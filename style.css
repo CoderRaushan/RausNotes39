@@ -1,0 +1,92 @@
+.main
+{
+    background-color: rgb(229, 210, 241);
+    text-decoration: none;     
+}
+.head
+{
+    background-color: black;
+   
+    height: 100%;
+    width: 100%;
+}
+#q
+{
+    color:white;
+    cursor:pointer;
+}
+#signup,#login
+{
+    background-color:yellow;
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+}
+h3
+{
+    color: #b92b27;
+}
+button
+{
+    background-color: green;
+    color: white; 
+    cursor:pointer;  
+}
+#myid
+{
+    color:rgb(10, 32, 10);
+}
+.co a 
+{
+    color: rgb(225, 255, 0);
+    background-color:rgb(55, 0, 255) ;
+}
+.nav a
+{
+    color:rgb(239, 244, 0);
+    color: black;
+    text-decoration: none;
+}
+nav
+{
+    word-spacing: 292px;
+    background-color: yellow;
+    color: black;
+   
+}
+button+button
+{
+    background-color:rgb(138, 86, 190);
+}
+
+body a
+{
+    text-decoration: none   ;
+}
+.container
+{
+    .container {
+        display: inline-block;
+        cursor: pointer;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #f9f4f4;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      /* Rotate first bar */
+      .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      /* Fade out the second bar */
+      .change .bar2 {opacity: 0;}
+      
+      /* Rotate last bar */
+      .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+}
