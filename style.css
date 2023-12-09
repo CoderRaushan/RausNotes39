@@ -15,11 +15,11 @@ padding: 0px 13px;
 
 }
 label.logo
-{
+{ 
 color: white;
 font-size:35px;
 line-height:80px;
-/* text-align: center; */
+
 font-weight: bold;
 cursor: pointer;
 
@@ -35,7 +35,7 @@ margin: 6px 0;
 nav ul{
   float: right;
   margin-right: 20px;
-  
+ 
   
 }
 nav{
@@ -64,19 +64,19 @@ a:hover
   background: #f4e9e9;
   color: black;
   transition: .5s;
- 
+  transform: scalex(2);
   
 }
 div.item
 {  
   background-color: black ;
   color: white ;
-  line-height: 50px;
+  line-height: 40px;
 }
 div a{
   color: rgb(255, 255, 255);
   /* margin: 0 40px; */
-  font-size: 20px;
+  /* font-size: 20px; */
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 15px;
@@ -90,7 +90,7 @@ font-size: 30px;
 color: white;
 float: right;
 line-height: 80px;
-margin-right: 40px;
+margin-right: 10px;
 cursor: pointer;
 display: none;
 }
@@ -100,14 +100,18 @@ display: none;
 }
 .wall
 {
-/* background-image: url('walll.jpg');
-background-repeat: no-repeat;
-height: 140vh;
-width: 100%;
-background-size: contain; */
 background-color:yellow;
 height:800px;
 width:100%;
+}
+.foter {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 @media(max-width:952px)
 {
