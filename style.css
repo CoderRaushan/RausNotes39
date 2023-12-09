@@ -100,11 +100,14 @@ display: none;
 }
 .wall
 {
-background-image: url('walll.jpg');
-/* background-repeat: no-repeat; */
+/* background-image: url('walll.jpg');
+background-repeat: no-repeat;
 height: 140vh;
-width: 200%;
-background-size: contain;
+width: 100%;
+background-size: contain; */
+background-color: yellow;
+height:800px;
+width:100%;
 }
 @media(max-width:952px)
 {
