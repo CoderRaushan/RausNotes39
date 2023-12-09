@@ -101,9 +101,9 @@ display: none;
 .wall
 {
 background-image: url('walll.jpg');
-background-repeat: no-repeat;
-height: 129vh;
-width: 100%;
+/* background-repeat: no-repeat; */
+height: 140vh;
+width: 200%;
 background-size: contain;
 }
 @media(max-width:952px)
@@ -149,4 +149,15 @@ background-size: contain;
       left: 0;
 
   }
+}
+@media(max-width:334px)
+{
+  label.logo {
+    color: white;
+    font-size: 23px;
+    line-height: 80px;
+    /* text-align: center; */
+    font-weight: bold;
+    cursor: pointer;
+}
 }
