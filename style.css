@@ -30,11 +30,19 @@ cursor: pointer;
 align-items: center;
 margin: 6px 0;
  border-radius: 50px;
+ border: 2px solid;
 }
 nav ul{
   float: right;
   margin-right: 20px;
+  
+  
 }
+nav{
+  position: sticky;
+  top:0;
+}
+
 nav ul li{
   display: inline-block;
   line-height: 80px;
@@ -59,7 +67,7 @@ a:hover
  
   
 }
-div
+div.item
 {  
   background-color: black ;
   color: white ;
@@ -87,14 +95,21 @@ cursor: pointer;
 display: none;
 }
 #check
-{
+{ 
   display: none;
+}
+.wall
+{
+background-image: url('walll.jpg');
+background-repeat: no-repeat;
+height: 129vh;
+width: 100%;
+background-size: contain;
 }
 @media(max-width:952px)
 {
   lable.logo{
       font-size: 30px;
-      padding-left: 50px;
   }
   nav ul li a{
       font-size: 16px;
@@ -103,10 +118,12 @@ display: none;
 @media(max-width:658px)
 {
   lable.logo{
-      font-size: 20px;
+      font-size: 10px;
   }
-  .checkbtn{
+  .checkbtn
+  {
       display: block;
+      font-size: 20px;
   }
   ul{
       position: fixed;
@@ -123,11 +140,6 @@ display: none;
       display: block;
       margin: 50px 0;
       line-height: 30px;
-  }
-  nav ul li a
-  {
-      font-size: 20px;
-    
   }
   a:hover,a.active{
       background: none;
