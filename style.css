@@ -114,13 +114,14 @@ width:100%;
   bottom: 0;
   width: 100%;
 }
-.auto {
-display: flex;
-justify-content: right;
+.auto 
+{
+
+
 position: fixed;
 bottom: 78px;
-width: 100%;
-
+width: 120px;
+margin:0px -30px;
 }
 @media(max-width:952px)
 {
