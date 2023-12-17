@@ -101,8 +101,8 @@ display: none;
 }
 .wall
 {
-background-color:yellow;
-height:800px;
+background-color:rgb(206, 158, 161);
+height:100vh;
 width:100%;
 }
 .foter {
@@ -113,6 +113,14 @@ width:100%;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.auto {
+display: flex;
+justify-content: right;
+position: fixed;
+bottom: 78px;
+width: 100%;
+
 }
 @media(max-width:952px)
 {
