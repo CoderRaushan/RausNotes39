@@ -117,53 +117,12 @@ p{
     
     margin: 0px 80px 80px;
 }
-
-@media(max-width:828px)
-{
-  h1{
-    font-size: 27px;
-  }
-}
-@media(max-width:799px)
-{
-  h1{
-    font-size: 30px;
-  }
-}
-@media(max-width:698px)
+@media(max-width:472px)
 {
   h1{
     font-size: 22px;
   }
-}
-@media(max-width:681px)
-{
-  h1{
-    font-size: 21px;
-  }
-}
-@media(max-width:568px)
-{
-  h1{
-    
-    font-size: 15px;
-  }
-  .logo{
-    height: 50px;
-  }
-}
-@media(max-width:360px)
-{
- .name{
-    
-    margin-top: -70px;
- }
-    h1{
-    font-size: 20px;
-  }
-  .logo{
-    height: 50px;   
-    margin-top: 12px;
-    margin-right: 10px;
+  .name{
+    padding-top: 80px;
   }
 }
