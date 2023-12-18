@@ -3,8 +3,8 @@ body {
     background-color: #57c760;
     margin: 0;
     padding: 0;
-}
-h1{
+  }
+  h1{
     background-color: rgb(0, 0, 0);
     padding: 20px;
     color:yellow;
@@ -12,58 +12,58 @@ h1{
     margin: 10px 20px;
     cursor: pointer;
     
-}
-#yy
-{
+  }
+  #yy
+  {
     color: white;
       
-}
-
-.container {    
+  }
+  
+  .container {    
     max-width: 800px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.logo
-{
+  }
+  .logo
+  {
    height: 80px;
     border-radius: 100px;
     align-items: center;
     margin-right: 10px;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: left    ;
     justify-content: right;
     color: #333;
     height: 80px;
    border:solid rgb(255, 255, 255);
    
-}
-.name
-{ position:absolute;
+  }
+  .name
+  { position:absolute;
    margin-left:0px;
    padding-top:90px;
    margin-top: -60px;
    font-size: 20px;
    cursor: pointer;
    
-}
-form {
+  }
+  form {
     margin-top: 20px;
     margin: 30px 80px;
     color: rgb(0, 0, 0);
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 5px;
-}
-
-input {
+  }
+  
+  input {
     width: 100%;
     padding: 4px;
     margin-bottom: 10px;
@@ -71,10 +71,10 @@ input {
     background-color: rgb(150, 200, 241);
     
     
-}
-
-button 
-{
+  }
+  
+  button 
+  {
     background-color: #4caf50;
     color: #fff;
     padding: 10px;
@@ -82,11 +82,11 @@ button
     border-radius: 20px;
     cursor: pointer;
     background-color: black;
-
-}
-
-button:hover 
-{
+  
+  }
+  
+  button:hover 
+  {
     background-color: #000000;
     color:yellow;
     transition: transform .5s;
@@ -94,35 +94,36 @@ button:hover
     
    
     
-}
-input:hover{
+  }
+  input:hover{
     transition: transform .5s;
     transform: scale(1.1);
-}
-h1:hover
-{
+  }
+  h1:hover
+  {
     transition: transform .5s;
     transform: scale(1.01);
-}
-#result {
+  }
+  #result {
     margin-top: 20px;
-}
-
-#sgpaValue {
+  }
+  
+  #sgpaValue {
     font-size: 18px;
     color: #333;
     
-}
-p{
+  }
+  p{
     
     margin: 0px 80px 80px;
-}
-@media(max-width:472px)
-{
+  }
+  @media(max-width:472px)
+  {
   h1{
     font-size: 22px;
   }
   .name{
     padding-top: 80px;
   }
-}
+  }
+  
