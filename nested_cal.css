@@ -1,6 +1,6 @@
 *{
     margin: 0%;
-    /* padding: 0%; */
+    padding: 0%;    
     background-color: rgb(188, 211, 212);
 }
 .head
@@ -24,7 +24,7 @@ div{
     color: white;
     border-radius: 10px;
     display: inline;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 
 }
 
@@ -36,7 +36,7 @@ div{
 
 }
 .ul{
-    font-size: 30px;
+    font-size: 20px;
     background: linear-gradient(
 
 45deg,
@@ -56,7 +56,7 @@ background-clip: text;
 
 -webkit-text-fill-color: transparent;
 
-display: inline-block;
+/* display: inline-block; */
 
 }
 .home
@@ -81,12 +81,14 @@ display: inline-block;
         font-size: 20px;
         background-color: rgb(0, 0, 0);
         color: white;
-        border-radius: 5px;
+        /* border-radius: 5px;   */
         margin-right: 10px;
-        /* padding: 10px; */
+        /* padding: 10px;   */
+        
     }
     .ul{
         font-size: 20px;
+        /* margin: 7px; */
     }
     .home
 {  display: inline;
@@ -95,7 +97,7 @@ display: inline-block;
     color: yellow;
     position: absolute;
    padding: 0px 8px;
-   margin: 0px 36%;
+   margin: 0px 35%;
 
    border-radius: 8px;
 }
