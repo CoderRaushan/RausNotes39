@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ce_3_sgpa.css">
+    <link rel="stylesheet" href="ee_3_sgpa.css">
     <title>sgpacalculator</title>
 </head>
 <body>
@@ -14,8 +14,8 @@
         function calculateSGPA() 
         {
             var arr = [];
-            var sub = ["Surveying & Geomatics","Solid Mechanics","Fluid Mechanics","DP&P","BEC","CE-ISGI","Survey-Lab","FM-Lab","SM-Lab","Training-1"];
-            for (var n = 0; n <=9; n++) 
+            var sub = ["Math-3","ETS","ECA","AE","EM-1","EF","AE-Lab","EM-1-Lab","Training-1"];
+            for (var n = 0; n <=8; n++) 
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
@@ -30,9 +30,9 @@
             var o5 = (arr[5] / 100) * 100;
             var o6 = (arr[6] / 50) * 100;
             var o7 = (arr[7] / 50) * 100;
-            var o8 = (arr[8] / 50 )* 100;
-            var o9 = (arr[9] / 100) * 100;
+            var o8 = (arr[8] / 100 )* 100;
           
+         
 
             var p = Math.floor(o / 10) + 1;
             var p1 = Math.floor(o1 / 10) + 1;
@@ -43,23 +43,23 @@
             var p6 = Math.floor(o6 / 10) + 1;
             var p7 = Math.floor(o7 / 10) + 1;
             var p8 = Math.floor(o8 / 10) + 1;
-            var p9 = Math.floor(o9 / 10) + 1;
+           
            
 
-            var res = p * 4;
+            var res = p * 3;
             var res1 = p1 * 3;
-            var res2 = p2 * 3;
-            var res3 = p3 * 3;
-            var res4 = p4 * 3;
+            var res2 = p2 * 4;
+            var res3 = p3 * 4;
+            var res4 = p4 * 4;
             var res5 = p5 * 3;
             var res6 = p6 * 1;
             var res7 = p7 * 1;
             var res8 = p8 * 1;
-            var res9 = p9 * 1;
-           
+          
+          
 
-            var c1 = 23;
-            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 + res8 + res9;
+            var c1 = 24;
+            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7+ res8;
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
@@ -69,52 +69,48 @@
 <body>
    <div>  
    
-    <h1 id="yy"> <img   class="logo"src="logo.png" alt=""><diB  class="name" >CE 3rd Semester SGPA Calculator</helo></h1>
+    <h1 id="yy"> <img   class="logo"src="logo.png" alt=""><diB  class="name" >EE 3rd Semester SGPA Calculator</helo></h1>
     
    </div>
     <form>
         <table>
             <tr>
-                <td><label for="marks0">Survey  & <br> Geomatics:</label></td>
+                <td><label for="marks0">Math-3:</label></td>
                 <td><input type="number" id="marks0" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks1">SM:</label></td>
+                <td><label for="marks1">ETS:</label></td>
                 <td><input type="number" id="marks1" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks2">FM:</label></td>
+                <td><label for="marks2">ECA:</label></td>
                 <td><input type="number" id="marks2" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks3">DP&P:</label></td>
+                <td><label for="marks3">AE:</label></td>
                 <td><input type="number" id="marks3" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks4">BEC:</label></td>
+                <td><label for="marks4">EM-1:</label></td>
                 <td><input type="number" id="marks4" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks5">CE-ISGI:</label></td>
+                <td><label for="marks5">EF:</label></td>
                 <td><input type="number" id="marks5" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks6">Survey-Lab:</label></td>
+                <td><label for="marks6">AE-Lab:</label></td>
                 <td><input type="number" id="marks6" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks7">FM-Lab:</label></td>
+                <td><label for="marks7">EM-1-Lab:</label></td>
                 <td><input type="number" id="marks7" placeholder="Enter internel + external"></td>
             </tr>
             <tr>
-                <td><label for="marks8">SM-Lab:</label></td>
+                <td><label for="marks8">Tranning-1:</label></td>
                 <td><input type="number" id="marks8" placeholder="Enter internel + external"></td>
             </tr>
-            <tr>
-                <td><label for="marks9">Tranning-1:</label></td>
-                <td><input type="number" id="marks9" placeholder="Enter internel + external"></td>
-            </tr>
-           
+          
         </table>
         <button type="button" onclick="calculateSGPA()">Calculate SGPA</button>
     </form>
