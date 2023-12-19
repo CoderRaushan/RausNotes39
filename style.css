@@ -55,7 +55,7 @@ nav ul li a{
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 15px;
-  border: 2px solid rgb(207, 190, 190);
+  border: 1.5px solid rgb(111, 255, 0);
   
 
 }
@@ -75,8 +75,6 @@ div.item
 }
 div a{
   color: rgb(255, 255, 255);
-  /* margin: 0 40px; */
-  /* font-size: 20px; */
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 15px;
@@ -100,7 +98,8 @@ display: none;
 }
 .wall
 {
-background-color:rgb(206, 158, 161);
+ 
+background-color:rgb(133, 195, 25); /* rgb(206, 158, 161); */
 height:100vh;
 width:100%;
 }
@@ -115,8 +114,6 @@ width:100%;
 }
 .auto 
 {
-
-
 position: fixed;
 bottom: 78px;
 width: 120px;
