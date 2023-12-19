@@ -48,16 +48,16 @@ blue,
 
 green,
 
-orange ,
+orange 
  
-black
+/* black */
 
 );
 background-clip: text;
 
 -webkit-text-fill-color: transparent;
 
-/* display: inline-block; */
+
 
 }
 .home
