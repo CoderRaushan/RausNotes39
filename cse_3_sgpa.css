@@ -9,7 +9,7 @@ h1{
   padding: 20px;
   color:yellow;
   border-radius: 70px;     
-  margin: 10px 20px;
+  margin: 10px 2px;
   cursor: pointer;
   
 }
@@ -117,12 +117,20 @@ p{
   
   margin: 0px 80px 80px;
 }
-@media(max-width:472px)
+@media(max-width:407px)
+{
+.name{
+  padding-top: 80px;
+  font-size: 25px;
+  margin-top: -65px;
+}
+}
+@media(max-width:456px)
 {
 h1{
-  font-size: 22px;
+  font-size: 20px;
 }
 .name{
   padding-top: 80px;
 }
-}
+} 
