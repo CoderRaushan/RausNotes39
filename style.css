@@ -4,7 +4,8 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-body{
+body
+{
   font-family: montserrat;
 }
 nav{
@@ -115,9 +116,9 @@ width:100%;
 .auto 
 {
 position: fixed;
-bottom: 78px;
+bottom: 35px;
 width: 120px;
-margin:0px -30px;
+margin:0px -45px;
 }
 @media(max-width:952px)
 {
@@ -169,7 +170,6 @@ margin:0px -30px;
     color: white;
     font-size: 23px;
     line-height: 80px;
-    /* text-align: center; */
     font-weight: bold;
     cursor: pointer;
 }
