@@ -42,6 +42,11 @@ div{
 
 
 }
+.auto
+{
+
+    margin: 20px -50px ;
+}
 .home
 {  display: inline;
     text-decoration: none;
