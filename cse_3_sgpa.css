@@ -116,6 +116,13 @@ p{
   
   margin: 0px 80px 80px;
 }
+.auto 
+{
+position: fixed;
+bottom: 78px;
+width: 120px;
+margin:0px -30px;
+}
 @media(max-width:407px)
 {
 .name{
