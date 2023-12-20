@@ -38,25 +38,7 @@ div{
 .ul{
     font-size: 18px;    
     margin-top:  10px;
-    background: linear-gradient(
-
-45deg,
-
-red,
-
-blue,
-
-green,
-
-orange 
- 
-/* black */
-
-);
-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
+  color: black;
 
 
 }
