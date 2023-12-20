@@ -9,7 +9,7 @@ body {
     padding: 20px;
     color:yellow;
     border-radius: 70px;     
-    margin: 10px 20px;
+    margin: 10px 0px;
     cursor: pointer;
     
   }
@@ -54,7 +54,7 @@ body {
   }
   form {
     margin-top: 20px;
-    margin: 30px 80px;
+    margin: 30px 30px;
     color: rgb(0, 0, 0);
   }
   
@@ -123,5 +123,21 @@ body {
     padding-top: 80px;
     margin-top: -70px;
   }
+  }@media(max-width:407px)
+  {
+  .name{
+    padding-top: 80px;
+    font-size: 20px;
+    margin-top: -72px;
   }
+  }
+  @media(max-width:456px)
+  {
+  h1{
+    font-size: 20px;
+  }
+  .name{
+    padding-top: 80px;
+  }
+  } 
   
