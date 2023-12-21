@@ -118,6 +118,41 @@ body {
 {
     margin: -60px 30px ;
 }
+.home
+{  
+    text-decoration: none;
+    background-color: black ;
+    color: yellow;
+    position: absolute;
+   padding: 0px 8px;
+   margin: -5px 80%;
+   border-radius: 20px;
+   float: right;
+   margin-right: 70px;
+   border:solid white 2px;
+}
+.home1
+{  
+    text-decoration: none;
+    background-color: black;
+    color: yellow;
+    position: absolute;
+   padding: 0px 8px;
+   margin: -5px  8%;
+   border-radius: 20px;
+ display: inline-block;
+ border:solid white 2px ;
+}
+.home1:hover
+{
+  transition: transform .5s;
+  transform: scale(1.05);
+}
+.home:hover
+{
+  transition: transform .5s;
+  transform: scale(1.05);
+}
   @media(max-width:472px)
   {
   h1{
