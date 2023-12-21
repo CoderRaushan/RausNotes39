@@ -94,6 +94,29 @@ button:hover
  
   
 }
+.home
+{  
+    text-decoration: none;
+    background-color: black ;
+    color: yellow;
+    position: absolute;
+   padding: 0px 8px;
+   margin: -5px 80%;
+   border-radius: 8px;
+   float: right;
+   margin-right: 70px;
+}
+.home1
+{  
+    text-decoration: none;
+    background-color: black ;
+    color: yellow;
+    position: absolute;
+   padding: 0px 8px;
+   margin: -5px  8%;
+   border-radius: 8px;
+ display: inline-block;
+}
 .auto
 {
 
@@ -112,7 +135,8 @@ h1:hover
   margin-top: 20px;
 }
 
-#sgpaValue {
+#sgpaValue 
+{
   font-size: 18px;
   color: #333;
   
@@ -136,5 +160,18 @@ h1{
 }
 .name{
   padding-top: 80px;
+}
+.home {
+ 
+  margin: -5px 46%;
+  border-radius: 8px;
+ 
+  margin-right: 71px;
+}
+.home1 {
+ 
+  margin: -5px 6%;
+  border-radius: 8px;
+ 
 }
 } 
