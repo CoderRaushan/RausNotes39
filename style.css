@@ -42,10 +42,12 @@ nav ul{
 .social{
   height: 30px; width: 30px ;
   border-radius: 30px;
+  margin-top: 3px;
 }
 
 .solink:hover{
   background: none;
+
 }
 nav{
   position: sticky;
@@ -128,7 +130,18 @@ bottom: 35px;
 width: 120px;
 margin:0px -45px;
 }
-
+#right{
+  font-size: 20px;
+  font-weight: 900;
+}
+#somelink
+{
+  margin-bottom:3px;
+  font-family:initial;
+  font-weight: 400;
+  font-size: 11px;
+  
+}
 @media(max-width:952px)
 {
   lable.logo{
