@@ -39,6 +39,14 @@ nav ul{
  margin-top: -77px;
   
 }
+.social{
+  height: 30px; width: 30px ;
+  border-radius: 30px;
+}
+
+.solink:hover{
+  background: none;
+}
 nav{
   position: sticky;
   top:0;
@@ -120,6 +128,7 @@ bottom: 35px;
 width: 120px;
 margin:0px -45px;
 }
+
 @media(max-width:952px)
 {
   lable.logo{
