@@ -1,4 +1,5 @@
-body {
+body 
+{
   font-family: 'Arial', sans-serif;
   background-color: #57c760;
   margin: 0;
@@ -173,7 +174,8 @@ h1{
 .name{
   padding-top: 80px;
 }
-.home {
+.home 
+{
  
   margin: -5px 46%;
   border-radius: 8px;
@@ -184,6 +186,5 @@ h1{
  
   margin: -5px 6%;
   border-radius: 8px;
- 
 }
 } 

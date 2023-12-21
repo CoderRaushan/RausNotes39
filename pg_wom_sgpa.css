@@ -181,4 +181,17 @@ h1{
 .name{
   padding-top: 80px;
 }
+.home 
+{
+ 
+  margin: -5px 46%;
+  border-radius: 20px;
+ 
+  margin-right: 71px;
+}
+.home1 {
+ 
+  margin: -5px 6%;
+  border-radius: 20px;
+}
 } 
