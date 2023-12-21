@@ -38,8 +38,10 @@ div{
 .ul{
     font-size: 18px;    
     margin-top:  10px;
+ 
   color: black;
-
+  font-weight: 1000;
+font-style:oblique;
 
 }
 .auto
