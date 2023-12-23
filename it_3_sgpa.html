@@ -19,17 +19,18 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
-                 if (isNaN(marks) || marks === "CRN") {
+                if (isNaN(marks) || marks === "CRN") 
+                {
                 alert("Please fill in all sections before calculating SGPA.");
                 return; 
-            }
+                }
            
                 arr.push(marks);
             }
             var crn = document.getElementById("CRN").value;
-            if (crn === "") 
+            if (crn.length !==7) 
             {
-            alert("Please enter the CRN before calculating SGPA.");
+            alert("Please enter the valid CRN before calculating SGPA.");
             return;
             }
             var o = (arr[0] / 100) * 100;

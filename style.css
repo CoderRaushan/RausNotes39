@@ -122,8 +122,8 @@ display: none;
 }
 .wall
 {
- background-image: url(wallpaper.jpg) no-repeat;
- height:100vh;
+ background: url(wallpaper.jpg) no-repeat;
+ height:200vh;
  width:100%;
 /* background-color:rgb(133, 195, 25); rgb(206, 158, 161); */
 }
