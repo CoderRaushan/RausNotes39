@@ -79,6 +79,7 @@
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
+            document.getElementById("sgpaInput").value = sgpa.toFixed(2);
         }
     </script>
 </head>
@@ -142,6 +143,10 @@
                 <td><label for="CRN">CRN:</label></td>
                 <td><input type="number" id="CRN"  placeholder="Enter CRN" name="CRN"></td>
             </tr>
+            <tr>
+                <input type="hidden" id="sgpaInput" name="SGPA" value="">
+                <button id="noshow" type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
+            </tr>
         </table>
         
         <button type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
@@ -154,11 +159,14 @@
         const form = document.forms['submit-to-google-sheet']
       
         form.addEventListener('submit', e => {
-          e.preventDefault()
+          e.preventDefault();
+          const sgpaValue = document.getElementById("sgpaInput").value;
+          const formData = new FormData(form);
+        formData.append('SGPA', sgpaValue);
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
-        })
+        });
       </script>
 </body>
 <footer class="foter">

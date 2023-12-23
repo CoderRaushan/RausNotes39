@@ -145,6 +145,9 @@ p {
   /* background-color: #e5d847; */
   background-color: rgb(188, 144, 229);
 }
+#noshow{
+  display: none;
+}
 @media (max-width: 407px) {
   .name {
     padding-top: 80px;
