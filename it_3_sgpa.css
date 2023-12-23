@@ -1,25 +1,21 @@
-body 
-{
-  font-family: 'Arial', sans-serif;
+body {
+  font-family: "Arial", sans-serif;
   background-color: #57c760;
   margin: 0;
   padding: 0;
 }
-h1{
+h1 {
   background-color: rgb(0, 0, 0);
   padding: 20px;
-  color:yellow;
-  border-radius: 70px;     
+  color: yellow;
+  border-radius: 70px;
   margin: 10px 0px;
   cursor: pointer;
-  
 }
-#yy
-{
+#yy {
   color: white;
-    
 }
-.container {    
+.container {
   max-width: 800px;
   margin: 50px auto;
   background-color: #fff;
@@ -27,30 +23,27 @@ h1{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.logo
-{
- height: 80px;
+.logo {
+  height: 80px;
   border-radius: 100px;
   align-items: center;
   margin-right: 10px;
 }
 
 h1 {
-  text-align: left    ;
+  text-align: left;
   justify-content: right;
   color: #333;
   height: 80px;
- border:solid rgb(255, 255, 255);
- 
+  border: solid rgb(255, 255, 255);
 }
-.name
-{ position:absolute;
- margin-left:0px;
- padding-top:90px;
- margin-top: -60px;
- font-size: 20px;
- cursor: pointer;
- 
+.name {
+  position: absolute;
+  margin-left: 0px;
+  padding-top: 90px;
+  margin-top: -60px;
+  font-size: 20px;
+  cursor: pointer;
 }
 form {
   margin-top: 20px;
@@ -67,14 +60,11 @@ input {
   width: 100%;
   padding: 4px;
   margin-bottom: 10px;
-  border-radius: 30px;     
+  border-radius: 30px;
   background-color: rgb(150, 200, 241);
-  
-  
 }
 
-button 
-{
+button {
   background-color: #4caf50;
   color: #fff;
   padding: 10px;
@@ -82,69 +72,64 @@ button
   border-radius: 20px;
   cursor: pointer;
   background-color: black;
-
 }
 
-button:hover 
-{
+button:hover {
   background-color: #000000;
-  color:yellow;
-  transition: transform .5s;
-  transform: scale(1.1);
-  
- 
-  
-}
-.home
-{  
-    text-decoration: none;
-    background-color: black ;
-    color: yellow;
-    position: absolute;
-   padding: 0px 8px;
-   margin: -5px 80%;
-   border-radius: 20px;
-   float: right;
-   margin-right: 70px;
-   border:solid white 2px;
-}
-.home1
-{  
-    text-decoration: none;
-    background-color: black;
-    color: yellow;
-    position: absolute;
-   padding: 0px 8px;
-   margin: -5px  8%;
-   border-radius: 20px;
- display: inline-block;
- border:solid white 2px ;
-}
-.home1:hover
-{
-  transition: transform .5s;
-  transform: scale(1.05);
-}
-.home:hover
-{
-  transition: transform .5s;
-  transform: scale(1.05);
-}
-.auto
-{
-
-    margin: -60px 30px ;
-}
-input:hover{
-  transition: transform .5s;
+  color: yellow;
+  transition: transform 0.5s;
   transform: scale(1.1);
 }
-h1:hover
+.home 
 {
-  transition: transform .5s;
+  text-decoration: none;
+  background-color: black;
+  color: yellow;
+  position: absolute;
+  padding: 0px 8px;
+  margin: -5px 80%;
+  border-radius: 20px;
+  float: right;
+  margin-right: 70px;
+  border: solid white 2px;
+}
+.home1 
+{
+  text-decoration: none;
+  background-color: black;
+  color: yellow;
+  position: absolute;
+  padding: 0px 8px;
+  margin: -5px 8%;
+  border-radius: 20px;
+  display: inline-block;
+  border: solid white 2px;
+}
+.home1:hover 
+{
+  transition: transform 0.5s;
+  transform: scale(1.05);
+}
+.home:hover 
+{
+  transition: transform 0.5s;
+  transform: scale(1.05);
+}
+.auto {
+  margin: -60px 30px;
+}
+input:hover 
+{
+  transition: transform 0.5s;
+  transform: scale(1.1);
+}
+h1:hover 
+{
+  transition: transform 0.5s;
   transform: scale(1.01);
 }
-#result {
+#result 
+{
   margin-top: 20px;
 }
 
@@ -152,43 +137,36 @@ h1:hover
 {
   font-size: 18px;
   color: #333;
-  
 }
-p{
-  
+p {
   margin: 0px 80px 80px;
 }
-#fs{
+#fs {
   /* background-color: #e5d847; */
-  background-color:rgb(188, 144, 229);
+  background-color: rgb(188, 144, 229);
 }
-@media(max-width:407px)
-{
-.name{
-  padding-top: 80px;
-  font-size: 23px;
-  margin-top: -65px;
+@media (max-width: 407px) {
+  .name {
+    padding-top: 80px;
+    font-size: 23px;
+    margin-top: -65px;
+  }
 }
+@media (max-width: 456px) {
+  h1 {
+    font-size: 20px;
+  }
+  .name {
+    padding-top: 80px;
+  }
+  .home {
+    margin: -5px 46%;
+    border-radius: 20px;
+
+    margin-right: 71px;
+  }
+  .home1 {
+    margin: -5px 6%;
+    border-radius: 20px;
+  }
 }
-@media(max-width:456px)
-{
-h1{
-  font-size: 20px;
-}
-.name{
-  padding-top: 80px;
-}
-.home 
-{
- 
-  margin: -5px 46%;
-  border-radius: 20px;
- 
-  margin-right: 71px;
-}
-.home1 {
- 
-  margin: -5px 6%;
-  border-radius: 20px;
-}
-} 

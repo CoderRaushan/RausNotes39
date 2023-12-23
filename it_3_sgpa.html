@@ -19,9 +19,19 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
+                 if (isNaN(marks) || marks === "CRN") {
+                alert("Please fill in all sections before calculating SGPA.");
+                return; 
+            }
+           
                 arr.push(marks);
             }
-
+            var crn = document.getElementById("CRN").value;
+            if (crn === "") 
+            {
+            alert("Please enter the CRN before calculating SGPA.");
+            return;
+            }
             var o = (arr[0] / 100) * 100;
             var o1 = (arr[1] / 100) * 100;
             var o2 = (arr[2] / 100) * 100;
@@ -124,7 +134,7 @@
             </tr>
             <tr>
                 <td><label for="CRN">CRN:</label></td>
-                <td><input type="number" id="CRN" required placeholder="Enter CRN" name="CRN"></td>
+                <td><input type="number" id="CRN"  placeholder="Enter CRN" name="CRN"></td>
             </tr>
         </table>
         
