@@ -13,7 +13,6 @@ position: fixed;
 background-size: 15%;
 width: 100%;
 height: 100vh;
-
 z-index:99999;
 }
 body
@@ -168,7 +167,17 @@ margin:0px -45px;
   lable.logo{
       font-size: 10px;
   }
- 
+  #preloader
+  {
+    background: black url('https://client.ianperks.org/Images/Animations/spin7.gif')
+  no-repeat center
+  ;
+  position: fixed;
+  background-size: 50%;
+  width: 100%;
+  height: 100vh;
+  z-index:99999;
+  }
   .checkbtn
   {
       display: block;
@@ -216,4 +225,5 @@ margin:0px -45px;
     font-weight: bold;
     cursor: pointer;
 }
+
 }
