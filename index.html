@@ -10,7 +10,10 @@
   />
     <title>RausNotes39.com</title>
 </head> 
-<body>
+<body onload="myfunction()">
+    <div id="preloader">
+        
+    </div>
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -51,5 +54,12 @@
          <a class="solink" href="https://x.com/RaushanKum11066?t=EW6TRRFWQX4lzqeSePZW4w&s=09" target="_blank"><img class="social" src="twitter.png" alt="" height="30"width="30"></a>
 
     </footer>
+    <script>
+        var preloader=document.getElementById('preloader');
+        function myfunction()
+        {
+            preloader.style.display='none';
+        }
+    </script>
  </body> 
 </html> 
