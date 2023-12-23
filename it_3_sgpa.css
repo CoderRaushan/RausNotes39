@@ -158,6 +158,10 @@ p{
   
   margin: 0px 80px 80px;
 }
+#fs{
+  /* background-color: #e5d847; */
+  background-color:rgb(188, 144, 229);
+}
 @media(max-width:407px)
 {
 .name{
