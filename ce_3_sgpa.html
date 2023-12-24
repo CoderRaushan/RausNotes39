@@ -78,6 +78,7 @@
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
+            document.getElementById("sgpaInput").value = sgpa.toFixed(2);
         }
     </script>
 </head>
@@ -149,12 +150,13 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwSTkEFjV3OqDUfaKovJWZoRvRTbNSCb8Zd6-4Y7y4-VajN7U5YS0sqPbRpUd6K8IfW/exec'
         const form = document.forms['submit-to-google-sheet']
       
-        form.addEventListener('submit', e => {
+        form.addEventListener('submit', e => 
+        {
           e.preventDefault();
           const sgpaValue = document.getElementById("sgpaInput").value;
           const formData = new FormData(form);
-        formData.append('SGPA', sgpaValue);
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            formData.append('SGPA', sgpaValue);
+         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         });
@@ -168,7 +170,5 @@
  
     </div>
 </footer>
-</html>
-
 </body>
 </html>
