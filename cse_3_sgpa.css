@@ -154,6 +154,9 @@ p{
 
     margin: -60px 30px ;
 }
+#noshow{
+  display: none;
+}
 @media(max-width:407px)
 {
 .name{
