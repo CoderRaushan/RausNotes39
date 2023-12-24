@@ -19,9 +19,24 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
+                if (isNaN(marks) || marks === "CRN") 
+                {
+                alert("Please fill in all sections before calculating SGPA.");
+                return; 
+                }
                 arr.push(marks);
             }
-
+            var crn = document.getElementById("CRN").value;
+            if (crn.length !==7) 
+            {
+            alert("Please enter the valid CRN before calculating SGPA.");
+            return;
+            }
+            if (crn.substring(0, 4) !== "2217") 
+            {
+            alert("Please enter the valid CRN before calculating SGPA.");
+            return; 
+            }
             var o = (arr[0] / 100) * 100;
             var o1 = (arr[1] / 100) * 100;
             var o2 = (arr[2] / 100) * 100;
@@ -59,6 +74,7 @@
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
+            document.getElementById("sgpaInput").value = sgpa.toFixed(2);
         }
     </script>
 </head>
@@ -70,52 +86,78 @@
         <a  class="home1" href="nested_cal.html" target="_blank">Previous page </a>
    
    </div>
-    <form>
+    <form method="post" name="submit-to-google-sheet">
         <br>
         <table>
             <tr>
                 <td><label for="marks0">MATH-3:</label></td>
-                <td><input type="number" id="marks0" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks0" placeholder="Enter internel + external" name="MATH-3"></td>
             </tr>
             <tr>
                 <td><label for="marks1">ED:</label></td>
-                <td><input type="number" id="marks1" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks1" placeholder="Enter internel + external" name="ED"></td>
             </tr>
             <tr>
                 <td><label for="marks2">NAS:</label></td>
-                <td><input type="number" id="marks2" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks2" placeholder="Enter internel + external" name="NAS"></td>
             </tr>
             <tr>
                 <td><label for="marks3">SS:</label></td>
-                <td><input type="number" id="marks3" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks3" placeholder="Enter internel + external" name="SS"></td>
             </tr>
             <tr>
                 <td><label for="marks4">DE:</label></td>
-                <td><input type="number" id="marks4" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks4" placeholder="Enter internel + external" name="DE"></td>
             </tr>
             <tr>
                 <td><label for="marks5">CA:</label></td>
-                <td><input type="number" id="marks5" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks5" placeholder="Enter internel + external" name="CA"></td>
             </tr>
             <tr>
                 <td><label for="marks6">ED-Lab:</label></td>
-                <td><input type="number" id="marks6" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks6" placeholder="Enter internel + external" name="ED-Lab"></td>
             </tr>
             <tr>
                 <td><label for="marks7">DE-Lab:</label></td>
-                <td><input type="number" id="marks7" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks7" placeholder="Enter internel + external" name="DE-Lab"></td>
             </tr>
             <tr>
                 <td><label for="marks8">Training-1:</label></td>
-                <td><input type="number" id="marks8" placeholder="Enter internel + external"></td>
+                <td><input type="number" id="marks8" placeholder="Enter internel + external" name="Training-1"></td>
             </tr>
-          
+            <tr>
+                <td>
+                    <label for="CRN">CRN:</label>
+                </td>
+                <td>
+                    <input type="number" id="CRN"  placeholder="Enter CRN" name="CRN">
+                </td>
+            </tr>
+            <tr>
+                <input type="hidden" id="sgpaInput" name="SGPA" value="">
+                <button id="noshow" type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
+            </tr>
         </table>
-        <button type="button" onclick="calculateSGPA()">Calculate SGPA</button>
+        <button type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
     </form>
     <p id="sgpaResult"></p>
  
-</body>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-6d9-s5t4m2MFHJ0Se64CrsiZZ47KIx45DfJhZ5HOdmQvdwNehoxre7Rds8Yii_WhQw/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e =>    
+        {
+          e.preventDefault();
+          const sgpaValue = document.getElementById("sgpaInput").value;
+          const formData = new FormData(form);
+        formData.append('SGPA', sgpaValue);
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        });
+      </script>
+
 <footer class="foter">
     <div class="auto"> 
           
@@ -124,8 +166,6 @@
  
     </div>
 </footer>
-</html>
-
 </body>
 
 </html>
