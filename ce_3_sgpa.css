@@ -155,6 +155,9 @@ p{
   transition: transform .5s;
   transform: scale(1.05);
 }
+#noshow{
+  display: none;
+}
 @media(max-width:407px)
 {
 .name{
