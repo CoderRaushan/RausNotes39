@@ -1,6 +1,22 @@
 .pdf
 {
     color: white ;
-    background-color:red;
+    /* background-color:red; */
     text-decoration: none;
+
+}
+
+button{
+    border-radius: 10px;
+   background-color: rgb(191, 27, 213);
+   color: whitesmoke;
+   cursor: pointer;
+   font-weight:300px;
+   position: absolute;
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 300px;
 }
