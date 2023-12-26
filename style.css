@@ -76,10 +76,10 @@ nav ul li{
 }
 nav ul li a{
   color: white;
-  font-size: 20px;
+  /* font-size: 20px; */
   text-transform: uppercase;
-  padding: 7px 13px;
-  border-radius: 15px;
+  padding: 3px 5px;
+  border-radius: 10px;
   border: 1.5px solid rgb(111, 255, 0);
   
 
@@ -100,11 +100,18 @@ div.item
 }
 div a
 {
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255);
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 15px;
-  border: 2px solid rgb(185, 167, 167);
+  border: 2px solid rgb(185, 167, 167); */
+
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 2px 5px;
+    border-radius: 15px;
+    /* border: 2px solid rgb(185, 167, 167); */
+
 }
 .checkbtn
 {
@@ -132,7 +139,8 @@ display: none;
 {
   background-color: #333;
   color: #fff;
-  padding: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -146,7 +154,7 @@ width: 120px;
 margin:0px -45px;
 }
 #right{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 900;
 }
 #somelink
@@ -213,7 +221,11 @@ margin:0px -45px;
   }
   a:hover,a.active{
       background: none;
-      color: #0082e6;
+      color: white;
+        background: #f4e9e9;
+        color: black;
+        transition: .5s;
+        transform: scalex(2);
   }
   #check:checked ~ ul{
       left: 0;
