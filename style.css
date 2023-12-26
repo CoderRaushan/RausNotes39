@@ -22,10 +22,11 @@ body
   font-family: montserrat;
 }
 nav{
-background-color: #0082e6;
+/* background-color: #0082e6; */
+background-color: #759f35;;
 height: 80px;
 width: 100%;
-padding: 0px 13px;  
+padding: 0px 10px;  
 
 }
 label.logo
@@ -48,7 +49,7 @@ cursor: pointer;
 }
 nav ul{
   float: right;
-  margin-right: 20px;
+  /* margin-right: 20px; */
  margin-top: -77px;
   
 }
@@ -71,7 +72,7 @@ nav{
 nav ul li{
   display: inline-block;
   line-height: 80px;
-  margin: 0 10px;
+  margin: 0 3px;
 
 }
 nav ul li a{
@@ -84,11 +85,21 @@ nav ul li a{
   
 
 }
+
+#search {
+  height: 30px;
+  width: 300px;
+  border-radius: 8px;
+  position: absolute;
+  margin-left: 47%;
+  margin-top: -26px;
+}
+
 a:hover
 {
-  background: #f4e9e9;
+  background: #ffffff;
   color: black;
-  transition: .5s;
+  transition: .3s;
   transform: scalex(2);
   
 }
@@ -173,6 +184,14 @@ margin:0px -45px;
   nav ul li a{
       font-size: 16px;
   }
+  #search {
+    height: 30px;
+    width: 200px;
+    border-radius: 8px;
+    position: absolute;
+    margin-left: 33%;
+    margin-top: -26px;
+  }
 }
 @media(max-width:658px)
 {
@@ -230,6 +249,15 @@ margin:0px -45px;
   #check:checked ~ ul{
       left: 0;
 
+  }
+  #search {
+    height: 27px;
+    width: 200px;
+    border-radius: 8px;
+    position: absolute;
+    margin-left: 46%;
+    margin-top: -26px;
+    
   }
 }
 @media(max-width:334px)
