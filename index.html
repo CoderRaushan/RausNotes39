@@ -10,19 +10,14 @@
     <title>RausNotes39.com</title>
 </head> 
 <body onload="myfunction()">
-    <div id="preloader">
-        
-    </div>
-    <nav>
+    <div id="preloader"></div>
+<nav>
          <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        
-        <label class="logo"><img class="lp" src="raushan.jpg" alt="logo">RausNotes39</label> 
-      <!-- <div id="search"> <input id="search" type="text" placeholder="search here">
-     <span ></span> -->
-   </div>  
+        <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="raushan.jpg" alt="Image" onclick="playVideo()">
+          <video id="myVideo" style="display: none;" height="90px" width="90px">
+          <source src="/video/video.mp4" type="video/mp4" ></video>RausNotes39</label> 
+</div>  
         <ul>
             <li><a class="active" href="index.html" target="_blank">home</a></li>
             <li><a href="portfolio.html" target="_blank">about</a></li>
@@ -67,5 +62,30 @@
             preloader.style.display='none';
         }
     </script>
+      <script>
+        function playVideo() {
+          // Hide the image
+          document.getElementById("myImage").style.display = "none";
+          // Show and play the video
+          var video = document.getElementById("myVideo");
+          video.style.display = "block";
+          video.play();
+    
+          // Add mousedown event listener to detect clicks outside the video
+          document.addEventListener("mousedown", function(event) {
+            // Check if the click occurred outside the video element
+            if (!video.contains(event.target)) {
+              // Stop the video
+              video.pause();
+              video.currentTime = 0;
+              // Hide the video and show the image
+              video.style.display = "none";
+              document.getElementById("myImage").style.display = "block";
+            }
+          });
+        }
+      </script>
+    
+      
  </body> 
 </html> 
