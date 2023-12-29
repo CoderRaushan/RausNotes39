@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* margin: 50px; */
+        }
+        #coin-image {
+            width: 200px;
+            height: 200px;
+            transition: transform .5s ease;
+            
+        }
+        h1{
+            background-color: yellow;
+            color: black;
+            padding: 20px;
+            margin-bottom: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>RausToss39</h1>
+    <img id="coin-image" src="/photos/coin1.jpeg" alt="Coin" onclick="tossCoin()">
+
+    <p id="result"></p>
+
+    <audio id="coin-sound">
+        <source src="toss.mp3" type="audio/mp3" dura>
+      
+    </audio>
+
+    <script>
+        function tossCoin() {
+            var coinImage = document.getElementById("coin-image");
+            var resultMessage;
+
+            var coinSound = document.getElementById("coin-sound");
+            coinSound.play();
+
+        
+            coinImage.style.transform = "rotatex(360deg)";
+                setTimeout(function() {
+                coinImage.style.transform = "rotateY(0deg)"; // Reset the rotation
+                resultMessage = "Result: " + (Math.random() < 0.5 ? "Heads!" : "Tails!");
+                document.getElementById("result").innerText = resultMessage;
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
