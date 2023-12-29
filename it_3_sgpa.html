@@ -28,15 +28,10 @@
                 arr.push(marks);
             }
             var crn = document.getElementById("CRN").value;
-            if (crn.length !==7) 
+            if (crn.length !==7 || crn.substring(0, 4) !== "2221" || parseInt(crn.substring(4)) >= 143 ) 
             {
             alert("Please enter the valid CRN before calculating SGPA.");
             return;
-            }
-            if (crn.substring(0, 4) !== "2221") 
-            {
-            alert("Please enter the valid CRN before calculating SGPA.");
-            return; 
             }
             var o = (arr[0] / 100) * 100;
             var o1 = (arr[1] / 100) * 100;
