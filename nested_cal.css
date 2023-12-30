@@ -18,15 +18,40 @@ div{
 }
 .a{
    
+
+
+
+
+
+    
+   
+    color: white;
+    animation-name: anchor;
+    padding-left: 5px;
+    padding-right: 5px;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
     text-decoration: none;
     font-size: 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 10px;
+    border-radius: 50px;
     display: inline;
     border: solid yellow 2px;
 
 }
+
+@keyframes anchor{
+    from{
+        background-color:blue;
+    }
+    to{
+        background-color:black ;
+    }
+    
+    }
+
 
 .a:hover{
     background-color: rgb(111, 255, 0);
@@ -81,7 +106,8 @@ font-style:oblique;
         /* margin: 7px; */
     }
     .home
-{  display: inline;
+{ 
+     display: inline;
     text-decoration: none;
     background-color: black ;
     color: yellow;
