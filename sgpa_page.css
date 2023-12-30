@@ -102,9 +102,8 @@ a:hover{
     background-color: black ;
     color: yellow;
     position: absolute;
-   padding: 0px 8px;
-   margin: 0px 35%;
-
-   border-radius: 8px;
+    padding: 0px 8px;
+    margin: 0px 35%;
+    border-radius: 8px;
 }
 }
