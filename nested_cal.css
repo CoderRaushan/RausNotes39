@@ -37,9 +37,11 @@ div{
 @keyframes anchor{
     from{
         background-color:blue;
+        color: white;
     }
     to{
         background-color:black ;
+        color: yellow;
     }
     
     }
