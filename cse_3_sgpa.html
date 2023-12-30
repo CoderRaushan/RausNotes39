@@ -32,7 +32,7 @@
             alert("Please enter the valid CRN before calculating SGPA.");
             return;
             }
-            if (crn.substring(0, 4) !== "2215") 
+            if (crn.substring(0, 4) !== "2215" || parseInt(crn.substring(4)) >= 216) 
             {
             alert("Please enter the valid CRN before calculating SGPA.");
             return; 
