@@ -4,12 +4,13 @@
 }
 .main
 {
-    height: 1800px;
+    height: 100vh;
     width: 100%;
     display: flex;
-   justify-content: baseline;
+    justify-content: baseline;
     background-color: pink;
 }
+
 .card 
 {
     height: 280px;
@@ -17,10 +18,10 @@
     border: 2px solid black;
     margin-top: 40px;
     margin-left: 40px;
-   box-shadow: 2px 2px 8px black;
-   cursor: pointer;
-   border-radius: 10px;
-   background-color: rgb(245, 245, 232) ;
+    box-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 232) ;
 }
 
 h1
@@ -79,7 +80,7 @@ h1{
 }
     .card
     {
-        height: 200px;
+        height: 180px;
         width: 130px;
         margin-top: 20px;
         margin-left: 20px;
@@ -92,7 +93,7 @@ h1{
     }
     .main
     {
-        height:1200px;
+        height:100vh;
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -101,11 +102,14 @@ h1{
         background-color: pink;
     }
 h3{
-    font-size: 14px;
+    font-size: 10px;
 }
 p{
-    font-size: 11px;   
+    font-size: 10px;   
     margin-bottom: -3px;
+}
+#h{
+    display: none;
 }
 #a{
     font-size: 8px;
