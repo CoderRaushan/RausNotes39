@@ -3,6 +3,19 @@
     padding: 0%;
    
 }
+#arrowimg
+{
+    height: 30px;
+    width: 30px;
+    display: flex;
+}
+#arrowanc
+{
+   display: inline-block;
+   position: absolute;
+   left:10px;
+   top: 15px;
+}
 
 button
 {
