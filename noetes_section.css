@@ -80,10 +80,10 @@ h1{
 }
     .card
     {
-        height: 210px;
-        width: 160px;
+        height: 200px;
+        width: 142px;
         margin-top: 20px;
-        margin-left: 20px;
+         margin-left:-1px;
         border: 2px solid black;
        box-shadow: 2px 2px 8px black;
        cursor: pointer;
@@ -96,7 +96,7 @@ h1{
         height:100vh;
         width: 100%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-content:flex-start;
         flex-wrap: wrap;
         background-color: pink;
@@ -106,7 +106,7 @@ h3{
 }
 p{
     font-size: 10px;   
-    margin-bottom: 0px;
+    margin-bottom: 3px;
 }
 #h{
     display: none;
@@ -125,8 +125,8 @@ p{
 }
 #im
 {
-    height: 150px;
-    width: 160px; 
+    height: 142px;
+    width: 143px; 
 }
 
 
