@@ -80,8 +80,8 @@ h1{
 }
     .card
     {
-        height: 200px;
-        width: 142px;
+        height: 202px;
+        width: 160px;
         margin-top: 20px;
          margin-left:-1px;
         border: 2px solid black;
@@ -125,8 +125,8 @@ p{
 }
 #im
 {
-    height: 142px;
-    width: 143px; 
+    height: 145px;
+    width: 160px; 
 }
 
 
