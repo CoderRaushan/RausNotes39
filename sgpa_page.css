@@ -21,7 +21,7 @@ div{
     animation-name: anchor;
     padding-left: 5px;
     padding-right: 5px;
-    animation-duration: .7s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-delay: 0;
     animation-iteration-count: infinite;
@@ -35,15 +35,46 @@ div{
 }
 
 @keyframes anchor{
-    from{
+    10%{
         background-color:blue;
         color: white;
     }
-    to{
-        background-color:black ;
-        color: yellow;
+    20%{
+        background-color:rgb(214, 214, 113) ;
+        color: white;
     }
-    
+    30%{
+        background-color:green ;
+        color: white;
+    }
+    40%{
+        background-color:black ;
+        color: white;
+    }
+    50%{
+        background-color:white ;
+        color: black;
+    }
+    60%{
+        background-color:pink ;
+        color: white;
+    }
+    70%{
+        background-color:red ;
+        color: white;
+    }
+    80%{
+        background-color:blueviolet ;
+        color: white;
+    }
+    60%{
+        background-color:brown ;
+        color: white;
+    }
+    60%{
+        background-color:orange ;
+        color: white;
+    }
     }
 
 
