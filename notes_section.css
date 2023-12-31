@@ -48,6 +48,37 @@ p{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+#arrowimg
+{
+    height: 30px;
+    width: 30px;
+    display: flex;
+
+}
+#arrowanc
+{
+   
+   display: inline-block;
+   text-decoration: none;
+   color: black;
+   position: absolute;
+   left:2px ;
+   top: 15px;
+   align-items: center;
+}
+h1
+{
+  margin-left: 60px; 
+}
+.arrowdiv
+{
+    height: 60px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    text-align: center;
+}
 #a{
     text-decoration: none;
     padding-top: 1px;
@@ -60,6 +91,7 @@ p{
     color: white;
    
 }
+
 #a:hover
 {
 background-color:rgb(247, 244, 244);
@@ -74,6 +106,28 @@ border: 1px solid black;
 @media(max-width:678px)
 {
 
+    #arrowanc
+{
+   display: inline-block;
+   text-decoration: none;
+   color: black;
+   position: absolute;
+   left:5px ;
+   top: 20px;
+   align-items: center;
+}
+.arrowdiv
+{  
+    height: 70px;
+    background-color: yellow;
+   
+}
+
+h1
+{
+  margin-left: 40px; 
+  background-color: yellow  ;
+}
 h1{
 
     font-size: 30px;
