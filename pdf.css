@@ -1,22 +1,41 @@
-.pdf
-{
-    color: white ;
-    /* background-color:red; */
-    text-decoration: none;
-
+*{
+    margin: 0%;
+    padding: 0%;
+   
 }
 
-button{
+button
+{
     border-radius: 10px;
    background-color: rgb(191, 27, 213);
    color: whitesmoke;
    cursor: pointer;
    font-weight:300px;
-   position: absolute;
-}
+   margin-bottom: 10px;
+   align-items: flex-start;
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-top: 3px;
+   margin-left:-80px;
 
+}
+#t{
+    display: block;
+    text-align: basel;
+}
 button:hover{
     background-color: rgb(255, 255, 255);
     color: black;
     font-weight: 300px;
+   
+}
+div{
+    display:block;
+   
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+   
+  
 }
