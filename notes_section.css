@@ -62,7 +62,7 @@ p{
    text-decoration: none;
    color: black;
    position: absolute;
-   left:2px ;
+   left:10px ;
    top: 15px;
    align-items: center;
 }
@@ -105,8 +105,7 @@ border: 1px solid black;
 }
 @media(max-width:678px)
 {
-
-    #arrowanc
+#arrowanc
 {
    display: inline-block;
    text-decoration: none;
