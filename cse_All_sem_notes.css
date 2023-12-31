@@ -10,6 +10,44 @@
     justify-content: baseline;
     background-color: pink;
 }
+
+.card 
+{
+    height: 260px;
+    width: 190px;
+    border: 2px solid black;
+    margin-top: 40px;
+    margin-left: 30px;
+    box-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 232) ;
+}
+
+h1
+{
+    font-size: 50px;
+    font-weight: bold;
+    background-color: yellow;
+    text-align: center;
+    
+}
+.inner 
+{
+    text-align: center;
+    font-style:inherit;
+}
+p{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#im{
+    height: 180px;
+    width: 190px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 #arrowimg
 {
     height: 30px;
@@ -41,36 +79,6 @@ h1
     font-size: 35px;
     text-align: center;
 }
-.card 
-{
-    height: 260px;
-    width: 190px;
-    border: 2px solid black;
-    margin-top: 40px;
-    margin-left: 30px;
-    box-shadow: 2px 2px 8px black;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(245, 245, 232) ;
-}
-
-
-.inner 
-{
-    text-align: center;
-    font-style:inherit;
-}
-p{
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-#im{
-    height: 180px;
-    width: 190px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
 #a{
     text-decoration: none;
     padding-top: 1px;
@@ -83,6 +91,7 @@ p{
     color: white;
    
 }
+
 #a:hover
 {
 background-color:rgb(247, 244, 244);
@@ -94,7 +103,7 @@ border: 1px solid black;
     transform: scale(1.03);
     box-shadow: 4px 4px 8px black;
 }
-@media(max-width:744px)
+@media(max-width:678px)
 {
 #arrowanc
 {
@@ -118,12 +127,16 @@ h1
   margin-left: 40px; 
   background-color: yellow  ;
 }
+h1{
+
+    font-size: 30px;
+}
     .card
     {
-        height: 180px;
+        height: 202px;
         width: 160px;
         margin-top: 20px;
-        margin-left:-1px;
+         margin-left:-1px;
         border: 2px solid black;
        box-shadow: 2px 2px 8px black;
        cursor: pointer;
