@@ -16,16 +16,18 @@
     <img id="coin-image" src="/photos/coin1.jpeg" alt="Coin" onclick="tossCoin()">
     <p id="result"></p>
     <audio id="coin-sound">
-        <source src="/photos/toss.mp3" type="/photos/toss.mp3" dura>
+        <source src="/photos/toss.mp3" type="audio/mpeg">
     </audio>
     <script>
-        function tossCoin() {
+        function tossCoin() 
+        {
             var coinImage = document.getElementById("coin-image");
             var resultMessage;
             var coinSound = document.getElementById("coin-sound");
             coinSound.play();
             coinImage.style.transform = "rotatex(360deg)";
-                setTimeout(function() {
+                setTimeout(function() 
+            {
                 coinImage.style.transform = "rotateY(0deg)";
                 resultMessage = "Result: " + (Math.random() < 0.5 ? "Heads!" : "Tails!");
                 document.getElementById("result").innerText = resultMessage;
