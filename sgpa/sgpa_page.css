@@ -1,0 +1,140 @@
+*{
+    margin: 0%;
+    padding: 0%;    
+    background-color: rgb(188, 211, 212);
+}
+.head
+{  
+    background-color: rgb(218, 218, 24);
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 255);
+}
+
+div{
+    padding-left: 50px;
+    margin-top: 50px;
+}
+.a{
+    color: white;
+    animation-name: anchor;
+    padding-left: 5px;
+    padding-right: 5px;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50px;
+    display: inline;
+    border: solid yellow 2px;
+
+}
+
+@keyframes anchor{
+    10%{
+        background-color:blue;
+        color: white;
+    }
+    20%{
+        background-color:rgb(214, 214, 113) ;
+        color: white;
+    }
+    30%{
+        background-color:green ;
+        color: white;
+    }
+    40%{
+        background-color:black ;
+        color: white;
+    }
+    50%{
+        background-color:white ;
+        color: black;
+    }
+    60%{
+        background-color:pink ;
+        color: white;
+    }
+    70%{
+        background-color:red ;
+        color: white;
+    }
+    80%{
+        background-color:blueviolet ;
+        color: white;
+    }
+    60%{
+        background-color:brown ;
+        color: white;
+    }
+    60%{
+        background-color:orange ;
+        color: white;
+    }
+    }
+
+
+a:hover{
+    background-color:black;
+    color:white;
+    transition: transform .5s;
+    transform: scale(1.1);
+
+}
+.ul{
+    font-size: 18px;    
+    margin-top:  10px;
+    color: black;
+    font-weight: 1000;
+    font-style:oblique;
+
+
+}
+.auto
+{
+
+    margin: 20px 0px ;
+}
+.home
+{  display: inline;
+    text-decoration: none;
+    background-color: black ;
+    color: yellow;
+    position: absolute;
+   padding: 0px 8px;
+   margin: 0px 41%;
+
+   border-radius: 8px;
+}
+.home:hover{
+    transition: transform .5s;
+    transform: scale(1.1);
+}
+@media(max-width:567px)
+{
+    .a {
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    .ul{
+        font-size: 20px;
+        margin-right:25px;
+        margin-bottom: 2px;
+    }
+    .home
+{ 
+     display: inline;
+    text-decoration: none;
+    background-color: black ;
+    color: yellow;
+    position: absolute;
+    padding: 0px 8px;
+    margin: 0px 35%;
+    border-radius: 8px;
+}
+}

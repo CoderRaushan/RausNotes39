@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="che_wom_sgpa.css">
+    <title>Chemistry group without mentoring marks Sgpa Calculate</title>
+</head>
+<body>
+    <html>
+<head>
+    <title class="hi">SGPA Calculator</title>
+    <script id="yy">
+        function calculateSGPA() 
+        {
+            var arr = [];
+            var sub = ["Math-2","Chemistry","PPS","English","Che-Lab","PPS-Lab","MP","Eng-Lab"];
+            for (var n = 0; n <=7; n++) 
+            {
+                var inputId = "marks" + n;
+                var marks = parseFloat(document.getElementById(inputId).value);
+                arr.push(marks);
+            }
+
+            var o = (arr[0] / 100) * 100;
+            var o1 = (arr[1] / 100) * 100;
+            var o2 = (arr[2] / 100) * 100;
+            var o3 = (arr[3] / 100) * 100;
+            var o4 = (arr[4] / 50) * 100;
+            var o5 = (arr[5] / 50) * 100;
+            var o6 = (arr[6] / 50) * 100;
+            var o7 = (arr[7] / 50) * 100;
+          
+           
+
+            var p = Math.floor(o / 10) + 1;
+            var p1 = Math.floor(o1 / 10) + 1;
+            var p2 = Math.floor(o2 / 10) + 1;
+            var p3 = Math.floor(o3 / 10) + 1;
+            var p4 = Math.floor(o4 / 10) + 1;
+            var p5 = Math.floor(o5 / 10) + 1;
+            var p6 = Math.floor(o6 / 10) + 1;
+            var p7 = Math.floor(o7 / 10) + 1;
+          
+
+            var res = p * 4;
+            var res1 = p1 * 4;
+            var res2 = p2 * 4;
+            var res3 = p3 * 3;
+            var res4 = p4 * 1;
+            var res5 = p5 * 1;
+            var res6 = p6 * 2;
+            var res7 = p7 * 1;
+            
+          
+
+            var c1 = 20;
+            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 ;
+            var sgpa = dum / c1;
+
+            document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+   <div>  
+   
+    <h1 id="yy"> <a href="https://appsc.gndec.ac.in/" target="_blank"><img   class="logo"src="/photos/logo.png" alt=""></a><diB   class="name" >Chemistry Group Without Mentoring Marks Sgpa Calculate</helo></h1>
+        <a  class="home" href="/index.html" target="_blank">Home page</a>
+        <a  class="home1" href="sgpa_page.html" target="_blank">Previous page </a>
+   
+   </div>
+    <form> 
+        <br>
+        <table>
+            <tr>
+                <td><label for="marks0">Math-2:</label></td>
+                <td><input type="number" id="marks0" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks1">Chemistry:</label></td>
+                <td><input type="number" id="marks1" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks2">PPS:</label></td>
+                <td><input type="number" id="marks2" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks3">English:</label></td>
+                <td><input type="number" id="marks3" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks4">Che-Lab:</label></td>
+                <td><input type="number" id="marks4" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks5">PPS-Lab:</label></td>
+                <td><input type="number" id="marks5" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks6">MP:</label></td>
+                <td><input type="number" id="marks6" placeholder="Enter internel + external"></td>
+            </tr>
+            <tr>
+                <td><label for="marks7">Eng-Lab:</label></td>
+                <td><input type="number" id="marks7" placeholder="Enter internel + external"></td>
+            </tr>
+          
+        </table>
+        <button type="button" onclick="calculateSGPA()">Calculate SGPA</button>
+    </form>
+    <p id="sgpaResult"></p>
+ 
+</body>
+<footer class="foter">
+    <div class="auto"> 
+         
+        <script type="text/javascript" src="https://www.counters-free.net/count/di0e"></script><br>
+        <a href='http://www.freevisitorcounters.com'>.</a> <script type='text/javascript' src='https://whomania.com/ctr?id=87b29ffbb633494216a9b14c5748549873533df5'></script>
+ 
+    </div>
+</footer>
+</html>
+
+</body>
+
+</html>

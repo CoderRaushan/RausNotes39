@@ -140,7 +140,7 @@ display: none;
 }
 .wall
 {
- background: url(wallpaper3.jpg) no-repeat;
+ background: url(/photos/wallpaper3.jpg) no-repeat;
  background-size: cover;
  height:100vh;
  width:100%;

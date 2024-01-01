@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="it_3_sgpa.css">
+    <title>IT Sem 3 Branch Sgpa Calculate</title>
+</head>
+<body>
+    <html>
+<head>
+    <title class="hi">SGPA Calculator</title>
+    <script id="yy"> 
+        function calculateSGPA() 
+        {
+            var arr = [];
+            var sub = ["DSA","OOPs","DCLD","DCCN","PPLE","DSA-Lab","OOPs-Lab","DCCN-Lab","DCLD-Lab","Training-1","Seminar"];
+            for (var n = 0; n <=10; n++) 
+            {
+                var inputId = "marks" + n;
+                var marks = parseFloat(document.getElementById(inputId).value);
+                if (isNaN(marks) || marks === "CRN") 
+                {
+                alert("Please fill in all sections before calculating SGPA.");
+                return; 
+                }
+           
+                arr.push(marks);
+            }
+            var crn = document.getElementById("CRN").value;
+            if (crn.length !==7 || crn.substring(0, 4) !== "2221" || parseInt(crn.substring(4)) >= 150 ) 
+            {
+            alert("Please enter the valid CRN before calculating SGPA.");
+            return;
+            }
+            var o = (arr[0] / 100) * 100;
+            var o1 = (arr[1] / 100) * 100;
+            var o2 = (arr[2] / 100) * 100;
+            var o3 = (arr[3] / 100) * 100;
+            var o4 = (arr[4] / 100) * 100;
+            var o5 = (arr[5] / 50) * 100;
+            var o6 = (arr[6] / 50) * 100;
+            var o7 = (arr[7] / 50) * 100;
+            var o8 = (arr[8] / 50 )* 100;
+            var o9 = (arr[9] / 100) * 100;
+            var o10 = (arr[10] / 50)* 100;
+
+            var p = Math.floor(o / 10) + 1;
+            var p1 = Math.floor(o1 / 10) + 1;
+            var p2 = Math.floor(o2 / 10) + 1;
+            var p3 = Math.floor(o3 / 10) + 1;
+            var p4 = Math.floor(o4 / 10) + 1;
+            var p5 = Math.floor(o5 / 10) + 1;
+            var p6 = Math.floor(o6 / 10) + 1;
+            var p7 = Math.floor(o7 / 10) + 1;
+            var p8 = Math.floor(o8 / 10) + 1;
+            var p9 = Math.floor(o9 / 10) + 1;
+            var p10 = Math.floor(o10 / 10) + 1;
+
+            var res = p * 3;
+            var res1 = p1 * 3;
+            var res2 = p2 * 3;
+            var res3 = p3 * 3;
+            var res4 = p4 * 3;
+            var res5 = p5 * 1;
+            var res6 = p6 * 1;
+            var res7 = p7 * 1;
+            var res8 = p8 * 1;
+            var res9 = p9 * 1;
+            var res10 = p10 *1;
+
+            var c1 = 21;
+            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7+res8+res9+res10;
+            var sgpa = dum / c1;
+
+            document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
+            document.getElementById("sgpaInput").value = sgpa.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+   <div>  
+
+    <h1 id="yy"> <a href="https://it.gndec.ac.in/" target="_blank"><img   class="logo"src="/photos/logo.png" alt=""></a><diB  class="name" >IT 3rd Semester SGPA Calculator</helo></h1>
+        <a  class="home" href="/index.html" target="_blank">Home page</a>
+        <a  class="home1" href="sgpa_page.html" target="_blank">Previous page </a>
+    </div>
+    <form method="post" name="submit-to-google-sheet">
+        <fieldset id="fs">
+        <table>
+            <br> 
+               
+            <tr>
+                <td><label for="marks0">DSA:</label></td>
+                <td><input type="number" id="marks0" placeholder="Enter internel + external" name="DSA"></td>
+            </tr>
+            <tr>
+                <td><label for="marks1">OOPS:</label></td>
+                <td><input type="number" id="marks1" placeholder="Enter internel + external" name="OOPs"></td>
+            </tr>
+            <tr>
+                <td><label for="marks2">DCLD:</label></td>
+                <td><input type="number" id="marks2" placeholder="Enter internel + external"  name="DCLD" ></td>
+            </tr>
+            <tr>
+                <td><label for="marks3">DCCN:</label></td>
+                <td><input type="number" id="marks3" placeholder="Enter internel + external" name="DCCN"></td>
+            </tr>
+            <tr>
+                <td><label for="marks4">PPLE:</label></td>
+                <td><input type="number" id="marks4" placeholder="Enter internel + external" name="PPLE" ></td>
+            </tr>
+            <tr>
+                <td><label for="marks5">DSA-Lab:</label></td>
+                <td><input type="number" id="marks5" placeholder="Enter internel + external" name="DSA-Lab"></td>
+            </tr>
+            <tr>
+                <td><label for="marks6">OOPS-Lab:</label></td>
+                <td><input type="number" id="marks6" placeholder="Enter internel + external" name="OOPs-Lab"></td>
+            </tr>
+            <tr>
+                <td><label for="marks7">DCCN-Lab:</label></td>
+                <td><input type="number" id="marks7" placeholder="Enter internel + external" name="DCCN-Lab"></td>
+            </tr>
+            <tr>
+                <td><label for="marks8">DCLD-Lab:</label></td>
+                <td><input type="number" id="marks8" placeholder="Enter internel + external" name="DCLD-Lab"></td>
+            </tr>
+            <tr>
+                <td><label for="marks9">Tranning-1:</label></td>
+                <td><input type="number" id="marks9" placeholder="Enter internel + external" name="Tranning-1"></td>
+            </tr>
+            <tr>
+                <td><label for="marks10">Seminar:</label></td>
+                <td><input type="number" id="marks10" placeholder="Enter internel + external" name="Seminar"></td>
+            </tr>
+            <tr>
+                <td><label for="CRN">CRN:</label></td>
+                <td><input type="number" id="CRN"  placeholder="Enter CRN" name="CRN"></td>
+            </tr>
+            <tr>
+                <input type="hidden" id="sgpaInput" name="SGPA" value="">
+                <button id="noshow" type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
+            </tr>
+        </table>
+        
+        <button type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
+    </fieldset>
+    </form>
+    <p id="sgpaResult"></p> 
+ 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_2vFR62YDs-ndPMviEaaJFv-K01y_uAU_PXctXlocRNo9batkpRRbA04x2kXRqFXf/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const sgpaValue = document.getElementById("sgpaInput").value;
+          const formData = new FormData(form);
+        formData.append('SGPA', sgpaValue);
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        });
+      </script>
+</body>
+<footer class="foter">
+    <div class="auto"> 
+       
+        <script type="text/javascript" src="https://www.counters-free.net/count/di0e"></script><br>
+        <a href='http://www.freevisitorcounters.com'>.</a> <script type='text/javascript' src='https://whomania.com/ctr?id=87b29ffbb633494216a9b14c5748549873533df5'></script>
+ 
+    </div>
+</footer>
+</html>
+
+</body>
+</html>
