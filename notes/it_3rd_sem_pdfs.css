@@ -33,19 +33,16 @@ button
 }
 #t{
     display: block;
-   font-size: 22px;
+   font-size: 20px;
 }
 button:hover{
     background-color: rgb(255, 255, 255);
     color: black;
     font-weight: 300px;
-   
 }
 div{
     margin-top: 60px;
     margin-left: 50px;
     margin-right: 20px;
     text-align:left;
-   
-  
 }
