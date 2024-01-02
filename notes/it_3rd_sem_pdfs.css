@@ -46,7 +46,8 @@ div{
     margin-right: 20px;
     text-align:left;
 }
-#teli{
+#teli
+{
 text-decoration: none;
 background-color: blueviolet;
 color: white;
@@ -54,4 +55,5 @@ border-radius: 10px;
 padding-left: 3px;
 padding-right: 3px;
 font-size: 15px;
+text-align: justify;
 }
