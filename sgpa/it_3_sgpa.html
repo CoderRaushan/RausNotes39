@@ -28,7 +28,7 @@
                 arr.push(marks);
             }
             var crn = document.getElementById("CRN").value;
-            if (crn.length !==7 || crn.substring(0, 4) !== "2221" || parseInt(crn.substring(4)) >= 150 ) 
+            if (crn.length !==7 || crn.substring(0, 4) !== "2221" || parseInt(crn.substring(4)) > 160 ) 
             {
             alert("Please enter the valid CRN before calculating SGPA.");
             return;
