@@ -19,9 +19,13 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
+                if ( marks===100 ) 
+                {
+                alert("Instead of entering 100 marks, please enter 99 marks, don't worry It will work fine.");
+                return; 
+                }
                 arr.push(marks);
             }
-
             var o = (arr[0] / 100) * 100;
             var o1 = (arr[1] / 100) * 100;
             var o2 = (arr[2] / 100) * 100;

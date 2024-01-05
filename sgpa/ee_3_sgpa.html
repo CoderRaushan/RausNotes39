@@ -19,6 +19,11 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
+                if ( marks===100 ) 
+                {
+                alert("Instead of entering 100 marks, please enter 99 marks, don't worry It will work fine.");
+                return; 
+                }
                 arr.push(marks);
             }
 
