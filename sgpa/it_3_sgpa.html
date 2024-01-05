@@ -19,9 +19,14 @@
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
-                if (isNaN(marks) || marks === "CRN") 
+                if (isNaN(marks) || marks === "CRN" ) 
                 {
                 alert("Please fill in all sections before calculating SGPA.");
+                return; 
+                }
+                if ( marks===100 ) 
+                {
+                alert("Please enter less one marks");
                 return; 
                 }
            
