@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" href="/photos/weg_logo.png">
-    <link rel="stylesheet" href="style.css">
     <title>RausNotes39</title>
+    <link rel="logo" href="/photos/whatsapp.png">
+    <link rel="stylesheet" href="style.css">
 </head> 
 <body onload="myfunction()">
-    <div id="preloader"></div>
+    <div id="preloader">
+    </div>
 <nav>
          <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
-        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo" onclick="playVideo()">
-          <video id="myVideo" style="display: none;" height="90px" width="90px">
-          <source src="/video/video.mp4" type="video/mp4" ></video>RausNotes39</label> 
-</div>  
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo" >
+          RausNotes39</label>  
         <ul>
             <li><a class="active" href="index.html" target="_blank">home</a></li>
             <li><a href="/portfolio/portfolio.html" target="_blank">about</a></li>
@@ -31,8 +30,7 @@
         <a href="/portfolio/portfolio.html" target="_blank">about</a>
     </div>
     <section2>
-    <div class="wall">
-    </div>
+    <div class="wall"></div>
     </section>
     <footer class="foter">
         <p id="right">&copy; 2023 RausNotes39. All rights reserved.</p>
@@ -56,31 +54,6 @@
         {
             preloader.style.display='none';
         }
-    </script>
-      <!-- <script>
-        function playVideo() {
-          // Hide the image
-          document.getElementById("myImage").style.display = "none";
-          // Show and play the video
-          var video = document.getElementById("myVideo");
-          video.style.display = "block";
-          video.play();
-    
-          // Add mousedown event listener to detect clicks outside the video
-          document.addEventListener("mousedown", function(event) {
-            // Check if the click occurred outside the video element
-            if (!video.contains(event.target)) {
-              // Stop the video
-              video.pause();
-              video.currentTime = 0;
-              // Hide the video and show the image
-              video.style.display = "none";
-              document.getElementById("myImage").style.display = "block";
-            }
-          });
-        }
-      </script> -->
-    
-      
+    </script> 
  </body> 
 </html> 

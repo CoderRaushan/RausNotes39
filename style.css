@@ -134,7 +134,7 @@ float: right;
 line-height: 80px;
 margin-right: 10px;
 cursor: pointer;
-display: none;
+/* display: none; */
 }
 #check
 { 
