@@ -1,20 +1,22 @@
 *{
     background-color:  rgb(229, 210, 241);
+    font-family: 'Roboto', sans-serif;
 }
 h1{
-    color: rgb(31, 31, 223)  ;
+    color:black ;
 }
 h2{
-    color: rgb(18, 18, 237)  ;
+    color:black ;
 }
 p{
-    color:  rgb(13, 13, 244);
+    color:black ;
 }
 li{
-    color:rgb(0, 0, 225);
+    color:black ;
 }
 a{
     text-decoration: none;
+    color: black;
 }
 img
 {
