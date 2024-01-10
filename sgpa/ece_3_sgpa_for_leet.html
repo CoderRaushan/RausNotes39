@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/photos/weg_logo.png">
-    <link rel="stylesheet" href="ce_3_sgpa_for_leet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-    <title>CE Sem 3 Branch Sgpa Calculate</title>
+    <link rel="stylesheet" href="ece_3_sgpa_for_leet.css">
+    <title>ECE Sem 3 Branch Sgpa Calculate</title>
 </head>
 <body>
     <html>
@@ -19,8 +15,8 @@
         function calculateSGPA() 
         {
             var arr = [];
-            var sub = ["Surveying & Geomatics","Solid Mechanics","Fluid Mechanics","DP&P","BEC","CE-ISGI","Survey-Lab","FM-Lab","SM-Lab"];
-            for (var n = 0; n <=8; n++) 
+            var sub = ["MATH-3","ED","NAS","SS","DE","CA","ED-Lab","DE-Lab"];
+            for (var n = 0; n<=7; n++) 
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
@@ -42,7 +38,7 @@
             alert("Please enter the valid CRN before calculating SGPA.");
             return;
             }
-            if (crn.substring(0, 4) !== "2214" || parseInt(crn.substring(4)) >= 120) 
+            if (crn.substring(0, 4) !== "2217") 
             {
             alert("Please enter the valid CRN before calculating SGPA.");
             return; 
@@ -55,10 +51,7 @@
             var o5 = (arr[5] / 100) * 100;
             var o6 = (arr[6] / 50) * 100;
             var o7 = (arr[7] / 50) * 100;
-            var o8 = (arr[8] / 50 ) * 100;
            
-          
-
             var p = Math.floor(o / 10) + 1;
             var p1 = Math.floor(o1 / 10) + 1;
             var p2 = Math.floor(o2 / 10) + 1;
@@ -67,24 +60,22 @@
             var p5 = Math.floor(o5 / 10) + 1;
             var p6 = Math.floor(o6 / 10) + 1;
             var p7 = Math.floor(o7 / 10) + 1;
-            var p8 = Math.floor(o8 / 10) + 1;
-           
-           
+          
+            
 
-            var res = p * 4;
+            var res = p * 3;
             var res1 = p1 * 3;
-            var res2 = p2 * 3;
-            var res3 = p3 * 3;
-            var res4 = p4 * 3;
+            var res2 = p2 * 4;
+            var res3 = p3 * 4;
+            var res4 = p4 * 4;
             var res5 = p5 * 3;
             var res6 = p6 * 1;
             var res7 = p7 * 1;
-            var res8 = p8 * 1;
           
-           
+          
 
-            var c1 = 22;
-            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 + res8 ;
+            var c1 = 23;
+            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7;
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
@@ -95,86 +86,87 @@
 <body>
    <div>  
    
-    <h1 id="yy"> <a href="https://ce.gndec.ac.in/" target="_blank"><img   class="logo"src="/photos/logo.png" alt=""></a><diB  class="name" >CE 3rd Semester SGPA Calculator</helo></h1>
+    <h1 id="yy"> <a href="https://ece.gndec.ac.in/" target="_blank"><img  class="logo"src="/photos/logo.png" alt=""></a><diB  class="name" >ECE 3rd Semester SGPA Calculator</helo></h1>
         <a  class="home" href="/index.html" target="_blank">Home page</a>
-        <a  class="home1" href="/sgpa/sgpa_page.html" target="_blank">Previous page </a>
+        <a  class="home1" href="sgpa_page.html" target="_blank">Previous page </a>
    
    </div>
-    <form method="post" name="submit-to-google-sheet"> <br>
+    <form method="post" name="submit-to-google-sheet">
+        <br>
         <table>
             <tr>
-                <td><label for="marks0">Survey  & <br> Geomatics:</label></td>
-                <td><input type="number" id="marks0" placeholder="Enter internel + external" name="S&G"></td>
+                <td><label for="marks0">MATH-3:</label></td>
+                <td><input type="number" id="marks0" placeholder="Enter internel + external" name="MATH-3"></td>
             </tr>
             <tr>
-                <td><label for="marks1">SM:</label></td>
-                <td><input type="number" id="marks1" placeholder="Enter internel + external" name="SM"></td>
+                <td><label for="marks1">ED:</label></td>
+                <td><input type="number" id="marks1" placeholder="Enter internel + external" name="ED"></td>
             </tr>
             <tr>
-                <td><label for="marks2">FM:</label></td>
-                <td><input type="number" id="marks2" placeholder="Enter internel + external" name="FM"></td>
+                <td><label for="marks2">NAS:</label></td>
+                <td><input type="number" id="marks2" placeholder="Enter internel + external" name="NAS"></td>
             </tr>
             <tr>
-                <td><label for="marks3">DP&P:</label></td>
-                <td><input type="number" id="marks3" placeholder="Enter internel + external" name="DP&P"></td>
+                <td><label for="marks3">SS:</label></td>
+                <td><input type="number" id="marks3" placeholder="Enter internel + external" name="SS"></td>
             </tr>
             <tr>
-                <td><label for="marks4">BEC:</label></td>
-                <td><input type="number" id="marks4" placeholder="Enter internel + external" name="BEC"></td>
+                <td><label for="marks4">DE:</label></td>
+                <td><input type="number" id="marks4" placeholder="Enter internel + external" name="DE"></td>
             </tr>
             <tr>
-                <td><label for="marks5">CE-ISGI:</label></td>
-                <td><input type="number" id="marks5" placeholder="Enter internel + external" name="CE-ISGI"></td>
+                <td><label for="marks5">CA:</label></td>
+                <td><input type="number" id="marks5" placeholder="Enter internel + external" name="CA"></td>
             </tr>
             <tr>
-                <td><label for="marks6">Survey-Lab:</label></td>
-                <td><input type="number" id="marks6" placeholder="Enter internel + external" name="Survey-Lab"></td>
+                <td><label for="marks6">ED-Lab:</label></td>
+                <td><input type="number" id="marks6" placeholder="Enter internel + external" name="ED-Lab"></td>
             </tr>
             <tr>
-                <td><label for="marks7">FM-Lab:</label></td>
-                <td><input type="number" id="marks7" placeholder="Enter internel + external" name="FM-Lab"></td>
+                <td><label for="marks7">DE-Lab:</label></td>
+                <td><input type="number" id="marks7" placeholder="Enter internel + external" name="DE-Lab"></td>
             </tr>
             <tr>
-                <td><label for="marks8">SM-Lab:</label></td>
-                <td><input type="number" id="marks8" placeholder="Enter internel + external" name="SM-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="CRN">CRN:</label></td>
-                <td><input type="number" id="CRN"  placeholder="Enter CRN" name="CRN"></td>
+                <td>
+                    <label for="CRN">CRN:</label>
+                </td>
+                <td>
+                    <input type="number" id="CRN"  placeholder="Enter CRN" name="CRN">
+                </td>
             </tr>
             <tr>
                 <input type="hidden" id="sgpaInput" name="SGPA" value="">
                 <button id="noshow" type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
             </tr>
-           
         </table>
         <button type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
     </form>
     <p id="sgpaResult"></p>
-     
+ 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSTkEFjV3OqDUfaKovJWZoRvRTbNSCb8Zd6-4Y7y4-VajN7U5YS0sqPbRpUd6K8IfW/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-6d9-s5t4m2MFHJ0Se64CrsiZZ47KIx45DfJhZ5HOdmQvdwNehoxre7Rds8Yii_WhQw/exec'
         const form = document.forms['submit-to-google-sheet']
       
-        form.addEventListener('submit', e => 
+        form.addEventListener('submit', e =>    
         {
           e.preventDefault();
           const sgpaValue = document.getElementById("sgpaInput").value;
           const formData = new FormData(form);
-            formData.append('SGPA', sgpaValue);
-         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        formData.append('SGPA', sgpaValue);
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         });
       </script>
-</body>
+
 <footer class="foter">
     <div class="auto"> 
-        
+          
         <script type="text/javascript" src="https://www.counters-free.net/count/di0e"></script><br>
         <a href='http://www.freevisitorcounters.com'>.</a> <script type='text/javascript' src='https://whomania.com/ctr?id=87b29ffbb633494216a9b14c5748549873533df5'></script>
  
     </div>
 </footer>
 </body>
+
 </html>
