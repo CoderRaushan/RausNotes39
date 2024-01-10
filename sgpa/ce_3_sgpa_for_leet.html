@@ -19,8 +19,8 @@
         function calculateSGPA() 
         {
             var arr = [];
-            var sub = ["Surveying & Geomatics","Solid Mechanics","Fluid Mechanics","DP&P","BEC","CE-ISGI","Survey-Lab","FM-Lab","SM-Lab","Training-1"];
-            for (var n = 0; n <=9; n++) 
+            var sub = ["Surveying & Geomatics","Solid Mechanics","Fluid Mechanics","DP&P","BEC","CE-ISGI","Survey-Lab","FM-Lab","SM-Lab"];
+            for (var n = 0; n <=8; n++) 
             {
                 var inputId = "marks" + n;
                 var marks = parseFloat(document.getElementById(inputId).value);
@@ -56,7 +56,7 @@
             var o6 = (arr[6] / 50) * 100;
             var o7 = (arr[7] / 50) * 100;
             var o8 = (arr[8] / 50 ) * 100;
-            var o9 = (arr[9] / 100) * 100;
+           
           
 
             var p = Math.floor(o / 10) + 1;
@@ -68,7 +68,7 @@
             var p6 = Math.floor(o6 / 10) + 1;
             var p7 = Math.floor(o7 / 10) + 1;
             var p8 = Math.floor(o8 / 10) + 1;
-            var p9 = Math.floor(o9 / 10) + 1;
+           
            
 
             var res = p * 4;
@@ -80,11 +80,11 @@
             var res6 = p6 * 1;
             var res7 = p7 * 1;
             var res8 = p8 * 1;
-            var res9 = p9 * 1;
+          
            
 
-            var c1 = 23;
-            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 + res8 + res9;
+            var c1 = 22;
+            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7 + res8 ;
             var sgpa = dum / c1;
 
             document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
@@ -137,10 +137,6 @@
             <tr>
                 <td><label for="marks8">SM-Lab:</label></td>
                 <td><input type="number" id="marks8" placeholder="Enter internel + external" name="SM-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="marks9">Tranning-1:</label></td>
-                <td><input type="number" id="marks9" placeholder="Enter internel + external" name="Tranning-1"></td>
             </tr>
             <tr>
                 <td><label for="CRN">CRN:</label></td>
