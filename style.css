@@ -397,7 +397,7 @@ padding-right: 1rem;
       margin: 50px 0;
       line-height: 30px;
   }
-  a:hover,a.active
+   nav a:hover,a.active
   {
       background: none;
       color: white;
