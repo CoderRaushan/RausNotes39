@@ -340,9 +340,13 @@ margin-top: 15px;
 {
   width: 100%;
 }
+.frow4
+{
+margin-top: 2rem;
+}
   .footer
 {
-  height: 54rem;
+  height: 56rem;
   width: 100%;
 }
 .frow3
