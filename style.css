@@ -354,9 +354,9 @@ margin-top: 15px;
 padding: 1rem;
 padding-right: 1rem;
 }
-.myfooter a
+.footer a
 {
-  opacity: .8;
+  opacity: 1;
 }
   #preloader
   {
