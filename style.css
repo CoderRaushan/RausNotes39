@@ -2,8 +2,8 @@
   padding:0%;
   margin:0%;
   font-family: 'Roboto', sans-serif;
-  text-decoration: none;
   box-sizing: border-box;
+  list-style: none;
 }
 #preloader
 {
@@ -27,8 +27,8 @@ nav{
 background-color: #759f35;;
 height: 80px;
 width: 100%;
-padding: 0px 10px;  
-
+padding: 0px 10px; 
+ z-index: 1;
 }
 label.logo
 { 
@@ -40,7 +40,8 @@ font-weight: bold;
 cursor: pointer;
 
 }
-.lp{
+.lp
+{
   height: 50px;
   width: 50px;
  margin: 15px 5px;
@@ -48,13 +49,15 @@ cursor: pointer;
  /* border: 2px solid; */
  
 }
-nav ul{
+nav ul
+{
   float: right;
   /* margin-right: 20px; */
  margin-top: -77px;
   
 }
-.social{
+.social
+{
   height: 20px; 
   width: 20px ;
   border-radius: 50%;
@@ -67,29 +70,32 @@ nav ul{
   background: none;
 
 }
-nav{
+nav
+{
   position: sticky;
   top:0;
 }
 
-nav ul li{
+nav ul li
+{
   display: inline-block;
   line-height: 80px;
   margin: 0 3px;
 
 }
-nav ul li a{
+nav ul li a
+{
   color: white;
   /* font-size: 20px; */
   text-transform: uppercase;
   padding: 5px 7px;
   border-radius: 50px;
   border: 1.5px solid rgb(255, 255, 255);
-  
+  text-decoration: none;
 
 }
-
-#search {
+#search 
+{
   height: 30px;
   width: 300px;
   border-radius: 8px;
@@ -98,7 +104,7 @@ nav ul li a{
   margin-top: -26px;
 }
 
-a:hover
+nav ul li a:hover
 {
   background:white;
   color: black;
@@ -106,26 +112,32 @@ a:hover
   transform: scalex(2);
   
 }
+.item a:hover
+{
+  background:white;
+  color: black;
+  transition: .3s;
+  transform: scalex(2);
+}
 div.item
 {  
   background-color: black ;
   color: white ;
   line-height: 40px;
 }
-div a
+.item a
 {
   /* color: rgb(255, 255, 255);
   text-transform: uppercase;
   padding: 7px 13px;
   border-radius: 15px;
   border: 2px solid rgb(185, 167, 167); */
-
+  text-transform: uppercase;
     color: rgb(255, 255, 255);
-    text-transform: uppercase;
     padding: 2px 5px;
     border-radius: 15px;
     /* border: 2px solid rgb(185, 167, 167); */
-
+    text-decoration: none;
 }
 .checkbtn
 {
@@ -179,15 +191,128 @@ margin:0px -45px;
   font-size: 11px;
   
 }
+.footer
+{
+  height: 386px;
+  width: 100%;
+  background-color: #141415;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.myfooter
+{
+  height: 293px;
+  width: 95%;
+  display: flex;
+}
+.myfooter a
+{
+  text-decoration: none;
+  color: lavenderblush;
+  opacity: .5;
+  font-family: 'Kanit', sans-serif;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.myfooter a:hover
+{
+  opacity: 1;
+  cursor: pointer;
+  text-decoration:underline;
+}
+.myfooter i
+{
+  margin-right: 5px;
+}
+.footer-copyright
+{
+  height: 35px;
+  width: 100%;
+  background-color: #0f0f10;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.frow1
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.img
+{
+  height: 80px;
+ 
+}
+.frow2
+{
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: baseline;
+  align-items: center; 
+  margin-top: 15px;
+}
+.frow2 a
+{
+display: flex;
+margin-top: 15px;
+}
+.frow3 a
+{
+display: flex;
+margin-top: 15px;
+}
+.frow4 a
+{
+display: flex;
+margin-top: 15px;
+}
+
+.frow3
+{
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30%; 
+  align-items: center;
+}
+.frow4
+{
+  margin-top: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;  
+
+}
+.right{
+  color: white;
+  text-align: center;
+}
 @media(max-width:952px)
 {
-  lable.logo{
+  lable.logo
+  {
       font-size: 30px;
   }
-  nav ul li a{
+  nav ul li a
+  {
       font-size: 16px;
   }
-  #search {
+  #search 
+  {
     height: 30px;
     width: 200px;
     border-radius: 8px;
@@ -198,7 +323,37 @@ margin:0px -45px;
 }
 @media(max-width:658px)
 {
- 
+  .myfooter
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .frow1{
+    margin-top: 1rem
+  }
+  .frow1 img
+  {
+    height: 120px;
+  }
+.frow1,.frow2,.frow3,.frow4
+{
+  width: 100%;
+}
+  .footer
+{
+  height: 54rem;
+  width: 100%;
+}
+.frow3
+{
+  margin-top: 0px;
+}
+.footer-copyright
+{
+padding: 1rem;
+padding-right: 1rem;
+}
   #preloader
   {
     background: black url('https://client.ianperks.org/Images/Animations/spin7.gif')
@@ -209,13 +364,15 @@ margin:0px -45px;
   width: 100%;
   height: 100vh;
   z-index:99999;
+
   }
   .checkbtn
   {
       display: block;
       font-size: 20px;
   }
-  ul{
+  nav ul
+  {
       position: fixed;
       width: 85%;
       height: 100vh;
@@ -224,6 +381,7 @@ margin:0px -45px;
       left:-100%;
       text-align: center;
       transition: all .1s;
+      
   }
   #somelink
 {
@@ -239,7 +397,8 @@ margin:0px -45px;
       margin: 50px 0;
       line-height: 30px;
   }
-  a:hover,a.active{
+  a:hover,a.active
+  {
       background: none;
       color: white;
         background: #f4e9e9;
@@ -271,14 +430,16 @@ margin:0px -45px;
 }
 @media(max-width:334px)
 {
-  label.logo {
+  label.logo 
+  {
     color: white;
     font-size: 23px;
     line-height: 80px;
     font-weight: bold;
     cursor: pointer;
 }
-.social{
+.social
+{
   height: 20px; 
   width: 20px ;
   border-radius: 50%;
