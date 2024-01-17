@@ -391,7 +391,7 @@ padding-right: 1rem;
       transition: all .1s;
       
   }
-  #somelink
+#somelink
 {
   margin-bottom:5px;
   font-family:initial;
@@ -407,8 +407,8 @@ padding-right: 1rem;
   }
    nav a:hover,a.active
   {
-      background: none;
-      color: white;
+        background: none;
+        color: white;
         background: #f4e9e9;
         color: black;
         transition: .5s;
@@ -416,9 +416,9 @@ padding-right: 1rem;
   }
   #check:checked ~ ul{
       left: 0;
-
   }
-  #search {
+  #search 
+  {
     height: 27px;
     width: 200px;
     border-radius: 8px;
@@ -427,14 +427,14 @@ padding-right: 1rem;
     margin-top: -26px;
     
   }
-  .social{
+  .social
+  {
     height: 20px; 
     width: 20px ;
     border-radius: 50%;
     margin-top: 3px;
     margin-right: -3px;
   }
-  
 }
 @media(max-width:334px)
 {
@@ -445,7 +445,7 @@ padding-right: 1rem;
     line-height: 80px;
     font-weight: bold;
     cursor: pointer;
-}
+  }
 .social
 {
   height: 20px; 
@@ -454,5 +454,4 @@ padding-right: 1rem;
   margin-top: 3px;
   margin-right: -3px;
 }
-
 }
