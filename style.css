@@ -83,17 +83,31 @@ nav ul li
   margin: 0 3px;
 
 }
-nav ul li a
+.nav-item  a
 {
-  color: white;
+  /* background-color: white; */
+  color: #FFFFF7;
+  font-weight: bolder;
   /* font-size: 20px; */
   text-transform: uppercase;
   padding: 5px 7px;
-  border-radius: 50px;
-  border: 1.5px solid rgb(255, 255, 255);
+  /* border-radius: 50px; */
+  /* border: 1.5px solid rgb(255, 255, 255); */
   text-decoration: none;
-
 }
+.nav-item .login, .nav-item .sign-up
+{
+  color:black;
+  text-transform: uppercase;;
+  border-radius: 0;
+  border:0;
+  background-color:yellow;
+}
+.nav-item .sign-up
+{
+  background-color:white;
+}
+
 #search 
 {
   height: 30px;
@@ -104,13 +118,15 @@ nav ul li a
   margin-top: -26px;
 }
 
-nav ul li a:hover
+.nav-item a:hover
 {
-  background:white;
-  color: black;
+  /* background:white; */
+  /* color: black; */
   transition: .3s;
   transform: scalex(2);
-  
+  background-color: white;
+  color: black;
+  border-radius: 80px;
 }
 .item a:hover
 {
@@ -121,7 +137,7 @@ nav ul li a:hover
 }
 div.item
 {  
-  background-color: black ;
+  background-color: #141415 ; 
   color: white ;
   line-height: 40px;
 }
@@ -301,6 +317,7 @@ margin-top: 15px;
   color: white;
   text-align: center;
 }
+
 @media(max-width:952px)
 {
   lable.logo
