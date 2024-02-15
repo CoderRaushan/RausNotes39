@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://rausnotes39.netlify.app/sitemap.xml">
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Example URL 1 -->
   <url>
     <loc>https://rausnotes39.netlify.app/notes/notes_section</loc>
-    <lastmod>2023-11-7</lastmod>
+    <lastmod>2023-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Example URL 2 -->
   <url>
     <loc>https://rausnotes39.netlify.app/sgpa/sgpa_page</loc>
-    <lastmod>2023-11-7</lastmod>
+    <lastmod>2023-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
-  
- <url>
+
+  <url>
     <loc>https://rausnotes39.netlify.app/weather/weather</loc>
     <lastmod>2024-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
 
-   <url>
+  <url>
     <loc>https://rausnotes39.netlify.app/toss/toss</loc>
     <lastmod>2023-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
+
   <url>
     <loc>https://rausnotes39.netlify.app/portfolio/portfolio</loc>
     <lastmod>2023-11-24</lastmod>
