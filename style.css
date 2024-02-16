@@ -7,7 +7,7 @@
 }
 #preloader
 {
-  background: black url('https://client.ianperks.org/Images/Animations/spin7.gif')
+background: black url('https://client.ianperks.org/Images/Animations/spin7.gif')
 no-repeat center
 ;
 width: 100%;
@@ -299,6 +299,65 @@ color: black;
   border-radius: 50%;
   z-index: -1;
   }
+  .hero-heading
+  {
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1 rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+  }
+  .hero-title
+  {
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+  }
+  .about .hero-main 
+  {
+     display: flex;
+     justify-content:center;
+     align-items: center;
+  }
+.about-image img
+  {
+  height:70vh;
+  width: 50vw;  
+  }
+.hero-content
+  {
+    padding-left: 2rem;
+
+  }
+.hero-content h3
+{
+font-size: 3rem;
+color: var(--pink);
+}
+.hero-content p
+{
+text-align: justify;
+font-size: 1.6rem;
+color: var(--pink);
+color: #999;
+padding:1rem 0;
+}
+.hero-content button
+{ 
+  height: 3.5rem;
+  width: 17rem;
+  background-color: blue;
+  color: #fff;
+  border-radius: 5rem;
+  box-shadow:0 .3rem 1 rem rgpb(0,0,0,.3);
+  font-size: 2rem;
+  cursor:pointer;
+  transition:.2s;
+}
 .foter 
 {
   /* #333 */
@@ -306,12 +365,13 @@ color: black;
   color: #fff;
   padding-top: 5px;
   padding-bottom: 5px;
-  text-align:center ;
+  text-align:center;
   position: fixed;
   bottom: 0;
   width: 100%;
-
 }
+
+
 .auto 
 {
 position: fixed;
@@ -347,7 +407,7 @@ margin:0px -45px;
 {
   height: 293px;
   width: 95%;
-  display: flex;
+  display:flex;
 }
 .myfooter a
 {
@@ -374,9 +434,9 @@ margin:0px -45px;
   height: 45px;
   width: 100%;
   background-color: #0f0f10;
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .frow1
 {
@@ -617,6 +677,54 @@ padding-right: 1rem;
   width:0;
   border-radius:0;
   z-index: -1;
+}
+.about .hero-main 
+{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.hero-heading 
+{
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+.hero-title 
+{
+ font-size: 1.5rem;
+}
+.hero-content 
+{
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0;
+}
+.hero-content h3 
+{
+  font-size: 1.5rem;
+}
+.hero-content p 
+{
+  font-size: 1rem;
+}
+.hero-content button 
+{
+  height: 2rem;
+  width: 7rem;
+  background-color: blue;
+  color: #fff;
+  border-radius: 5rem;
+  box-shadow: 0 .3rem 1 rem rgpb(0,0,0,.3);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .2s;
+}
+.about-image img 
+{
+  height: 70vh;
+  width: 100vw;
 }
 }
 @media(max-width:334px)
