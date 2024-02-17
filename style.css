@@ -2,18 +2,41 @@
   padding: 0%;
   margin: 0%;
   font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   list-style: none;
 }
-#preloader {
+:root{
+  --primary-color:#fff;
+  --secondary-color:#000;
+}
+body
+{
+  background-color: var(--primary-color);
+}
+.dark_theme
+{
+  --primary-color:#000;
+  --secondary-color:#fff;
+}
+#preloader 
+{
   background: black
-    url("https://client.ianperks.org/Images/Animations/spin7.gif") no-repeat
-    center;
+  url("https://client.ianperks.org/Images/Animations/spin7.gif") no-repeat
+  center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-size: 15%;
   z-index: 99999;
+}
+.dark-mode img
+{
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: white;  
+  color: white;
+  cursor:pointer;
+  
 }
 body {
   font-family: montserrat;
@@ -27,7 +50,7 @@ nav {
   z-index: 1;
 }
 label.logo {
-  color: white;
+  color: var(--primary-color);
   font-size: 35px;
   line-height: 80px;
   display: flex;
@@ -69,7 +92,7 @@ nav ul li {
 }
 .nav-item a {
   /* background-color: white; */
-  color: #fffff7;
+  color: var(--primary-color);
   font-weight: bolder;
   /* font-size: 20px; */
   text-transform: uppercase;
@@ -80,14 +103,14 @@ nav ul li {
 }
 .nav-item .login,
 .nav-item .sign-up {
-  color: black;
+  color:  var(--secondary-color);
   text-transform: uppercase;
   border-radius: 0;
   border: 0;
   background-color: yellow;
 }
 .nav-item .sign-up {
-  background-color: white;
+  background-color: var(--primary-color);
 }
 
 #search {
@@ -104,14 +127,14 @@ nav ul li {
   /* color: black; */
   transition: 0.3s;
   transform: scalex(2);
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: var(--primary-color);
+  color:  var(--secondary-color);
   border-radius: 80px;
 }
 
 div.item {
   background-color: #141415;
-  color: white;
+  color: var(--primary-color);
   line-height: 40px;
 }
 .item a {
@@ -121,7 +144,7 @@ div.item {
   border-radius: 15px;
   border: 2px solid rgb(185, 167, 167); */
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: var(--primary-color);
   padding: 2px 5px;
   /* border-radius: 15px; */
   /* border: 2px solid rgb(185, 167, 167); */
@@ -129,14 +152,14 @@ div.item {
 }
 .item a:hover {
   background: rgb(232, 116, 7);
-  color: white;
+  color: var(--primary-color);
   transition: 0.3s;
   transform: scalex(2);
   padding: 10px 5px;
 }
 .checkbtn {
   font-size: 30px;
-  color: white;
+  color:var(--primary-color);
   float: right;
   line-height: 80px;
   margin-right: 10px;
@@ -174,7 +197,7 @@ div.item {
 }
 .home .content h1 {
   font-size: 3rem;
-  color: #fff;
+  color: var(--primary-color);
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -184,7 +207,7 @@ div.item {
   padding-right: 20rem;
   text-align: center;
   font-size: 1rem;
-  color: #fff;
+  color: var(--primary-color);
 }
 .home .content button {
   margin-top: 2rem;
@@ -193,7 +216,7 @@ div.item {
   border-radius: 5rem;
   cursor: pointer;
   background: var(--pink);
-  color: #fff;
+  color:var(--primary-color);
   font-size: 1.5rem;
   background-color: #2c3e50;
 }
@@ -216,7 +239,7 @@ div.item {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color:var(--primary-color);
   border-radius: 1rem;
   margin-right: 3rem;
   padding-left: 1.5rem;
@@ -226,7 +249,7 @@ div.item {
 }
 .box-container .box:hover {
   transform: scale(1.03);
-  box-shadow: 4px 4px 8px rgb(0, 0, 0);
+  box-shadow: 4px 4px 8px  var(--secondary-color);
   transition-duration: 0.3s;
 }
 .box-container .box img {
@@ -237,12 +260,12 @@ div.item {
 }
 .box-container .box h3 {
   font-size: 30px;
-  color: black;
+  color:  var(--secondary-color);
 }
 .box-container .box p {
   margin-top: 1rem;
   font-size: 1rem;
-  color: black;
+  color:  var(--secondary-color);
   font-weight: lighter;
 }
 .box-container .box a {
@@ -254,7 +277,7 @@ div.item {
   bottom: -50%;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 70vh solid #fff;
+  border-top: 70vh solid var(--primary-color);
   width: 120%;
   border-radius: 50%;
   z-index: -1;
@@ -302,7 +325,7 @@ div.item {
   height: 3.5rem;
   width: 17rem;
   background-color: blue;
-  color: #fff;
+  color: var(--primary-color);
   border-radius: 5rem;
   box-shadow: 0 0.3rem 1 rem rgpb(0, 0, 0, 0.3);
   font-size: 2rem;
@@ -321,7 +344,7 @@ div.item {
   border-radius: 10px;
   height: 200px;
   width: 300px;
-  background-color: #fff;
+  background-color: var(--primary-color);
   margin-bottom: 8rem;
   display: flex;
   justify-content: center;
@@ -347,7 +370,7 @@ div.item {
 }
 .student-review-card p {
   text-decoration: none;
-  color: black;
+  color: var(--secondary-color);
   padding-left: 2rem;
   padding-right: 2rem;
   text-align: center;
@@ -355,7 +378,7 @@ div.item {
 
 .student-review-card h3 {
   text-decoration: none;
-  color: black;
+  color:  var(--secondary-color);
 }
 .student-review-card a {
   text-decoration: none;
@@ -388,7 +411,7 @@ textarea {
   margin-right: 2rem;
   height: 3rem;
   width: 90%;
-  background-color: #fff;
+  background-color: var(--primary-color);
   border-radius: 5rem;
   padding: 0 1rem;
   margin: 1 rem 0;
@@ -401,7 +424,7 @@ textarea {
   border-radius: 1rem;
   padding: 1rem;
   resize: none;
-  border: 2px solid black;
+  border: 2px solid  var(--secondary-color);
 }
 .contact-us-image img {
   height: 638px;
@@ -410,14 +433,14 @@ textarea {
 .contact-us-form form input[type="submit"] {
   width: 15rem;
   background-color: orange;
-  color: #000;
+  color:  var(--secondary-color);
   cursor: pointer;
   font-size: 1.4rem;
 }
 /* faq section */
 .faq 
 {
-  background-color: #e3edf7;
+  background-color: var(--primary--color);
   height:1200px;
   width: auto;
 }
@@ -461,7 +484,7 @@ textarea {
   transition: max-height 0.5s, padding 0.5s;
 }
 .faq-content p {
-  color: black;
+  color:  var(--secondary-color);
   padding: 0 10px;
   line-height: 26px;
 }
@@ -475,7 +498,7 @@ textarea {
 .scroll-to-top i
 {
   background-color: #581c84;
-  color: #fff;
+  color: var(--primary-color);
   border-radius: 50%;
   font-size: 1.5rem;
   position: fixed;
@@ -489,7 +512,7 @@ textarea {
 .foter {
   /* #333 */
   background-color: #333;
-  color: #fff;
+  color: var(--primary-color);
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
@@ -566,7 +589,7 @@ textarea {
   height: 80px;
 }
 .frow2 {
-  color: white;
+  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -589,7 +612,7 @@ textarea {
 
 .frow3 {
   margin-top: 40px;
-  color: white;
+  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -597,14 +620,14 @@ textarea {
 }
 .frow4 {
   margin-top: 15px;
-  color: white;
+  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   width: 30%;
   align-items: center;
 }
 .right {
-  color: white;
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -660,7 +683,7 @@ textarea {
     opacity: 1;
   }
   #preloader {
-    background: black
+    background: var(--secondary-color)
       url("https://client.ianperks.org/Images/Animations/spin7.gif") no-repeat
       center;
     position: fixed;
@@ -697,9 +720,9 @@ textarea {
   nav a:hover,
   a.active {
     background: none;
-    color: white;
+    color: var(--primary-color);
     background: #f4e9e9;
-    color: black;
+    color:  var(--secondary-color);
     transition: 0.5s;
     transform: scalex(2);
   }
@@ -743,7 +766,7 @@ textarea {
     border-radius: 5rem;
     cursor: pointer;
     background: var(--pink);
-    color: #fff;
+    color: var(--primary-color);
     font-size: 1rem;
     background-color: #2c3e50;
   }
@@ -787,7 +810,7 @@ textarea {
     height: 2rem;
     width: 7rem;
     background-color: blue;
-    color: #fff;
+    color: var(--primary-color);
     border-radius: 5rem;
     box-shadow: 0 0.3rem 1 rem rgpb(0, 0, 0, 0.3);
     font-size: 1rem;
@@ -852,7 +875,7 @@ textarea {
 }
 @media (max-width: 334px) {
   label.logo {
-    color: white;
+    color: var(--primary-color);
     font-size: 23px;
     line-height: 80px;
     font-weight: bold;

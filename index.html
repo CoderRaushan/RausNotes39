@@ -24,6 +24,7 @@
             <li><a href="/portfolio/portfolio.html" target="_blank">about</a></li>
             <li><a href="service.html">service</a></li>
             <li><a href="#">feedback</a></li>
+            <li class="dark-mode" ><img id="darkicon" src="/photos/sun.svg" alt="" height="30px" width="30px"></li>
             <!-- <li><a href="" class="login" >login</a></li> 
             <li><a href="" class="sign-up">sign up</a></li> -->
         </ul> 
@@ -319,6 +320,24 @@
         behavior: "smooth"
         });
         });
-        </script>
+    </script>
+    
+
+    <script>
+        var darkicon=document.getElementById("darkicon");
+        darkicon.onclick=function()
+        {
+            document.body.classList.toggle("dark_theme");
+            if(document.body.classList.contains("dark_theme")) 
+        {
+            darkicon.src = "/photos/sun.svg";
+        }
+        else
+        {
+            darkicon.src ="/photos/moon.svg";
+        }
+        }
+       
+    </script>
 </body> 
 </html>
