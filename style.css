@@ -263,6 +263,7 @@ display: none;
 {
   transform: scale(1.03);
   box-shadow: 4px 4px 8px rgb(0, 0, 0);
+  transition-duration: .3s;
 }
 .box-container .box img
 {
@@ -358,6 +359,88 @@ padding:1rem 0;
   cursor:pointer;
   transition:.2s;
 }
+.review-card-container
+{
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: justify;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.student-review-card
+{
+  border-radius: 10px;
+  height: 190px;
+  width: 300px;
+  background-color: #fff;
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow:  5px 5px rgba(80, 0, 239, 0.886);
+}
+.student-review-card:hover
+{
+  transition:ease;
+  transform: scale(1.07);
+  transition-duration: .4s;
+  box-shadow: 4px 4px 8px rgb(0, 0, 0);
+}
+.student-review-card img
+{
+height: 8rem;
+width: 8rem;
+border-radius: 50%;
+margin-top: -4rem;
+/* border: 5px solid black; */
+border: .6rem solid blue;
+border-left: .6rem solid violet;
+border-bottom: .6rem solid yellow;
+border-right: .6rem solid black;
+}
+.student-review-card p
+{
+  text-decoration: none;
+  color: black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.student-review-card h3
+{
+  text-decoration: none;
+  color: black;
+}
+
+.student-review-card a
+{
+  text-decoration: none;
+}
+
+.student-review-card i
+{
+  color: blue;
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .foter 
 {
   /* #333 */
@@ -725,6 +808,15 @@ padding-right: 1rem;
 {
   height: 50vh;
   width: 100vw;
+}
+.student-review-card
+{
+width: 250px;
+height: 202px;
+}
+.student-review-card i
+{
+margin-top: 8px;
 }
 }
 @media(max-width:334px)
