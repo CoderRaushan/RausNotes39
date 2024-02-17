@@ -231,7 +231,7 @@ div.item {
 }
 
 .box-container .box {
-  margin-bottom: 8rem;
+  margin-bottom: 5.7rem;
   height: 15rem;
   width: 18rem;
   display: flex;
@@ -243,7 +243,7 @@ div.item {
   border-radius: 1rem;
   margin-right: 3rem;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-right: 1.5rem;  
   cursor: pointer;
   box-shadow: 5px 5px rgba(80, 0, 239, 0.886);
 }
