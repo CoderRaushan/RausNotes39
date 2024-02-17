@@ -480,9 +480,10 @@ textarea {
   border-radius: 50%;
   font-size: 1.5rem;
   position: fixed;
-  bottom:3rem;
+  bottom:2rem;
   right: 1.3rem;
   padding: 1rem 1.2rem;
+  z-index: 55;
 }
 .foter {
   /* #333 */
