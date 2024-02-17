@@ -326,7 +326,7 @@ color: black;
   }
 .about-image img
   {
-  height:70vh;
+  height:82vh;
   width: 50vw;  
   }
 .hero-content
@@ -371,7 +371,7 @@ padding:1rem 0;
 .student-review-card
 {
   border-radius: 10px;
-  height: 190px;
+  height: 200px;
   width: 300px;
   background-color: #fff;
   margin-bottom: 8rem;
@@ -405,6 +405,7 @@ border-right: .6rem solid black;
   color: black;
   padding-left: 2rem;
   padding-right: 2rem;
+  text-align:center;
 }
 
 .student-review-card h3
@@ -412,19 +413,71 @@ border-right: .6rem solid black;
   text-decoration: none;
   color: black;
 }
-
 .student-review-card a
 {
   text-decoration: none;
 }
-
 .student-review-card i
 {
   color: blue;
   margin-top: 8px;
 }
 
-
+.contact-us-field
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-us-form
+{
+  height:50%;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.contact-us-image 
+{
+  height: 50%;
+  width: 50%;
+}
+.contact-us-form form input,textarea
+{
+margin-top: 1.4rem;
+margin-right: 2rem;
+height:3rem;
+width:90%;
+background-color: #fff;
+border-radius: 5rem;
+padding: 0 1rem;
+margin: 1 rem 0;
+color: var(--pink);
+font-size: 1.2rem;
+transition: .2s linear;
+}
+.contact-us-form form textarea
+{
+  height: 10rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  resize: none;
+  border: 2px solid black;
+}
+.contact-us-image img
+{
+  height:638px;
+  width:638px;
+}
+.contact-us-form form input[type="submit"]
+{
+  width: 15rem;
+  background-color: orange;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
 
 
 
@@ -812,11 +865,44 @@ padding-right: 1rem;
 .student-review-card
 {
 width: 250px;
-height: 202px;
+height: 220px;
 }
 .student-review-card i
 {
 margin-top: 8px;
+}
+.contact-us-field
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-us-form
+{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height:100%;
+  width: 100%;
+}
+.contact-us-image 
+{
+  height: 100%;
+  width: 100%;
+}
+.contact-us-image img
+{ 
+  height:380px;
+  width:auto;
+}
+.contact-us-form form input,textarea
+{
+
+height:2.3rem;
+width:80%;
+
 }
 }
 @media(max-width:334px)
