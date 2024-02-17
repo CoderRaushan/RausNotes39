@@ -50,7 +50,7 @@ nav {
   z-index: 1;
 }
 label.logo {
-  color: var(--primary-color);
+  color:  #fff;
   font-size: 35px;
   line-height: 80px;
   display: flex;
@@ -92,7 +92,7 @@ nav ul li {
 }
 .nav-item a {
   /* background-color: white; */
-  color: var(--primary-color);
+  color: #fff;
   font-weight: bolder;
   /* font-size: 20px; */
   text-transform: uppercase;
@@ -134,7 +134,7 @@ nav ul li {
 
 div.item {
   background-color: #141415;
-  color: var(--primary-color);
+  color:  #fff;
   line-height: 40px;
 }
 .item a {
@@ -144,7 +144,7 @@ div.item {
   border-radius: 15px;
   border: 2px solid rgb(185, 167, 167); */
   text-transform: uppercase;
-  color: var(--primary-color);
+  color:  #fff;
   padding: 2px 5px;
   /* border-radius: 15px; */
   /* border: 2px solid rgb(185, 167, 167); */
@@ -197,7 +197,7 @@ div.item {
 }
 .home .content h1 {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: #fff ;
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -207,7 +207,7 @@ div.item {
   padding-right: 20rem;
   text-align: center;
   font-size: 1rem;
-  color: var(--primary-color);
+  color: #fff;
 }
 .home .content button {
   margin-top: 2rem;
@@ -216,7 +216,7 @@ div.item {
   border-radius: 5rem;
   cursor: pointer;
   background: var(--pink);
-  color:var(--primary-color);
+  color: #fff;
   font-size: 1.5rem;
   background-color: #2c3e50;
 }
@@ -325,10 +325,10 @@ div.item {
   height: 3.5rem;
   width: 17rem;
   background-color: blue;
-  color: var(--primary-color);
+  color:  #fff;
   border-radius: 5rem;
   box-shadow: 0 0.3rem 1 rem rgpb(0, 0, 0, 0.3);
-  font-size: 2rem;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -364,7 +364,7 @@ div.item {
   margin-top: -4rem;
   /* border: 5px solid black; */
   border: 0.6rem solid blue;
-  border-left: 0.6rem solid violet;
+  border-left: 0.6rem solid orange;
   border-bottom: 0.6rem solid yellow;
   border-right: 0.6rem solid black;
 }
@@ -484,7 +484,7 @@ textarea {
   transition: max-height 0.5s, padding 0.5s;
 }
 .faq-content p {
-  color:  var(--secondary-color);
+  color:  black;
   padding: 0 10px;
   line-height: 26px;
 }
@@ -498,7 +498,7 @@ textarea {
 .scroll-to-top i
 {
   background-color: #581c84;
-  color: var(--primary-color);
+  color:  #fff;
   border-radius: 50%;
   font-size: 1.5rem;
   position: fixed;
@@ -589,7 +589,7 @@ textarea {
   height: 80px;
 }
 .frow2 {
-  color: var(--primary-color);
+  color:  #fff;
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -620,7 +620,7 @@ textarea {
 }
 .frow4 {
   margin-top: 15px;
-  color: var(--primary-color);
+  color: #fff;
   display: flex;
   flex-direction: column;
   width: 30%;
