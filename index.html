@@ -38,7 +38,7 @@
 <!--card section  -->
 <main>
     <div class="scroll-to-top">
-        <i class="fa-solid fa-arrow-up"></i>
+        <i id="scroll-to-top-icon" class="fa-solid fa-arrow-up"></i>
      </div>
     <section class="home">
         <div class="content">
@@ -304,6 +304,21 @@
             }
         }
     </script>
-    
+    <script>
+        const scrollBtn = document.querySelector('#scroll-to-top-icon');
+        window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 532) {
+        scrollBtn.style.display = "block";
+        } else {
+        scrollBtn.style.display = "none";
+        }
+        });
+        scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+        });
+        });
+        </script>
 </body> 
 </html>

@@ -472,7 +472,6 @@ textarea {
 .faq-accordion li input[type="radio"]:checked + label::before {
   content: "-";
 }
-
 .scroll-to-top i
 {
   background-color: #581c84;
@@ -484,6 +483,8 @@ textarea {
   right: 1.3rem;
   padding: 1rem 1.2rem;
   z-index: 55;
+  cursor: pointer;
+  display: none;
 }
 .foter {
   /* #333 */
