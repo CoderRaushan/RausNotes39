@@ -414,8 +414,7 @@ textarea {
   cursor: pointer;
   font-size: 1.4rem;
 }
-/* faq */
-
+/* faq section */
 .faq 
 {
   background-color: #e3edf7;
@@ -472,6 +471,18 @@ textarea {
 }
 .faq-accordion li input[type="radio"]:checked + label::before {
   content: "-";
+}
+
+.scroll-to-top i
+{
+  background-color: #581c84;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom:3rem;
+  right: 1.3rem;
+  padding: 1rem 1.2rem;
 }
 .foter {
   /* #333 */
