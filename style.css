@@ -854,6 +854,13 @@ textarea {
   .student-review-card i {
     margin-top: 8px;
   }
+  .student-review-card p {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    text-align: center;
+}
   .contact-us-field {
     display: flex;
     flex-direction: column;
