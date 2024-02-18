@@ -20,13 +20,23 @@
         <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>  
         <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo" onclick="playVideo()">RausNotes39</label> 
         <ul class="nav-item">
-            <li><a class="active" href="index.html" target="_blank" style=" background-color:white; color: black;border-radius: 80px;">home</a></li>
-            <li><a href="/portfolio/portfolio.html" target="_blank">about</a></li>
-            <li><a href="service.html">service</a></li>
-            <li><a href="#">feedback</a></li>
-            <li class="dark-mode" ><img id="darkicon" src="/photos/sun.svg" alt="" height="30px" width="30px"></li>
+            <li ><a class="active"href="index.html" target="_blank" style=" background-color:white; color: black;border-radius: 80px;">Home</a></li>
+            <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
+            <li><a  class="active" href="service.html">Service</a></li>
+            <li><a  class="active" href="service.html">Feedback</a></li>
+            <li><i onclick="toggleShareOptions()" class="fa-solid fa-share-from-square"></i></li>
+            <li class="dark-mode" ><img id="darkicon" src="/photos/mooon (2).png" alt="" height="30px" width="30px"></li>
             <!-- <li><a href="" class="login" >login</a></li> 
             <li><a href="" class="sign-up">sign up</a></li> -->
+            <div>
+                <div class="share-web-link" id="share-options">
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20awesome%20website:%20[https://rausnotes39.netlify.app/]" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=[https://rausnotes39.netlify.app/]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://t.me/share/url?url=[https://rausnotes39.netlify.app/]" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/share?url=[https://rausnotes39.netlify.app/]" target="_blank"><i class="fa-brands fa-instagram"target="_blank"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?url=[https://rausnotes39.netlify.app/]" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
         </ul> 
     </nav>
     <div class="item">
@@ -332,14 +342,19 @@
             document.body.classList.toggle("dark_theme");
             if(document.body.classList.contains("dark_theme")) 
         {
-            darkicon.src = "/photos/sun.svg";
+            darkicon.src = "/photos/mooon (2).png";
         }
         else
         {
-            darkicon.src ="/photos/moon.svg";
+            darkicon.src ="/photos/mooon (1).png";
         }
         }
-       
+    </script>
+    <script>
+        function toggleShareOptions() {
+            var shareOptions = document.getElementById("share-options");
+            shareOptions.style.display = (shareOptions.style.display === "none") ? "block" : "none";
+        }
     </script>
 </body> 
 </html>
