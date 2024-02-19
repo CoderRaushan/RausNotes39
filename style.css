@@ -538,6 +538,56 @@ textarea {
   cursor: pointer;
   display: none;
 }
+.ppt_container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.ppt1 a
+{
+   text-decoration: none;
+   color: black;
+}
+.ppt1 img
+{
+   height: 190px;
+   width: 300px;
+   border-radius: 3.5px;
+   margin-top: -1px;
+}
+.ppt1 
+{  
+    height: 244px;
+    width: 300px;
+    margin-top: 1rem;    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px  black;
+}
+.ppt1  h3   
+{
+   padding: 3px;
+}
+.ppt1 p
+{
+    padding-bottom: 3px;    
+}
+.ppt_container  div:hover
+{
+   transform: scale(1.04);
+   transition:ease-in;
+   transition-duration: .4s;
+}
 .foter {
   /* #333 */
   background-color: #333;
