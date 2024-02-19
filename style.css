@@ -97,13 +97,22 @@ nav ul li i {
   font-size: 1.5rem;
   cursor: pointer;
 }
-#share-options i {
+
+#share-options i 
+{
   border-radius: 70%;
   background-color: black;
   text-decoration: none;
   color: #fff;
   font-size: 1.7rem;
   padding: 5px;
+  /* z-index: 5; */
+  /* position:absolute;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem; 
+ */
+ 
 }
 #share-options i:hover {
   color: yellow;
@@ -171,11 +180,12 @@ div.item {
   text-decoration: none;
 }
 .item a:hover {
-  background: rgb(232, 116, 7);
-  color: var(--primary-color);
+  background-color: rgb(232, 116, 7);
+  color:#fff;
   transition: 0.3s;
-  transform: scalex(2);
-  padding: 10px 5px;
+  /* transform: scalex(2); */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .checkbtn {
   font-size: 30px;
@@ -997,10 +1007,14 @@ padding-bottom: .5rem; */
   .item {
     overflow-y: scroll;
   }
+  label.logo 
+  {
+    color:#fff;
+  }
 }
 @media (max-width: 334px) {
   label.logo {
-    color: var(--primary-color);
+    color:#fff;
     font-size: 23px;
     line-height: 80px;
     font-weight: bold;
