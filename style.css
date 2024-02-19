@@ -518,7 +518,7 @@ textarea {
   font-size: 1.5rem;
   position: fixed;
   bottom: 2rem;
-  right: 1.3rem;
+  right: 10px;
   padding: 1rem 1.2rem;
   z-index: 55;
   cursor: pointer;
@@ -749,6 +749,11 @@ background-color:var(--primary-color);
   }
 }
 @media (max-width: 658px) {
+  .scroll-to-top i
+  {
+    padding: .6rem .8rem;
+    right: 1.8rem;
+  }
   .dark-mode img {
     position: relative;
     top: 13px;
