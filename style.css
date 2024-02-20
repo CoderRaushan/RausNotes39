@@ -325,7 +325,8 @@ div.item {
   font-size: 2rem;
   text-align: center;
   font-weight: 400;
-  color: #aaa;
+  color:var(--secondary-color);
+  opacity: .8;
 }
 .about .hero-main {
   display: flex;
@@ -343,7 +344,7 @@ div.item {
 }
 .hero-content h3 {
   font-size: 3rem;
-  color: var(--pink);
+  color:var(--secondary-color);
 }
 .hero-content p {
   text-align: justify;
@@ -409,7 +410,7 @@ div.item {
 
 .student-review-card h3 {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(---color);
 }
 .student-review-card a {
   text-decoration: none;
