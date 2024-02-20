@@ -228,7 +228,7 @@ div.item {
 .home .content h1 {
   font-size: 3rem;
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 10px;
   margin-top: 20px;
 }
@@ -337,7 +337,7 @@ div.item {
   margin-left: 1rem;
   margin-right: 1rem;
   height: 82vh;
-  width: 40vw;
+  width: 43vw;
 }
 .hero-content {
   padding-left: 3rem;
