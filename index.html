@@ -12,6 +12,9 @@
     <link rel="icon" href="/photos/weg_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head> 
 <body oncontextmenu="return false" onload="myfunction()">
     <div id="preloader"></div>
@@ -25,7 +28,7 @@
             <li><a  class="active" href="service.html">Service</a></li>
             <li><a  class="active" href="service.html">Feedback</a></li>
             <li><i onclick="toggleShareOptions()" class="fa-solid fa-share-from-square"></i></li>
-            <li class="dark-mode" ><img id="darkicon" src="/photos/mooon (2).png" alt="" height="30px" width="30px"></li>
+            <li class="dark-mode" ><img id="darkicon" src="/photos/mooon (1).png" alt="" height="30px" width="30px"></li>
             <!-- <li><a href="" class="login" >login</a></li> 
             <li><a href="" class="sign-up">sign up</a></li> -->
             <div>
@@ -42,8 +45,8 @@
         <a href="/portfolio/portfolio.html" target="_blank">portfolio</a>
         <a href="/notes/notes_section.html" target="_blank">Notes</a>
         <a href="/sgpa/sgpa_page.html" target="_blank">SGPA</a>
-        <a href="/toss/toss.html" target="_blank">toss</a>
         <a href="/weather/weather.html" target="_blank">Weather</a>
+        <a href="/toss/toss.html" target="_blank">toss</a>
     </div>
 <!--card section  -->
 <main>
@@ -51,27 +54,34 @@
         <i id="scroll-to-top-icon" class="fa-solid fa-arrow-up"></i>
      </div>
     <section class="home">
-        <div class="content">
+        <div class="content" 
+        data-aos="zoom-out"
+        data-aos-duration="1300"
+        data-aos-once="true">   
          <h1>learn with us</h1>
          <p>Each set of notes is created by experienced student and subject matter experts, ensuring accuracy and relevance. Dive into our user-friendly interface and discover organized, easy-to-follow content that simplifies complex topics. </p>
          <a href="index.html"> <button>Explore More</button></a>
         </div>
      <div class="box-container">
-         <div class="box">
+         <div class="box" 
+         data-aos="fade-right" data-aos-duration="1300"
+         data-aos-once="true">
              <a href="/notes/notes_section.html" target="_blank">
                  <img src="/photos/applied.png" alt="">
                  <h3>Applied Science</h3>
                  <p>Explore applied Science and let's ready to study notes</p>    
              </a>
          </div>
-         <div class="box">
+         <div class="box"  data-aos="fade-down" data-aos-duration="1300"
+         data-aos-once="true">
              <a href="/notes/it_All_sem_notes.html" target="_blank">
                  <img src="/photos/it_card.png" alt="">
                  <h3>IT</h3>
                  <p>Explore Information Technology and let's ready to study notes</p>    
              </a>
          </div>
-         <div class="box">
+         <div class="box" data-aos="fade-left" data-aos-duration="1300"
+         data-aos-once="true">
              <a href="/notes/cse_All_sem_notes.html" target="_blank">
                  <img src="/photos/cse_card.png" alt="">
                  <h3>CSE</h3>
@@ -84,27 +94,153 @@
 <!-- about section -->
      </section>
      <section class="about">
-        <h1 class="hero-heading">About Us</h1>      
-        <h3 class="hero-title">Start Journy With Us</h3>
+        <h1 class="hero-heading" data-aos="zoom-in"
+        data-aos-duration="1300"
+        data-aos-once="true" >About Us</h1>      
+        <h3 class="hero-title"  data-aos="zoom-in"
+        data-aos-duration="1300"
+        data-aos-once="true">Start Journy With Us</h3>
         <div class="hero-main">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-right" data-aos-easing="ease-in-sin" data-aos-duration="1300"
+            data-aos-once="true">
                 <h3>Start Journy to a better life with our website</h3>
                 <p>Dive into a world of limitless information with our user-friendly notes website. Unleash the power of curated content and easily access a treasure trove of knowledge right from the hero section. Our intuitive design ensures that you spend less time searching and more time absorbing valuable insights.
                 </p>
                 <br>    
                   <a href="#"><button>Read More</button></a>
               </div>
-              <div class="about-image">
+              <div  data-aos="fade-left"
+              data-aos-duration="1300"
+              data-aos-once="true" class="about-image">
                   <img src="/photos/hero-img.png"alt="">
               </div>
         </div>
      </section>
+     <!-- ppt secrion -->
+     <section>
+        <h1 class="hero-heading" data-aos="zoom-in"
+        data-aos-duration="1300"
+        data-aos-once="true">Take a Closer Look at the PPT<Section></Section></h1>      
+        <h3 class="hero-title" data-aos="zoom-in"
+        data-aos-duration="1300"
+        data-aos-once="true">Let's Ready To Download</h3>
+        <div class="ppt_container" >
+            <div class="ppt1"
+            data-aos="fade-right"
+        data-aos-duration="1300"
+        data-aos-once="true">
+                <a href="/ppt/5G-Technology.pptx">
+                <img src="/ppt-image/ppt11.png" alt="">
+                <h3>Topic:</h3>
+                <p>5G-Technology</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Acid rain.ppt">
+                <img src="ppt-image/ppt12.png"">
+                <h3>Topic:</h3>
+                <p>Acid rain</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-right"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Ai and Privacy Concern.pptx">
+                <img src="ppt-image/ppt13.png"">
+                <h3>Topic:</h3>
+                <p>Ai and Privacy Concern</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Artificial intelligence 3.pptx">
+                <img src="ppt-image/ppt14.png"">
+                <h3>Topic:</h3>
+                <p>Artificial intelligence</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-right"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Artificial Intelligence.pptx">
+                <img src="ppt-image/ppt15.png"">
+                <h3>Topic:</h3>
+                <p>Artificial Intelligence</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1" data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Artificial Intelligence1.pdf">
+                <img src="ppt-image/ppt16.png"">
+                <h3>Topic:</h3>
+                <p>Artificial Intelligence</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-right"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Artificial Intelligence2.pptx">
+                <img src="ppt-image/ppt17.png">
+                <h3>Topic:</h3>
+                <p>Artificial Intelligence</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+            <div class="ppt1"  data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
+                <a href="ppt/Exploring Renewable and Non-Renewable Resources.pdf">
+                <img src="ppt-image/ppt118.png"">
+                <h3>Topic:</h3>
+                <p>Renewable & Non-Renewable Resources</p>
+                <button type="button" data-dl>
+                    <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+                </button>
+                </a>
+            </div>
+        </div>
+     </section>
+  <!-- ppt read more section -->
+   <section>
+    <div class="ppt-more-div">
+        <a href="">Click For More</a>
+     </div>
+   </section>
      <!-- student review -->
      <section class="review">
-        <h1 class="hero-heading">Students Review</h1>      
-        <h3 class="hero-title">What Our Students Says About Us</h3>
+        <h1 class="hero-heading"  data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-once="true">Students Review</h1>      
+        <h3 class="hero-title"data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-once="true">What Our Students Says About Us</h3>
         <div class="review-card-container">
-            <div class="student-review-card">
+            <div class="student-review-card"   data-aos="fade-right" data-aos-duration="1300"
+            data-aos-once="true">
                 <a href="">
                     <img src="/photos/jay_review.jpg" alt="">
                     <h3>Jay Jaiswal</h3>
@@ -118,13 +254,15 @@
                     <i class="fa-solid fa-star"></i>
                 </a>
             </div>
-            <div class="student-review-card">
+            <div class="student-review-card" data-aos="zoom-in"
+            data-aos-duration="1300"
+            data-aos-once="true">
                 <a href="">
                     <img src="/photos/aaruni_review.jpg" alt="">
                     <h3>Aaruni Shandilya</h3>
                     <p>
-                    This website is very good for learning in exam times,
-                    and sgpa calculator is very helpful 
+                    This website is very good for learning in 
+                    exam times,and sgpa calculator is very helpful 
                     to calculating sgpa.
                     </p>
                     <i class="fa-solid fa-star"></i>
@@ -134,7 +272,9 @@
                     <i class="fa-solid fa-star"></i>
                 </a>
             </div>
-            <div class="student-review-card">
+            <div class="student-review-card"  data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
                 <a href="">
                     <img src="/photos/om_photo.jpg" alt="">
                     <h3>Om Raja</h3>
@@ -144,6 +284,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
                 </a>
             </div>
         </div>
@@ -151,20 +292,30 @@
      
      <!-- FAQ secton -->
      <section class="faq">
-        <h1 class="hero-heading">Frequently Asked Questions</h1>      
-        <h3 class="hero-title">Let's Talk Solutions</h3>
-        <ul class="faq-accordion">
+        <h1 class="hero-heading" data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-once="true">Frequently Asked Questions</h1>      
+        <h3 class="hero-title" data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-once="true">Let's Talk Solutions</h3>
+        <ul class="faq-accordion" data-aos="fade-right"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="first" onclick="handleRadioClick()">
                 <label for="first">What types of notes are available on your website?</label>
-                <div class="faq-content">
+                <div class="faq-content" data-aos="fade-up"
+                data-aos-duration="1300"
+                data-aos-once="true">
                     <p>
                         Our website offers comprehensive notes for B.Tech, including IT and CSE, as well as Physics and Chemistry groups. You can find detailed study materials to support your academic journey in these subjects.
                     </p>
                 </div>
             </li>
         </ul>
-        <ul class="faq-accordion">
+        <ul class="faq-accordion" data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="second" onclick="handleRadioClick()">
                 <label for="second">Are the notes free to access?</label>
@@ -175,7 +326,9 @@
                 </div>
             </li>
         </ul>
-        <ul class="faq-accordion">
+        <ul class="faq-accordion" data-aos="fade-right"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="third" onclick="handleRadioClick()">
                 <label for="third">How can I use the SGPA calculator on your website?</label>
@@ -186,7 +339,9 @@
                 </div>
             </li>
         </ul>
-        <ul class="faq-accordion">
+        <ul class="faq-accordion" data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="fourth" onclick="handleRadioClick()">
                 <label for="fourth">Are the SGPA calculations based on a specific grading system?</label>
@@ -197,7 +352,9 @@
                 </div>
             </li>
         </ul>
-        <ul class="faq-accordion">
+        <ul class="faq-accordion" data-aos="fade-right"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="fifth" onclick="handleRadioClick()">
                 <label for="fifth"> Are there any specific requirements to access the notes and calculator?</label>
@@ -208,7 +365,9 @@
                 </div>
             </li>
         </ul>
-        <ul class="faq-accordion">
+        <ul class="faq-accordion" data-aos="fade-left"
+        data-aos-duration="1300"
+        data-aos-once="true">
             <li>
                 <input type="radio" name="faq-accordion" id="sixth" onclick="handleRadioClick()">
                 <label for="sixth">Can I request specific topics or subjects for notes to be added to the website?</label>
@@ -223,13 +382,21 @@
 
      <!-- contact us section -->
      <section class="contact-us">
-        <h1 class="hero-heading">Contact Us</h1>      
-        <h3 class="hero-title">We Like Conversations,Let's Talk</h3>
+        <h1 class="hero-heading" data-aos="fade-down"
+        data-aos-duration="1300"
+        data-aos-once="true">Contact Us</h1>      
+        <h3 class="hero-title" data-aos="fade-up"
+        data-aos-duration="1300"
+        data-aos-once="true">We Like Conversations,Let's Talk</h3>
         <div class="contact-us-field">
-            <div class="contact-us-image">
+            <div class="contact-us-image" data-aos="fade-right"
+            data-aos-duration="1300"
+            data-aos-once="true">
                <img src="/photos/contact-image.png" alt="">
             </div>
-            <div class="contact-us-form">
+            <div class="contact-us-form" data-aos="fade-left"
+            data-aos-duration="1300"
+            data-aos-once="true">
               <form action="https://formsubmit.co/raushankumar23082004@gmail.com" method="POST" >
                 <label for="text"></label>
                 <input type="text" id="text" name="name" required placeholder="Enter Full Name">
@@ -352,5 +519,11 @@
             shareOptions.style.display = (shareOptions.style.display === "none") ? "block" : "none";
         }
     </script>
+<!-- Script for AOS Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    // once: false;
+  </script>
 </body> 
 </html>
