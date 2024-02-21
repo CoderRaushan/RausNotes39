@@ -343,9 +343,9 @@ div.item {
 .about-image img {
   margin-left: 1rem;
   margin-right: 1rem;
-  /* height: 82vh;
-  width: 43vw; */
-  object-fit: contain;
+  height: 82vh;
+  width: 43vw;
+  /* object-fit: contain; */
 }
 .hero-content {
   padding-left: 3rem;
