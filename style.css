@@ -343,8 +343,9 @@ div.item {
 .about-image img {
   margin-left: 1rem;
   margin-right: 1rem;
-  height: 82vh;
-  width: 43vw;
+  /* height: 82vh;
+  width: 43vw; */
+  object-fit: contain;
 }
 .hero-content {
   padding-left: 3rem;
@@ -917,7 +918,7 @@ padding-bottom: .5rem; */
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom:0;
   }
   .hero-heading {
     font-size: 2.5rem;
@@ -970,6 +971,7 @@ padding-bottom: .5rem; */
 
   .review-card-container {
     padding-bottom: .1em;
+    margin-bottom: -6rem;
   }
 
   .contact-us-field {
@@ -979,15 +981,16 @@ padding-bottom: .5rem; */
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
   }
   .contact-us-form {
     margin-left: 1rem;
     margin-right: 1rem;
     height: 100%;
-    width: 280px;
+    width: 300px;
   }
   .contact-us-image {
-    width: 250px;
+    width: 300px;
   }
   .contact-us-image img {
     height: 380px;
@@ -998,7 +1001,7 @@ padding-bottom: .5rem; */
   .contact-us-form form input,
   textarea {
     height: 2.3rem;
-    width: 80%;
+    width: 90%;
   }
 
   .faq-accordion {
@@ -1044,3 +1047,46 @@ padding-bottom: .5rem; */
     margin-right: -3px;
   }
 }
+
+@media (max-width: 320px) {
+  *{
+    margin:0;
+  }
+    .contact-us-field {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+    }
+    .contact-us-form {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      height: 100%;
+      width: 280px;
+    }
+    .contact-us-image {
+      width: 275px;
+    }
+    .contact-us-image img {
+      height: 300px;
+      width: 100%;
+      object-fit: contain;
+      overflow: hidden;
+      /* margin-left:-5rem; */
+    }
+    .contact-us-form form input{
+      height: 2.3rem;
+      width: 275px;
+      margin:0;
+      margin-top:1rem;
+    }
+    textarea {
+      width:275px;
+      margin:0;
+      margin-top:1rem;
+      /* margin-left:-2rem; */
+    }
+  }
