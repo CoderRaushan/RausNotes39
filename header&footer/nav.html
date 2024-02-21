@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header_file</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"rel="stylesheet">
+    <link rel="icon" href="/photos/weg_logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo"
+                onclick="playVideo()">RausNotes39</label>
+        <ul class="nav-item">
+            <li><a class="active" href="/index.html" target="_blank"
+                    style=" background-color:white; color: black;border-radius: 80px;">Home</a></li>
+            <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
+            <li><a class="active" href="service.html">Service</a></li>
+            <li><a class="active" href="service.html">Feedback</a></li>
+            <li><i onclick="toggleShareOptions()" class="fa-solid fa-share-from-square"></i></li>
+            <li class="dark-mode"><img id="darkicon" src="/photos/mooon (1).png" alt="" height="30px" width="30px"></li>
+            <!-- <li><a href="" class="login" >login</a></li> 
+            <li><a href="" class="sign-up">sign up</a></li> -->
+            <div>
+                <div class="share-web-link" id="share-options">
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20awesome%20website:%20[https://rausnotes39.netlify.app/]"
+                        target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=[https://rausnotes39.netlify.app/]"
+                        target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://t.me/share/url?url=[https://rausnotes39.netlify.app/]" target="_blank"><i
+                            class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?url=[https://rausnotes39.netlify.app/]"
+                        target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="item">
+        <a href="/portfolio/portfolio.html" target="_blank">portfolio</a>
+        <a href="/notes/notes_section.html" target="_blank">Notes</a>
+        <a href="/sgpa/sgpa_page.html" target="_blank">SGPA</a>
+        <a href="/weather/weather.html" target="_blank">Weather</a>
+        <a href="/toss/toss.html" target="_blank">toss</a>
+        <a href="/ppt_section/ppt_page.html">PPTs</a>
+    </div>
+    <!-- for faq checkbox -->
+    <script>
+        let radioChecked = false;
+        function handleRadioClick() {
+            if (radioChecked) {
+                document.getElementById("first").checked = false;
+                radioChecked = false;
+            } else {
+                document.getElementById("first").checked = true;
+                radioChecked = true;
+            }
+        }
+    </script>
+    <!-- for scroll to top button -->
+    <script>
+        const scrollBtn = document.querySelector('#scroll-to-top-icon');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 532) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+<!-- for dark mode and light mode -->
+    <script>
+        var darkicon = document.getElementById("darkicon");
+        darkicon.onclick = function () {
+            document.body.classList.toggle("dark_theme");
+            if (document.body.classList.contains("dark_theme")) {
+                darkicon.src = "/photos/mooon (2).png";
+            }
+            else {
+                darkicon.src = "/photos/mooon (1).png";
+            }
+        }
+    </script>
+    <!-- for share the weblink -->
+    <script>
+        function toggleShareOptions() {
+            var shareOptions = document.getElementById("share-options");
+            shareOptions.style.display = (shareOptions.style.display === "none") ? "block" : "none";
+        }
+    </script>
+    <!-- Script for AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Script for scrolling to top on reload -->
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

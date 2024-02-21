@@ -155,8 +155,8 @@ nav ul li i {
 .active:hover {
   transition: 0.3s;
   transform: scalex(2);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color:#fff;
+  color:black;
   border-radius: 80px;
 }
 div.item {
@@ -185,10 +185,12 @@ div.item {
 .item a:hover {
   background-color: rgb(232, 116, 7);
   color:#fff;
-  transition: 0.3s;
-  /* transform: scalex(2); */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: .65rem;
+  padding-bottom: .65rem;
+}
+.item :active
+{
+  background-color: rgb(232, 116, 7);
 }
 .checkbtn {
   font-size: 30px;
