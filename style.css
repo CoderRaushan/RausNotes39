@@ -153,11 +153,8 @@ nav ul li i {
 } */
 
 .active:hover {
-  transition: 0.3s;
-  transform: scalex(2);
-  background-color:#fff;
-  color:black;
-  border-radius: 80px;
+  border-bottom-style: solid ;
+  color: #ffff00;
 }
 div.item {
   background-color: #141415;
