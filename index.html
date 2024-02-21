@@ -114,11 +114,8 @@
                 <br>    
                   <a href="#"><button>Read More</button></a>
               </div>
-              <div  data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-duration="1300"
-              data-aos-once="true" class="about-image">
-                  <img src="/photos/hero-img.png"alt="">
+              <div class="about-image">
+                  <img src="/photos/hero-img.png"alt="" data-aos="fade-left" data-aos-duration="1300" data-aos-once="true">
               </div>
         </div>
      </section>
@@ -214,7 +211,7 @@
         </section>
         <!-- ppt read more button -->
         <section>
-            <div class="ppt-more-div">
+            <div class="ppt-more-div" data-aos="zoom-in" data-aos-duration="1300" data-aos-once="true">
                 <a href="">Click For More</a>
             </div>
         </section>
@@ -500,6 +497,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <!-- Script for scrolling to top on reload -->
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
 

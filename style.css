@@ -914,6 +914,10 @@ padding-bottom: .5rem; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
   .hero-heading {
     font-size: 2.5rem;
@@ -943,6 +947,7 @@ padding-bottom: .5rem; */
     font-size: 1rem;
     cursor: pointer;
     transition: 0.2s;
+    margin-bottom: 1em;
   }
   .about-image img {
     height: 50vh;
@@ -962,6 +967,11 @@ padding-bottom: .5rem; */
     padding-right: 1.7rem;
     text-align: center;
   }
+
+  .review-card-container {
+    padding-bottom: .1em;
+  }
+
   .contact-us-field {
     display: flex;
     flex-direction: column;
