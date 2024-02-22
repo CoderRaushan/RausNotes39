@@ -601,14 +601,8 @@ textarea {
   border-radius: 30px;
 }
 .ppt1 button:hover {
-  background-color: rgb(255, 255, 255);
+  background-color:#fff;
   color: black;
-  font-weight: 300px;
-}
-.ppt_container div:hover {
-  transform: scale(1.04);
-  transition: ease-in;
-  transition-duration: 0.4s;
 }
 .ppt-more-div {
   display: flex;
