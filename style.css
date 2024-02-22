@@ -1034,6 +1034,13 @@ padding-bottom: .5rem; */
   {
     color:#fff;
   }
+  .ppt1 img {
+    height: 190px;
+    width: 250px;
+  }
+  .ppt1 {
+    width: 250px;
+  }
 }
 @media (max-width: 334px) {
   label.logo {

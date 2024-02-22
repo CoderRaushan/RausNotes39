@@ -3,185 +3,65 @@
     padding: 0%;
     font-family: 'Roboto', sans-serif;
 }
-.main
-{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: baseline;
-    background-color: pink;
-}
-
-.card 
-{
-    height: 280px;
-    width: 190px;
-    border: 2px solid black;
-    margin-top: 40px;
-    margin-left: 30px;
-    box-shadow: 2px 2px 8px black;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(245, 245, 232) ;
-}
-
-h1
-{
-    font-size: 50px;
-    font-weight: bold;
-    background-color: yellow;
-    text-align: center;
-    
-}
-.inner 
-{
-    text-align: center;
-    font-style:inherit;
-}
-p{
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-#im{
-    height: 180px;
-    width: 190px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-#arrowimg
-{
-    height: 30px;
-    width: 30px;
-    display: flex;
-
-}
-#arrowanc
-{
-   
-   display: inline-block;
-   text-decoration: none;
-   color: black;
-   position: absolute;
-   left:10px ;
-   top: 15px;
-   align-items: center;
-}
-h1
-{
-  margin-left: 60px; 
-}
-.arrowdiv
-{
-    height: 60px;
-    background-color: yellow;
+.ppt_container-for-notes-section {
     display: flex;
     justify-content: center;
-    font-size: 35px;
+    flex-direction: row;
+    align-items: center;
     text-align: center;
-}
-#a{
-    text-decoration: none;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 40px;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+.ppt1 {
+    background-color: #fff;
+    width: 250px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
     cursor: pointer;
-    background-color: black;
-    color: white;
-   
+  }
+  .ppt_container-for-notes-section div:hover {
+    transform: scale(1.04);
+    transition: ease-in;
+    transition-duration: 0.2s;
+  }
+.ppt1 a {
+  text-decoration: none;
+  color: black;
+}
+.ppt1 img {
+  height: 190px;
+  width: 250px;
+  border-radius: 9px;
 }
 
-#a:hover
-{
-background-color:rgb(247, 244, 244);
-color: black;
-transition-duration:.3s;
-border: 1px solid black;
+#a {
+  border-radius: 10px;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: 300px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px; 
+  padding-bottom: 2px;
+  margin-top: 3px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 2px solid black;
 }
-.card:hover{
-    transform: scale(1.03);
-    box-shadow: 4px 4px 8px black;
-}
-@media(max-width:678px)
-{
-#arrowanc
-{
-   display: inline-block;
-   text-decoration: none;
-   color: black;
-   position: absolute;
-   left:5px ;
-   top: 20px;
-   align-items: center;
-}
-.arrowdiv
-{  
-    height: 70px;
-    background-color: yellow;
-   
-}
-
-h1
-{
-  margin-left: 40px; 
-  background-color: yellow  ;
-}
-h1{
-
-    font-size: 30px;
-}
-    .card
-    {
-        height: 202px;
-        width: 160px;
-        margin-top: 20px;
-         margin-left:-1px;
-        border: 2px solid black;
-       box-shadow: 2px 2px 8px black;
-       cursor: pointer;
-       border-radius: 10px;
-       background-color: rgb(245, 245, 232) ;
-       
-    }
-    .main
-    {
-        height:100vh;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-content:flex-start;
-        flex-wrap: wrap;
-        background-color: pink;
-    }
-h3{
-    font-size: 10px;
-}
-p{
-    font-size: 10px;   
-    margin-bottom: 3px;
-}
-#h{
-    display: none;
-}
-#a{
-    font-size: 12px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 40px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-   
-}
-#im
-{
-    height: 145px;
-    width: 160px; 
-}
-
-
+#a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 300px;
 }
