@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,26 +50,24 @@
     </style>
 </head>
 <body>
-<!-- importing nav bar -->
-<!-- <div id="includnav"></div> -->
 <!-- notes secton start -->
 <div class="container mt-3 p-2">
     <div class="text-center">
-      <p class="h2 fw-bold text-primary">IT Sem 4</p>
+      <p class="h2 fw-bold text-primary">IT Semester 4</p>
       <p class="h3 fw-bold">Download Notes & Question Papers</p>
       <a class="home_button" href="/index.html">Go Home</a>
     </div>
   </div>
     <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!-- Notes Section -->
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
+                    data-bs-target="#collapseNotes" aria-expanded="true" aria-controls="collapseNotes">
                     Notes
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div id="collapseNotes" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <ul type="square">
                         <li>
@@ -89,23 +86,22 @@
                             <a href="/pdf/Wt _notes.pdf">WT Notes</a>
                         </li>
                         <li>
-                            <a href="/pdf/python_notes.pdf">WT Notes</a>
+                            <a href="/pdf/python_notes.pdf">python Notes</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
-<!-- second section -->
+
+        <!-- Question Papers Section -->
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
+                    data-bs-target="#collapsePapers" aria-expanded="true" aria-controls="collapsePapers">
                   Question Papers
                 </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div id="collapsePapers" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <ul type="square">
                         <li>
@@ -134,11 +130,10 @@
 <!-- importing footer -->
 <!-- <div id="includefooter" style="bottom: 0;"></div> -->
 
-
 <!-- js link  -->
 <script>
-    $("#includnav").load("/header&footer/nav.html");
-    $("#includefooter").load("/header&footer/footer.html");
+    // $("#includnav").load("/header&footer/nav.html");
+    // $("#includefooter").load("/header&footer/footer.html");
 </script>
     <!-- Boostrap JavaScript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
