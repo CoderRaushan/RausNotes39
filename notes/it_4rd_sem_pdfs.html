@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <!-- js link -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- logo icon -->
+    <link rel="icon" href="/photos/weg_logo.png">
+    <title>IT semester 4</title>
+    <style>
+        .accordion {
+            margin: 2em 2em 2em 2em;
+        }
+
+        .accordion-body a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+        }
+        .home_button
+        {
+            text-decoration: none; 
+            color:white; 
+            background-color: blue; 
+            border-radius: 5rem; padding:.3rem .8rem .4rem .8rem; 
+            font-weight: 600;
+        }
+        .home_button:hover
+        {
+            background-color: #fff;
+            color: black;
+            border: 2px solid black;
+        }
+        .home_button:active
+        {
+            background-color: yellow;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<!-- importing nav bar -->
+<!-- <div id="includnav"></div> -->
+<!-- notes secton start -->
+<div class="container mt-3 p-2">
+    <div class="text-center">
+      <p class="h2 fw-bold text-primary">IT Sem 4</p>
+      <p class="h3 fw-bold">Download Notes & Question Papers</p>
+      <a class="home_button" href="/index.html">Go Home</a>
+    </div>
+  </div>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Notes
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    <ul type="square">
+                        <li>
+                            <a href="/pdf/cam_practical_file.pdf">CAM Practical File</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/cam_notes.pdf">CAM Notes</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/pas_notes.pdf">PAS Notes </a>
+                        </li>
+                        <li>
+                            <a href="/pdf/os_notes.pdf">OS Notes</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/Wt _notes.pdf">WT Notes</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/python_notes.pdf">WT Notes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+<!-- second section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                  Question Papers
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    <ul type="square">
+                        <li>
+                            <a href="/pdf/WT_mst_1.pdf">WT Mst Paper</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/CAM_mst1.pdf">cam mst paper</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/OS_mst1.pdf">os mst paper</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/PAS_mst1.pdf">pas mst paper</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/Python _mst1.pdf">Python mst paper</a>
+                        </li>
+                        <li>
+                            <a href="/pdf/CAM_mst1.pdf">DBMS mst paper</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- importing footer -->
+<!-- <div id="includefooter" style="bottom: 0;"></div> -->
+
+
+<!-- js link  -->
+<script>
+    $("#includnav").load("/header&footer/nav.html");
+    $("#includefooter").load("/header&footer/footer.html");
+</script>
+    <!-- Boostrap JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
