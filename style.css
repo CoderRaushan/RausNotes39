@@ -402,16 +402,16 @@ div.item {
   border-radius: 50%;
   margin-top: -4rem;
   /* border: 5px solid black; */
-  border: 0.6rem solid blue;
+  border: 0.6rem solid rgb(78, 78, 16);
   border-left: 0.6rem solid orange;
-  border-bottom: 0.6rem solid yellow;
-  border-right: 0.6rem solid black;
+  border-bottom: 0.6rem solid blue;
+  border-right: 0.6rem solid green;
 }
 .student-review-card p {
   text-decoration: none;
   color: var(--secondary-color);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
   text-align: center;
 }
 
