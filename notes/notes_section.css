@@ -32,7 +32,7 @@
     margin-bottom: 3rem;
   }
   
-.ppt1 {
+.ppt2 {
     background-color: #fff;
     width: 250px;
     margin-top: 1rem;
@@ -51,20 +51,20 @@
     transition: ease-in;
     transition-duration: 0.2s;
   }
-  .ppt1 h3
+  .ppt2 h3
   {
     padding-bottom:3px;
   }
-  .ppt1 p
+  .ppt2 p
   {
     padding-bottom:3px;
   }
-.ppt1 a 
+.ppt2 a 
 {
   text-decoration: none;
   color: black;
 }
-.ppt1 img {
+.ppt2 img {
   height: 190px;
   width: 250px;
   border-radius: 9px;
