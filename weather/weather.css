@@ -4,17 +4,19 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background-color: #ff6a6a;;
+.card_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0em 4em 0em;
 }
 .card
 {
-    /* 135deg,#00feba,#5b548a */
     width: 90%;
     max-width: 470px;
     background: linear-gradient(135deg,#36f115,#2b0eeb);
     color: #fff;
-    margin: 110px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
