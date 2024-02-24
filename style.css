@@ -701,6 +701,7 @@ padding-bottom: .5rem; */
   align-items:center;
   flex-direction: column;
   width: 10%;  
+  cursor: pointer;
 }
 
 .img {
