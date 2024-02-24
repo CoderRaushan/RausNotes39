@@ -798,7 +798,7 @@ padding-bottom: .5rem; */
     position: fixed;
     width: 65%;
     height: 100%;
-    background-color:#581c84;
+    /* background-color:#581c84; */
     background-color:rgba(0,0,255,0.6);
     top: 50px;
     left: -100%;
