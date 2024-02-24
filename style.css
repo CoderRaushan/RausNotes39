@@ -697,9 +697,10 @@ padding-bottom: .5rem; */
 }
 .frow1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10%;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: column;
+  width: 10%;  
 }
 
 .img {
@@ -781,9 +782,12 @@ padding-bottom: .5rem; */
   }
   .frow1 {
     margin-top: 1rem;
-  }
-  .frow1 img {
-    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    width: 10%;
+    gap: 1rem; 
   }
   .frow1,
   .frow2,
@@ -795,7 +799,7 @@ padding-bottom: .5rem; */
     margin-top: 2rem;
   }
   .footer {
-    height: 56rem;
+    height: 62rem;
     width: 100%;
   }
   .frow3 {
