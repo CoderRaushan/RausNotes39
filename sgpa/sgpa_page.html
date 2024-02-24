@@ -8,13 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>sgpacalculate</title>
 </head>
 <body>
-<h1 class="head" >Calculate Sgpa Of All Branches</h1>
-<a  class="home" href="/index.html">Go to Home </a>
-   <div>
-    <ul><li class="ul">Calculate IT 3rd Semester &nbsp; Sgpa </li></ul>
+         <!-- nav file included -->
+         <div id="includnav"></div>
+<!-- <h1 class="head" >Calculate Sgpa Of All Branches</h1>
+<a class="home" href="/index.html">Go to Home </a> -->
+<h3 class="hero-title">Calculate Sgpa Of Semester 3rd All Branches</h3>
+<!-- <h3 >What Our Students Says About Us</h3> -->
+   <div class="sgpa_container">
+    <ul><li class="ul">Calculate IT 3rd Semester Sgpa </li></ul>
      <a class="a" href="it_3_sgpa.html" target="_blank"> click here</a>
     
      <ul><li class="ul">Calculate IT 3rd Semester Sgpa(specially for LEET)</li></ul>
@@ -63,12 +68,13 @@
      <a class="a" href="che_wm_sgpa.html" target="_blank"> click here</a>   
      </ul>
    </div>
-   <footer class="foter">
-    <div class="auto"> 
-        <script type="text/javascript" src="https://freehitcounters.org/count/dhuh"></script><br>
-        <a href='http://www.freevisitorcounters.com'>.</a> <script type='text/javascript'src='https://whomania.com/ctr?id=b0038dbea700a94bd1d45ba68634f9ec5379f79a'></script>
-   
-    </div>
-</footer>
+   <br>
+<!-- footer file included -->
+<div id="includefooter">
+<!-- importing js code -->
+<script>
+    $("#includnav").load("/header&footer/nav.html");
+    $("#includefooter").load("/header&footer/footer.html");
+</script>
 </body>
 </html>                                                                                                                             

@@ -1,21 +1,11 @@
 *{
     margin: 0%;
     padding: 0%;    
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(188, 211, 212);
 }
-.head
-{  
-    background-color: rgb(218, 218, 24);
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-    color: rgb(0, 0, 255);
-}
-
-div{
-    padding-left: 50px;
-    margin-top: 50px;
+.sgpa_container 
+{
+margin-left: 2rem;
+margin-right: 2rem;
 }
 .a{
     color: white;
@@ -32,9 +22,7 @@ div{
     border-radius: 50px;
     display: inline;
     border: solid yellow 2px;
-
 }
-
 @keyframes anchor{
     10%{
         background-color:blue;
@@ -77,65 +65,38 @@ div{
         color: white;
     }
     }
-
-
-a:hover{
-    background-color:black;
-    color:white;
-    transition: transform .5s;
-    transform: scale(1.1);
-
-}
 .ul{
     font-size: 18px;    
     margin-top:  10px;
-    color: black;
-    font-weight: 1000;
-    font-style:oblique;
-
-
+    color:var(--secondary-color);
+    font-weight: 100;
 }
 .auto
 {
-
     margin: 20px 0px ;
 }
 .home
 {  display: inline;
-    text-decoration: none;
-    background-color: black ;
-    color: yellow;
-    position: absolute;
+   text-decoration: none;
+   background-color: black ;
+   color: yellow;
+   position: absolute;
    padding: 0px 8px;
    margin: 0px 41%;
-
    border-radius: 8px;
-}
-.home:hover{
-    transition: transform .5s;
-    transform: scale(1.1);
 }
 @media(max-width:567px)
 {
     .a {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         margin-right: 10px;
     }
     .ul{
-        font-size: 20px;
-        margin-right:25px;
+        font-size: 15px;
+        /* margin-right:25px; */
         margin-bottom: 2px;
+        color: var(--secondary-color);
+        text-align:left;
     }
-    .home
-{ 
-     display: inline;
-    text-decoration: none;
-    background-color: black ;
-    color: yellow;
-    position: absolute;
-    padding: 0px 8px;
-    margin: 0px 35%;
-    border-radius: 8px;
-}
 }
