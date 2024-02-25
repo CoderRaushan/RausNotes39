@@ -54,7 +54,7 @@
         </div>
         <section class="home">
             <div class="content" data-aos="fade-right" data-aos-duration="1900" data-aos-once="true">
-                <h1>Learn With Us</h1>
+                <h1>Welcome To <span class="dynamic-text"></span></h1>
                 <p>Each set of notes is created by experienced student and subject matter experts, ensuring accuracy and
                     relevance. Dive into our user-friendly interface and discover organized, easy-to-follow content that
                     simplifies complex topics. </p>
@@ -447,6 +447,19 @@
             <p class="right">&copy; 2024 RausNotes39. All Rights Reserved by RausNotes39 | Designed by Raushan kumar</p>
         </div>
     </footer>
+    <!-- dynamic typing -->
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('.dynamic-text', {
+      strings: ['RausNotes39'],
+      typeSpeed: 100,
+      backSpeed:100,
+      loop:true
+    });
+  </script>
+</body>
     <!-- java script files -->
     <script>
         var preloader = document.getElementById('preloader');
