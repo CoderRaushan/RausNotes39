@@ -158,3 +158,22 @@ width: 30px;
     font-size: 20px;
 }
 }
+.title-heading-weather  
+{
+  font-size: 3rem;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 0 1 rem;
+  letter-spacing: 0;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+@media(max-width:658px)
+{
+  .title-heading-weather
+  {
+    margin-top: .5em;
+    font-size: 2rem;
+    padding: 0 .5rem 0 .5rem;
+  }
+}

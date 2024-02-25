@@ -7,6 +7,16 @@
 margin-left: 2rem;
 margin-right: 2rem;
 }
+.hero-heading-sgpa  
+{
+  font-size: 3rem;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 0 1 rem;
+  letter-spacing: 0;
+  padding-top: 1rem;
+  font-weight: 500;
+}
 .a{
     color: white;
     animation-name: anchor;
@@ -99,4 +109,12 @@ margin-right: 2rem;
         color: var(--secondary-color);
         text-align:left;
     }
+}
+@media(max-width:658px)
+{
+  .hero-heading-sgpa  
+  {
+    padding:0 .5rem 0 .5rem;
+    font-size: 2rem;
+  }
 }

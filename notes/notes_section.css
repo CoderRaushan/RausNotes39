@@ -3,8 +3,9 @@
     padding: 0%;
     font-family: 'Roboto', sans-serif;
 }
-.hero-heading {
-  font-size: 4rem;
+.hero-heading-notes  
+{
+  font-size: 3rem;
   color: var(--secondary-color);
   text-align: center;
   padding: 0 1 rem;
@@ -90,4 +91,11 @@
   background-color: rgb(255, 255, 255);
   color: black;
   font-weight: 300px;
+}
+@media(max-width:658px)
+{
+  .hero-heading-notes  
+  {
+    font-size: 2rem;
+  }
 }
