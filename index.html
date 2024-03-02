@@ -527,5 +527,31 @@
         })
     }
 </script>
+
+
+
+<!-- temporary -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing JavaScript code here
+
+        document.addEventListener('click', function (event) {
+            var nav = document.querySelector('.nav-class-for-phone');
+            var checkbox = document.getElementById('check');
+
+            if (!nav || !checkbox) {
+                // Check if elements are found
+                return;
+            }
+
+            if (!nav.contains(event.target) && checkbox.checked) {
+                checkbox.checked = false;
+                nav.querySelector('ul').style.left = '-100%';
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
