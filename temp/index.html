@@ -28,7 +28,7 @@
 
 <body oncontextmenu="return false" onload="myfunction()">
     <!-- <div id="preloader"></div> -->
-    <nav>
+    <nav class="navhaibhai">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
         <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo"
@@ -36,13 +36,20 @@
         <ul class="nav-item">
             <li><a class="active" href="index.html" target="_blank"
                     style=" background-color:white; color: black;border-radius: 80px;">home</a></li>
-            <li><a href="/portfolio/portfolio.html" target="_blank">about</a></li>
+            <li><a href="/portfolio/portfolio.html" target="_blank" id="ham-hai-about">about</a></li>
             <li><a href="service.html">service</a></li>
             <li><a href="#">feedback</a></li>
             <li><a id="userlink" href="" class="login">name</a></li>
             <li><a id="signoutlink" href="" class="sign-up">Log Out</a></li>
 
         </ul>
+        <div class="nav-ka-container-hai">
+            <a href="">hi</a>
+            <a href="">hello</a>
+            <a href="">cilcik</a>
+            <a href="">tilu</a>
+        </div>
+
     </nav>
     <div class="item">
         <a href="/portfolio/portfolio.html" target="_blank">portfolio</a>
@@ -171,6 +178,45 @@
         }
     </script>
     <script src="main.js"></script>
+
+    <script>
+        let outside = document.querySelector("body");
+        let check = document.querySelector("#check");
+        let navhaibhai = document.querySelector(".navhaibhai");
+
+        outside.onmouseenter = function () {
+            if (check.checked) {
+                navhaibhai.style.left = "100%";
+            }
+        };
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let aboutdiv = document.querySelector(".nav-ka-container-hai");
+            let aboutbtn = document.querySelector("#ham-hai-about");
+    
+            // Function to show the div
+            function showDiv() {
+                aboutdiv.style.display = "block";
+            }
+    
+            // Function to hide the div
+            function hideDiv() {
+                aboutdiv.style.display = "none";
+            }
+    
+            // Function to handle clicks inside the div
+            function handleClick() {
+              
+            }
+    
+            // Event listeners
+            aboutbtn.addEventListener("mouseenter", showDiv);
+            aboutdiv.addEventListener("mouseleave", hideDiv);
+            aboutdiv.addEventListener("click", handleClick);
+        });
+    </script>
+    
 </body>
 
 </html>

@@ -36,36 +36,6 @@
         <a href="/ppt_section/ppt_page.html">PPT</a>
         <a href="/toss/toss.html" target="_blank">toss</a>
     </div>
-    <!-- for faq checkbox -->
-    <script>
-        let radioChecked = false;
-        function handleRadioClick() {
-            if (radioChecked) {
-                document.getElementById("first").checked = false;
-                radioChecked = false;
-            } else {
-                document.getElementById("first").checked = true;
-                radioChecked = true;
-            }
-        }
-    </script>
-    <!-- for scroll to top button -->
-    <script>
-        const scrollBtn = document.querySelector('#scroll-to-top-icon');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 532) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
  <!-- for dark mode and light mode -->
  <script>
     var darkicon = document.getElementById("darkicon");
@@ -86,12 +56,6 @@
             shareOptions.style.display = (shareOptions.style.display === "none") ? "block" : "none";
         }
     </script>
-    <!-- Script for AOS Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <!-- for share the weblink -->
 <script>
     async function sharepage()
     {
@@ -105,9 +69,9 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () 
     {
-        var nav = document.querySelector('.nav-class-for-phone');
+        var nav = document.querySelector(".nav-class-for-phone");
         var checkbox = document.getElementById('check');
-        document.addEventListener('click', function (event) {
+            document.addEventListener('click', function (event) {
             if (!nav.contains(event.target) && checkbox.checked)
             {
                 checkbox.checked = false;
@@ -115,6 +79,5 @@
         });
     });
 </script>
-
 </body>
 </html>

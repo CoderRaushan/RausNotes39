@@ -18,7 +18,7 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
-  --third-color: blue;
+  /* --third-color: blue; */
 }
 body {
   background-color: var(--primary-color);
