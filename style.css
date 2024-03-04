@@ -73,7 +73,14 @@ nav ul {
 {
   margin-left: 8px;
 }
-
+/* for logout button */
+#signout 
+{
+  background-color: rgb(238, 175, 58);
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 .social {
   height: 20px;
@@ -435,12 +442,13 @@ textarea {
   font-size: 1.2rem;
   transition: 0.2s linear;
 }
-.contact-us-form form textarea {
+.contact-us-form form textarea 
+{
   height: 10rem;
   border-radius: 1rem;
   padding: 1rem;
   resize: none;
-  border: 2px solid var(--secondary-color);
+  /* border: 2px solid var(--secondary-color); */
 }
 .contact-us-image img {
   height: 638px;

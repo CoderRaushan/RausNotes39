@@ -23,7 +23,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
 <body oncontextmenu="return false" onload="myfunction()">
     <!-- <div id="preloader"></div> -->
     <nav class="nav-class-for-phone">
@@ -35,6 +34,11 @@
             <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
             <li><a class="active" href="service.html">Service</a></li>
             <li><a class="active" href="service.html">Feedback</a></li>
+             <!-- <li><a class="active" id="signinBtn" href="signIn.html">SignIn</a></li> -->
+             <!-- <li><a id="username" style="color: #fff;">user </a></li> -->
+             <!-- <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li> -->
+             <!-- <li><button type="button" class="btn btn-warning" id="signout">LogOut</button></li> -->
+             <!-- <li><a id="signout" class="logoutbtn">LogOut</a></li> -->
             <li><i onclick="sharepage()"class="fa-solid fa-share-from-square"></i></li>
             <li id="darkicon"><i class="fa-solid fa-moon" ></i></li>
         </ul>
@@ -541,5 +545,7 @@
         });
     });
 </script>
+<!-- incliding main js file for firebase -->
+<script src="/database/main.js"></script>
 </body>
 </html>
