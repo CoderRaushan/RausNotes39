@@ -76,7 +76,7 @@
 			.login-container 
 		{
             width: 310px;
-			height: 310px;
+			height: 318px;
         }
 		
 		}
@@ -137,7 +137,7 @@
 		signInWithEmailAndPassword(auth, EmailInput.value, PasswordInput.value)
 			.then((Credentials) => {
 				// location.href = "index.html";
-				alert("SignIn Successfully");
+				alert("Login Successfully");
 
 				get(child(dbref, "UserAuthList/" + Credentials.user.uid)).then((snapshot) => {
 					if (snapshot.exists) {
