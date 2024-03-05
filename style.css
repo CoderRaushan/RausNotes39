@@ -63,7 +63,7 @@ label.logo {
 }
 nav ul {
   float: right;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   margin-top: -51px;
   display: flex;
   justify-content: center;
@@ -821,7 +821,7 @@ padding-bottom: .5rem; */
     background-color:rgba(0,0,255,0.6);
     top: 50px;
     left: -100%;
-    justify-content: center;
+    justify-content:center;
     text-align:center;
     transition: ease 0.5s;
     flex-direction: column;
@@ -837,12 +837,14 @@ padding-bottom: .5rem; */
     font-weight: 400;
     font-size: 8px;
   }
-  nav ul li {
+  nav ul li 
+  {
     display: block;
-    margin: 50px 0;
+    margin: 30px 0;
     line-height: 30px;
   }
-  #check:checked ~ ul {
+  #check:checked ~ ul 
+  {
     left: 0;
   }
   #search {

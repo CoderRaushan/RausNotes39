@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="google-adsense-account" content="ca-pub-9833609693095446">
     <meta name="google-site-verification" content="TNQpoZtoHlRHEP12VLksknZdvSSEw-Ttn0D0TSF5MzM" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword"content="rausnotes39, gndec notes, sgpa Calculate,toss,question papers,gndec study materials ,notes,rausnotes39,raushan kumar,raushan website,raushan github,gndec it,gndec cse,gndec me,gndec ce,gndec ece ,raushan it,it sgpa ,cse sgpa,notes">
     <meta name="description" content="Engineering notes for all branches - rausnotes39">
     <title>rausnotes39</title>
@@ -22,8 +22,34 @@
     <!-- AOS Animation Library CDN -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script> 
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () 
+        {
+            const authStatus = localStorage.getItem("user-creds");
+
+            if (authStatus) 
+            {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("username").style.display = "inline-block";
+                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+            } 
+            else 
+            {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("username").style.display = "none";
+            }
+        });
+    </script>
 </head>
-<body oncontextmenu="return false" onload="myfunction()">
+<!-- onload="myfunction()" -->
+<body oncontextmenu="return false" >
     <!-- <div id="preloader"></div> -->
     <nav class="nav-class-for-phone">
         <input type="checkbox" id="check">
@@ -34,10 +60,9 @@
             <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
             <li><a class="active" href="service.html">Service</a></li>
             <li><a class="active" href="service.html">Feedback</a></li>
-             <!-- <li><a class="active" id="signinBtn" href="signIn.html">SignIn</a></li> -->
+             <!-- <li><a id="signinBtn" href="/database/signIn.html">SignIn</a></li> -->
              <!-- <li><a id="username" style="color: #fff;">user </a></li> -->
              <!-- <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li> -->
-             <!-- <li><button type="button" class="btn btn-warning" id="signout">LogOut</button></li> -->
              <!-- <li><a id="signout" class="logoutbtn">LogOut</a></li> -->
             <li><i onclick="sharepage()"class="fa-solid fa-share-from-square"></i></li>
             <li id="darkicon"><i class="fa-solid fa-moon" ></i></li>
