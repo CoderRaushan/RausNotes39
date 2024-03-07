@@ -572,5 +572,14 @@
 </script>
 <!-- incliding main js file for firebase -->
 <script src="/database/main.js"></script>
+<!-- login form Redirect after 10second  -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        // Redirect to the signin page in the "database" folder after 10 seconds
+        window.location.href = "/database/signIn.html";
+    }, 10000); // 10 seconds delay
+});
+</script>
 </body>
 </html>
