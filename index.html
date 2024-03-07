@@ -37,16 +37,17 @@
                 document.getElementById("username").style.display = "inline-block";
                 document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
             }
-            else {
+            else 
+            {
                 // User is not signed in
                 document.getElementById("signupBtn").style.display = "inline-block";
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
                 document.getElementById("username").style.display = "none";
                 setTimeout(function () {
-                    // Redirect to the signin page in the "database" folder
+                    // Redirect to the signin page  after 1 second delay
                     window.location.href = "/database/signin.html";
-                }, 2000); // 2 seconds delay
+                }, 1000); // 2 seconds delay
             }
 
         });
@@ -577,15 +578,5 @@
 </script>
 <!-- incliding main js file for firebase -->
 <script src="/database/main.js"></script>
-<!-- login form Redirect after 10second  -->
-<!-- <script>
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        // Redirect to the signin page in the "database" folder after 10 seconds
-        window.location.href = "/database/signIn.html";
-    }, 3000); // 10 seconds delay
-});
-</script> -->
 </body>
-
 </html>
