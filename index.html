@@ -28,7 +28,6 @@
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user-creds");
-
             if (authStatus) {
                 // User is signed in
                 document.getElementById("signupBtn").style.display = "none";
@@ -47,14 +46,13 @@
                 setTimeout(function () {
                     // Redirect to the signin page  after 1 second delay
                     window.location.href = "/database/signin.html";
-                }, 1000); // 2 seconds delay
+                }, 1000); // 1 seconds delay
             }
 
         });
     </script>
 </head>
 <!-- onload="myfunction()" -->
-
 <body oncontextmenu="return false">
     <!-- <div id="preloader"></div> -->
     <nav class="nav-class-for-phone">
@@ -557,7 +555,8 @@
 </script>
 <!-- for share the weblink -->
 <script>
-    async function sharepage() {
+    async function sharepage() 
+    {
         await navigator.share({
             title: document.title,
             url: window.location.href
