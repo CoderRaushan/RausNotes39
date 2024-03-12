@@ -13,6 +13,33 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user-creds");
+            if (authStatus) 
+            {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("username").style.display = "inline-block";
+                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+            }
+            else 
+            {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("username").style.display = "none";
+                setTimeout(function () {
+                    // Redirect to the signin page  after 1 second delay
+                    window.location.href = "/database/signin.html";
+                }, 1000); // 1 seconds delay
+            }
+        });
+    </script>
 </head>
 <body>
     <nav class="nav-class-for-phone">
@@ -24,6 +51,10 @@
                     <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
                     <li><a class="active" href="service.html">Service</a></li>
                     <li><a class="active" href="service.html">Feedback</a></li>
+                    <li><a id="signinBtn" href="/database/signIn.html">Login</a></li>
+                    <li><a id="username" style="color: #fff;">User </a></li>
+                    <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
+                    <li><a id="signout" class="logoutbtn">LogOut</a></li>
                     <li><i onclick="sharepage()"class="fa-solid fa-share-from-square"></i></li>
                     <li id="darkicon"><i class="fa-solid fa-moon" ></i></li>
                 </ul>
@@ -65,8 +96,8 @@
         })
     }
 </script>
-<!-- JAVA script code for clicking outside of the nav bar it gores back -->
-<script>
+ <!-- JAVA script code for clicking outside of the nav bar it gores back -->
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function () 
     {
         var nav = document.querySelector(".nav-class-for-phone");
@@ -78,6 +109,34 @@
             }
         });
     });
+</script>  -->
+<!-- for logout button working script is added overthere -->
+<script>
+    const username = document.querySelector("#username");
+const signoutBtn = document.querySelector("#signout");
+// const userEmail = document.querySelector("#useremail");
+
+let userCreds = JSON.parse(localStorage.getItem("user-creds"));
+let userInfo = JSON.parse(localStorage.getItem("user-info"));
+
+
+
+let Signout = () => {
+    localStorage.removeItem("user-creds");
+    localStorage.removeItem("user-info");
+    window.location.href = '/../index.html'
+}
+
+let CheckCred = () => {
+    if (!localStorage.getItem("user-cred")) {
+        window.location.href = 'signIn.html'
+    } else {
+        username.innerText = userInfo.firstname;
+    }
+}
+username.innerText = userInfo.firstname;
+// window.addEventListener('load', CheckCred)
+signoutBtn.addEventListener('click', Signout);
 </script>
 </body>
 </html>

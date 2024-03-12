@@ -28,7 +28,8 @@
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user-creds");
-            if (authStatus) {
+            if (authStatus) 
+            {
                 // User is signed in
                 document.getElementById("signupBtn").style.display = "none";
                 document.getElementById("signinBtn").style.display = "none";
@@ -48,7 +49,6 @@
                     window.location.href = "/database/signin.html";
                 }, 1000); // 1 seconds delay
             }
-
         });
     </script>
 </head>
