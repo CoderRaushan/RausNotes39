@@ -7,13 +7,15 @@ let userInfo = JSON.parse(localStorage.getItem("user-info"));
 
 
 
-let Signout = () => {
+let Signout = () => 
+{
     localStorage.removeItem("user-creds");
     localStorage.removeItem("user-info");
     window.location.href = 'index.html'
 }
 
-let CheckCred = () => {
+let CheckCred = () => 
+{
     if (!localStorage.getItem("user-cred")) {
         window.location.href = 'signIn.html'
     } else {
