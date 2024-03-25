@@ -1,5 +1,6 @@
 const username = document.querySelector("#username");
 const signoutBtn = document.querySelector("#signout");
+// const bottom_menu_profile = document.querySelector("#bottom_menu_profile");
 // const userEmail = document.querySelector("#useremail");
 
 let userCreds = JSON.parse(localStorage.getItem("user-creds"));
