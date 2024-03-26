@@ -21,8 +21,8 @@
 {
   --primary-color: #fff;
   --secondary-color: #000;
-  /* --third-color: blue; */
 }
+
 body {
   background-color: var(--primary-color);
   overflow: auto;
@@ -811,10 +811,10 @@ textarea {
   margin-right: 2rem;
   height: 3rem;
   width: 90%;
-  background-color: var(--primary-color);
+  /* background: var(--primary-color); */
   border-radius: 5rem;
   padding: 0 1rem;
-  margin: 1 rem 0;
+  margin: 1rem 0;
   color: var(--pink);
   font-size: 1.2rem;
   transition: 0.2s linear;
@@ -825,7 +825,7 @@ textarea {
   border-radius: 1rem;
   padding: 1rem;
   resize: none;
-  /* border: 2px solid var(--secondary-color); */
+  border: 2px solid var(--secondary-color);
 }
 .contact-us-image img {
   height: 638px;
@@ -839,65 +839,56 @@ textarea {
   font-size: 1.4rem;
 }
 /* faq section */
-.faq {
-  background-color: var(--primary--color);
-  height: 780px;
+
+.accordion 
+{
+  padding: 10px 3rem 10px 3rem;
+  height: auto;
   width: auto;
-}
-.faq-accordion {
-  margin: 15px auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
-}
-.faq-accordion li {
-  list-style: none;
-  width: 70%;
-  /* margin-left: 10rem; */
-  /* margin-right: 10rem; */
-  padding: 10px;
+  /* background-color: #e3edf7; */
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 5px var(--secondary-color);
+  cursor: pointer;
   border-radius: 8px;
-  background: var(--primary-color);
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-.faq ul li label {
-  color: var(--secondary-color);
-}
-.faq-accordion li label {
+
+.question 
+{
   display: flex;
   align-items: center;
-  padding: 10px;
-  font-weight: 500;
-  font-size: 18px;
-  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row;
 }
-.faq-accordion li label::before {
-  content: "+";
-  margin-right: 10px;
-  font-size: 24px;
-  font-weight: 600;
+.question h3
+{
+  color:var(--secondary-color);
 }
-.faq-accordion li input[type="radio"] {
-  display: none;
+
+.accordion_container {
+  padding: 1rem 12rem 1rem 12rem;
 }
-.faq-content {
+
+.icon {
+  margin-left: .7rem;
+  transition: transform .3s;
+}
+
+.icon.active {
+  transform: rotate(-180deg);
+}
+
+.answer {
+  margin-top: 10px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s, padding 0.5s;
+  transition: max-height .3s;
 }
-.faq-content p {
-  color: var(--secondary-color);
-  padding: 0 10px;
-  line-height: 26px;
+.answer p
+{
+  margin-right: 8rem;
+  color:var(--secondary-color);
 }
-.faq-accordion li input[type="radio"]:checked + label + .faq-content {
-  max-height: 400px;
-  padding: 10px 10px 20px;
-}
-.faq-accordion li input[type="radio"]:checked + label::before {
-  content: "-";
-}
+/* scroll to top */
 .scroll-to-top i 
 {
   background-color: #581c84;
@@ -905,7 +896,7 @@ textarea {
   border-radius: 50%;
   font-size: 1.5rem;
   position: fixed;
-  bottom: 2rem;
+  bottom: 4px;
   right: 10px;
   padding: 1rem 1.2rem;
   z-index: 55;
@@ -1101,7 +1092,7 @@ font-size: 13px;
   margin-right: 5px;
 }
 .footer-copyright {
-  height: 45px;
+  height: 10rem;
   width: 100%;
   background-color: 440671;
   display: flex;
@@ -1221,7 +1212,9 @@ font-size: 13px;
   .frow3 {
     margin-top: 0px;
   }
-  .footer-copyright {
+  .footer-copyright 
+  {
+    height:8.5rem;
     padding: 1rem;
     padding-right: 1rem;
   }
@@ -1419,29 +1412,18 @@ font-size: 13px;
     width: 100%;
     margin: 0;
     margin-top: 1rem;
+  }
+  .accordion_container {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .accordion 
+{
+  padding: 10px 1rem 10px 1rem;
 }
-  .faq-accordion 
-  {
-    margin: 15px auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-  }
-  .faq 
-  {
-    width: 100%;
-    height: 1000px;
-  }
-  .faq-accordion li 
-  {
-    width: 100%;
-    margin: 0 20px;
-
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  }
+.answer p
+{
+  margin-right:0rem;
+}
   /* .item
   {
    overflow-y:scroll;
@@ -1498,10 +1480,11 @@ font-size: 10px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px) 
+{
   *{
     margin:0;
-  }
+    }
     .contact-us-field {
       display: flex;
       flex-direction: column;
@@ -1534,4 +1517,3 @@ font-size: 10px;
       margin-top:1rem;
     }
   }
-
