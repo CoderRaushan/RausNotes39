@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-        <!-- js link -->
+    <!-- js link -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- logo icon -->
     <link rel="icon" href="/photos/weg_logo.png">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
     <title>IT-semester-4-notes-rausnotes39</title>
     <style>
-        .accordion {
-            margin: 2em 2em 2em 2em;
-        }
-
-        .accordion-body a {
-            display: block;
-            text-decoration: none;
-            color: black;
-            text-transform: capitalize;
-        }
-        .accordion-body a:hover
-        {
-           background-color: #ffff00;
-           display: inline;
-        }
         .home_button
         {
             text-decoration: none; 
@@ -47,131 +38,205 @@
             color: black;
             border: 2px solid black;
         }
+        
+        /* faq section */
+        .accordion 
+        {
+            padding: 10px 3rem 10px 3rem;
+            height: auto;
+            width: auto;
+            /* background-color: #e3edf7; */
+            margin-bottom: 1rem;
+            box-shadow: 2px 2px 5px black;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .question 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .question h3 
+        {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        .accordion_container {
+            padding: 1rem 12rem 1rem 12rem;
+        }
+
+        .icon {
+            margin-left: .7rem;
+            transition: transform .3s;
+        }
+
+        .icon.active {
+            transform: rotate(-180deg);
+        }
+
+        .answer 
+        {
+            height: auto;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .answer a 
+        {
+            margin-right: 8rem;
+            color: black;
+            text-decoration: none;
+            background-color: pink;
+            border: 2px solid black;
+            padding: 5px;
+            margin-top: 2px;
+        }
+        .answer a:hover
+        {
+            background-color: yellow;
+        }
+        @media(max-width:658px)
+        {
+            .accordion_container 
+            {
+            padding: 1rem 2rem 1rem 2rem;
+            }
+            .question h3 
+            {
+            font-size: 1rem;
+            }
+            .accordion 
+            {
+            padding: 10px 1rem 10px 1rem;
+            }
+            .answer p
+            {
+            margin-right:0rem;
+            }
+        }
     </style>
 </head>
 <body>
-<!-- notes secton start -->
-<div class="container mt-3 p-2">
-    <div class="text-center">
-      <p class="h2 fw-bold text-primary">IT Semester 4 Notes</p>
-      <p class="h3 fw-bold">Download Notes & Question Papers</p>
-      <a class="home_button" href="/index.html">Go Home</a>
+ <!-- nav file included -->
+ <!-- <div id="includnav"></div> -->
+    <!-- notes secton start -->
+    <div class="container mt-3 p-2">
+        <div class="text-center">
+            <p class="h2 fw-bold text-primary">IT Semester 4 Notes</p>
+            <p class="h3 fw-bold">Download Notes & Question Papers</p>
+            <a class="home_button" href="/index.html">Go Home</a>
+        </div>
     </div>
-  </div>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-        <!-- Notes Section -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNotes" aria-expanded="true" aria-controls="collapseNotes">
-                    Notes
-                </button>
-            </h2>
-            <div id="collapseNotes" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <ul type="square">
-                        <li>
-                            <a href="/pdf/cam_practical_file.pdf">CAM Practical File</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/cam_notes.pdf">CAM Notes</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/pas_notes.pdf">PAS Notes </a>
-                        </li>
-                        <li>
-                            <a href="/pdf/os_notes.pdf">OS Notes</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/Wt _notes.pdf">WT Notes</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/python_notes.pdf">python Notes</a>
-                        </li>
-                    </ul>
+    <section>
+        <div class="accordion_container">
+            <div class="accordion">
+                <div class="question">
+                    <h3>
+                        Question Papers
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="/pdf/WT_mst_1.pdf">WT Mst Paper</a>
+                    <a href="/pdf/CAM_mst1.pdf">Cam Mst paper</a>
+                    <a href="/pdf/PAS_mst1.pdf">Pas Mst paper</a>
+                    <a href="/pdf/OS_mst1.pdf">Os Mst paper</a>
+                    <a href="/pdf/Python _mst1.pdf">Python Mst paper</a>
+                    <a href="/pdf/DBMS_Mst1.pdf">DBMS Mst paper</a>
+                </div>
+            </div>
+             <div class="accordion">
+                <div class="question">
+                    <h3>  Notes
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="/pdf/cam_practical_file.pdf">CAM Practical File</a>
+                    <a href="/pdf/cam_notes.pdf">CAM Notes</a>
+                    <a href="/pdf/pas_notes.pdf">PAS Notes </a>
+                    <a href="/pdf/os_notes.pdf">OS Notes</a>
+                    <a href="/pdf/Wt _notes.pdf">WT Notes</a>
+                    <a href="/pdf/python_notes.pdf">Python Notes</a>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="question">
+                    <h3>  Practical Files
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="/pdf/wt_file_1_4.pdf">WT Practical File</a>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="question">
+                    <h3>   Assignments
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="/pdf/DBMS_assignment.pdf">DBMS Assignment</a>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="question">
+                    <h3> Math Book
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="/pdf/correlation_and_regression .pdf">Correlation and Regression</a>
+                    <a href="/pdf/Theory_of_probability_and_probability_distribution .pdf">Theory of Probability and Probability Distribution</a>
                 </div>
             </div>
         </div>
+    </section> 
 
-        <!-- Question Papers Section -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsePapers" aria-expanded="true" aria-controls="collapsePapers">
-                  Question Papers
-                </button>
-            </h2>
-            <div id="collapsePapers" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <ul type="square">
-                        <li>
-                            <a href="/pdf/WT_mst_1.pdf">WT Mst Paper</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/CAM_mst1.pdf">cam mst paper</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/OS_mst1.pdf">os mst paper</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/PAS_mst1.pdf">pas mst paper</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/Python _mst1.pdf">Python mst paper</a>
-                        </li>
-                        <li>
-                            <a href="/pdf/DBMS_Mst1.pdf">DBMS mst paper</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNotes" aria-expanded="true" aria-controls="collapseNotes">
-                   Assignments
-                </button>
-            </h2>
-            <div id="collapseNotes" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <ul type="square">
-                        <li>
-                            <a href="/pdf/DBMS_assignment.pdf">DBMS Assignment</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNotes" aria-expanded="true" aria-controls="collapseNotes">
-                   Practical Files
-                </button>
-            </h2>
-            <div id="collapseNotes" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <ul type="square">
-                        <li>
-                            <a href="/pdf/wt_file_1_4.pdf">WT Practical File</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- importing footer -->
-<!-- <div id="includefooter" style="bottom: 0;"></div> -->
-<!-- js link  -->
-<script>
-    // $("#includnav").load("/header&footer/nav.html");
-    // $("#includefooter").load("/header&footer/footer.html");
-</script>
-    <!-- Boostrap JavaScript CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    <!-- importing footer -->
+    <!-- <div id="includefooter"></div> -->
+    <!-- js link  -->
+    <script>
+        $("#includnav").load("/header&footer/nav.html");
+        $("#includefooter").load("/header&footer/footer.html");
     </script>
+    <!-- Boostrap JavaScript CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script> -->
+
+    
+<!-- for faq checkbox -->
+<script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(accordion => {
+        const icon = accordion.querySelector(".icon");
+        const answer = accordion.querySelector(".answer");
+        accordion.addEventListener("click", () => {
+            //    icon.classList.toggle("active");// isme koi problem nahi hai but
+            //    answer.classList.toggle("active");//isme animation problem hai 
+            if (icon.classList.contains("active")) 
+            {
+                icon.classList.remove("active");
+                answer.style.maxHeight = null;
+            }
+            else {
+                icon.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
