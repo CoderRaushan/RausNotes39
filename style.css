@@ -1441,7 +1441,7 @@ font-size: 13px;
   /* dropdown css */
 .dropbtn 
 {
-  font-size:14px;
+  font-size:1rem;
 }
   .scroll-to-top i {
     padding: 0.6rem 0.8rem;
