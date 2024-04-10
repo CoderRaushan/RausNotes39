@@ -45,7 +45,7 @@
             padding: 10px 3rem 10px 3rem;
             height: auto;
             width: auto;
-            /* background-color: #e3edf7; */
+            background-color: #75b3d9;
             margin-bottom: 1rem;
             box-shadow: 2px 2px 5px black;
             cursor: pointer;
@@ -104,6 +104,77 @@
         {
             background-color: yellow;
         }
+        /* scrollling text style */
+        /* Container styles */
+.scrolling-text-container 
+{
+    background-color: #195dc4;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner 
+{
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text 
+{
+    display: flex;
+}
+
+.scrolling-text-item 
+{
+    padding: 0 30px;
+    color:#fff;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div 
+{
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+.whanchor
+{
+    text-decoration: none;
+    background-color:rgb(255, 186, 57);
+    color:#fff;
+    padding: 0px 12px 2px 12px;
+    border-radius: 5rem;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right 
+{
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
         @media(max-width:658px)
         {
             .accordion_container 
@@ -128,8 +199,22 @@
 <body>
  <!-- nav file included -->
  <!-- <div id="includnav"></div> -->
+ <!-- scrolling text  -->
+ <div class="scrolling-text-container">
+    <div class="scrolling-text-inner" style="--marquee-speed: 35s; --direction:scroll-left" role="marquee">
+        <div class="scrolling-text">
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div> 
+            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+            <!-- Add More Items Here -->
+        </div>
+    </div>
+</div>
     <!-- notes secton start -->
-    <div class="container mt-3 p-2">
+    <div class="container">
         <div class="text-center">
             <p class="h2 fw-bold text-primary">IT Semester 4 Notes</p>
             <p class="h3 fw-bold">Download Notes & Question Papers</p>
@@ -141,7 +226,7 @@
             <div class="accordion">
                 <div class="question">
                     <h3>
-                        Question Papers
+                        MST Question Papers
                     </h3>
                     <i class="fa-sharp fa-solid fa-caret-down icon"></i>
                 </div>
@@ -198,6 +283,21 @@
                 <div class="answer">
                     <a href="/pdf/correlation_and_regression .pdf">Correlation and Regression</a>
                     <a href="/pdf/Theory_of_probability_and_probability_distribution .pdf">Theory of Probability and Probability Distribution</a>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="question">
+                    <h3> Final Question Papers
+                    </h3>
+                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                </div>
+                <div class="answer">
+                    <a href="">PAS</a>
+                    <a href="">CAM</a>
+                    <a href="">OS</a>
+                    <a href="">WT</a>
+                    <a href="">Python</a>
+                    <a href="">DBMS</a>
                 </div>
             </div>
         </div>
