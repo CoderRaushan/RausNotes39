@@ -1282,12 +1282,14 @@ cursor: pointer;
 padding: 9px 9px;
 border-radius: 4rem;
 }
-.bottom_menubox1:hover
+.hover_on_pro:hover
 {
-  /* background-color: rgb(232, 116, 7); */
-  background-color: white;
+  background-color: rgb(232, 116, 7);
+  background-color: white; 
   color: #000;
 }
+
+
 
 .bottom_menubox1 h4
 {
