@@ -35,6 +35,7 @@
                 document.getElementById("signout").style.display = "inline-block";
                 document.getElementById("username").style.display = "inline-block";
                 document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
             }
             else {
                 // User is not signed in
@@ -42,6 +43,7 @@
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
                 document.getElementById("username").style.display = "none";
+                // document.getElementById("bottom_menu_profile").style.display = "none";
                 // setTimeout(function () 
                 // {
                 //     window.location.href = "/database/signin.html";
