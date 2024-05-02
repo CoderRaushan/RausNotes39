@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- google adsense links -->
     <meta name="google-adsense-account" content="ca-pub-9833609693095446">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-     crossorigin="anonymous"></script>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-     crossorigin="anonymous"></script>
-<!-- square -->
-<!-- <ins class="adsbygoogle"
+        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
+        crossorigin="anonymous"></script>
+    <!-- square -->
+    <!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9833609693095446"
      data-ad-slot="6569706726"
@@ -17,8 +18,8 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script> -->
-<!-- in-feed -->
-<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
+    <!-- in-feed -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block"
@@ -29,7 +30,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script> -->
-<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block"
@@ -39,7 +40,7 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script> -->
-   <!-- till here goole ad sense links -->
+    <!-- till here goole ad sense links -->
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="jjSz4zVZv2EWGo-UQD6WRXeu3v_sWTvp48t1COaECjY" />
     <meta name="google-adsense-account" content="ca-pub-9833609693095446">
@@ -66,8 +67,7 @@
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user-creds");
-            if (authStatus) 
-            {
+            if (authStatus) {
                 // User is signed in
                 document.getElementById("signupBtn").style.display = "none";
                 document.getElementById("signinBtn").style.display = "none";
@@ -92,6 +92,7 @@
     </script>
 </head>
 <!-- onload="myfunction()" // oncontextmenu="return false" -->
+
 <body>
     <!-- <div id="preloader"></div> -->
     <nav class="nav-class-for-phone">
@@ -560,6 +561,53 @@
                 </div>
             </div>
         </section>
+        <!-- about developer section -->
+        <section>
+            <h1 class="hero-heading developer_bottom_space" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">About Developer
+            </h1>
+            <div class="developer_container">
+                <div class="developer_text_area">
+                    <div class="typed_text_main">
+                        <div class="head_text1">
+                            <h3>Hi I'm <span class="raushnan_color">Raushan</span> Kumar Developer Of </h3>
+                        </div>
+                        <div class="head_text2">
+                            <span class="raushnan_color">RausNotes39</span>
+                        </div>
+                        <a href="/photos/about_developer/Resume .pdf"><button class="cv_btn">Download CV <i
+                                    class="fa-solid fa-download"></i></button></a>
+                    </div>
+                    <div class="developer_social_media">
+                        <h4>Social Media</h4>
+                        <a href="https://wa.link/by8byy"><i class="fa-brands fa-whatsapp"
+                                style="color: #e4e764; "></i></a>
+                        <a href="https://instagram.com/raushan__39?igshid=NGExMmI2YTkyZg=="
+                            style="color:white; "><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/raushan-kumar-964a75255" style="color:#dce6f1;"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:raushankumar23082004@gmail.com" style="color: 	#f2a60c;"><i
+                                class="fa-regular fa-envelope"></i></a>
+                        <a href="https://t.me/+917631867534"><i class="fa-brands fa-telegram"
+                                style="color:#229ED9; background-color: white; border-radius: 50%;"></i></a>
+                    </div>
+                    <div class="personal_info">
+                        <h4>Introduction</h4>
+                        <div class="text_aline">
+                            <p>Name: Raushan Kumar</p>
+                            <p>Age: 20</p>
+                            <p>Email: raushankumar23082004@gmail.com</p>
+                            <p>Address: Gne College Ludhiana Punjab India</p>
+                            <p>Hobbies: Playing & Watching Cricket, Coding</p>
+                            <p>Profession: Web Developer</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="developer_div_box">
+                    <img src="/photos/about_developer/Raushan Img final.png" alt="Developer Photo">
+                </div>
+            </div>
+        </section>
         <!-- contact us section -->
         <section class="contact-us">
             <h1 class="hero-heading" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">Contact Us</h1>
@@ -684,21 +732,16 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
     <script>
-        var typed = new Typed('.dynamic-text', {
+        let typed = new Typed('.dynamic-text', {
             strings: ['RausNotes39'],
             typeSpeed: 100,
             backSpeed: 100,
             loop: true
         });
     </script>
+
+
 </body>
-<!--for preloader -->
-<!-- <script>
-    var preloader = document.getElementById('preloader');
-    function myfunction() {
-        preloader.style.display = 'none';
-    }
-</script> -->
 <!-- for faq checkbox -->
 <script>
     const accordions = document.querySelectorAll('.accordion');
@@ -778,4 +821,5 @@
 <!-- incliding main js file for firebase -->
 <script src="/database/main.js"></script>
 </body>
+
 </html>

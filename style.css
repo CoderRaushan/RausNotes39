@@ -10,7 +10,6 @@
 .dynamic-text
 {
   color:#fbff00;
-  /* color: yellow; */
 }
 .share-web-link 
 {
@@ -1148,12 +1147,115 @@ textarea {
   max-height: 0;
   overflow: hidden;
   transition: max-height .3s;
+  
 }
 .answer p
 {
   margin-right: 8rem;
   color:var(--secondary-color);
 }
+/* about developer section */
+.developer_container
+{
+  height: 100%;
+  width: 100%;
+  background-image: url('/photos/about_developer/developer_backimage.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-origin: content-box; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;   
+  flex-wrap: wrap-reverse; 
+  justify-content: space-between;
+}
+.developer_container img
+{
+  height:520px;
+  width: 530px;
+  padding-right:3rem;
+}
+.developer_div_box
+{
+
+  height: 100vh;
+  width: 100wh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.developer_text_area
+{
+  padding-left: 1rem;
+  height: 600px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction: column;
+}
+.raushnan_color
+{
+  color:#fbff00;
+  font-size: 2.4rem;
+}
+.developer_text_area h3
+{ 
+  color:white;
+  font-size: 2.4rem;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+}
+.cv_btn
+{
+  margin-top:10px;
+  height: 2.2rem;
+  width: 11rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  background-color: yellow;
+  color: #000;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.personal_info 
+{
+  text-align: left;
+}
+.personal_info h4
+{
+color:#fbff00;
+font-size: 1.5rem;
+}
+.personal_info p
+{
+  color:#fff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.developer_social_media
+{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.developer_social_media i
+{
+/* color:yellow; */
+font-size: 2rem;
+margin-right: 10px;
+}
+.developer_social_media h4
+{
+color:#fbff00;
+font-size: 1.5rem;
+}
+
 /* scroll to top */
 .scroll-to-top i 
 {
@@ -1651,7 +1753,75 @@ font-size: 13px;
     padding-bottom: .1em;
     margin-bottom: -6rem;
   }
-
+/* about developer section css */
+  .developer_div_box
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+  .developer_text_area h3 
+  {
+    color: white;
+    font-size: 2.4rem;
+    color: #fff;
+    margin: 10px 10px 0px 10px;
+  }
+  .developer_container img
+  {
+    height:340px;
+    width: 320px;
+    margin-top: -11rem;
+    padding-right:0rem;
+  }
+  .developer_text_area h3 
+  {
+    font-size: 1.8rem;
+    padding: 10px 10px 0px 10px;
+  }
+  .raushnan_color 
+  {
+    font-size:1.8rem;
+  }
+  .personal_info
+  {
+    padding-left: 5px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  .personal_info p 
+  {
+    font-size: 1rem;
+  }
+  .developer_bottom_space
+  {
+    margin-bottom: 11rem;
+  }
+  .developer_text_area 
+  {
+    margin-top: -3.2rem;
+    padding-left: 0rem;
+  }
+  .cv_btn 
+  {
+    margin-bottom: 0rem;
+  }
+  .developer_social_media h4 
+  {
+    color: #fbff00;
+    font-size: 1.3rem;
+    margin-bottom:.8rem;
+  }
+  .personal_info h4 
+  {
+    color: #fbff00;
+    font-size: 1.3rem;
+    margin-bottom:.8rem;
+  }
+  
   .contact-us-field {
     display: flex;
     flex-direction: column;
