@@ -1214,7 +1214,7 @@ textarea {
 .cv_btn
 {
   margin-top:10px;
-  height: 2.2rem;
+  height: 2.5rem;
   width: 11rem;
   border-radius: 5rem;
   cursor: pointer;
@@ -1255,7 +1255,87 @@ margin-right: 10px;
 color:#fbff00;
 font-size: 1.5rem;
 }
-
+/* sill section */
+.developer_skill_text
+{
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.developer_skil_table
+{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* align-items: center; */
+}
+.developer_skil_table,table   
+{
+  font-size: 1.1rem;
+  border-collapse: collapse;   
+}
+.skill_table1,.skill_table2,.skill_table3,.skill_table4,.skill_table5
+{
+  margin: 20px 20px 20px 20px;
+}
+.developer_skil_table table  th, td 
+{
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+}
+.developer_skil_table table th 
+{
+  background-color: #581c84;
+  color:#fff;
+}
+.developer_skil_table table td
+{
+background-color: #d4bae7;
+color:#000;
+}
+.developer_skil_table table th[colspan="4"] 
+{
+  text-align: center;
+}
+/* education section */
+.education_box1
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.education_box1
+{
+  margin: 20px 20px 20px 20px;
+}
+.education_box1 table   
+{
+  font-size: 1.1rem;
+  border-collapse: collapse;   
+}
+.education_box1 table  th, td 
+{
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+}
+.education_box1 
+table th 
+{
+  background-color: #581c84;
+  color:#fff;
+}
+.education_box1 table td
+{
+background-color: #d4bae7;
+color:#000;
+}
 /* scroll to top */
 .scroll-to-top i 
 {
@@ -1808,6 +1888,9 @@ font-size: 13px;
   .cv_btn 
   {
     margin-bottom: 0rem;
+    height: 1.9rem;
+    width: 8rem;
+    font-size: .9rem;
   }
   .developer_social_media h4 
   {
@@ -1821,7 +1904,10 @@ font-size: 13px;
     font-size: 1.3rem;
     margin-bottom:.8rem;
   }
-  
+  .developer_skil_table table   
+{
+  font-size: 1.1rem;
+}
   .contact-us-field {
     display: flex;
     flex-direction: column;
