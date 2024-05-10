@@ -67,7 +67,7 @@
     <div class="no_to_wa_link_generate">
         <h1>Generate Phone Number to WhatsApp link</h1>
         <input type="number" name="number" id="no_to_wa_link_text">
-        <a href="" id="no_to_wa_link_anchor">Open WhatsApp</a>
+        <a id="no_to_wa_link_anchor">Open WhatsApp</a>
     </div>
 </body>
 <script>
@@ -83,7 +83,7 @@
         }
         else if(input_area)
         {
-            operwhatsapp.href="https://wa.me/"+input_area;
+            operwhatsapp.href="https://wa.me/+91"+input_area;
         }
         else{
             alert("Please Enter a valid phone number");
