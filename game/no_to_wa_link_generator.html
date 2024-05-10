@@ -71,10 +71,11 @@
     </div>
 </body>
 <script>
-    let input_area=document.getElementById("no_to_wa_link_text").value;
+   
     let operwhatsapp=document.getElementById("no_to_wa_link_anchor");
     operwhatsapp.addEventListener("click",()=>
     {
+        let input_area=document.getElementById("no_to_wa_link_text").value;
         operwhatsapp.href="https://wa.me/"+input_area;
     });
 </script>
