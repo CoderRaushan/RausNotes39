@@ -75,8 +75,19 @@
     let operwhatsapp=document.getElementById("no_to_wa_link_anchor");
     operwhatsapp.addEventListener("click",()=>
     {
+        // event.preventDefault();
         let input_area=document.getElementById("no_to_wa_link_text").value;
-        operwhatsapp.href="https://wa.me/"+input_area;
+        if(input_area.length<10 || input_area.length>10)
+        {
+            alert("Number digits should be of 10 digits");
+        }
+        else if(input_area)
+        {
+            operwhatsapp.href="https://wa.me/"+input_area;
+        }
+        else{
+            alert("Please Enter a valid phone number");
+        }
     });
 </script>
 </html>
