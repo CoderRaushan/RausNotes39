@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+    .container
+    {
+        padding: 1rem;
+        margin-top:12rem;
+        width: 300px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        background-color: rgb(12, 12, 163);
+        border-radius:1rem;
+    }
+     #userprofileimage
+     {
+        height: 100px;
+        padding-top: 1rem;
+     }
+     .userdata
+     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+     }
+     .main_containerr
+     {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    </style>
+</head>
+<body>
+  <div class="main_containerr">
+    <div class="container">
+        <img src="profile_photo.png" alt="profile_photo" id="userprofileimage">
+        <div class="userdata">
+            <p>Name: <span id="firstname"></span> <span id="lastname"></span></p>
+            <p>Email: <span id="useremail"></span></p>
+        </div>
+      </div>
+  </div>
+</body>
+<script>
+    let userfirstname=JSON.parse(localStorage.getItem("user-info")).firstname;
+    let userlastname=JSON.parse(localStorage.getItem("user-info")).lastname;
+    let useremail=JSON.parse(localStorage.getItem("user-creds")).email;
+
+    let firstname=document.getElementById("firstname");
+    firstname.innerText=userfirstname;
+
+    let lastname=document.getElementById("lastname");
+    lastname.innerText=userlastname
+
+    let email=document.getElementById("useremail");
+    email.innerText=useremail;
+</script>
+</html>

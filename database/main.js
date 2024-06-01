@@ -12,13 +12,13 @@ let Signout = () =>
 {
     localStorage.removeItem("user-creds");
     localStorage.removeItem("user-info");
-    window.location.href = 'index.html'
+    window.location.href = 'index.html';
 }
 
 let CheckCred = () => 
 {
     if (!localStorage.getItem("user-cred")) {
-        window.location.href = 'signIn.html'
+        window.location.href = 'signIn.html';
     } else {
         username.innerText = userInfo.firstname;
     }

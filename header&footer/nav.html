@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
      
-    <meta name="google-site-verification" content="jjSz4zVZv2EWGo-UQD6WRXeu3v_sWTvp48t1COaECjY" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header_file</title>
@@ -56,7 +55,7 @@
                     <li><a class="active" href="service.html">Service</a></li>
                     <li><a class="active" href="service.html">Feedback</a></li>
                     <li><a id="signinBtn" href="/database/signIn.html">Login</a></li>
-                    <li><a id="username" style="color: #fff;">User </a></li>
+                    <li><a id="username" style="color: #fff;" href="/userProfile/userProfile.html">User </a></li>
                     <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
                     <li><a id="signout" class="logoutbtn">LogOut</a></li>
                     <li><i onclick="sharepage()"class="fa-solid fa-share-from-square"></i></li>
@@ -236,5 +235,12 @@
         });
     });
 </script> 
+<!-- user profile info button js -->
+<!-- <script>
+    let nav_user_name=document.getElementById("username");
+    nav_user_name.addEventListener("click",()=>{
+        window.location.href = "/userProfile/userProfile.html";
+    });
+</script> -->
 </body>
 </html>
