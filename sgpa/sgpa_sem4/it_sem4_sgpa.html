@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <!-- <link rel="stylesheet" href="sem_4_common_style.css"> -->
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background-color: #FCFBF4;
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+
+
+        table,
+        td,
+        tr {
+            border: none;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: auto;
+            height: 720px;
+            padding: 0 1rem 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 3px solid blue;
+            background-color: rgb(222, 188, 15);
+            border-radius: 2rem;
+            box-shadow: 5px 5px 8px black;
+        }
+
+        h1 {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            color: yellow;
+            border-radius: 70px;
+            margin: 10px 0px;
+            cursor: pointer;
+        }
+
+        #yy {
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 80px;
+            border-radius: 100px;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        h1 {
+            text-align: left;
+            justify-content: right;
+            color: #333;
+            height: 80px;
+            border: solid rgb(255, 255, 255);
+        }
+
+        .name {
+            position: absolute;
+            margin-left: 0px;
+            padding-top: 90px;
+            margin-top: -60px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        form {
+            margin-top: 20px;
+            margin: 30px 30px;
+            color: rgb(0, 0, 0);
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 4px;
+            margin: 10px 10px;
+            border-radius: 30px;
+            background-color: rgb(150, 200, 241);
+        }
+
+        education_box1 table th,
+        td {
+            /* border: 1px solid #000; */
+            text-align: center;
+            padding: 10px 20px 10px 20px;
+        }
+
+        #sgpabtn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 6px 10px 6px 10px;
+            border: solid rgb(255, 255, 255);
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: black;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        .home {
+            text-decoration: none;
+            background-color: black;
+            color: yellow;
+            position: absolute;
+            padding: 0px 8px;
+            margin: -5px 80%;
+            border-radius: 20px;
+            float: right;
+            margin-right: 70px;
+            border: solid white 2px;
+        }
+
+        .home1 {
+            text-decoration: none;
+            background-color: black;
+            color: yellow;
+            position: absolute;
+            padding: 0px 8px;
+            margin: -5px 8%;
+            border-radius: 20px;
+            display: inline-block;
+            border: solid white 2px;
+        }
+
+        .home1:hover {
+            transition: transform 0.5s;
+            transform: scale(1.05);
+        }
+
+        .home:hover {
+            transition: transform 0.5s;
+            transform: scale(1.05);
+        }
+
+        .auto {
+            margin: -60px 30px;
+        }
+
+        input:hover {
+            transition: transform 0.5s;
+            transform: scale(1.1);
+        }
+
+        h1:hover {
+            transition: transform 0.5s;
+            transform: scale(1.01);
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        #sgpaValue {
+            font-size: 18px;
+            color: #333;
+        }
+
+
+        #fs {
+            background-color: rgb(188, 144, 229);
+        }
+
+        #noshow {
+            display: none;
+        }
+    </style>
+</head>
+<!-- nav file included -->
+<div id="includnav"></div>
+<div class="main">
+    <form method="post">
+        <div class="box" style="height: 820px;">
+            <table border="none">
+                <div>
+                    <tr>
+                        <td><label for="PAS">PAS:</label></td>
+                        <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="DBMS">DBMS:</label></td>
+                        <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
+                                name="DBMS" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="PY">PY:</label></td>
+                        <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="OS">OS:</label></td>
+                        <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="WT">WT:</label></td>
+                        <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="CAM">CAM:</label></td>
+                        <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="DBMS-LAB">DBMS-LAB</label></td>
+                        <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
+                                name="DBMS-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="PY-LAB">PY-LAB:</label></td>
+                        <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
+                                name="PY-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="OS-LAB">OS & CAM -LAB:</label></td>
+                        <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
+                                name="OS-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="WT-LAB">WT-LAB:</label></td>
+                        <td><input type="number" id="WT-LAB" placeholder="Enter Sum of internel & external"
+                                name="WT-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="MPD">MPD:</label></td>
+                        <td><input type="number" id="MPD" placeholder="Enter Sum of internel & external" name="MPD"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+            </table>
+            <!-- <a id="sgpabtn">calculate sgpa</a> -->
+            <button id="sgpabtn">calculate sgpa</button>
+        </div>
+    </form>
+</div>
+<script>
+    let sgpabtn = document.getElementById("sgpabtn");
+    sgpabtn.addEventListener("click", () => {
+        {
+            // accessing all input fields 
+            let PAS = (document.getElementById("PAS").value);
+            let DBMS = (document.getElementById("DBMS").value);
+            let PY = (document.getElementById("PY").value);
+            let OS = (document.getElementById("OS").value);
+            let WT = (document.getElementById("WT").value);
+            let CAM = (document.getElementById("CAM").value);
+            // LABS
+            let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
+            let PY_LAB = (document.getElementById("PY-LAB").value);
+            let OS_LAB = (document.getElementById("OS-LAB").value);
+            let WT_LAB = (document.getElementById("WT-LAB").value);
+            let MPD_lab = (document.getElementById("MPD").value);
+
+            let test = document.querySelectorAll("input");
+            for (let p of test) {
+                if (p.value === "") {
+
+                    alert("Please Enter Marks in All input field!");
+                    break;
+                }
+            }
+            // now  calculating percentage of each subject including lab
+            PAS = PAS / 100 * 100;
+            DBMS = DBMS / 100 * 100;
+            PY = PY / 100 * 100;
+            OS = OS / 100 * 100;
+            WT = WT / 100 * 100;
+            CAM = CAM / 100 * 100;
+
+            DBMS_LAB = DBMS_LAB / 50 * 100;
+            PY_LAB = PY_LAB / 50 * 100;
+            OS_LAB = OS_LAB / 50 * 100;
+            WT_LAB = WT_LAB / 50 * 100;
+            MPD_lab = MPD_lab / 100 * 100;
+
+            // now calculating grade point form persentage
+            let pasgrade = Math.floor(PAS / 10) + 1;
+            if (pasgrade >= 10) {
+                pasgrade = 10;
+            }
+            let dbmsgrade = Math.floor(DBMS / 10) + 1;
+            if (dbmsgrade >= 10) {
+                dbmsgrade = 10;
+            }
+            let pygrade = Math.floor(PY / 10) + 1;
+            if (pygrade >= 10) {
+                pygrade = 10;
+            }
+            let osgrade = Math.floor(OS / 10) + 1;
+            if (osgrade >= 10) {
+                osgrade = 10;
+            }
+            let wtgrade = Math.floor(WT / 10) + 1;
+            if (wtgrade >= 10) {
+                wtgrade = 10;
+            }
+            let camgrade = Math.floor(CAM / 10) + 1;
+            if (camgrade >= 10) {
+                camgrade = 10;
+            }
+
+            // labs
+
+            let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
+            if (dbmslabgrade >= 10) {
+                dbmslabgrade = 10;
+            }
+            let pylabgrade = Math.floor(PY_LAB / 10) + 1;
+            if (pylabgrade >= 10) {
+                pylabgrade = 10;
+            }
+            let oslabgrade = Math.floor(OS_LAB / 10) + 1;
+            if (oslabgrade >= 10) {
+                oslabgrade = 10;
+            }
+            let wtlabgrade = Math.floor(WT_LAB / 10) + 1;
+            if (wtlabgrade >= 10) {
+                wtlabgrade = 10;
+            }
+            let MPDgrade = Math.floor(MPD_lab / 10) + 1;
+            if (MPDgrade >= 10) {
+                MPDgrade = 10;
+            }
+            // multiplying grade and credit point
+            let pasresult = pasgrade * 3;
+            let dbmsresult = dbmsgrade * 3;
+            let pyresult = pygrade * 3;
+            let osresult = osgrade * 3;
+            let wtresult = wtgrade * 3;
+            let camresult = camgrade * 3;
+
+            let dbmslabresult = dbmslabgrade * 1;
+            let pylabresult = pylabgrade * 1;
+            let oslabresult = oslabgrade * 1;
+            let wtlabresult = wtlabgrade * 1;
+            let MPDresult = MPDgrade * 1;
+
+            //   adding all results
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
+            sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
+            event.preventDefault();
+        }
+    });
+</script>
+<!-- footer file included -->
+<div id="includefooter">
+    <!-- importing js code -->
+    <script>
+        $("#includnav").load("/header&footer/nav.html");
+        $("#includefooter").load("/header&footer/footer.html");
+    </script>
+
+    <body>
+    </body>
+
+</html>

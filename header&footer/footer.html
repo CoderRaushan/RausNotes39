@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,34 +17,7 @@
 </head>
 <body>
     <footer class="footer">
-      <!-- bottom menu -->
- <div class="bottom_menu">
-    <a class="bottom_menu_anchor" href="/index.html">
-        <div class="bottom_menubox1">
-            <i class="fa-solid fa-house"></i>
-            <h4>Home</h4>
-        </div>
-    </a>
-    <a class="bottom_menu_anchor" href="/notes/notes_section.html">
-        <div class="bottom_menubox1">
-            <i class="fa-solid fa-notes-medical"></i>
-            <h4>Notes</h4>
-        </div>
-    </a>
-    <a class="bottom_menu_anchor" href="/sgpa/sgpa_page.html">
-        <div class="bottom_menubox1">
-            <i class="fa-solid fa-calculator"></i>
-            <h4>SgpaC</h4>
-        </div>
-    </a>
-    <a class="bottom_menu_anchor">
-        <div class="bottom_menubox1">
-            <i class="fa-solid fa-user"></i>
-            <h4 id="bottom_menu_profile">Profile</h4>
-        </div>
-    </a>
-</div>
-        
+        <!-- footer menu -->
         <div class="myfooter">
             <div class="frow1">
                 <img src="/photos/weg_logo.png" class="img" alt="logo" <abbr title="logo"></abbr>
@@ -108,17 +82,14 @@
 
         let userCreds = JSON.parse(localStorage.getItem("user-creds"));
         let userInfo = JSON.parse(localStorage.getItem("user-info"));
-        let Signout = () => 
-        {
+        let Signout = () => {
             localStorage.removeItem("user-creds");
             localStorage.removeItem("user-info");
             window.location.href = '/../index.html';
         }
 
-        let CheckCred = () => 
-        {
-            if (!localStorage.getItem("user-cred")) 
-            {
+        let CheckCred = () => {
+            if (!localStorage.getItem("user-cred")) {
                 window.location.href = 'signIn.html'
             } else {
                 username.innerText = userInfo.firstname;

@@ -1,33 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="jjSz4zVZv2EWGo-UQD6WRXeu3v_sWTvp48t1COaECjY" />
-    <!-- google ads link -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-    crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-9833609693095446"
-    data-ad-slot="4642381531"></ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="ppt, covid-19, python, gne , Engineering-ppt">
     <meta name="description" content="Download ppt here for all topics with-rausnotes39">
-    <title>PPT_Section-with-rausnotes39</title>
+    <title>PPT RausNotes39</title>
     <link rel="icon" href="/photos/weg_logo.png">
-    <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-</head>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user-creds");
+            if (authStatus) 
+            {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("username").style.display = "inline-block";
+                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+            }
+            else 
+            {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("username").style.display = "none";
 
+                // setTimeout(function () {
+                //     // Redirect to the signin page  after 1 second delay
+                //     window.location.href = "/database/signin.html";
+                // }, 1000); // 1 seconds delay
+            }
+        });
+    </script>
+</head>         
 <body>
+    <nav class="nav-class-for-phone">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/weg_logo.png" alt="logo">RausNotes39</label>
+                <ul class="nav-item">
+                    <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+                    <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
+                    <li><a class="active" href="service.html">Service</a></li>
+                    <li><a class="active" href="service.html">Feedback</a></li>
+                    <li><a id="signinBtn" href="/database/signIn.html">Login</a></li>
+                    <li><a id="username" style="color: #fff;">User </a></li>
+                    <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
+                    <li><a id="signout" class="logoutbtn">LogOut</a></li>
+                    <li><i onclick="sharepage()"class="fa-solid fa-share-from-square"></i></li>
+                    <li id="darkicon"><i class="fa-solid fa-moon"></i></li>
+                </ul>
+    </nav>
+    <div class="main_nav_nested_item_ele">
+        <!-- <a href="portfolio/portfolio.html">
+            <div class="dropdown">
+                <button class="dropbtn">Portfolio</button>
+            </div>
+        </a> -->
+        <a href="/ppt_section/ppt_page.html">
+            <div class="dropdown">
+                <button class="dropbtn">PPT</button>
+            </div>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content">
+                <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
+                    <div class="dropdown-content_for_applied">
+                        <a href="/notes/physics_Group.html">Physics</a>
+                        <a href="notes/chemistry_Group.html">Chemistry</a>
+                    </div>
+                </a>
+                <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
+                    <div class="dropdown-content_for_it">
+                        <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
+                        <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                    </div>
+                </a>
+                <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
+                    <div class="dropdown-content_for_cse">
+                        <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_sgpa">
+                <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa">
+                        <a id="it-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_it_leet">
+                                <a href="/sgpa/it_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/it_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/sgpa_sem4/it_sem4_sgpa.html">Semester 4</a>
+                    </div>
+                </a>
+                <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_cse_sgpa">
+                        <a id="cse-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_cse_leet">
+                                <a href="/sgpa/cse_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/cse_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ece_sgpa">
+                        <a id="ece-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ece_leet">
+                                <a href="/sgpa/ece_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ece_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ee_sgpa">
+                        <a id="ee-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ee_leet">
+                                <a href="/sgpa/ee_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ee_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ce_sgpa">
+                        <a id="ce-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ce_leet">
+                                <a href="/sgpa/ce_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ce_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_me_sgpa">
+                        <a id="me-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_me_leet">
+                                <a href="/sgpa/me_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/me_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_game">
+                <a href="/game/color_genetator.html">Color Gen</a>
+                <a href="/game/gues_a_number.html">Guess no</a>
+                <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
+                <a href="#">Game4</a>
+                <a href="#">Game5</a>
+                <a href="#">Game6</a>
+            </div>
+        </div>
+        <!-- <a href="/weather/weather.html">
+            <div class="dropdown">
+                <button class="dropbtn">Weather</i></button>
+            </div>
+        </a> -->
+    </div>
     <!-- nav file included -->
-    <div id="includnav"></div>
+    <!-- <div id="includnav"></div> -->
     <!-- ppt section start -->
     <section>
         <br>
@@ -37,7 +194,7 @@
         <div class="ppt_container">
             <div class="ppt1">
                 <a href="/ppt/5G-Technology.pptx">
-                    <img src="/ppt-image/ppt11.png" alt="">
+                    <img src="/ppt-image/ppt11.png" alt="hisdfds">
                     <h3>Topic:</h3>
                     <p>5G-Technology</p>
                     <button type="button" data-dl>
@@ -355,6 +512,34 @@
                     </button>
                 </a>
             </div>
+
+            <!-- bottom menu  -->
+            <div class="bottom_menu">
+                <a class="bottom_menu_anchor" href="/index.html">
+                    <div class="bottom_menubox1">
+                        <i class="fa-solid fa-house"></i>
+                        <h4>Home</h4>
+                    </div>
+                </a>
+                <a class="bottom_menu_anchor" href="/notes/notes_section.html">
+                    <div class="bottom_menubox1">
+                        <i class="fa-solid fa-notes-medical"></i>
+                        <h4>Notes</h4>
+                    </div>
+                </a>
+                <a class="bottom_menu_anchor" href="/sgpa/sgpa_page.html">
+                    <div class="bottom_menubox1">
+                        <i class="fa-solid fa-calculator"></i>
+                        <h4>SgpaC</h4>
+                    </div>
+                </a>
+                <a class="bottom_menu_anchor">
+                    <div class="bottom_menubox1">
+                        <i class="fa-solid fa-user"></i>
+                        <h4 id="bottom_menu_profile">Profile</h4>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
     <!-- ppt section end -->
@@ -372,5 +557,4 @@
         $("#includefooter").load("/header&footer/footer.html");
     </script>
 </body>
-
 </html>
