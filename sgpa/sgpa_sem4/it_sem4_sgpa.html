@@ -217,6 +217,13 @@
         #noshow {
             display: none;
         }
+        #it_sem4
+        {
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 <!-- nav file included -->
@@ -368,9 +375,10 @@
         </div>
     </a> -->
 </div>
+<h3 id="it_sem4">SGPA Calculator for IT Branch, Semester 4</h3>
 <div class="main">
     <form method="post">
-        <div class="box" style="height: 820px;">
+        <div class="box" style="height: 860px;">
             <table border="none">
                 <div>
                     <tr>
@@ -456,8 +464,8 @@
                     </tr>
                 </div>
             </table>
-            <!-- <a id="sgpabtn">calculate sgpa</a> -->
-            <button id="sgpabtn">calculate sgpa</button>
+            <button id="sgpabtn">Calculate Sgpa</button>
+            <p id="congrass">Click on Calculate Sgpa</p>
         </div>
     </form>
     <!-- bottom menu -->
@@ -490,6 +498,7 @@
 </div>
 <script>
     let sgpabtn = document.getElementById("sgpabtn");
+    let congrassbtn = document.getElementById("congrass");
     sgpabtn.addEventListener("click", () => {
         {
             // accessing all input fields 
@@ -593,6 +602,7 @@
             //   adding all results
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
             sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
+            congrassbtn.innerText="RausNotes39, congrats! You did well. Keep it up!"
             event.preventDefault();
         }
     });
