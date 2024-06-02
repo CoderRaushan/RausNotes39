@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +49,7 @@
         });
     </script>
 </head>
+
 <body>
     <nav class="nav-class-for-phone">
         <input type="checkbox" id="check">
@@ -56,9 +58,10 @@
                 alt="logo">RausNotes39</label>
         <ul class="nav-item">
             <li><a class="active" href="index.html" target="_blank">Home</a></li>
-            <li><a class="active" href="/portfolio/portfolio.html" target="_blank">About</a></li>
-            <li><a class="active" href="service.html">Service</a></li>
-            <li><a class="active" href="service.html">Feedback</a></li>
+            <li><a class="active" id="about_dev_btn">About</a>
+            </li>
+            <li><a class="active">Service</a></li>
+            <li><a class="active" id="feedback_btn">Feedback</a></li>
             <li><a id="signinBtn" href="/database/signIn.html">Login</a></li>
             <li><a id="username" style="color: #fff;" href="/userProfile/userProfile.html">User </a></li>
             <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
@@ -517,8 +520,8 @@
         </section>
         <!-- about developer section -->
         <section>
-            <h1 class="hero-heading developer_bottom_space" data-aos="fade-up" data-aos-duration="1300"
-                data-aos-once="true">About Developer
+            <h1 class="hero-heading developer_bottom_space" id="abou_devloper_scroll" data-aos="fade-up"
+                data-aos-duration="1300" data-aos-once="true">About Developer
             </h1>
             <div class="developer_container">
                 <div class="developer_text_area">
@@ -929,12 +932,11 @@
         });
     });
 </script>
- <!-- user profile info button js -->
+<!-- user profile info button js -->
 <script>
-    let btn_profile=document.getElementById("user_profile_btn");
+    let btn_profile = document.getElementById("user_profile_btn");
     // let nav_user_name=document.getElementById("username");
-    btn_profile.addEventListener("click",()=>
-    {
+    btn_profile.addEventListener("click", () => {
         window.location.href = "/userProfile/userProfile.html";
     });
     // nav_user_name.addEventListener("click",()=>{
@@ -942,7 +944,29 @@
     // });
 </script>
 
+<!-- scroll to about -->
+<script>
+    let access = document.getElementById("about_dev_btn");
+    access.addEventListener("click", () => {
+        window.scrollTo({
+            top:3655,
+            behavior: "smooth"
+        });
+    });
+</script>
+<!-- scroll to feedback -->
+<script>
+    let feedfeedback_btn=document.getElementById("feedback_btn");
+    feedfeedback_btn.addEventListener("click",()=>
+    {
+       window.scrollTo({
+        top:5345,
+            behavior: "smooth"
+       });
+    });
+</script>
 <!-- incliding main js file for firebase -->
 <script src="/database/main.js"></script>
 </body>
+
 </html>
