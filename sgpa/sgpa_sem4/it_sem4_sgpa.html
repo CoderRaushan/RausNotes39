@@ -26,11 +26,10 @@
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
                 document.getElementById("username").style.display = "none";
-
-                // setTimeout(function () {
-                //     // Redirect to the signin page  after 1 second delay
-                //     window.location.href = "/database/signin.html";
-                // }, 1000); // 1 seconds delay
+                setTimeout(function () {
+                    // Redirect to the signin page  after 1 second delay
+                    window.location.href = "/database/signin.html";
+                }, 500); // 1 seconds delay
             }
         });
     </script>
@@ -41,9 +40,6 @@
             padding: 0;
             font-family: "Roboto", sans-serif;
         }
-
-
-
         table,
         td,
         tr {

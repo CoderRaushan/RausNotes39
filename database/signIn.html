@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- google ads link -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-    crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-format="autorelaxed"
-    data-ad-client="ca-pub-9833609693095446"
-    data-ad-slot="4642381531"></ins>
+        crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-9833609693095446"
+        data-ad-slot="4642381531"></ins>
     <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +22,7 @@
     <title>Login Form</title>
     <style>
         body {
-             font-family: "Roboto", sans-serif;
+            font-family: "Roboto", sans-serif;
             background-color: #F9F6F0;
             display: flex;
             justify-content: center;
@@ -32,28 +30,28 @@
             height: 100vh;
             margin: 0;
         }
-        h1{
+
+        h1 {
             color: yellow;
         }
-            label
-            {
-                color: #ffffff;
-            }
-        .login-container 
-		{
+
+        label {
+            color: #ffffff;
+        }
+
+        .login-container {
             background-color: blue;
             border-radius: 10px;
-            box-shadow:  7px 7px 10px #000;
+            box-shadow: 7px 7px 10px #000;
             padding: 20px;
             width: 350px;
-			height: 365px;
+            height:400px;
         }
-          
-        .login-container h2 
-		{
+
+        .login-container h2 {
             text-align: center;
             margin-bottom: 20px;
-			font-weight: 600;
+            font-weight: 600;
             color: yellow;
         }
 
@@ -70,7 +68,7 @@
             width: 100%;
             padding: 10px 0px 10px 0;
             border: 2px solid #000;
-			border-radius: 8px;
+            border-radius: 8px;
         }
 
         .form-group input:focus {
@@ -88,20 +86,20 @@
             cursor: pointer;
             margin-bottom: 1rem;
             font-size: 14px;
-            font-weight:550;
+            font-weight: 550;
         }
 
-        .btn-login:hover 
-		{
-            background-color:black;
+        .btn-login:hover {
+            background-color: black;
             color: #fff;
         }
-		h1{
-			text-align: center;
-			font-weight: 600;
-		}
-        .register-btn
-        {
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .register-btn {
             text-decoration: none;
             color: white;
             background-color: orangered;
@@ -111,36 +109,49 @@
             padding-bottom: 8px;
             border-radius: 7px;
         }
-        .aline
-        {  height: 30px;
-            
+
+        .aline {
+            height: 30px;
+
             text-align: center;
         }
-        .aline a:hover 
-		{
-            background-color:black;
+
+        .aline a:hover {
+            background-color: black;
             color: #fff;
         }
-		@media(max-width:445px)
-		{
-		.login-container 
-		{
-            width: 310px;
-			height: 365px;
+
+        #imageofwen {
+            height: 100px;
+            width: 100px;
+            margin-top: -4.5rem;
+            margin-left: 7.6rem;
         }
-        .register-btn
-        {
-           
-            padding-left: 8rem;
-            padding-right: 7.6rem;
+
+        @media(max-width:445px) {
+            .login-container {
+                width: 310px;
+                height: 365px;
+            }
+
+            #imageofwen {
+                margin-left: 6.6rem;
+            }
+
+            .register-btn {
+
+                padding-left: 8rem;
+                padding-right: 7.6rem;
+            }
+
         }
-		
-		}
     </style>
 </head>
+
 <body>
     <div class="login-container">
-		<h1>RausNotes39</h1>
+        <img id="imageofwen" src="/photos/rausnotes39_logo.png" alt="image website">
+        <h1>RausNotes39</h1>
         <h2>Login</h2>
         <form action="#" method="post" id="mainForm">
             <div class="form-group">
@@ -155,62 +166,62 @@
             <div class="aline"><a class="register-btn" href="/database/signUp.html">Register</a></div>
         </form>
     </div>
-<script type="module">
-	// Import the functions you need from the SDKs you need
-	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-	import { getDatabase, get, ref as sRef, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
-	import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getDatabase, get, ref as sRef, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-	// Your web app's Firebase configuration
-	const firebaseConfig = {
-		apiKey: "AIzaSyAqFZDj6QyFgl0x65CTXfga2Wr3nH93KK8",
-		authDomain: "rausnotes39-database.firebaseapp.com",
-		projectId: "rausnotes39-database",
-		storageBucket: "rausnotes39-database.appspot.com",
-		messagingSenderId: "142186350624",
-		appId: "1:142186350624:web:668313fa73b269a08b9445"
-	};
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAqFZDj6QyFgl0x65CTXfga2Wr3nH93KK8",
+            authDomain: "rausnotes39-database.firebaseapp.com",
+            projectId: "rausnotes39-database",
+            storageBucket: "rausnotes39-database.appspot.com",
+            messagingSenderId: "142186350624",
+            appId: "1:142186350624:web:668313fa73b269a08b9445"
+        };
 
-	// Initialize Firebase
-	const app = initializeApp(firebaseConfig);
-	const db = getDatabase(app);
-	const auth = getAuth(app);
-	const dbref = sRef(db);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const auth = getAuth(app);
+        const dbref = sRef(db);
 
-	let PasswordInput = document.querySelector("#passwordInput");
-	let EmailInput = document.querySelector("#emailInput");
-	let MainForm = document.querySelector("#mainForm");
-	let signinBtn = document.querySelector("#signinBtn");
-	let signupBtn = document.querySelector("#signupBtn");
-	let signoutBtn = document.querySelector("#signout");
+        let PasswordInput = document.querySelector("#passwordInput");
+        let EmailInput = document.querySelector("#emailInput");
+        let MainForm = document.querySelector("#mainForm");
+        let signinBtn = document.querySelector("#signinBtn");
+        let signupBtn = document.querySelector("#signupBtn");
+        let signoutBtn = document.querySelector("#signout");
 
-	let SignInUser = evt => {
-		evt.preventDefault();
-		signInWithEmailAndPassword(auth, EmailInput.value, PasswordInput.value)
-			.then((Credentials) => {
-				// location.href = "index.html";
-				alert("Login Successfully");
+        let SignInUser = evt => {
+            evt.preventDefault();
+            signInWithEmailAndPassword(auth, EmailInput.value, PasswordInput.value)
+                .then((Credentials) => {
+                    // location.href = "index.html";
+                    alert("Login Successfully");
 
-				get(child(dbref, "UserAuthList/" + Credentials.user.uid)).then((snapshot) => {
-					if (snapshot.exists) {
-						localStorage.setItem("user-info", JSON.stringify({
-							firstname: snapshot.val().firstname,
-							lastname: snapshot.val().lastname
-						}))
-						localStorage.setItem("user-creds", JSON.stringify(Credentials.user));
-						window.location.href = '/../index.html'
-						let logoubtnn = document.querySelector("#signout");
-					}
-				})
-			})
-			.catch((error) => 
-			{
-				alert(error.message);
-				console.log(error.code);
-				console.log(error.message);
-			})
-	}
-	MainForm.addEventListener('submit', SignInUser);
-</script>
+                    get(child(dbref, "UserAuthList/" + Credentials.user.uid)).then((snapshot) => {
+                        if (snapshot.exists) {
+                            localStorage.setItem("user-info", JSON.stringify({
+                                firstname: snapshot.val().firstname,
+                                lastname: snapshot.val().lastname
+                            }))
+                            localStorage.setItem("user-creds", JSON.stringify(Credentials.user));
+                            window.location.href = '/../index.html'
+                            let logoubtnn = document.querySelector("#signout");
+                        }
+                    })
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    console.log(error.code);
+                    console.log(error.message);
+                })
+        }
+        MainForm.addEventListener('submit', SignInUser);
+    </script>
 </body>
+
 </html>
