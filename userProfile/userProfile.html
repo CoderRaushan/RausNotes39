@@ -1,77 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
     <link rel="icon" href="/photos/rausnotes39_logo.png">
-    <title>User Profile</title>
     <style>
-    body
-    {
-        padding: 0;
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-    }
-    .container
-    {
-        padding: 1rem;
-        margin-top:12rem;
-        width: 350px;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction: column;
-        background-color: rgb(12, 12, 163);
-        border-radius:1rem;
-    }
-     #userprofileimage
-     {
-        height: 100px;
-        padding-top: 1rem;
-     }
-     .userdata
-     {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        color: white;
-     }
-     .main_containerr
-     {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-     }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .maincontainer {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(237, 120, 231);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 10px;
+        }
+
+        .userdata {
+            height: 400px;
+            width: auto;
+            padding: 0 2rem 0 2rem;
+            background-color: #581c84;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 1rem;
+            box-shadow: 5px 6px 13px  rgb(246, 245, 245);
+            gap: 20px;
+            color: white;
+            flex-wrap: wrap;
+            
+
+        }
+
+        #userProfilePicture {
+            border-radius: 50%;
+            height: 200px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(108, 246, 3);
+            background-color: rgb(5, 5, 5);
+            padding: 3px 6px 3px 6px;
+            border-radius: 6px;
+        }
+
+        @media (max-width:360px) 
+        {
+            #userProfilePicture {
+            border-radius: 50%;
+            height: 160px;
+        }
+        .userdata p
+        {
+            font-size: 14px;
+        }
+        }
     </style>
 </head>
+
 <body>
-  <div class="main_containerr">
-    <div class="container">
-        <img src="profile_photo.png" alt="profile_photo" id="userprofileimage">
+
+    <div class="maincontainer">
+        <h1>User Information </h1>
         <div class="userdata">
-            <p>FirstName : <span id="firstname">NA</p>
-            <p>LastName : </span> <span id="lastname"></span></p>
-            <p>Email : <span id="useremail">NA</span></p>
+            <img src="" alt="user picture" id="userProfilePicture">
+            <p>First Name : <span id="userName"></span></p>
+            <p>Last Name : <span id="lastname"></span></p>
+            <p>Email : <span id="userEmail"></span></p>
         </div>
-      </div>
-  </div>
+    </div>
+
 </body>
 <script>
-    let userfirstname=JSON.parse(localStorage.getItem("user-info")).firstname;
-    let userlastname=JSON.parse(localStorage.getItem("user-info")).lastname;
-    let useremail=JSON.parse(localStorage.getItem("user-creds")).email;
+    document.addEventListener("DOMContentLoaded", function () {
+        const user = localStorage.getItem("user");
+        if (user) {
+            const userData = JSON.parse(user);
+            // const firstName = userData.displayName.split(' ')[0];
+            document.getElementById("userName").textContent = userData.displayName.split(' ')[0];
+            document.getElementById("lastname").textContent = userData.displayName.split(' ')[1];
+            document.getElementById("userEmail").textContent = userData.email;
+            document.getElementById("userProfilePicture").src = userData.photoURL;
 
-    let firstname=document.getElementById("firstname");
-    firstname.innerText=userfirstname;
-
-    let lastname=document.getElementById("lastname");
-    lastname.innerText=userlastname
-
-    let email=document.getElementById("useremail");
-    email.innerText=useremail;
+        }
+    });
 </script>
+
 </html>

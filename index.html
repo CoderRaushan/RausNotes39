@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,16 +22,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         // Add this script to handle user authentication status
-        document.addEventListener("DOMContentLoaded", function () {
-            const authStatus = localStorage.getItem("user-creds");
+        document.addEventListener("DOMContentLoaded", function () 
+        {
+            const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 // User is signed in
                 document.getElementById("signupBtn").style.display = "none";
                 document.getElementById("signinBtn").style.display = "none";
                 document.getElementById("signout").style.display = "inline-block";
                 document.getElementById("username").style.display = "inline-block";
-                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
-                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user-info")).firstname;
+                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+                document.getElementById("user_icon").style.display="none";
+                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
             }
             else {
                 // User is not signed in
@@ -40,6 +42,8 @@
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
                 document.getElementById("username").style.display = "none";
+                document.getElementById("it_user_iamge").style.display="none";
+
                 // document.getElementById("bottom_menu_profile").style.display = "none";
                 // setTimeout(function () 
                 // {
@@ -60,9 +64,9 @@
             <li><a class="active" href="index.html" target="_blank">Home</a></li>
             <li><a class="active" id="about_dev_btn">About</a>
             </li>
-            <li><a class="active" href="/sgpa/sgpa_sem4/google_login.html">check</a></li>
+            <li><a class="active">Service</a></li>
             <li><a class="active" id="feedback_btn">Feedback</a></li>
-            <li><a id="signinBtn" href="/database/signIn.html">Login</a></li>
+            <li><a id="signinBtn" href="/database/login.html">Login</a></li>
             <li><a id="username" style="color: #fff;" href="/userProfile/userProfile.html">User </a></li>
             <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
             <li><a id="signout" class="logoutbtn">LogOut</a></li>
@@ -777,7 +781,8 @@
             </a>
             <a class="bottom_menu_anchor">
                 <div class="bottom_menubox1" id="user_profile_btn">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user" id="user_icon"></i>
+                    <img src="" alt="uesr image" id="it_user_iamge">
                     <h4 id="bottom_menu_profile">Profile</h4>
                 </div>
             </a>
@@ -964,6 +969,26 @@
             behavior: "smooth"
        });
     });
+</script>
+ <!-- logout section of js code  -->
+ <script>
+    const username = document.querySelector("#username");
+    const signoutBtn = document.querySelector("#signout");
+    let userInfo = JSON.parse(localStorage.getItem("user"));
+    let Signout = () => {
+        localStorage.removeItem("user");
+        window.location.href = 'index.html';
+    }
+
+    let CheckCred = () => {
+        if (!localStorage.getItem("user")) {
+            window.location.href = 'signIn.html';
+        } else {
+            username.innerText = userInfo.displayName;
+        }
+    }
+    username.innerText = userInfo.displayName;
+    signoutBtn.addEventListener('click', Signout);
 </script>
 <!-- incliding main js file for firebase -->
 <script src="/database/main.js"></script>

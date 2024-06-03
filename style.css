@@ -1426,12 +1426,18 @@ padding-bottom: .5rem; */
   color: white;
   text-decoration: none;
 }
-
+#it_user_iamge
+{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: -10px;
+}
 .bottom_menu
 {
 position:fixed;
 bottom:5px;
-height:53px;
+height:60px;
 width: 30%;
 background-color:#581c84;
 display: flex;
@@ -1448,7 +1454,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-gap:3px;
+gap:6px;
 cursor: pointer;
 padding: 9px 9px;
 border-radius: 4rem;
@@ -1959,6 +1965,17 @@ font-size: 13px;
 {
 height:43px;
 width: 70%;
+margin-right: 8px;
+}
+.bottom_menubox1
+{
+gap:3px;
+}
+#it_user_iamge
+{
+  height: 30px;
+  width: 30px;
+  margin-bottom: -5px;
 }
 .bottom_menubox1
 {
