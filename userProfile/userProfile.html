@@ -15,32 +15,40 @@
         }
 
         .maincontainer {
+
             height: 100vh;
             width: 100%;
-            background-color: rgb(237, 120, 231);
+            background-color: blanchedalmond;
             display: flex;
-            justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 3rem;
+            gap: 1rem;
             padding: 10px;
         }
 
-        .userdata {
+        .box {
             height: 400px;
             width: auto;
-            padding: 0 2rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background-color: #581c84;
+            border-radius: 1rem;
+            box-shadow: 5px 6px 13px rgb(246, 245, 245);
+            gap: 1rem;
+        }
+
+        .userdata {
+            padding: 0 2rem 0 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            border-radius: 1rem;
-            box-shadow: 5px 6px 13px  rgb(246, 245, 245);
             gap: 20px;
             color: white;
             flex-wrap: wrap;
-            
+
 
         }
 
@@ -50,23 +58,47 @@
         }
 
         h1 {
+            margin-top: 2rem;
             text-align: center;
-            color: rgb(108, 246, 3);
-            background-color: rgb(5, 5, 5);
+            color: orangered;
+            /* background-color: rgb(5, 5, 5); */
             padding: 3px 6px 3px 6px;
             border-radius: 6px;
         }
 
-        @media (max-width:360px) 
-        {
+        #logout,
+        #home {
+            background-color: rgb(238, 175, 58);
+            color: black;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 5px 7px;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+
+        @media (max-width:360px) {
             #userProfilePicture {
-            border-radius: 50%;
-            height: 160px;
-        }
-        .userdata p
-        {
-            font-size: 14px;
-        }
+                border-radius: 50%;
+                height: 160px;
+            }
+
+            .userdata p {
+                font-size: 14px;
+            }
+
+            .box {
+                height: 360px;
+            }
         }
     </style>
 </head>
@@ -75,11 +107,17 @@
 
     <div class="maincontainer">
         <h1>User Information </h1>
-        <div class="userdata">
-            <img src="" alt="user picture" id="userProfilePicture">
-            <p>First Name : <span id="userName"></span></p>
-            <p>Last Name : <span id="lastname"></span></p>
-            <p>Email : <span id="userEmail"></span></p>
+        <div class="box">
+            <div class="userdata">
+                <img src="" alt="user picture" id="userProfilePicture">
+                <p>First Name : <span id="userName"></span></p>
+                <p>Last Name : <span id="lastname"></span></p>
+                <p>Email : <span id="userEmail"></span></p>
+            </div>
+            <div class="home">
+                <a href="" id="logout">LogOut</a>
+                <a href="/index.html" id="home">Home</a>
+            </div>
         </div>
     </div>
 
@@ -97,6 +135,28 @@
 
         }
     });
+</script>
+<!-- for log out -->
+<script>
+    // const username = document.querySelector("#username");
+    const signoutBtn = document.querySelector("#logout");
+    // let userInfo = JSON.parse(localStorage.getItem("user"));
+    let Signout = () => 
+    {
+        localStorage.removeItem("user");
+        window.location.href = 'index.html';
+    }
+
+    // let CheckCred = () => {
+    //     if (!localStorage.getItem("user")) {
+    //         window.location.href = 'signIn.html';
+    //     } else {
+    //         username.innerText = userInfo.displayName;
+    //     }
+    // }
+    // username.innerText = userInfo.displayName;
+    signoutBtn.addEventListener('click', Signout);
+
 </script>
 
 </html>
