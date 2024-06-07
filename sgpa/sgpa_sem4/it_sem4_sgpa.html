@@ -611,7 +611,7 @@
             //   adding all results
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
             sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
-            congrassbtn.innerText = "RausNotes39, congrats! You did well. Keep it up!"
+            congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
             event.preventDefault();
         }
     });
@@ -711,6 +711,13 @@
         username.innerText = userInfo.displayName;
         signoutBtn.addEventListener('click', Signout);
     </script>
+    <!-- for user_displaying name -->
+    <!-- <script>
+        let user_name_display = document.getElementById("user_name_display");
+        addEventListener("DOMContentLoaded", () => {
+            user_name_display.innerHTML = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+        });
+    </script> -->
 
     <body>
     </body>
