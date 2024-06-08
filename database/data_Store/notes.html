@@ -8,7 +8,131 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Firebase Contact Form</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            width: 90%;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            font-size: 16px;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #data {
+            margin-top: 20px;
+        }
+
+        .message-content {
+            white-space: pre-wrap;
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .message-container {
+            margin-bottom: 15px;
+        }
+
+        .message-container .icon-buttons {
+            margin-bottom: 10px;
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            color: black;
+        }
+
+        .icon-buttons {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-end;
+            /* Align icons to the right */
+        }
+
+        #copyNotification {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 128, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <!-- Add this div for displaying the copied message -->
+        <div id="copyNotification">
+            Code Copied!
+        </div>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+        <input type="hidden" id="messageId">
+        <button onclick="send()">Submit</button>
+        <div id="data"></div>
+        <!-- Add this div for displaying the message -->
+        <div id="copyMessage" style="display: none; color: green;">Message copied!</div>
+
+    </div>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyCrKx21dIo3FUteB3MmHOjyizo3E_sK7Ec",
@@ -29,8 +153,9 @@
         function getUserIdFromLocalStorage() {
             return JSON.parse(localStorage.getItem("user")).uid;
         }
+
         function escapeHTML(text) {
-            return text.replace(/[&<>"']/g, function(match) {
+            return text.replace(/[&<>"']/g, function (match) {
                 switch (match) {
                     case '&': return '&amp;';
                     case '<': return '&lt;';
@@ -40,6 +165,7 @@
                 }
             });
         }
+
         function loadData() {
             const uid = getUserIdFromLocalStorage();
             if (!uid) return;
@@ -48,15 +174,32 @@
                 dataDiv.innerHTML = '';
                 querySnapshot.forEach((doc) => {
                     const div = document.createElement('div');
+                    div.classList.add('message-container');
                     div.innerHTML = `
-                         <p class="message-content">${escapeHTML(doc.data().message)}</p>
-                            <button onclick="populateUpdate('${doc.id}', '${escapeHTML(doc.data().message).replace(/\n/g, '\\n')}')">Update</button>
-                            <button onclick="deleteData('${doc.id}')">Delete</button>
+                        <div class="icon-buttons">
+                            <button class="icon-button" onclick="populateUpdate('${doc.id}', '${escapeHTML(doc.data().message).replace(/\n/g, '\\n')}')">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="icon-button" onclick="deleteData('${doc.id}')">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                            <button class="icon-button copy-btn">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                            <i class="fa-solid fa-check-double copied-icon" style="display:none;"></i>
+                        </div>
+                        <p class="message-content">${escapeHTML(doc.data().message)}</p>
                     `;
                     dataDiv.appendChild(div);
+
+                    // Attach event listener to the newly created copy button
+                    div.querySelector('.copy-btn').addEventListener('click', () => {
+                        copyMessage(escapeHTML(doc.data().message), div.querySelector('.copied-icon'));
+                    });
                 });
             });
         }
+
         function send() {
             let message = document.getElementById('message');
             let messageId = document.getElementById('messageId');
@@ -96,23 +239,30 @@
                 loadData();
             });
         }
-    </script>
-    <title>My Firebase Contact Form</title>
-    <style>
-        .message-content {
-            white-space: pre-wrap;
-        }
-    </style>
-</head>
+        function copyMessage(message, copiedIcon) {
+            // Remove HTML encoding before copying
+            const decodedMessage = message.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&amp;/g, "&").replace(/&#39;/g, "'");
 
-<body>
-    <div id="content">
-        <label for="message">Message</label>
-        <textarea name="message" id="message"></textarea>
-        <input type="hidden" id="messageId">
-        <button onclick="send()">Submit</button>
-        <div id="data"></div>
-    </div>
+            navigator.clipboard.writeText(decodedMessage).then(() => {
+                console.log("Copied to clipboard:", decodedMessage);
+                copiedIcon.style.display = 'inline'; // Show the double check icon
+                setTimeout(() => {
+                    copiedIcon.style.display = 'none'; // Hide the double check icon after 2 seconds
+                }, 2000);
+                const copyNotification = document.getElementById('copyNotification');
+                copyNotification.style.display = 'block'; // Show the notification
+                setTimeout(() => {
+                    copyNotification.style.display = 'none'; // Hide the notification after 2 seconds
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+
+
+
+    </script>
 </body>
 
 </html>
