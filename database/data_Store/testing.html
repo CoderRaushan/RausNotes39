@@ -46,13 +46,11 @@
                 });
             });
         }
-
         function send() {
             let message = document.getElementById('message');
             let messageId = document.getElementById('messageId');
             const uid = getUserIdFromLocalStorage();
             if (!uid) return;
-
             if (message.value !== '') {
                 if (messageId.value === '') {
                     db.collection("contact-list").add({
