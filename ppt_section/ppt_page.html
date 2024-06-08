@@ -11,38 +11,8 @@
      <script src="/header&footer/nav.js"></script>
     <link rel="icon" href="/photos/weg_logo.png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        // Add this script to handle user authentication status
-        document.addEventListener("DOMContentLoaded", function () {
-            const authStatus = localStorage.getItem("user");
-            if (authStatus) 
-            {
-                // User is signed in
-                document.getElementById("signupBtn").style.display = "none";
-                document.getElementById("signinBtn").style.display = "none";
-                document.getElementById("signout").style.display = "inline-block";
-                document.getElementById("username").style.display = "inline-block";
-                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
-                document.getElementById("user_icon").style.display = "none";
-                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
-                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
-            }
-            else {
-                // User is not signed in
-                document.getElementById("signupBtn").style.display = "inline-block";
-                document.getElementById("signinBtn").style.display = "inline-block";
-                document.getElementById("signout").style.display = "none";
-                document.getElementById("username").style.display = "none";
-                document.getElementById("it_user_iamge").style.display = "none";
-
-                // document.getElementById("bottom_menu_profile").style.display = "none";
-                // setTimeout(function () 
-                // {
-                //     window.location.href = "/database/signin.html";
-                // }, 1000); 
-            }
-        });
-    </script>
+    <!-- main js for nav and dynaminc and fetching user data  -->
+     <script src="/header&footer/main_nav_index.js"></script>
 </head>
 
 <body>
@@ -52,14 +22,14 @@
         <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/rausnotes39_logo.png"
                 alt="logo">RausNotes39</label>
         <ul class="nav-item">
-            <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+            <li><a class="active" href="index.html" target="_blank">Home</a></li>
             <li><a class="active" id="about_dev_btn">About</a>
             </li>
             <li><a class="active">Service</a></li>
             <li><a class="active" id="feedback_btn">Feedback</a></li>
             <li><a id="signinBtn" href="/database/login.html">Login</a></li>
-            <li><a id="username" style="color: #fff;" href="/userProfile/userProfile.html">User </a></li>
-            <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/signUp.html">SignUp</a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img src="" alt="user_img" id="user_img" class="user_img_css"></a></li>
+            <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
             <li><a id="signout" class="logoutbtn">LogOut</a></li>
             <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
             <li id="darkicon"><i class="fa-solid fa-moon"></i></li>
@@ -589,26 +559,9 @@
                 })
             }
         </script>
-        <!-- logout section of js code  -->
-        <script>
-            const username = document.querySelector("#username");
-            const signoutBtn = document.querySelector("#signout");
-            let userInfo = JSON.parse(localStorage.getItem("user"));
-            let Signout = () => {
-                localStorage.removeItem("user");
-                window.location.href = '../../database/login.html';
-            }
-
-            let CheckCred = () => {
-                if (!localStorage.getItem("user")) {
-                    window.location.href = 'signIn.html';
-                } else {
-                    username.innerText = userInfo.displayName;
-                }
-            }
-            username.innerText = userInfo.displayName;
-            signoutBtn.addEventListener('click', Signout);
-        </script>
+       </script>
+       <!-- logout section of js code  -->
+       <script src="/header&footer/logout.js"> </script>
 </body>
 
 </html>
