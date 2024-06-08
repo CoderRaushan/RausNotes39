@@ -30,10 +30,9 @@
                 document.getElementById("signupBtn").style.display = "none";
                 document.getElementById("signinBtn").style.display = "none";
                 document.getElementById("signout").style.display = "inline-block";
-                document.getElementById("username").style.display = "inline-block";
-                document.getElementById("username").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
                 document.getElementById("user_icon").style.display="none";
                 document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
                 document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
             }
             else {
@@ -41,8 +40,9 @@
                 document.getElementById("signupBtn").style.display = "inline-block";
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
-                document.getElementById("username").style.display = "none";
                 document.getElementById("it_user_iamge").style.display="none";
+                document.getElementById("kaho").style.display="none";
+                document.getElementById("kaho").style.display="user_img";
 
                 // document.getElementById("bottom_menu_profile").style.display = "none";
                 // setTimeout(function () 
@@ -67,7 +67,7 @@
             <li><a class="active">Service</a></li>
             <li><a class="active" id="feedback_btn">Feedback</a></li>
             <li><a id="signinBtn" href="/database/login.html">Login</a></li>
-            <li><a id="username" style="color: #fff;" href="/userProfile/userProfile.html">User</a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img src="" alt="user_img" id="user_img" class="user_img_css"></a></li>
             <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
             <li><a id="signout" class="logoutbtn">LogOut</a></li>
             <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
@@ -972,7 +972,7 @@
 </script>
  <!-- logout section of js code  -->
  <script>
-    const username = document.querySelector("#username");
+    // const username = document.querySelector("#username");
     const signoutBtn = document.querySelector("#signout");
     let userInfo = JSON.parse(localStorage.getItem("user"));
     let Signout = () => {
@@ -980,14 +980,14 @@
         window.location.href = 'index.html';
     }
 
-    let CheckCred = () => {
-        if (!localStorage.getItem("user")) {
-            window.location.href = 'signIn.html';
-        } else {
-            username.innerText = userInfo.displayName;
-        }
-    }
-    username.innerText = userInfo.displayName;
+    // let CheckCred = () => {
+    //     if (!localStorage.getItem("user")) {
+    //         window.location.href = 'signIn.html';
+    //     } else {
+    //         username.innerText = userInfo.displayName;
+    //     }
+    // }
+    // username.innerText = userInfo.displayName;
     signoutBtn.addEventListener('click', Signout);
 </script>
 </body>

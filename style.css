@@ -1426,12 +1426,13 @@ padding-bottom: .5rem; */
   color: white;
   text-decoration: none;
 }
-#it_user_iamge
+#it_user_iamge,.user_img_css
 {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-bottom: -10px;
+  cursor: pointer;
 }
 .bottom_menu
 {
