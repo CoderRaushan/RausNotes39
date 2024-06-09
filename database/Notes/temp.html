@@ -4,32 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
     <link rel="icon" href="/photos/rausnotes39_logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
-        rel="stylesheet">
+    <!-- jquery code for imporing footer -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- code for nav items to move towards left side -->
     <script src="/header&footer/nav.js"></script>
-    <link rel="stylesheet" href="notes_section.css">
-    <title>Engineering Notes RausNotes39</title>
-    <!-- main js for nav and dynaminc and fetching user data  -->
-    <script src="/header&footer/main_nav_index.js"></script>
-</head>
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("user_icon").style.display = "none";
+                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+            }
+            else {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("it_user_iamge").style.display = "none";
+                document.getElementById("kaho").style.display = "none";
+                document.getElementById("kaho").style.display = "user_img";
 
+                document.getElementById("bottom_menu_profile").style.display = "none";
+                setTimeout(function () {
+                    window.location.href = "/database/login.html";
+                }, 1000);
+            }
+        });
+
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+
+        .main
+        {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
 <body>
+    <!-- nav file included -->
+    <!-- <div id="includnav"></div> -->
     <nav class="nav-class-for-phone">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
         <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/rausnotes39_logo.png"
                 alt="logo">RausNotes39</label>
         <ul class="nav-item">
-            <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+            <li><a class="active" href="index.html" target="_blank">Home</a></li>
             <li><a class="active" id="about_dev_btn">About</a>
             </li>
+            <li><a class="active">Service</a></li>
             <li><a class="active" id="feedback_btn">Feedback</a></li>
-            <li><a class="active" href="/database/Notes/notes.html"><i id="note" class="fa-solid fa-pencil"></i></a></li>
             <li><a id="signinBtn" href="/database/login.html">Login</a></li>
             <li><a id="kaho" href="/userProfile/userProfile.html"><img src="" alt="user_img" id="user_img"
                         class="user_img_css"></a></li>
@@ -69,7 +112,7 @@
                 <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
                     <div class="dropdown-content_for_cse">
                         <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
-                        <a href="#">Semester 4</a>
+                        <a href="/sgpa/sgpa_sem4/cse_sem4_sgpa.html">Semester 4</a>
                     </div>
                 </a>
             </div>
@@ -168,45 +211,10 @@
         </div>
     </a> -->
     </div>
-    <!-- importing nav bar -->
-    <!-- <div id="includnav"></div> -->
-    <!-- card heading -->
-    <h1 class="hero-heading-notes">Engineering Notes for All Semester(gne)</h1>
-    <h3 class="hero-title">Click On Your Respective Branch</h3>
-    <!-- cards -->
-    <div class="ppt_container-for-notes-section">
-        <div class="ppt2">
-            <a href="/notes/physics_Group.html">
-                <img src="/photos/physics_g.jpeg" alt="Rausahan">
-                <h3>Branch:Applied Science</h3>
-                <p>Notes:Physics Group</p>
-                <a id="a" href="/notes/physics_Group.html" target="_blank">Read More</a>
-            </a>
-        </div>
-        <div class="ppt2">
-            <a href="/notes/chemistry_Group.html">
-                <img src="/photos/chemistry_g.avif" alt="Rausahan">
-                <h3>Branch:Applied Science</h3>
-                <p>Notes:Chemistry Group</p>
-                <a id="a" href="/notes/chemistry_Group.html" target="_blank">Read More</a>
-            </a>
-        </div>
-        <div class="ppt2">
-            <a href="/notes/it_All_sem_notes.html">
-                <img src="/photos/it.png" alt="Rausahan">
-                <h3>Branch:IT</h3>
-                <p>Notes:IT Branch</p>
-                <a id="a" href="/notes/it_All_sem_notes.html">Read More</a>
-            </a>
-        </div>
-        <div class="ppt2">
-            <a href="/notes/cse_All_sem_notes.html">
-                <img src="/photos/cse.jpg" alt="Rausahan">
-                <h3>Branch:CSE</h3>
-                <p>Notes:CSE Branch</p>
-                <a id="a" href="/notes/cse_All_sem_notes.html">Read More</a>
-            </a>
-        </div>
+    <div class="main">
+        
+
+        
         <!-- bottom menu -->
         <div class="bottom_menu">
             <a class="bottom_menu_anchor" href="/index.html">
@@ -236,51 +244,165 @@
             </a>
         </div>
     </div>
-    <!-- importing footer -->
-    <div id="includefooter"></div>
-    <!-- import js code -->
+    
     <script>
-        $("#includnav").load("/header&footer/nav.html");
-        $("#includefooter").load("/header&footer/footer.html");
-    </script>
-    <!-- for dark mode and light mode -->
-    <script>
-        var darkicon = document.getElementById("darkicon");
-        darkicon.onclick = function () {
-            document.body.classList.toggle("dark_theme");
-            if (document.body.classList.contains("dark_theme")) {
-                darkicon.innerHTML = '<i class="fa-solid fa-sun"></i>';
-            }
-            else {
-                darkicon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            }
+        const firebaseConfig = {
+            apiKey: "AIzaSyCrKx21dIo3FUteB3MmHOjyizo3E_sK7Ec",
+            authDomain: "check-6227f.firebaseapp.com",
+            projectId: "check-6227f",
+            storageBucket: "check-6227f.appspot.com",
+            messagingSenderId: "911891676739",
+            appId: "1:911891676739:web:94269f07802acc2cc71ef6"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            loadData();
+        });
+
+        function getUserIdFromLocalStorage() {
+            return JSON.parse(localStorage.getItem("user")).uid;
         }
-    </script>
-    <!-- for share the weblink -->
-    <script>
-        async function sharepage() {
-            await navigator.share({
-                title: document.title,
-                url: window.location.href
-            })
-        }
-    </script>
-    </script>
-    <!-- logout section of js code  -->
-    <script src="/header&footer/logout.js"> </script>
-    <!-- JAVA script code for clicking outside of the nav bar it gores back -->
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var nav = document.querySelector('.nav-class-for-phone');
-            var checkbox = document.getElementById('check');
-            document.addEventListener('click', function (event) {
-                if (!nav.contains(event.target) && checkbox.checked) {
-                    checkbox.checked = false;
+
+        function escapeHTML(text) {
+            return text.replace(/[&<>"']/g, function (match) {
+                switch (match) {
+                    case '&': return '&amp;';
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '"': return '&quot;';
+                    case "'": return '&#39;';
                 }
             });
-        });
-    </script>    -->
+        }
 
+        function loadData() {
+            const uid = getUserIdFromLocalStorage();
+            if (!uid) return;
+            db.collection("contact-list").where("userId", "==", uid).get().then((querySnapshot) => {
+                const dataDiv = document.getElementById('data');
+                dataDiv.innerHTML = '';
+                querySnapshot.forEach((doc) => {
+                    const div = document.createElement('div');
+                    div.classList.add('message-container');
+                    div.innerHTML = `
+                    <div class="icon-buttons">
+                        <button class="icon-button" onclick="populateUpdate('${doc.id}', '${escapeHTML(doc.data().message).replace(/\n/g, '\\n')}')">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button class="icon-button" onclick="deleteData('${doc.id}')">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button class="icon-button copy-btn">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <i class="fa-solid fa-check-double copied-icon" style="display:none;"></i>
+                    </div>
+                    <p class="message-content">${escapeHTML(doc.data().message)}</p>
+                `;
+                    dataDiv.appendChild(div);
+
+                    // Attach event listener to the newly created copy button
+                    div.querySelector('.copy-btn').addEventListener('click', () => {
+                        copyMessage(escapeHTML(doc.data().message), div.querySelector('.copied-icon'));
+                    });
+                });
+            });
+        }
+
+        function send() {
+            let message = document.getElementById('message');
+            let messageId = document.getElementById('messageId');
+            const uid = getUserIdFromLocalStorage();
+            if (!uid) return;
+            if (message.value !== '') {
+                if (messageId.value === '') {
+                    db.collection("contact-list").add({
+                        message: message.value,
+                        userId: uid
+                    }).then(() => {
+                        message.value = '';
+                        loadData();
+                    });
+                } else {
+                    db.collection("contact-list").doc(messageId.value).update({
+                        message: message.value,
+                        userId: uid
+                    }).then(() => {
+                        message.value = '';
+                        messageId.value = '';
+                        loadData();
+                    });
+                }
+            }
+        }
+
+        function populateUpdate(id, currentMessage) {
+            let message = document.getElementById('message');
+            let messageId = document.getElementById('messageId');
+            message.value = currentMessage;
+            messageId.value = id;
+        }
+
+        function deleteData(id) {
+            db.collection("contact-list").doc(id).delete().then(() => {
+                loadData();
+            });
+        }
+        function copyMessage(message, copiedIcon) {
+            // Remove HTML encoding before copying
+            const decodedMessage = message.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&amp;/g, "&").replace(/&#39;/g, "'");
+
+            navigator.clipboard.writeText(decodedMessage).then(() => {
+                console.log("Copied to clipboard:", decodedMessage);
+                copiedIcon.style.display = 'inline'; // Show the double check icon
+                setTimeout(() => {
+                    copiedIcon.style.display = 'none'; // Hide the double check icon after 2 seconds
+                }, 2000);
+                const copyNotification = document.getElementById('copyNotification');
+                copyNotification.style.display = 'block'; // Show the notification
+                setTimeout(() => {
+                    copyNotification.style.display = 'none'; // Hide the notification after 2 seconds
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+    <!-- footer file included -->
+    <div id="includefooter">
+        <!-- importing js code -->
+
+        <script>
+            $("#includnav").load("/header&footer/nav.html");
+            $("#includefooter").load("/header&footer/footer.html");
+        </script>
+        <!-- for dark mode and light mode -->
+        <script>
+            var darkicon = document.getElementById("darkicon");
+            darkicon.onclick = function () {
+                document.body.classList.toggle("dark_theme");
+                if (document.body.classList.contains("dark_theme")) {
+                    darkicon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                }
+                else {
+                    darkicon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                }
+            }
+        </script>
+        <!-- for share the weblink -->
+        <script>
+            async function sharepage() {
+                await navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                })
+            }
+        </script>
+        <!-- logout section of js code  -->
+        <script src="/header&footer/logout.js"> </script>
 </body>
 
 </html>

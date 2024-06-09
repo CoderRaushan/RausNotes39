@@ -115,6 +115,12 @@ nav ul li i {
   padding: 5px 7px;
   text-decoration: none;
 }
+
+#note
+{
+  color:white;
+  font-size: 1.3rem;
+}
 .active:hover 
 {
   border-bottom-style: solid ;
@@ -1416,7 +1422,6 @@ padding-bottom: .5rem; */
   color: var(--secondary-color);
   background-color: var(--primary-color);
 }
-
 
 
 /* bottom menu */
