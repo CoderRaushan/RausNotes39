@@ -104,7 +104,6 @@
         .icon-buttons {
             display: flex;
             justify-content: flex-end;
-            /* Align icons to the right */
         }
 
         #copyNotification {
@@ -117,18 +116,23 @@
             border-radius: 5px;
             display: none;
         }
+        .notes
+        {
+            text-align: center;
+            text-shadow:2px 2px  rgb(244, 243, 244);
+        }
     </style>
 </head>
 
 <body>
-
     <div id="content">
+        <h1 class="notes">Write Some Notes </h1>
         <!-- Add this div for displaying the copied message -->
         <div id="copyNotification">
             Code Copied!
         </div>
 
-        <label for="message">Message</label>
+        <label for="message">Write Message Here</label>
         <textarea name="message" id="message"></textarea>
         <input type="hidden" id="messageId">
         <button onclick="send()">Submit</button>
