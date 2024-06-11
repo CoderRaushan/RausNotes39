@@ -1509,7 +1509,7 @@ font-size: 13px;
   font-size: 11px;
 }
 .footer {
-  height: 386px;
+  height: 400px;
   width: 100%;
   /*  old fotter */
   background-color: #440671;
@@ -1542,9 +1542,9 @@ font-size: 13px;
   margin-right: 5px;
 }
 .footer-copyright {
-  height: 10rem;
+  height: 12rem;
   width: 100%;
-  background-color: 440671;
+  background-color: #440671;
   display: flex;
   justify-content: center;
   align-items: center;

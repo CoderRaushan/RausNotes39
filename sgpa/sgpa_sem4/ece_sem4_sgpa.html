@@ -7,13 +7,11 @@
     <title>SGPA Calculator</title>
     <link rel="icon" href="/photos/rausnotes39_logo.png">
     <link rel="stylesheet" href="/sgpa/sgpa_sem4/sem_4_common_style.css">
+    <!-- jquery code for imporing footer -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- code for nav items to move towards left side -->
     <script src="/header&footer/nav.js"></script>
-    <!-- <link rel="stylesheet" href="sem_4_common_style.css"> -->
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user");
@@ -37,12 +35,14 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                setTimeout(function () {
-                    window.location.href = "/database/login.html";
-                }, 1000);
+                setTimeout(redirectToLogin(), 1000);
             }
         });
-
+        function redirectToLogin() {
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+            window.location.href = '/database/login.html';
+        }
     </script>
 </head>
 
@@ -100,7 +100,7 @@
                 <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
                     <div class="dropdown-content_for_cse">
                         <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
-                        <a href="#">Semester 4</a>
+                        <a href="/sgpa/sgpa_sem4/cse_sem4_sgpa.html">Semester 4</a>
                     </div>
                 </a>
             </div>
@@ -202,11 +202,11 @@
     <h3 id="it_sem4">SGPA Calculator for ECE Branch, Semester 4</h3>
     <div class="main">
         <form method="post">
-            <div class="box" style="height:740x;">
+            <div class="box" style="height: 860px;">
                 <table border="none">
                     <div>
                         <tr>
-                            <td><label for="PAS">Discrete Mathematics:</label></td>
+                            <td><label for="PAS">AC:</label></td>
                             <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
                                     required>
                             </td>
@@ -214,14 +214,14 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="DBMS">CAM:</label></td>
+                            <td><label for="DBMS">OOPS AND DS:</label></td>
                             <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
                                     name="DBMS" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="PY">OS:</label></td>
+                            <td><label for="PY">EFT:</label></td>
                             <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
                                     required>
                             </td>
@@ -229,7 +229,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="OS">DS:</label></td>
+                            <td><label for="OS">LCS:</label></td>
                             <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
                                     required>
                             </td>
@@ -237,7 +237,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="WT">SE:</label></td>
+                            <td><label for="WT">IM AND DA:</label></td>
                             <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
                                     required>
                             </td>
@@ -245,7 +245,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="CAM">CAM-LAB:</label></td>
+                            <td><label for="CAM">AC-LAB:</label></td>
                             <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
                                     required>
                             </td>
@@ -253,23 +253,38 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="DBMS-LAB">OS-LAB</label></td>
+                            <td><label for="DBMS-LAB">M AND C-LAB</label></td>
                             <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
                                     name="DBMS-LAB" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="PY-LAB">DS-LAB:</label></td>
+                            <td><label for="PY-LAB">OOPS-LAB:</label></td>
                             <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
                                     name="PY-LAB" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="OS-LAB">MPD:</label></td>
+                            <td><label for="OS-LAB">ISP-LAB:</label></td>
                             <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
                                     name="OS-LAB" required></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="WT-LAB">Seminar:</label></td>
+                            <td><input type="number" id="WT-LAB" placeholder="Enter Sum of internel & external"
+                                    name="WT-LAB" required></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="MPD">MPD:</label></td>
+                            <td><input type="number" id="MPD" placeholder="Enter Sum of internel & external" name="MPD"
+                                    required>
+                            </td>
                         </tr>
                     </div>
                 </table>
@@ -277,7 +292,6 @@
                 <audio src="/sgpa/sgpa_sem4/congrts_music.unknown" preload="auto" id="clicksound" controls></audio>
                 <p id="congrass">Click on Calculate Sgpa</p>
             </div>
-
         </form>
 
         <!-- bottom menu -->
@@ -314,132 +328,151 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 
+        // Your web app's Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyCMqcf_7Rbhlc-iq7Khgtuf8bM2hIJXT5I",
-            authDomain: "sem4resultcse.firebaseapp.com",
-            projectId: "sem4resultcse",
-            storageBucket: "sem4resultcse.appspot.com",
-            messagingSenderId: "26108703653",
-            appId: "1:26108703653:web:2c2a9246c293bef6066e4c"
+            apiKey: "AIzaSyCD0eQGp7Ez7gurCDvtzobRB1DdBcTVUsI",
+            authDomain: "sem4resultit-8f82f.firebaseapp.com",
+            projectId: "sem4resultit-8f82f",
+            storageBucket: "sem4resultit-8f82f.appspot.com",
+            messagingSenderId: "253322074829",
+            appId: "1:253322074829:web:01750fc9df53474271e784"
         };
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
 
-        let sgpabtn = document.getElementById("sgpabtn");
-        let congrassbtn = document.getElementById("congrass");
-        sgpabtn.addEventListener("click", (event) => {
-            {
-                event.preventDefault();
-                // accessing all input fields 
-                let PAS = (document.getElementById("PAS").value);
-                let DBMS = (document.getElementById("DBMS").value);
-                let PY = (document.getElementById("PY").value);
-                let OS = (document.getElementById("OS").value);
-                let WT = (document.getElementById("WT").value);
-                let CAM = (document.getElementById("CAM").value);
-                let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
-                let PY_LAB = (document.getElementById("PY-LAB").value);
-                let OS_LAB = (document.getElementById("OS-LAB").value);
+        const authStatus = localStorage.getItem("user");
+        const congrassbtn = document.getElementById("congrass");
+        document.getElementById("sgpabtn").addEventListener("click", (event) => {
+            event.preventDefault();
 
+            // accessing all input fields 
+            let PAS = (document.getElementById("PAS").value);
+            let DBMS = (document.getElementById("DBMS").value);
+            let PY = (document.getElementById("PY").value);
+            let OS = (document.getElementById("OS").value);
+            let WT = (document.getElementById("WT").value);
+            let CAM = (document.getElementById("CAM").value);
+            // LABS
+            let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
+            let PY_LAB = (document.getElementById("PY-LAB").value);
+            let OS_LAB = (document.getElementById("OS-LAB").value);
+            let WT_LAB = (document.getElementById("WT-LAB").value);
+            let MPD_lab = (document.getElementById("MPD").value);
 
-                let test = document.querySelectorAll("input");
-                for (let p of test) {
-                    if (p.value === "") {
+            // Validate if any input field is empty
+            let test = document.querySelectorAll("input");
+            for (let p of test) {
+                if (p.value === "") {
 
-                        alert("Please Enter Marks in All input field!");
-                        break;
-                    }
+                    alert("Please Enter Marks in All input field!");
+                    break;
                 }
-                // now  calculating percentage of each subject including lab
-                PAS = PAS / 100 * 100;
-                DBMS = DBMS / 100 * 100;
-                PY = PY / 100 * 100;
-                OS = OS / 100 * 100;
-                WT = WT / 100 * 100;
-                CAM = CAM / 50 * 100;
+            }
 
-                DBMS_LAB = DBMS_LAB / 50 * 100;
-                PY_LAB = PY_LAB / 50 * 100;
-                OS_LAB = OS_LAB / 100 * 100;
+            // now  calculating percentage of each subject including lab
+            PAS = PAS / 100 * 100;
+            DBMS = DBMS / 100 * 100;
+            PY = PY / 100 * 100;
+            OS = OS / 100 * 100;
+            WT = WT / 100 * 100;
+            CAM = CAM / 50 * 100;
 
-                // now calculating grade point form persentage
-                let pasgrade = Math.floor(PAS / 10) + 1;
-                if (pasgrade >= 10) {
-                    pasgrade = 10;
-                }
-                let dbmsgrade = Math.floor(DBMS / 10) + 1;
-                if (dbmsgrade >= 10) {
-                    dbmsgrade = 10;
-                }
-                let pygrade = Math.floor(PY / 10) + 1;
-                if (pygrade >= 10) {
-                    pygrade = 10;
-                }
-                let osgrade = Math.floor(OS / 10) + 1;
-                if (osgrade >= 10) {
-                    osgrade = 10;
-                }
-                let wtgrade = Math.floor(WT / 10) + 1;
-                if (wtgrade >= 10) {
-                    wtgrade = 10;
-                }
-                let camgrade = Math.floor(CAM / 10) + 1;
-                if (camgrade >= 10) {
-                    camgrade = 10;
-                }
-                let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
-                if (dbmslabgrade >= 10) {
-                    dbmslabgrade = 10;
-                }
-                let pylabgrade = Math.floor(PY_LAB / 10) + 1;
-                if (pylabgrade >= 10) {
-                    pylabgrade = 10;
-                }
-                let oslabgrade = Math.floor(OS_LAB / 10) + 1;
-                if (oslabgrade >= 10) {
-                    oslabgrade = 10;
-                }
-                // multiplying grade and credit point
-                let pasresult = pasgrade * 4;
-                let dbmsresult = dbmsgrade * 3;
-                let pyresult = pygrade * 4;
-                let osresult = osgrade * 3;
-                let wtresult = wtgrade * 4;
-                let camresult = camgrade * 1;
+            DBMS_LAB = DBMS_LAB / 50 * 100;
+            PY_LAB = PY_LAB / 50 * 100;
+            OS_LAB = OS_LAB / 50 * 100;
+            WT_LAB = WT_LAB / 50 * 100;
+            MPD_lab = MPD_lab / 100 * 100;
+            // now calculating grade point form persentage
+            let pasgrade = Math.floor(PAS / 10) + 1;
+            if (pasgrade >= 10) {
+                pasgrade = 10;
+            }
+            let dbmsgrade = Math.floor(DBMS / 10) + 1;
+            if (dbmsgrade >= 10) {
+                dbmsgrade = 10;
+            }
+            let pygrade = Math.floor(PY / 10) + 1;
+            if (pygrade >= 10) {
+                pygrade = 10;
+            }
+            let osgrade = Math.floor(OS / 10) + 1;
+            if (osgrade >= 10) {
+                osgrade = 10;
+            }
+            let wtgrade = Math.floor(WT / 10) + 1;
+            if (wtgrade >= 10) {
+                wtgrade = 10;
+            }
+            let camgrade = Math.floor(CAM / 10) + 1;
+            if (camgrade >= 10) {
+                camgrade = 10;
+            }
 
-                let dbmslabresult = dbmslabgrade * 1;
-                let pylabresult = pylabgrade * 2;
-                let oslabresult = oslabgrade * 1;
+            // labs
 
-                //   adding all results
-                let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
-                sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
-                const authStatus = localStorage.getItem("user");
-                if (authStatus) {
-                    congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
-                }
-                else {
-                    congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
-                }
-                // Store SGPA in Firebase Realtime Database
-                if (authStatus) {
-                    let user = JSON.parse(localStorage.getItem("user"));
-                    let username = user.displayName.split(' ')[0];
-                    let sgpa = sgpares.toFixed(2).replace('.', '-');
-                    let username_sgpa = `${username} ${sgpa}`;
-                    const userRef = ref(database, `${username_sgpa}`);
-                    set(userRef, {
-                        sgpa: sgpares.toFixed(2),
-                        username: username
-                    }).then(() => {
-                        console.log("SGPA stored successfully.");
-                    }).catch((error) => {
-                        console.error("Error storing SGPA: ", error);
-                    });
-                } else {
-                    console.error("User is not authenticated.");
-                }
+            let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
+            if (dbmslabgrade >= 10) {
+                dbmslabgrade = 10;
+            }
+            let pylabgrade = Math.floor(PY_LAB / 10) + 1;
+            if (pylabgrade >= 10) {
+                pylabgrade = 10;
+            }
+            let oslabgrade = Math.floor(OS_LAB / 10) + 1;
+            if (oslabgrade >= 10) {
+                oslabgrade = 10;
+            }
+            let wtlabgrade = Math.floor(WT_LAB / 10) + 1;
+            if (wtlabgrade >= 10) {
+                wtlabgrade = 10;
+            }
+            let MPDgrade = Math.floor(MPD_lab / 10) + 1;
+            if (MPDgrade >= 10) {
+                MPDgrade = 10;
+            }
+            // multiplying grade and credit point
+            let pasresult = pasgrade * 4;
+            let dbmsresult = dbmsgrade * 3;
+            let pyresult = pygrade * 3;
+            let osresult = osgrade * 4;
+            let wtresult = wtgrade * 3;
+            let camresult = camgrade * 1;
+
+            let dbmslabresult = dbmslabgrade * 1;
+            let pylabresult = pylabgrade * 1;
+            let oslabresult = oslabgrade * 1;
+            let wtlabresult = wtlabgrade * 1;
+            let MPDresult = MPDgrade * 1;
+
+            //   adding all results
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
+            sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
+            }
+            else {
+                congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
+            }
+            // Store SGPA in Firebase Realtime Database
+            if (authStatus) {
+                let user = JSON.parse(localStorage.getItem("user"));
+                let username = user.displayName.split(' ')[0];
+                let sgpa = sgpares.toFixed(2).replace('.', '-');
+                let username_sgpa = `${username} ${sgpa}`;
+                const userRef = ref(database, `${username_sgpa}`);
+                set(userRef, {
+                    sgpa: sgpares.toFixed(2),
+                    username: username
+                }).then(() => {
+                    console.log("SGPA stored successfully.");
+                }).catch((error) => {
+                    console.error("Error storing SGPA: ", error);
+                });
+            } else {
+                console.error("User is not authenticated.");
             }
         });
     </script>
@@ -457,7 +490,6 @@
     <!-- footer file included -->
     <div id="includefooter">
         <!-- importing js code -->
-
         <script>
             $("#includnav").load("/header&footer/nav.html");
             $("#includefooter").load("/header&footer/footer.html");
@@ -530,6 +562,18 @@
         </script>
         <!-- logout section of js code  -->
         <script src="/header&footer/logout.js"> </script>
+        <!-- store the current website url to sessionStoreage -->
+        <!-- <script>
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+        </script> -->
+        <!-- for user_displaying name -->
+        <!-- <script>
+        let user_name_display = document.getElementById("user_name_display");
+        addEventListener("DOMContentLoaded", () => {
+            user_name_display.innerHTML = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+        });
+    </script> -->
 </body>
 
 </html>
