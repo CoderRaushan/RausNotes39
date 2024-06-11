@@ -25,7 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log('User logged in:', user);
           // Save user info to local storage
           localStorage.setItem("user", JSON.stringify(user));
-          window.location.href = '../index.html';
+          // Retrieve the original URL from sessionStorage
+          const originalUrl = sessionStorage.getItem('originalUrl');
+          if (originalUrl) {
+            window.location.href = originalUrl;
+          } else {
+            window.location.href = '../index.html'; // Fallback in case no original URL is found
+          }
+          // window.location.href = '../index.html';
         }).catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;

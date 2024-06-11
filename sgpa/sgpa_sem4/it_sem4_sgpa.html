@@ -35,15 +35,16 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                setTimeout(function () {
-                    window.location.href = "/database/login.html";
-                }, 1000);
+                setTimeout(redirectToLogin(), 1000);
             }
         });
-
+        function redirectToLogin() {
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+            window.location.href = '/database/login.html';
+        }
     </script>
 </head>
-
 <body>
     <!-- nav file included -->
     <!-- <div id="includnav"></div> -->
@@ -561,7 +562,11 @@
         </script>
         <!-- logout section of js code  -->
         <script src="/header&footer/logout.js"> </script>
-
+        <!-- store the current website url to sessionStoreage -->
+        <!-- <script>
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+        </script> -->
         <!-- for user_displaying name -->
         <!-- <script>
         let user_name_display = document.getElementById("user_name_display");

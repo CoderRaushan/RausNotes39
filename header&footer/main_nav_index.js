@@ -21,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("kaho").style.display = "none";
         document.getElementById("kaho").style.display = "user_img";
 
-        // document.getElementById("bottom_menu_profile").style.display = "none";
-        // setTimeout(function () 
-        // {
-        //     window.location.href = "/database/signin.html";
-        // }, 1000); 
+        document.getElementById("bottom_menu_profile").style.display = "none";
+        setTimeout(redirectToLogin(), 1000);
     }
 });
+function redirectToLogin() {
+    const currentUrl = window.location.href;
+    sessionStorage.setItem('originalUrl', currentUrl);
+    window.location.href = '/database/login.html';
+}

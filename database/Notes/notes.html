@@ -74,7 +74,7 @@
 
         .message-content {
             white-space: pre-wrap;
-            background-color: #9fb5d5;
+            background-color: #f4f4f4;
             color: black;
             padding: 10px;
             border-radius: 4px;
@@ -116,12 +116,42 @@
             border-radius: 5px;
             display: none;
         }
-        .notes
-        {
+
+        .notes {
             text-align: center;
-            text-shadow:2px 2px  rgb(244, 243, 244);
+            text-shadow: 2px 2px rgb(244, 243, 244);
         }
+
+        #loadingSpinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+        #spinner
+        {
+            margin-top: 10px;
+           border-radius:50%;
+        }
+        
     </style>
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                console.log("user is login");
+            }
+            else {
+                setTimeout(function () {
+                    const currentUrl = window.location.href;
+                    sessionStorage.setItem('originalUrl', currentUrl);
+                    window.location.href = '/database/login.html';
+                }, 1000);
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -139,7 +169,10 @@
         <div id="data"></div>
         <!-- Add this div for displaying the message -->
         <div id="copyMessage" style="display: none; color: green;">Message copied!</div>
-
+        <!-- Loading spinner -->
+        <div id="loadingSpinner" style="display: none;">
+            <img id="spinner" src="spinners.gif" alt="Loading...">
+        </div>
     </div>
 
     <script>
@@ -178,6 +211,8 @@
         function loadData() {
             const uid = getUserIdFromLocalStorage();
             if (!uid) return;
+            // Show loading spinner
+            document.getElementById('loadingSpinner').style.display = 'block';
             db.collection("contact-list").where("userId", "==", uid).get().then((querySnapshot) => {
                 const dataDiv = document.getElementById('data');
                 dataDiv.innerHTML = '';
@@ -185,23 +220,22 @@
                     const div = document.createElement('div');
                     div.classList.add('message-container');
                     div.innerHTML = `
-                        <div class="icon-buttons">
-                            <button class="icon-button" onclick="populateUpdate('${doc.id}', '${escapeHTML(doc.data().message).replace(/\n/g, '\\n')}')">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="icon-button" onclick="deleteData('${doc.id}')">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                            <button class="icon-button copy-btn">
-                                <i class="fa-regular fa-copy"></i>
-                            </button>
-                            <button class="icon-button share-btn">
-                                <i class="fa-solid fa-share-nodes"></i>
-                            </button>
-                            <i class="fa-solid fa-check-double copied-icon" style="display:none;"></i>
-                        </div>
-                        <p class="message-content">${escapeHTML(doc.data().message)}</p>
-                    `;
+                <div class="icon-buttons">
+                    <button class="icon-button" onclick="populateUpdate('${doc.id}', '${escapeHTML(doc.data().message).replace(/\n/g, '\\n')}')">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="icon-button" onclick="deleteData('${doc.id}')">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <button class="icon-button copy-btn">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                    <button class="icon-button share-btn">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                    <i class="fa-solid fa-check-double copied-icon" style="display:none;"></i>
+                </div>
+                <p class="message-content">${escapeHTML(doc.data().message)}</p>`;
                     dataDiv.appendChild(div);
 
                     // Attach event listener to the newly created copy button
@@ -214,6 +248,14 @@
                         shareMessage(escapeHTML(doc.data().message));
                     });
                 });
+
+                // Hide loading spinner
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }).catch((error) => {
+                console.error("Error fetching documents: ", error);
+
+                // Hide loading spinner in case of error
+                document.getElementById('loadingSpinner').style.display = 'none';
             });
         }
 
