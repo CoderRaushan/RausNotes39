@@ -1024,7 +1024,7 @@ nav ul li i {
 
 .updates-box {
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);;
     border-radius: 5px;
     width:40%;
     height: 400px;
@@ -1047,11 +1047,13 @@ nav ul li i {
     /* Adjust height to account for heading */
     position: relative;
     overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 .updates-content {
     position: absolute;
     bottom: 0;
+    height: 400px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1062,8 +1064,11 @@ nav ul li i {
 .update-message {
     padding:1rem;
     border-bottom: 1px solid #eee;
-    background-color: #fafafa;
+    background-color: var(--primary-color);
+    color:  var(--secondary-color);
     box-sizing: border-box;
+    /* border: .1px solid black;
+    margin-top: 11px; */
 }
 
 @keyframes scrollUp {
@@ -1664,14 +1669,8 @@ font-size: 13px;
   }
   
 .updates-box {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   width:70%;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
   /* dropdown css */
 .dropbtn 
