@@ -441,6 +441,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- future and latest updates  -->
+         <section>
+            <div class="update_container">
+                <div class="updates-box" id="latest-updates">
+                    <h2>Latest Updates</h2>
+                    <div class="updates-wrapper">
+                        <div class="updates-content"></div>
+                    </div>
+                </div>
+                <div class="updates-box" id="future-updates">
+                    <h2>Future Updates</h2>
+                    <div class="updates-wrapper">
+                        <div class="updates-content"></div>
+                    </div>
+                </div>
+            </div>
+         </section>
         <!-- FAQ secton -->
         <section>
             <div class="accordion_container" data-aos="fade-up" data-aos-duration="1300" data-aos-once="true">
@@ -977,8 +995,64 @@
         });
     });
 </script>
+<!-- webupdate js code -->
+<script>
+    const latestUpdates = [
+        "1.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "2.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "3.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "4.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "5.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "6.Adjust the JavaScript to dynamically add messages and ensure the scrolling works:"
+    ];
+
+    const futureUpdates = [
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+        "Adjust the JavaScript to dynamically add messages and ensure the scrolling works:",
+    ];
+
+    const latestUpdatesContent = document.querySelector('#latest-updates .updates-content');
+    const futureUpdatesContent = document.querySelector('#future-updates .updates-content');
+
+    function addMessages(updates, container) {
+        updates.forEach((message) => {
+            const div = document.createElement('div');
+            div.className = 'update-message';
+            div.textContent = message;
+            container.appendChild(div);
+        });
+
+        // Clone the messages to create an infinite scroll effect
+        updates.forEach((message) => {
+            const div = document.createElement('div');
+            div.className = 'update-message';
+            div.textContent = message;
+            container.appendChild(div);
+        });
+    }
+
+    addMessages(latestUpdates, latestUpdatesContent);
+    addMessages(futureUpdates, futureUpdatesContent);
+
+    // Adjust the animation duration based on the content height
+    function adjustAnimationDuration(container) {
+        const messages = container.querySelectorAll('.update-message');
+        const messageHeight = messages[0].offsetHeight;
+        const totalHeight = messages.length * messageHeight;
+        const animationDuration = totalHeight / 20; // Adjust speed as necessary
+
+        container.style.animationDuration = `${animationDuration}s`;
+    }
+
+    adjustAnimationDuration(latestUpdatesContent);
+    adjustAnimationDuration(futureUpdatesContent);
+
+</script>
 <!-- logout section of js code  -->
 <script src="/header&footer/logout.js"> </script>
 </body>
-
 </html>

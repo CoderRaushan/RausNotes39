@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Updates</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .updates-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .updates-box h2 {
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .updates-wrapper {
+            height: calc(100% - 42px);
+            /* Adjust height to account for heading */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .updates-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .update-message {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            background-color: #fafafa;
+            box-sizing: border-box;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .updates-wrapper .updates-content {
+            animation: scrollUp 10s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="updates-box" id="latest-updates">
+            <h2>Latest Updates</h2>
+            <div class="updates-wrapper">
+                <div class="updates-content"></div>
+            </div>
+        </div>
+        <div class="updates-box" id="future-updates">
+            <h2>Future Updates</h2>
+            <div class="updates-wrapper">
+                <div class="updates-content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="scripts.js"></script> -->
+    <script>
+        const latestUpdates = [
+            "Latest update 1",
+            "Latest update 2",
+            "Latest update 3",
+            "Latest update 4",
+            "Latest update 5"
+        ];
+
+        const futureUpdates = [
+            "Future update 1",
+            "Future update 2",
+            "Future update 3",
+            "Future update 4",
+            "Future update 5"
+        ];
+
+        const latestUpdatesContent = document.querySelector('#latest-updates .updates-content');
+        const futureUpdatesContent = document.querySelector('#future-updates .updates-content');
+
+        function addMessages(updates, container) {
+            updates.forEach((message) => {
+                const div = document.createElement('div');
+                div.className = 'update-message';
+                div.textContent = message;
+                container.appendChild(div);
+            });
+
+            // Clone the messages to create an infinite scroll effect
+            updates.forEach((message) => {
+                const div = document.createElement('div');
+                div.className = 'update-message';
+                div.textContent = message;
+                container.appendChild(div);
+            });
+        }
+
+        addMessages(latestUpdates, latestUpdatesContent);
+        addMessages(futureUpdates, futureUpdatesContent);
+
+        // Adjust the animation duration based on the content height
+        function adjustAnimationDuration(container) {
+            const messages = container.querySelectorAll('.update-message');
+            const messageHeight = messages[0].offsetHeight;
+            const totalHeight = messages.length * messageHeight;
+            const animationDuration = totalHeight / 50; // Adjust speed as necessary
+
+            container.style.animationDuration = `${animationDuration}s`;
+        }
+
+        adjustAnimationDuration(latestUpdatesContent);
+        adjustAnimationDuration(futureUpdatesContent);
+
+    </script>
+</body>
+
+</html>

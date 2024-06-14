@@ -626,13 +626,6 @@ nav ul li i {
   transform: rotate(-180deg);
 }
 
-
-
-
-
-
-
-
 /* It icon */
 .it-arrowi {
   transition: transform 0.3s ease;
@@ -774,36 +767,6 @@ nav ul li i {
 .dropdown:hover .dropbtn {
   background-color: rgb(232, 116, 7)
 }
-
-@media(max-width: 400px)
-{
-/* .main_nav_nested_item_ele 
-{
-  height: auto;
-  width: 100%;
-}  */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .item :active
@@ -1045,6 +1008,76 @@ nav ul li i {
 .student-review-card i {
   color: blue;
   margin-top: 8px;
+}
+
+  /* website udaetes */
+  .update_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* gap: 20px; */
+}
+
+.updates-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width:40%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.updates-box h2 {
+    text-align: center;
+    background-color: #581c84;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.updates-wrapper {
+    height: calc(100% - 42px);
+    /* Adjust height to account for heading */
+    position: relative;
+    overflow: hidden;
+}
+
+.updates-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.update-message {
+    padding:1rem;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.updates-wrapper .updates-content {
+    animation: scrollUp 10s linear infinite;
 }
 
 .contact-us-field {
@@ -1623,6 +1656,23 @@ font-size: 13px;
 }
 @media (max-width: 658px) 
 {
+
+  /* updatse  */
+  .update_container 
+  {
+    flex-direction: column;
+  }
+  
+.updates-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width:70%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
   /* dropdown css */
 .dropbtn 
 {
