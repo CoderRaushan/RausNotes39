@@ -1063,7 +1063,7 @@ nav ul li i {
 
 .update-message {
     padding:1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
     color:  var(--secondary-color);
     box-sizing: border-box;
