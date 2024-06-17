@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,30 +17,29 @@
     <!-- <link rel="stylesheet" href="../style.css"> -->
     <title>IT-semester-4-notes-rausnotes39</title>
     <style>
-        .home_button
-        {
-            text-decoration: none; 
-            color:white; 
-            background-color: blue; 
-            border-radius: 5rem; padding:.3rem .8rem .4rem .8rem; 
+        .home_button {
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            border-radius: 5rem;
+            padding: .3rem .8rem .4rem .8rem;
             font-weight: 600;
         }
-        .home_button:hover
-        {
+
+        .home_button:hover {
             background-color: #fff;
             color: black;
             border: 2px solid black;
         }
-        .home_button:active
-        {
+
+        .home_button:active {
             background-color: yellow;
             color: black;
             border: 2px solid black;
         }
-        
+
         /* faq section */
-        .accordion 
-        {
+        .accordion {
             padding: 10px 3rem 10px 3rem;
             height: auto;
             width: auto;
@@ -50,16 +50,14 @@
             border-radius: 8px;
         }
 
-        .question 
-        {
+        .question {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-direction: row;
         }
 
-        .question h3 
-        {
+        .question h3 {
             font-size: 1.2rem;
             color: black;
         }
@@ -77,8 +75,7 @@
             transform: rotate(-180deg);
         }
 
-        .answer 
-        {
+        .answer {
             height: auto;
             margin-top: 10px;
             max-height: 0;
@@ -88,8 +85,7 @@
             flex-direction: column;
         }
 
-        .answer a 
-        {
+        .answer a {
             margin-right: 8rem;
             color: black;
             text-decoration: none;
@@ -98,119 +94,120 @@
             padding: 5px;
             margin-top: 2px;
         }
-        .answer a:hover
-        {
+
+        .answer a:hover {
             background-color: yellow;
         }
+
         /* scrollling text style */
         /* Container styles */
-.scrolling-text-container 
-{
-    background-color: #195dc4;
-    border-radius: 4px;
-    overflow: hidden;
-}
+        .scrolling-text-container {
+            background-color: #195dc4;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
-/* Inner container styles */
-.scrolling-text-inner 
-{
-    display: flex;
-    white-space: nowrap;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 0;
-}
+        /* Inner container styles */
+        .scrolling-text-inner {
+            display: flex;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 0;
+        }
 
-/* Text styles */
-.scrolling-text 
-{
-    display: flex;
-}
+        /* Text styles */
+        .scrolling-text {
+            display: flex;
+        }
 
-.scrolling-text-item 
-{
-    padding: 0 30px;
-    color:#fff;
-}
+        .scrolling-text-item {
+            padding: 0 30px;
+            color: #fff;
+        }
 
-/* Apply the animation to the text items */
-.scrolling-text-inner>div 
-{
-    animation: var(--direction) var(--marquee-speed) linear infinite;
-}
+        /* Apply the animation to the text items */
+        .scrolling-text-inner>div {
+            animation: var(--direction) var(--marquee-speed) linear infinite;
+        }
 
-/* Pause the animation when a user hovers over it */
-.scrolling-text-container:hover .scrolling-text-inner>div {
-    animation-play-state: paused;
-}
-.whanchor
-{
-    text-decoration: none;
-    background-color:#581c84;
-    color:#fff;
-    padding: 2px 12px 2px 12px;
-    border-radius: 5rem;
-}
+        /* Pause the animation when a user hovers over it */
+        .scrolling-text-container:hover .scrolling-text-inner>div {
+            animation-play-state: paused;
+        }
 
-/* Setting the Animation using Keyframes */
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
+        .whanchor {
+            text-decoration: none;
+            background-color: #581c84;
+            color: #fff;
+            padding: 2px 12px 2px 12px;
+            border-radius: 5rem;
+        }
 
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll-right 
-{
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-        @media(max-width:658px)
-        {
-            .accordion_container 
-            {
-            padding: 1rem 2rem 1rem 2rem;
+        /* Setting the Animation using Keyframes */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0%);
             }
-            .question h3 
-            {
-            font-size: 1rem;
+
+            100% {
+                transform: translateX(-100%);
             }
-            .accordion 
-            {
-            padding: 10px 1rem 10px 1rem;
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
             }
-            .answer p
-            {
-            margin-right:0rem;
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @media(max-width:658px) {
+            .accordion_container {
+                padding: 1rem 2rem 1rem 2rem;
+            }
+
+            .question h3 {
+                font-size: 1rem;
+            }
+
+            .accordion {
+                padding: 10px 1rem 10px 1rem;
+            }
+
+            .answer p {
+                margin-right: 0rem;
             }
         }
     </style>
 </head>
+
 <body>
- <!-- nav file included -->
- <!-- <div id="includnav"></div> -->
- <!-- scrolling text  -->
- <div class="scrolling-text-container">
-    <div class="scrolling-text-inner" style="--marquee-speed: 35s; --direction:scroll-left" role="marquee">
-        <div class="scrolling-text">
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div> 
-            <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
-            <!-- Add More Items Here -->
+    <!-- nav file included -->
+    <!-- <div id="includnav"></div> -->
+    <!-- scrolling text  -->
+    <div class="scrolling-text-container">
+        <div class="scrolling-text-inner" style="--marquee-speed: 35s; --direction:scroll-left" role="marquee">
+            <div class="scrolling-text">
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <div class="scrolling-text-item">Join rausnotes39 Official Whatsapp Group to stay updated <a
+                        href="https://chat.whatsapp.com/FZRDuxiyIUe6a1RTFCiWtf" class="whanchor">Join</a></div>
+                <!-- Add More Items Here -->
+            </div>
         </div>
     </div>
-</div>
     <!-- notes secton start -->
     <div class="container">
         <div class="text-center">
@@ -224,54 +221,32 @@
             <div class="accordion">
                 <div class="question">
                     <h3>
-                        MST Question Papers
+                        Download Full Notes
                     </h3>
                     <i class="fa-sharp fa-solid fa-caret-down icon"></i>
                 </div>
                 <div class="answer">
-                    <a href="/pdf/WT_mst_1.pdf">WT Mst Paper</a>
-                    <a href="/pdf/CAM_mst1.pdf">Cam Mst paper</a>
-                    <a href="/pdf/PAS_mst1.pdf">Pas Mst paper</a>
-                    <a href="/pdf/OS_mst1.pdf">Os Mst paper</a>
-                    <a href="/pdf/Python _mst1.pdf">Python Mst paper</a>
-                    <a href="/pdf/DBMS_Mst1.pdf">DBMS Mst paper</a>
+                    <a href="/pdf/it_Sem4/OS Full Notes .pdf">OS</a>
+                    <a href="/pdf/it_Sem4/DBMS Full Notes.pdf">DBMS</a>
+                    <a href="/pdf/it_Sem4/PAS Full Notes .pdf">PAS</a>
+                    <a href="/pdf/it_Sem4/CAM Full Notes .pdf">CAM</a>
+                    <a href="/pdf/it_Sem4/WT Full Notes.pdf">WT</a>
+                    <a href="/pdf/it_Sem4/Python Full Notes .pdf">Python</a>
                 </div>
             </div>
             <div class="accordion">
                 <div class="question">
-                    <h3> Final Question Papers
+                    <h3>ALL Final Question Papers Alogn with MSTs
                     </h3>
                     <i class="fa-sharp fa-solid fa-caret-down icon"></i>
                 </div>
                 <div class="answer">
                     <a href="/pdf/it_Sem4/PAS_f_4.pdf">PAS</a>
-                    <a href="/pdf/it_Sem4/cam_f_4.pdf">CAM</a>
-                    <a href="/pdf/it_Sem4/os_final_qp.pdf">OS</a>
-                    <a href="/pdf/it_Sem4/WT_f_4.pdf">WT</a>
-                    <a href="/pdf/it_Sem4/PYTHON_f_4.pdf">Python</a>
-                    <a href="/pdf/it_Sem4/DBMS_f_4.pdf">DBMS</a>
-                    <a href="/pdf/it_Sem4/all_sub_mixed1.pdf">All subject paper mixed 1</a>
-                    <a href="/pdf/it_Sem4/all_sub_mixed2.pdf">All subject paper mixed 2</a>
-                </div>
-            </div>
-             <div class="accordion">
-                <div class="question">
-                    <h3>  full Notes:(MST1+MST2)
-                    </h3>
-                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
-                </div>
-                <div class="answer">
-                    <!-- <a href="/pdf/cam_practical_file.pdf">CAM Practical File</a>
-                    <a href="/pdf/cam_notes.pdf">CAM Notes</a>
-                    <a href="/pdf/pas_notes.pdf">PAS Notes </a> -->
-                    <a href="/pdf/it_Sem4/os_full_notes.pdf">OS Notes</a>
-                    <!-- <a href="/pdf/Wt _notes.pdf">WT Notes</a>
-                    <a href="/pdf/python_notes.pdf">Python Notes</a> -->
                 </div>
             </div>
             <div class="accordion">
                 <div class="question">
-                    <h3>  Practical Files
+                    <h3> Practical Files
                     </h3>
                     <i class="fa-sharp fa-solid fa-caret-down icon"></i>
                 </div>
@@ -279,16 +254,7 @@
                     <a href="/pdf/wt_file_1_4.pdf">WT Practical File</a>
                 </div>
             </div>
-            <div class="accordion">
-                <div class="question">
-                    <h3>   Assignments
-                    </h3>
-                    <i class="fa-sharp fa-solid fa-caret-down icon"></i>
-                </div>
-                <div class="answer">
-                    <a href="/pdf/DBMS_assignment.pdf">DBMS Assignment</a>
-                </div>
-            </div>
+
             <div class="accordion">
                 <div class="question">
                     <h3> Math Book
@@ -297,11 +263,12 @@
                 </div>
                 <div class="answer">
                     <a href="/pdf/correlation_and_regression .pdf">Correlation and Regression</a>
-                    <a href="/pdf/Theory_of_probability_and_probability_distribution .pdf">Theory of Probability and Probability Distribution</a>
+                    <a href="/pdf/Theory_of_probability_and_probability_distribution .pdf">Theory of Probability and
+                        Probability Distribution</a>
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- importing footer -->
     <!-- <div id="includefooter"></div> -->
@@ -315,28 +282,27 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script> -->
 
-    
-<!-- for faq checkbox -->
-<script>
-    const accordions = document.querySelectorAll('.accordion');
-    accordions.forEach(accordion => {
-        const icon = accordion.querySelector(".icon");
-        const answer = accordion.querySelector(".answer");
-        accordion.addEventListener("click", () => {
-            //    icon.classList.toggle("active");// isme koi problem nahi hai but
-            //    answer.classList.toggle("active");//isme animation problem hai 
-            if (icon.classList.contains("active")) 
-            {
-                icon.classList.remove("active");
-                answer.style.maxHeight = null;
-            }
-            else {
-                icon.classList.add("active");
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
+
+    <!-- for faq checkbox -->
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            const icon = accordion.querySelector(".icon");
+            const answer = accordion.querySelector(".answer");
+            accordion.addEventListener("click", () => {
+                //    icon.classList.toggle("active");// isme koi problem nahi hai but
+                //    answer.classList.toggle("active");//isme animation problem hai 
+                if (icon.classList.contains("active")) {
+                    icon.classList.remove("active");
+                    answer.style.maxHeight = null;
+                }
+                else {
+                    icon.classList.add("active");
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
