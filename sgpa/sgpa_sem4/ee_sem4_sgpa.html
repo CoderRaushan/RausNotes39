@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link rel="icon" href="/photos/rausnotes39_logo.png">
+    <link rel="stylesheet" href="sem_4_common_style.css">
+    <!-- jquery code for imporing footer -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- code for nav items to move towards left side -->
+    <script src="/header&footer/nav.js"></script>
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("user_icon").style.display = "none";
+                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+            }
+            else {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("it_user_iamge").style.display = "none";
+                document.getElementById("kaho").style.display = "none";
+                document.getElementById("kaho").style.display = "user_img";
+
+                document.getElementById("bottom_menu_profile").style.display = "none";
+                // setTimeout(redirectToLogin(), 1000);
+            }
+        });
+        // function redirectToLogin() {
+        //     const currentUrl = window.location.href;
+        //     sessionStorage.setItem('originalUrl', currentUrl);
+        //     window.location.href = '/database/login.html';
+        // }
+    </script>
+</head>
+
+<body>
+    <!-- nav file included -->
+    <!-- <div id="includnav"></div> -->
+    <nav class="nav-class-for-phone">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/rausnotes39_logo.png"
+                alt="logo">RausNotes39</label>
+        <ul class="nav-item">
+            <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+            <li><a class="active" id="about_dev_btn">About</a>
+            </li>
+            <li><a class="active" id="feedback_btn">Feedback</a></li>
+            <li><a class="active" href="/database/Notes/notes.html"><i id="note" class="fa-solid fa-pencil"></i></a>
+            </li>
+            <li><a id="signinBtn" href="/database/login.html">Login</a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img src="" alt="user_img" id="user_img"
+                        class="user_img_css"></a></li>
+            <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
+            <li><a id="signout" class="logoutbtn">LogOut</a></li>
+            <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
+            <li id="darkicon"><i class="fa-solid fa-moon"></i></li>
+        </ul>
+    </nav>
+    <!-- top nav items  -->
+    <div class="main_nav_nested_item_ele">
+        <!-- <a href="portfolio/portfolio.html">
+        <div class="dropdown">
+            <button class="dropbtn">Portfolio</button>
+        </div>
+    </a> -->
+        <a href="/ppt_section/ppt_page.html">
+            <div class="dropdown">
+                <button class="dropbtn">PPT</button>
+            </div>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content">
+                <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
+                    <div class="dropdown-content_for_applied">
+                        <a href="/notes/physics_Group.html">Physics</a>
+                        <a href="notes/chemistry_Group.html">Chemistry</a>
+                    </div>
+                </a>
+                <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
+                    <div class="dropdown-content_for_it">
+                        <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
+                        <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                    </div>
+                </a>
+                <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
+                    <div class="dropdown-content_for_cse">
+                        <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
+                        <a href="/sgpa/sgpa_sem4/cse_sem4_sgpa.html">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_sgpa">
+                <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa">
+                        <a id="it-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_it_leet">
+                                <a href="/sgpa/it_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/it_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/sgpa_sem4/it_sem4_sgpa.html">Semester 4</a>
+                    </div>
+                </a>
+                <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_cse_sgpa">
+                        <a id="cse-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_cse_leet">
+                                <a href="/sgpa/cse_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/cse_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/sgpa_sem4/cse_sem4_sgpa.html">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ece_sgpa">
+                        <a id="ece-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ece_leet">
+                                <a href="/sgpa/ece_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ece_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ee_sgpa">
+                        <a id="ee-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ee_leet">
+                                <a href="/sgpa/ee_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ee_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ce_sgpa">
+                        <a id="ce-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ce_leet">
+                                <a href="/sgpa/ce_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ce_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="#">Semester 4</a>
+                    </div>
+                </a>
+                <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_me_sgpa">
+                        <a id="me-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_me_leet">
+                                <a href="/sgpa/me_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/me_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/sgpa_sem4/me_sem4_sgpa.html">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_game">
+                <a href="/game/color_genetator.html">Color Gen</a>
+                <a href="/game/gues_a_number.html">Guess no</a>
+                <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
+                <a href="#">Game4</a>
+                <a href="#">Game5</a>
+                <a href="#">Game6</a>
+            </div>
+        </div>
+        <!-- <a href="/weather/weather.html">
+        <div class="dropdown">
+            <button class="dropbtn">Weather</i></button>
+        </div>
+    </a> -->
+    </div>
+    <h3 id="it_sem4">SGPA Calculator for EE Branch, Semester 4</h3>
+    <div class="main">
+        <form method="post">
+            <div class="box" style="height: 760px;">
+                <table border="none">
+                    <div>
+                        <tr>
+                            <td><label for="PAS">DE:</label></td>
+                            <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
+                                    required>
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="DBMS">EM2(A & SM):</label></td>
+                            <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
+                                    name="DBMS" required></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="PY">PW:</label></td>
+                            <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
+                                    required>
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="OS">S and S:</label></td>
+                            <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
+                                    required>
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="WT">DE-LAB:</label></td>
+                            <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
+                                    required>
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="CAM">EM2-LAB:</label></td>
+                            <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
+                                    required>
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="DBMS-LAB">PE-LAB</label></td>
+                            <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
+                                    name="DBMS-LAB" required></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="PY-LAB">Seminar:</label></td>
+                            <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
+                                    name="PY-LAB" required></td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td><label for="OS-LAB">MPD:</label></td>
+                            <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
+                                    name="OS-LAB" required></td>
+                        </tr>
+                    </div>
+                </table>
+                <button id="sgpabtn">Calculate Sgpa</button>
+                <audio src="/sgpa/sgpa_sem4/congrts_music.unknown" preload="auto" id="clicksound" controls></audio>
+                <p id="congrass">Click on Calculate Sgpa</p>
+            </div>
+        </form>
+
+        <!-- bottom menu -->
+        <div class="bottom_menu">
+            <a class="bottom_menu_anchor" href="/index.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/notes/notes_section.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h4>Notes</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/sgpa/sgpa_page.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h4>SgpaC</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="../../userProfile/userProfile.html">
+                <div class="bottom_menubox1" id="user_profile_btn">
+                    <i class="fa-solid fa-user" id="user_icon"></i>
+                    <img src="" alt="uesr image" id="it_user_iamge">
+                    <h4 id="bottom_menu_profile">Profile</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+        const authStatus = localStorage.getItem("user");
+        const congrassbtn = document.getElementById("congrass");
+        document.getElementById("sgpabtn").addEventListener("click", (event) => {
+            event.preventDefault();
+
+            // accessing all input fields 
+            let PAS = (document.getElementById("PAS").value);
+            let DBMS = (document.getElementById("DBMS").value);
+            let PY = (document.getElementById("PY").value);
+            let OS = (document.getElementById("OS").value);
+            let WT = (document.getElementById("WT").value);
+            let CAM = (document.getElementById("CAM").value);
+            // LABS
+            let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
+            let PY_LAB = (document.getElementById("PY-LAB").value);
+            let OS_LAB = (document.getElementById("OS-LAB").value);
+            
+
+            // Validate if any input field is empty
+            let test = document.querySelectorAll("input");
+            for (let p of test) {
+                if (p.value === "") {
+
+                    alert("Please Enter Marks in All input field!");
+                    break;
+                }
+            }
+
+            // now  calculating percentage of each subject including lab
+            PAS = PAS / 100 * 100;
+            DBMS = DBMS / 100 * 100;
+            PY = PY / 100 * 100;
+            OS = OS / 100 * 100;
+            WT = WT / 50 * 100;
+            CAM = CAM / 50 * 100;
+
+            DBMS_LAB = DBMS_LAB / 50 * 100;
+            PY_LAB = PY_LAB / 50 * 100;
+            OS_LAB = OS_LAB / 100 * 100;
+            
+            // now calculating grade point form persentage
+            let pasgrade = Math.floor(PAS / 10) + 1;
+            if (pasgrade >= 10) {
+                pasgrade = 10;
+            }
+            let dbmsgrade = Math.floor(DBMS / 10) + 1;
+            if (dbmsgrade >= 10) {
+                dbmsgrade = 10;
+            }
+            let pygrade = Math.floor(PY / 10) + 1;
+            if (pygrade >= 10) {
+                pygrade = 10;
+            }
+            let osgrade = Math.floor(OS / 10) + 1;
+            if (osgrade >= 10) {
+                osgrade = 10;
+            }
+            let wtgrade = Math.floor(WT / 10) + 1;
+            if (wtgrade >= 10) {
+                wtgrade = 10;
+            }
+            let camgrade = Math.floor(CAM / 10) + 1;
+            if (camgrade >= 10) {
+                camgrade = 10;
+            }
+
+            // labs
+
+            let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
+            if (dbmslabgrade >= 10) {
+                dbmslabgrade = 10;
+            }
+            let pylabgrade = Math.floor(PY_LAB / 10) + 1;
+            if (pylabgrade >= 10) {
+                pylabgrade = 10;
+            }
+            let oslabgrade = Math.floor(OS_LAB / 10) + 1;
+            if (oslabgrade >= 10) {
+                oslabgrade = 10;
+            }
+            // multiplying grade and credit point
+            let pasresult = pasgrade * 4;
+            let dbmsresult = dbmsgrade * 4;
+            let pyresult = pygrade * 4;
+            let osresult = osgrade * 4;
+            let wtresult = wtgrade * 1;
+            let camresult = camgrade * 1;
+
+            let dbmslabresult = dbmslabgrade * 1;
+            let pylabresult = pylabgrade * 1;
+            let oslabresult = oslabgrade * 1;
+            
+
+            //   adding all results
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 21);
+            sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
+            }
+            else {
+                congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
+            }
+        });
+    </script>
+    <!-- button sound effect -->
+    <script>
+        // Get the button and audio elements
+        const sgpabtn2 = document.getElementById("sgpabtn");
+        const clicksoun2 = document.getElementById("clicksound");
+
+        // Add event listener to the button
+        sgpabtn2.addEventListener("click", () => {
+            clicksoun2.play();
+        });
+    </script>
+    <!-- footer file included -->
+    <div id="includefooter">
+        <!-- importing js code -->
+        <script>
+            $("#includnav").load("/header&footer/nav.html");
+            $("#includefooter").load("/header&footer/footer.html");
+        </script>
+        <!-- for dark mode and light mode -->
+        <script>
+            var darkicon = document.getElementById("darkicon");
+            darkicon.onclick = function () {
+                document.body.classList.toggle("dark_theme");
+                if (document.body.classList.contains("dark_theme")) {
+                    darkicon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                }
+                else {
+                    darkicon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                }
+            }
+        </script>
+        <!-- for share the weblink -->
+        <script>
+            async function sharepage() {
+                await navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                })
+            }
+        </script>
+        <!-- Include the confetti.js library -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+        <script>
+            var count = 200;
+
+            var defaults = {
+                origin: { y: 0.8 }
+            };
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            document.getElementById('sgpabtn').addEventListener('click', function () {
+                fire(0.25, {
+                    spread: 26,
+                    startVelocity: 55
+                });
+
+                fire(0.2, {
+                    spread: 60
+                });
+
+                fire(0.35, {
+                    spread: 100,
+                    decay: 0.91,
+                    scalar: 0.8
+                });
+
+                fire(0.1, {
+                    spread: 120,
+                    startVelocity: 25,
+                    decay: 0.92,
+                    scalar: 1.2
+                });
+
+                fire(0.1, {
+                    spread: 120,
+                    startVelocity: 45
+                });
+            });
+        </script>
+        </script>
+        <!-- logout section of js code  -->
+        <script src="/header&footer/logout.js"> </script>
+</body>
+
+</html>
