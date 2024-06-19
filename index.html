@@ -698,7 +698,7 @@
                                 <td>Express.js</td>
                             </tr>
                             <tr>
-                                <td>Ejs</td>              
+                                <td>Ejs</td>
                             </tr>
                         </tbody>
                     </table>
@@ -708,18 +708,18 @@
                         <thead>
                             <tr>
                                 <th colspan="4">DataBases</th>
-                                <tr>
-                                    <td>SQL</td>
-                                </tr>
+                            <tr>
+                                <td>SQL</td>
+                            </tr>
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                         </tbody>
                     </table>
                 </div>
 
-                
+
 
                 <div class="skill_table4">
                     <table>
@@ -833,9 +833,8 @@
 
         <div class="myfooter">
             <div class="frow1">
-                <img src="/photos/weg_logo.png" class="img" alt="logo" <abbr title="Logo"></abbr>
-                <img src="photos/qrcode.png" alt="qrcode" height="100px" width="100px" <abbr
-                    title="https://rausnotes39.netlify.app/"></abbr>
+                <img src="/photos/rausnotes39_logo.png" class="img" alt="logo"> 
+                <img src="/photos/qrcode.png" alt="qrcode" height="100px" width="100px">
             </div>
             <div class="frow2">
                 <h3>Social meadia links</h3>
@@ -901,8 +900,6 @@
             loop: true
         });
     </script>
-
-
 </body>
 <!-- for faq checkbox -->
 <script>
@@ -970,13 +967,9 @@
 <!-- user profile info button js -->
 <script>
     let btn_profile = document.getElementById("user_profile_btn");
-    // let nav_user_name=document.getElementById("username");
     btn_profile.addEventListener("click", () => {
         window.location.href = "/userProfile/userProfile.html";
     });
-    // nav_user_name.addEventListener("click",()=>{
-    //     window.location.href = "/userProfile/userProfile.html";
-    // });
 </script>
 
 <!-- scroll till about -->
@@ -1017,8 +1010,6 @@
     ];
 
     const futureUpdates = [
-        "1.EE sem 4 sgpa",
-        "2.CE sem 4 sgpa",
         "3.A separate page for sgpa",
         "4.Realtime user review system",
         "5.Galary section",
@@ -1062,44 +1053,42 @@
     adjustAnimationDuration(futureUpdatesContent);
 
 </script>
-
-
 <!-- Dark and Light mode theme js code -->
 <script>
     // Function to enable dark theme
     function enableDarkTheme() {
-      document.documentElement.classList.add('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
-      localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark_theme');
+        document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
     }
-  
+
     // Function to enable light theme
     function enableLightTheme() {
-      document.documentElement.classList.remove('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
-      localStorage.setItem('theme', 'light');
+        document.documentElement.classList.remove('dark_theme');
+        document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
     }
-  
+
     // Function to toggle between themes
     function toggleTheme() {
-      if (document.documentElement.classList.contains('dark_theme')) {
-        enableLightTheme();
-      } else {
-        enableDarkTheme();
-      }
+        if (document.documentElement.classList.contains('dark_theme')) {
+            enableLightTheme();
+        } else {
+            enableDarkTheme();
+        }
     }
-  
+
     // Check the user's saved theme preference on page load
     document.addEventListener('DOMContentLoaded', (event) => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        enableDarkTheme();
-      } else {
-        enableLightTheme();
-      }
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            enableDarkTheme();
+        } else {
+            enableLightTheme();
+        }
     });
-  </script>
-  
+</script>
+
 
 
 <!-- logout section of js code  -->
