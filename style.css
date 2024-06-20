@@ -774,13 +774,13 @@ nav ul li i {
 #check {
   display: none;
 }
-.wall {
+/* .wall {
   background: url(/photos/wall.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
-  /* background-color:rgb(133, 195, 25); rgb(206, 158, 161); */
-}
+   background-color:rgb(133, 195, 25); rgb(206, 158, 161); 
+} */
 .home {
   background: url(/photos/wall.jpg) no-repeat;
   background-size: cover;
