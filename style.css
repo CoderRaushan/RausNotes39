@@ -860,8 +860,9 @@ nav ul li i {
 .box-container .box img {
   margin-bottom: 1rem;
   height: 5.5rem;
-  background-color: rgba(0, 6, 128, 0.804);
+  background-color: rgba(255, 255, 255, 0.804);
   border-radius: 60px;
+  border: 2px solid black;
 }
 .box-container .box h3 {
   font-size: 30px;
