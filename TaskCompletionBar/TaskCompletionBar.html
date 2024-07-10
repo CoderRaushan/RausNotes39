@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Progress Tracker</title>
     <link rel="icon" href="/photos/rausnotes39_logo.png">
     <style>
-body 
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
-/* Hide the default checkbox */
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000000;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
 
-input[type="checkbox"]:checked 
-{
-  background-color: #56b82f; /* Change this to your desired color */
-  border: 2px solid #000000; /* Optional: Match the border color to the background color */
-}
-.container 
-{
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(pink,rgb(76, 76, 229),rgb(235, 173, 60),rgb(0, 60, 255),rgb(205, 205, 36),pink);
-}
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
 
-.progress-container 
-{
-    width: 100%;
-    background: #e0e0e0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
+        input[type="checkbox"]:checked {
+            background-color: #56b82f;
+            /* Change this to your desired color */
+            border: 2px solid #000000;
+            /* Optional: Match the border color to the background color */
+        }
 
-.progress-bar 
-{
-    width: 0%;
-    height: 8px;
-    background: #2a8e2a;
-    border-radius: 5px;
-    border: 2px solid rgb(255, 255, 255);
-    transition: width 0.5s ease-in-out; /* Added transition for animation */
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(pink, rgb(76, 76, 229), rgb(235, 173, 60), rgb(0, 60, 255), rgb(205, 205, 36), pink);
+        }
 
-.task-list 
-{
-    text-align: left;
-}
+        .progress-container {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
 
-.task 
-{
-    margin: 17px 0;
-}
-label,input
-{
-    height:1rem;
-    width: 1rem;
-    cursor: pointer;
-}
+        .progress-bar {
+            width: 0%;
+            height: 8px;
+            background: #2a8e2a;
+            border-radius: 5px;
+            border: 2px solid rgb(255, 255, 255);
+            transition: width 0.5s ease-in-out;
+            /* Added transition for animation */
+        }
+
+        .task-list {
+            text-align: left;
+        }
+
+        .task {
+            margin: 17px 0;
+        }
+
+        label,
+        input {
+            height: 1rem;
+            width: 1rem;
+            cursor: pointer;
+        }
+        .data
+        {
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+            gap: 1rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 style="font-size: calc(16px + 1.5vw);">Delta Full Stack Web Development</h1>
         <div class="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
-        <div class="progress-text" id="progress-text">0/63</div>
+        <div class="data">
+            <div class="progress-text" id="left-remaining-task">63 left</div>
+            <div class="progress-text" id="progress-text">0/63</div>
+            <div class="progress-percentage" id="progress-percentage">0%</div>
+        </div>
         <div class="task-list">
             <div class="task">
                 <input type="checkbox" id="task1" onclick="updateProgress()">
@@ -338,60 +350,58 @@ label,input
             </div>
         </div>
     </div>
-   <script>
-    function updateProgress() 
-    {
-        const tasks = document.querySelectorAll('.task input[type="checkbox"]');
-        const totalTasks = tasks.length;
-        const completedTasks = Array.from(tasks).filter(task => task.checked).length;
-        const progressPercentage = (completedTasks / totalTasks) * 100;
+    <script>
+        function updateProgress() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            const totalTasks = tasks.length;
+            const completedTasks = Array.from(tasks).filter(task => task.checked).length;
+            const progressPercentage = (completedTasks / totalTasks) * 100;
 
-        localStorage.setItem('progressPercentage', progressPercentage);
-        const storedProgressPercentage = localStorage.getItem('progressPercentage');
+            localStorage.setItem('progressPercentage', progressPercentage);
+            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage'));
 
-        document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
-          // Update the progress text
-        document.getElementById('progress-text').innerText = `${completedTasks}/${totalTasks}`;
-    }
-    function initializeProgress() 
-    {
-        const storedProgressPercentage = localStorage.getItem('progressPercentage') || 0;
-        document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
-
-        const tasks = document.querySelectorAll('.task input[type="checkbox"]');
-        let completedTasks = 0;
-        tasks.forEach((task, index) => 
-        {
-        const taskChecked = JSON.parse(localStorage.getItem(`task-${index + 1}`)) || false;
-        task.checked = taskChecked;
-        if (taskChecked) {
-            completedTasks++;
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
+            document.getElementById('progress-text').innerText = `(${completedTasks}/${totalTasks})`;
+            document.getElementById('left-remaining-task').innerText = `(${totalTasks - completedTasks} left)`;
+            document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
         }
-        document.getElementById('progress-text').innerText = `${completedTasks}/${tasks.length}`;
-    });
-    }
 
-    function saveTaskState() 
-    {
-        const tasks = document.querySelectorAll('.task input[type="checkbox"]');
-        tasks.forEach((task, index) => {
-            localStorage.setItem(`task-${index + 1}`, task.checked);
-        });
-    }
+        function initializeProgress() {
+            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage')) || 0;
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
 
-    document.addEventListener('DOMContentLoaded', () => 
-    {
-        const tasks = document.querySelectorAll('.task input[type="checkbox"]');
-        tasks.forEach((task) => 
-        {
-            task.addEventListener('click', () => 
-            {
-                saveTaskState();
-                updateProgress();
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            let completedTasks = 0;
+            tasks.forEach((task, index) => {
+                const taskChecked = JSON.parse(localStorage.getItem(`task-${index + 1}`)) || false;
+                task.checked = taskChecked;
+                if (taskChecked) {
+                    completedTasks++;
+                }
+                document.getElementById('progress-text').innerText = `(${completedTasks}/${tasks.length})`;
+                document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(2)}%)`;
+                document.getElementById('left-remaining-task').innerText = `(${tasks.length - completedTasks} left)`;
             });
+        }
+
+        function saveTaskState() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task, index) => {
+                localStorage.setItem(`task-${index + 1}`, task.checked);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task) => {
+                task.addEventListener('click', () => {
+                    saveTaskState();
+                    updateProgress();
+                });
+            });
+            initializeProgress();
         });
-        initializeProgress();
-    });
-   </script>
+    </script>
 </body>
+
 </html>
