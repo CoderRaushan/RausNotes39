@@ -365,29 +365,31 @@
         </div>
     </div>
     <script>
+        const PROJECT1_PREFIX = 'project1-';
+    
         function updateProgress() {
             const tasks = document.querySelectorAll('.task input[type="checkbox"]');
             const totalTasks = tasks.length;
             const completedTasks = Array.from(tasks).filter(task => task.checked).length;
             const progressPercentage = (completedTasks / totalTasks) * 100;
-
-            localStorage.setItem('progressPercentage', progressPercentage);
-            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage'));
-
+    
+            localStorage.setItem(`${PROJECT1_PREFIX}progressPercentage`, progressPercentage);
+            const storedProgressPercentage = parseFloat(localStorage.getItem(`${PROJECT1_PREFIX}progressPercentage`));
+    
             document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
             document.getElementById('progress-text').innerText = `(${completedTasks}/${totalTasks})`;
             document.getElementById('left-remaining-task').innerText = `(${totalTasks - completedTasks} left)`;
             document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
         }
-
+    
         function initializeProgress() {
-            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage')) || 0;
+            const storedProgressPercentage = parseFloat(localStorage.getItem(`${PROJECT1_PREFIX}progressPercentage`)) || 0;
             document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
-
+    
             const tasks = document.querySelectorAll('.task input[type="checkbox"]');
             let completedTasks = 0;
             tasks.forEach((task, index) => {
-                const taskChecked = JSON.parse(localStorage.getItem(`task-${index + 1}`)) || false;
+                const taskChecked = JSON.parse(localStorage.getItem(`${PROJECT1_PREFIX}task-${index + 1}`)) || false;
                 task.checked = taskChecked;
                 if (taskChecked) {
                     completedTasks++;
@@ -397,14 +399,14 @@
                 document.getElementById('left-remaining-task').innerText = `(${tasks.length - completedTasks} left)`;
             });
         }
-
+    
         function saveTaskState() {
             const tasks = document.querySelectorAll('.task input[type="checkbox"]');
             tasks.forEach((task, index) => {
-                localStorage.setItem(`task-${index + 1}`, task.checked);
+                localStorage.setItem(`${PROJECT1_PREFIX}task-${index + 1}`, task.checked);
             });
         }
-
+    
         document.addEventListener('DOMContentLoaded', () => {
             const tasks = document.querySelectorAll('.task input[type="checkbox"]');
             tasks.forEach((task) => {
@@ -415,7 +417,7 @@
             });
             initializeProgress();
         });
-    </script>
+    </script>    
 </body>
 
 </html>

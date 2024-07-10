@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Progress Tracker</title>
+    <link rel="icon" href="/photos/rausnotes39_logo.png">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        input[type="checkbox"]:checked 
+        {
+            background-color: red;
+            border: 2px solid #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(pink, rgb(235, 173, 60), rgb(76, 76, 229));
+        }
+
+        .progress-container {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 8px;
+            background: #2a8e2a;
+            border-radius: 5px;
+            border: 2px solid rgb(255, 255, 255);
+            transition: width 0.5s ease-in-out;
+        }
+
+        .task-list 
+        {   margin-bottom: 3rem;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        .task {
+            margin: 17px 0;
+        }
+
+        label,
+        input {
+            height: 1rem;
+            width: 1rem;
+            cursor: pointer;
+        }
+        input
+        {
+            background-color: rgb(240, 234, 234);
+        }
+        .data
+        {  
+            min-width: 170px;
+            position: fixed;
+            bottom:1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color:#581c84;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            color: #fff;
+            padding: .5rem 2rem;
+            border-radius: 3rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-size: calc(16px + 1.5vw);">Strivers A2Z DSA Sheet</h1>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="data">
+            <div class="progress-text" id="left-remaining-task">63 left</div>  
+            <div class="progress-text" id="progress-text">0/63</div>  
+            <div class="progress-percentage" id="progress-percentage">0%</div>
+        </div>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox" id="task1" onclick="updateProgress()">
+                <label>Step 1 : Learn the basics</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task2" onclick="updateProgress()">
+                <label>Step 2 : Learn Important Sorting Techniques</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3" onclick="updateProgress()">
+                <label>Step 3 : Solve Problems on Arrays [Easy -> Medium -> Hard]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task4" onclick="updateProgress()">
+                <label>Step 4 : Binary Search [1D, 2D Arrays, Search Space]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task5" onclick="updateProgress()">
+                <label>Step 5 : Strings [Basic and Medium]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task6" onclick="updateProgress()">
+                <label>Step 6 : Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task7" onclick="updateProgress()">
+                <label>Step 7 : Recursion [PatternWise]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task8" onclick="updateProgress()">
+                <label>Step 8 : Stack and Queues [Learning, Pre-In-Post-fix, Monotonic Stack, Implementation]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task9" onclick="updateProgress()">
+                <label>Step 9 : Binary Trees [Traversals, Medium and Hard Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task10" onclick="updateProgress()">
+                <label>Step 10 : Binary Search Trees [Concept and Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task11" onclick="updateProgress()">
+                <label>Step 11 : Graphs [Concepts & Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task12" onclick="updateProgress()">
+                <label>Step 12 : Dynamic Programming [Patterns and Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task13" onclick="updateProgress()">
+                <label>Step 13 : Sliding Window & Two Pointer Combined Problems</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task14" onclick="updateProgress()">
+                <label>Step 14 : Heaps [Learning, Medium, Hard Problems]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task15" onclick="updateProgress()">
+                <label>Step 15 : Greedy Algorithms [Easy, Medium/Hard]</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task16" onclick="updateProgress()">
+                <label>Step 16 : Tries</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task17" onclick="updateProgress()">
+                <label>Step 17 : Bit Manipulation [Concepts & Problems]</label>
+            </div> 
+                <!-- <div class="task">
+                    <input type="checkbox" id="task18" onclick="updateProgress()">
+                    <label>Step 18 : Strings</label>
+                </div> -->
+        </div>        
+    </div>
+    <script>
+        const PROJECT2_PREFIX = 'project2-';
+    
+        function updateProgress() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            const totalTasks = tasks.length;
+            const completedTasks = Array.from(tasks).filter(task => task.checked).length;
+            const progressPercentage = (completedTasks / totalTasks) * 100;
+    
+            localStorage.setItem(`${PROJECT2_PREFIX}progressPercentage`, progressPercentage);
+            const storedProgressPercentage = parseFloat(localStorage.getItem(`${PROJECT2_PREFIX}progressPercentage`));
+    
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
+            document.getElementById('progress-text').innerText = `(${completedTasks}/${totalTasks})`;
+            document.getElementById('left-remaining-task').innerText = `(${totalTasks - completedTasks} left)`;
+            document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
+        }
+    
+        function initializeProgress() {
+            const storedProgressPercentage = parseFloat(localStorage.getItem(`${PROJECT2_PREFIX}progressPercentage`)) || 0;
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
+    
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            let completedTasks = 0;
+            tasks.forEach((task, index) => {
+                const taskChecked = JSON.parse(localStorage.getItem(`${PROJECT2_PREFIX}task-${index + 1}`)) || false;
+                task.checked = taskChecked;
+                if (taskChecked) {
+                    completedTasks++;
+                }
+                document.getElementById('progress-text').innerText = `(${completedTasks}/${tasks.length})`;
+                document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
+                document.getElementById('left-remaining-task').innerText = `(${tasks.length - completedTasks} left)`;
+            });
+        }
+    
+        function saveTaskState() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task, index) => {
+                localStorage.setItem(`${PROJECT2_PREFIX}task-${index + 1}`, task.checked);
+            });
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task) => {
+                task.addEventListener('click', () => {
+                    saveTaskState();
+                    updateProgress();
+                });
+            });
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>
