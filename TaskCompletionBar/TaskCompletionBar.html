@@ -56,11 +56,10 @@
             border-radius: 5px;
             border: 2px solid rgb(255, 255, 255);
             transition: width 0.5s ease-in-out;
-            /* Added transition for animation */
         }
 
         .task-list 
-        {
+        {   margin-bottom: 3rem;
             text-align: left;
             padding-left: 2rem;
         }
@@ -80,11 +79,21 @@
             background-color: rgb(240, 234, 234);
         }
         .data
-        {
+        {  
+            min-width: 180px;
+            position: fixed;
+            bottom:1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color:#581c84;
             display: flex;
             justify-content: center;
             justify-content: center;
             gap: 1rem;
+            color: #fff;
+            padding: .5rem 2rem;
+            border-radius: 3rem;
         }
     </style>
 </head>
