@@ -80,7 +80,7 @@
         }
         .data
         {  
-            min-width: 220px;
+            min-width: 150px;
             position: fixed;
             bottom:1rem;
             left: 50%;
@@ -88,12 +88,12 @@
             z-index: 1000;
             background-color:#581c84;
             display: flex;
-            justify-content: center;
-            justify-content: center;
-            gap: 1rem;
+            flex-wrap: nowrap;
+            justify-content: space-between;
             color: #fff;
             padding: .5rem 2rem;
             border-radius: 3rem;
+            font-size: .9rem;
         }
     </style>
 </head>
@@ -105,8 +105,8 @@
             <div class="progress-bar" id="progress-bar"></div>
         </div>
         <div class="data">
-            <div class="progress-text" id="left-remaining-task">63 left</div>
-            <div class="progress-text" id="progress-text">0/63</div>
+            <div class="progress-text" id="left-remaining-task">63 left</div>  
+            <div class="progress-text" id="progress-text">0/63</div>  
             <div class="progress-percentage" id="progress-percentage">0%</div>
         </div>
         <div class="task-list">
