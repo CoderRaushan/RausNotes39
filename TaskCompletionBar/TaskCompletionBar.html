@@ -384,7 +384,7 @@
                     completedTasks++;
                 }
                 document.getElementById('progress-text').innerText = `(${completedTasks}/${tasks.length})`;
-                document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(2)}%)`;
+                document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
                 document.getElementById('left-remaining-task').innerText = `(${tasks.length - completedTasks} left)`;
             });
         }
