@@ -1,0 +1,21 @@
+
+User-agent: *
+allow: 
+User-agent:*
+allow: 
+User-agent: *
+allow: 
+User-agent: *
+allow: 
+User-agent: *
+allow: 
+User-agent: *
+allow: 
+User-agent:*
+allow: 
+User-agent: *
+allow: 
+User-agent: *
+allow: 
+allow: /cgi-bin/
+Sitemap: https://rausnotes39.netlify.app/sitemap.xml

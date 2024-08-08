@@ -13,7 +13,8 @@
     <script src="/header&footer/nav.js"></script>
     <script>
         // Add this script to handle user authentication status
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () 
+        {
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 // User is signed in
@@ -25,7 +26,8 @@
                 document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
                 document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
             }
-            else {
+            else 
+            {
                 // User is not signed in
                 document.getElementById("signupBtn").style.display = "inline-block";
                 document.getElementById("signinBtn").style.display = "inline-block";
