@@ -9,514 +9,617 @@
 
 <url>
   <loc>https://rausnotes39.netlify.app/</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/portfolio/portfolio</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <loc>https://rausnotes39.netlify.app/database/notes/notes</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/notes/notes_section</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <loc>https://rausnotes39.netlify.app/database/login</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/sgpa_page</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/weather/weather</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/toss/toss</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <loc>https://rausnotes39.netlify.app/userprofile/userprofile</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt_section/ppt_page</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/notes/it_all_sem_notes</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/notes/cse_all_sem_notes</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/World%20Trade%20Issue.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/5G-Technology.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/Artificial%20Intelligence2.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/ISRO%20Presentation%20.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/the%20growing%20concern%20of%20mobile%20phone%20addiction.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/pyton.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/Cyber%20security1.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/ppt/MACHINE%20LEARNING.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/game/game</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/notes/physics_group</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/notes/chemistry_group</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/it_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/notes/it_3rd_sem_pdfs</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/it_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/notes/it_4rd_sem_pdfs</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/cse_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/notes/cse_3rd_pdfs</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/cse_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/it/sem3/it_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ece_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/it/sem3/it_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ece_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/it/sem4/it_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ce_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/cse/sem3/cse_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ce_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/cse/sem3/cse_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ee_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/cse/sem4/cse_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/ee_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ece/sem3/ece_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/me_3_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ece/sem3/ece_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/me_3_sgpa_for_leet</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ece/sem4/ece_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/pg_wm_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ee/sem3/ee_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/pg_wom_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ee/sem3/ee_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/che_wom_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ee/sem4/ee_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/sgpa/che_wm_sgpa</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://rausnotes39.netlify.app/sgpa/ce/sem3/ce_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/ce/sem3/ce_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/ce/sem4/ce_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/me/sem3/me_3_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/me/sem3/me_3_sgpa_for_leet</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/me/sem4/me_sem4_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/taskprogresstracker/taskcompletionbar/taskcompletionbar</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/game/color_genetator</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/game/gues_a_number</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/game/no_to_wa_link_generator</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/rausnotes39-Project-Repoert.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/notes/notes_section</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/notes/it_all_sem_notes</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/notes/cse_all_sem_notes</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/World%20Trade%20Issue.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/5G-Technology.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/Artificial%20Intelligence2.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/ISRO%20Presentation%20.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/photos/about_developer/Resume%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/robots.txt</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/toss/toss</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/weather/weather</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Acid%20rain.ppt</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Ai%20and%20Privacy%20Concern.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Artificial%20intelligence%203.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Artificial%20Intelligence1.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/bioremediation.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/ChatGPT%20presentation.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/climate%20change.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Cyber%20Security.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/Cyber%20security1.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Digital%20Games%20And%20Health.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Ecosystem.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Effect%20of%20Modern%20Agriculture.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Environment-Pollution-A-Comprehensive-Guide.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Environmental%20Ethics.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/environmental%20protection%20act.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Exploring%20Renewable%20and%20Non-Renewable%20Resources.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/GREEN%20AWARENESS.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/landing%20on%20mars.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/MACHINE%20LEARNING.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Natural%20disaster.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/resettlement%20and%20rehabilitation.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/SEO.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/Statistics.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/SUSTAINANLE%20DEVELOPMENT.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/ppt/the%20growing%20concern%20of%20mobile%20phone%20addiction.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/ppt/WORDPRESS.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/notes/it_3rd_sem_pdfs</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/notes/it_sem_4th_pdfs</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://rausnotes39.netlify.app/notes/cse_3rd_pdfs</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
+  <loc>https://rausnotes39.netlify.app/ppt/pyton.pptx</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/Engineering_physics%20.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/BEE.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/MATH-1.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/EGD.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/PEEM.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/peem-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/math-1-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/physics-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/BEE-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/EGD-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/PPS.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/Chemistry.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/ENGLISH%20.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/MATH-2.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/math-2-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/pps-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/DSA.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/DCCN.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/DCLD.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/OOPs.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/PPLE.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/DSA_PRACTICLE_FILE.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/dccn%20-%20practical%20file%20.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/oops-practical-file.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/dcld-practical-file%20.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/dsa-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/oops-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/dccn-pyq%20.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/dcld-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/pple-pyq.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/EVS-PYQ.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/cam_practical_file.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/OS%20Full%20Notes%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/cam_notes.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/DBMS%20Full%20Notes.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/pas_notes.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/PAS%20Full%20Notes%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/os_notes.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/CAM%20Full%20Notes%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/Wt%20_notes.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/WT%20Full%20Notes.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://rausnotes39.netlify.app/pdf/pppt.pptx</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/Python%20Full%20Notes%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/All%20PYQs.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/wt_lab.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/DBMS_lab.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/os_lab.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/Cam_lab.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/it_Sem4/python_lab.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/pdf/correlation_and_regression%20.pdf</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/hpvp.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/CN.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rausnotes39.netlify.app/pdf/OOPs_cse.pdf</loc>
-  <lastmod>2024-02-22T08:17:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
-
-
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/appliedscience/physicgroup/pg_wom_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/appliedscience/chemistrygroup/che_wom_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/appliedscience/physicgroup/pg_wm_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rausnotes39.netlify.app/sgpa/appliedscience/chemistrygroup/che_wm_sgpa</loc>
+  <lastmod>2024-08-09T05:27:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
