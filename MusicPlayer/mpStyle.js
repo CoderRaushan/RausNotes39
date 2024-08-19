@@ -17,8 +17,8 @@ let playbackRate = 1;
 let currentTrackIndex = 0;
 
 const tracks = [
-    { title: "Bhaj Man Govinda Radhe", src: "/music/radhe govinda.mp3", image: "/images/Radhe Govinda.jpeg" },
-    { title: "Chaat ke Rahab Othlali", src: "/music/chat ke rahab othlali .mp3", image: "/images/char ke rahab.jpeg" }
+    { title: "Bhaj Man Govinda Radhe", src: "/MusicPlayer/music/radhe govinda.mp3", image: "/MusicPlayer/images/Radhe Govinda.jpeg" },
+    { title: "Chaat ke Rahab Othlali", src: "/MusicPlayer/music/chat ke rahab othlali .mp3", image: "/MusicPlayer/images/char ke rahab.jpeg" }
 ];
 const loadTrack = (index) => {
     const track = tracks[index];

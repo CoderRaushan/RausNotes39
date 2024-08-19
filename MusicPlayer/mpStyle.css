@@ -1,7 +1,5 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   margin: 0;
   background: linear-gradient(
@@ -9,6 +7,13 @@ body {
   );
 }
 
+h3
+{
+  margin-top: 7rem; 
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+}
 .music-player {
   display: flex;
   justify-content: center;
@@ -16,6 +21,7 @@ body {
 }
 
 .card {
+
   height: 410px;
   width: 320px;
   padding: 20px;
