@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="music-player">
+    <div class="card">
+     <div>
+      <img id="track-image" src="/images/Radhe Govinda.jpeg" alt="Track Image">
+     </div>
+     <div> <h2 id="track-title">dil de du</h2></div>
+      <audio id="audio-player" src="/music/radhe govinda.mp3"></audio>
+      <div id="progress-container">
+       <div> <span id="current-time">0:00</span></div>
+       <div class="pro_inp">
+        <input type="range" id="progress-bar" value="0" min="0" max="100">
+       </div>
+       <div> <span id="duration-time">0:00</span></div>
+      </div>
+      <div class="controls">
+        <button id="loop-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+        <button id="prev-btn"><i class="fa-solid fa-backward"></i></button>
+        <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+        <button id="next-btn"><i class="fa-solid fa-forward"></i></button>
+        <div id="speed-control" class="speed-control">
+          <button id="speed-btn"><i class="fa-solid fa-gauge"></i></button>
+          <div id="speed-options" class="hidden">
+            <button data-speed="0.5" id="speed-2x">0.5x</button>
+            <button data-speed="0.75" id="speed-2x">0.75x</button>
+            <button data-speed="1" id="speed-2x">1x</button>
+            <button data-speed="1.25"id="speed-2x"id="speed-2x">1.5x</button>
+            <button data-speed="1.75" id="speed-2x">1.75x</button>
+            <button data-speed="2" id="speed-2x">2x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>

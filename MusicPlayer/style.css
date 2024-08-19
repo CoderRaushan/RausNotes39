@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+   pink, blue,green
+  );
+}
+
+.music-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 410px;
+  width: 320px;
+  padding: 20px;
+  border:2px solid #1da011;
+  border-radius: 10px;
+  box-shadow: 8px 6px 8px rgba(0, 0, 0);
+  text-align: center;
+  background-color: #000;
+  position: relative;
+  color: white; 
+  border-radius: 40px;
+}
+
+.card img {
+  margin-top: 1.2rem;
+  height: 200px;
+  width: 200px;
+  border-radius:50%;
+  margin-bottom: 20px;
+  transition: transform 15s ease;
+  border: 3px solid black;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.card h2 
+{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.controls 
+{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom:1rem;
+}
+#speed-2x
+{
+  font-size:.8rem;
+}
+.controls button {
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: black;  
+  border-radius:30%;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#progress-container
+{
+  margin-bottom: 1.8rem;
+}
+/* .controls button:hover {
+  background-color: #0056b3;
+} */
+.speed-control {
+  position: relative;
+}
+
+.hidden {
+ visibility: hidden;
+}
+.visible
+{
+  visibility: visible;
+}
+#speed-options {
+  position: absolute;
+  top: -210px;
+  right: 0;
+  display: flex;
+  flex-direction:column;
+  border-radius: 5px;
+  
+}
+
+.speed-options button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.speed-options button:hover {
+  background-color: #0056b3;
+}
+
+
+#progress-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.pro_inp
+{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  flex-direction: column;
+  width: 18rem;
+}
+
+#progress-bar {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 95%;
+  height: 3.5px; /* Height of the progress bar */
+  background: #a17c7c; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  outline: none;
+  transition: opacity .2s;
+  background: linear-gradient(to right, yellow 0%, yellow 0%, #a17c7c 0%, #a17c7c 100%);
+}
+
+
+/* Style the thumb (handle) */
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; /* Width of the thumb */
+  height: 16px; /* Height of the thumb */
+  background: #2bff00; /* Thumb color */
+  border-radius: 50%; /* Rounded thumb */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+/* Update the background dynamically */
+#progress-bar {
+  background: linear-gradient(to right, yellow 0%, yellow var(--progress-percent, 0%), #a17c7c var(--progress-percent, 0%), #a17c7c 100%);
+}
+
