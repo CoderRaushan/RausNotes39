@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Progress Tracker</title>
+    <link rel="icon" href="/photos/rausnotes39_logo.png">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        input[type="checkbox"]:checked 
+        {
+            background-color: red;
+            border: 2px solid #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(pink, rgb(76, 76, 229), rgb(235, 173, 60), rgb(0, 60, 255), rgb(205, 205, 36), pink);
+        }
+
+        .progress-container {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 8px;
+            background: #2a8e2a;
+            border-radius: 5px;
+            border: 2px solid rgb(255, 255, 255);
+            transition: width 0.5s ease-in-out;
+        }
+
+        .task-list 
+        {   margin-bottom: 3rem;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        .task {
+            margin: 17px 0;
+        }
+
+        label,
+        input {
+            height: 1rem;
+            width: 1rem;
+            cursor: pointer;
+        }
+        input
+        {
+            background-color: rgb(240, 234, 234);
+        }
+        .data
+        {  
+            min-width: 170px;
+            position: fixed;
+            bottom:1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color:#581c84;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            color: #fff;
+            padding: .5rem 2rem;
+            border-radius: 3rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-size: calc(16px + 1.5vw);">Delta Full Stack Web Development</h1>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="data">
+            <div class="progress-text" id="left-remaining-task">63 left</div>  
+            <div class="progress-text" id="progress-text">0/63</div>  
+            <div class="progress-percentage" id="progress-percentage">0%</div>
+        </div>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox" id="task1" onclick="updateProgress()">
+                <label>Delta Day 01 : Intro & HTML Basic</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task2" onclick="updateProgress()">
+                <label>Delta Day 02 : HTML Level 01</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3" onclick="updateProgress()">
+                <label>Delta Day 03 : HTML Level 02</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task4" onclick="updateProgress()">
+                <label>Delta Day 04 : HTML Level 03</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task5" onclick="updateProgress()">
+                <label>Delta Day 05 : CSS Part 01</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task6" onclick="updateProgress()">
+                <label>Delta Day 06 : CSS Part 02</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task7" onclick="updateProgress()">
+                <label>Delta Day 07 : CSS Part 03</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task8" onclick="updateProgress()">
+                <label>Delta Day 08 : CSS Part 04</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task9" onclick="updateProgress()">
+                <label>Delta Day 09 : CSS Part 05</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task10" onclick="updateProgress()">
+                <label>Delta Day 10 : CSS Part 06</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task11" onclick="updateProgress()">
+                <label>Delta Day 11 : Mini CSS Project</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task12" onclick="updateProgress()">
+                <label>Delta Day 12 : Bootstrap</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task13" onclick="updateProgress()">
+                <label>Delta Day 13 : Project CSS</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task14" onclick="updateProgress()">
+                <label>Delta Day 14 : JavaScript Part 01</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task15" onclick="updateProgress()">
+                <label>Delta Day 15 : JavaScript Part 02</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task16" onclick="updateProgress()">
+                <label>Delta Day 16 : JavaScript Part 03</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task17" onclick="updateProgress()">
+                <label>Delta Day 17 : JavaScript Part 04</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task18" onclick="updateProgress()">
+                <label>Delta Day 18 : JavaScript Part 05</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task19" onclick="updateProgress()">
+                <label>Delta Day 19 : JavaScript Part 06</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task20" onclick="updateProgress()">
+                <label>Delta Day 20 : JavaScript Part 07</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task21" onclick="updateProgress()">
+                <label>Delta Day 21 : JavaScript Part 08</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task22" onclick="updateProgress()">
+                <label>Delta Day 22 : JavaScript Part 09</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task23" onclick="updateProgress()">
+                <label>Delta Day 23 : JavaScript Part 10</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task24" onclick="updateProgress()">
+                <label>Delta Day 24 : JavaScript Mini Project</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task25" onclick="updateProgress()">
+                <label>Delta Day 25 : JavaScript Part 11</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task26" onclick="updateProgress()">
+                <label>Delta Day 26 : JavaScript Part 12</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task27" onclick="updateProgress()">
+                <label>Delta Day 27 : JavaScript Part 13</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task28" onclick="updateProgress()">
+                <label>Delta Day 28 : Terminal</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task29" onclick="updateProgress()">
+                <label>Delta Day 29 : Git</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task30" onclick="updateProgress()">
+                <label>Delta Day 30 : Node.js</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task31" onclick="updateProgress()">
+                <label>Delta Day 31 : Express</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task32" onclick="updateProgress()">
+                <label>Delta Day 32 : EJS</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task33" onclick="updateProgress()">
+                <label>Delta Day 33 : Miscellaneous</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task34" onclick="updateProgress()">
+                <label>Delta Day 34 : Backend 4</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task35" onclick="updateProgress()">
+                <label>Delta Day 35 : Starting SQL</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task36" onclick="updateProgress()">
+                <label>Delta Day 36 : SQL Part 2</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task37" onclick="updateProgress()">
+                <label>Delta Day 37 : Backend 5 (Node with SQL)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task38" onclick="updateProgress()">
+                <label>Delta Day 38 : MongoDB (Part 1)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task39" onclick="updateProgress()">
+                <label>Delta Day 39 : MongoDB (Part 2)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task40" onclick="updateProgress()">
+                <label>Delta Day 40 : MongoDB with Express</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task41" onclick="updateProgress()">
+                <label>Delta Day 41 : Project Phase 1 (Part 1)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task42" onclick="updateProgress()">
+                <label>Delta Day 42 : Project Phase 1 (Part 2)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task43" onclick="updateProgress()">
+                <label>Delta Day 43 : Backend 6 (Middlewares)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task44" onclick="updateProgress()">
+                <label>Delta Day 44 : Backend 7 (Errors)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task45" onclick="updateProgress()">
+                <label>Delta Day 45 : Project Phase 1 (Validations) (Part 3)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task46" onclick="updateProgress()">
+                <label>Delta Day 46 : Database Relationship</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task47" onclick="updateProgress()">
+                <label>Delta Day 47 : Project Phase 2 (Part 1)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task48" onclick="updateProgress()">
+                <label>Delta Day 48 : Project Phase 2 (Part 2)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task49" onclick="updateProgress()">
+                <label>Delta Day 49 : Project Phase 2 (Part 3)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task50" onclick="updateProgress()">
+                <label>Delta Day 50 : Project Phase 2 (Part 4)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task51" onclick="updateProgress()">
+                <label>Delta Day 51 : Major Project Phase 2 (Part 5)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task52" onclick="updateProgress()">
+                <label>Delta Day 52 : Project Phase 3 (Part 1)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task53" onclick="updateProgress()">
+                <label>Delta Day 53 : Project Phase 3 (Part 2)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task54" onclick="updateProgress()">
+                <label>Delta Day 54 : Project Phase 3 (Part 3)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task55" onclick="updateProgress()">
+                <label>Delta Day 55 : Project Phase 3 (Part 4)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task56" onclick="updateProgress()">
+                <label>Delta Day 56 : React (Part 1)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task57" onclick="updateProgress()">
+                <label>Delta Day 57 : React (Part 2)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task58" onclick="updateProgress()">
+                <label>Delta Day 58 : React (Part 3)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task59" onclick="updateProgress()">
+                <label>Delta Day 59 : React (Part 4)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task60" onclick="updateProgress()">
+                <label>Delta Day 60 : React (Part 5)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task61" onclick="updateProgress()">
+                <label>Delta Day 61 : React (Part 6)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task62" onclick="updateProgress()">
+                <label>Delta Day 62 : React Mini Project</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task63" onclick="updateProgress()">
+                <label>Delta Day 63 : Tailwind</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateProgress() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            const totalTasks = tasks.length;
+            const completedTasks = Array.from(tasks).filter(task => task.checked).length;
+            const progressPercentage = (completedTasks / totalTasks) * 100;
+
+            localStorage.setItem('progressPercentage', progressPercentage);
+            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage'));
+
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
+            document.getElementById('progress-text').innerText = `(${completedTasks}/${totalTasks})`;
+            document.getElementById('left-remaining-task').innerText = `(${totalTasks - completedTasks} left)`;
+            document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
+        }
+
+        function initializeProgress() {
+            const storedProgressPercentage = parseFloat(localStorage.getItem('progressPercentage')) || 0;
+            document.getElementById('progress-bar').style.width = `${storedProgressPercentage}%`;
+
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            let completedTasks = 0;
+            tasks.forEach((task, index) => {
+                const taskChecked = JSON.parse(localStorage.getItem(`task-${index + 1}`)) || false;
+                task.checked = taskChecked;
+                if (taskChecked) {
+                    completedTasks++;
+                }
+                document.getElementById('progress-text').innerText = `(${completedTasks}/${tasks.length})`;
+                document.getElementById('progress-percentage').innerText = `(${storedProgressPercentage.toFixed(0)}%)`;
+                document.getElementById('left-remaining-task').innerText = `(${tasks.length - completedTasks} left)`;
+            });
+        }
+
+        function saveTaskState() {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task, index) => {
+                localStorage.setItem(`task-${index + 1}`, task.checked);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tasks = document.querySelectorAll('.task input[type="checkbox"]');
+            tasks.forEach((task) => {
+                task.addEventListener('click', () => {
+                    saveTaskState();
+                    updateProgress();
+                });
+            });
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>
