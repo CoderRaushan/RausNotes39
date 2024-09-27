@@ -41,7 +41,7 @@ nav {
 }
 label.logo {
   color: #fff;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 80px;
   display: flex;
   font-weight: bold;
@@ -1999,6 +1999,7 @@ font-size: 13px;
 }
   label.logo 
   {
+    font-size:25px;
     color:#fff;
   }
   .ppt1 img {

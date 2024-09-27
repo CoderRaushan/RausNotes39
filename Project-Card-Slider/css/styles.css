@@ -49,6 +49,7 @@
 
 .card__container {
   padding-block: 5rem;
+  margin-top: -4rem;
 }
 
 .card__content {
@@ -74,10 +75,9 @@
 .card__data {
   background-color: var(--container-color);
   padding: 1.5rem 2rem;
-  border-radius: 1rem;
+  border-radius:0 1rem;
   text-align: center;
   position: relative;
-  /* z-index: 10; */
 }
 
 .card__img {
@@ -85,7 +85,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 5;
-  margin-bottom: 11px;
+  margin-bottom: 1.2rem;
 }
 
 .card__shadow {
@@ -111,6 +111,11 @@
   font-weight: 500;
   color: white;
   margin-bottom: 1.75rem;
+  max-height:58px;
+  max-width:262px;
+  min-height:58px;
+  min-width:262px;
+  text-align: justify;
 }
 
 .card__button {
