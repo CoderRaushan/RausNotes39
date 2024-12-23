@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
      crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script>
+    <!-- <script>
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () 
         {
@@ -45,7 +45,7 @@
             sessionStorage.setItem('originalUrl', currentUrl);
             window.location.href = '/database/login.html';
         }
-    </script>
+    </script> -->
 </head>
 <body>
     <!-- nav file included -->
@@ -97,6 +97,7 @@
                     <div class="dropdown-content_for_it">
                         <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
                         <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                        
                     </div>
                 </a>
                 <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
@@ -120,6 +121,7 @@
                             </div>
                         </a>
                         <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 5</a>
                     </div>
                 </a>
                 <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
@@ -168,6 +170,7 @@
                             </div>
                         </a>
                         <a href="sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
+                        <a href="sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 5</a>
                     </div>
                 </a>
                 <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
@@ -202,14 +205,14 @@
         </a> -->
     </div>
     </div>
-    <h3 id="it_sem4">SGPA Calculator for IT Branch, Semester 4</h3>
+    <h3 id="it_sem4">SGPA Calculator for IT Branch, Semester 5</h3>
     <div class="main">
         <form method="post">
-            <div class="box" style="height: 860px;">
+            <div class="box" style="height: 700px;">
                 <table border="none">
                     <div>
                         <tr>
-                            <td><label for="PAS">PAS:</label></td>
+                            <td><label for="PAS">Java:</label></td>
                             <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
                                     required>
                             </td>
@@ -217,14 +220,14 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="DBMS">DBMS:</label></td>
+                            <td><label for="DBMS">Discrete Math:</label></td>
                             <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
                                     name="DBMS" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="PY">PY:</label></td>
+                            <td><label for="PY">Iot:</label></td>
                             <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
                                     required>
                             </td>
@@ -232,7 +235,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="OS">OS:</label></td>
+                            <td><label for="OS">Toc:</label></td>
                             <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
                                     required>
                             </td>
@@ -240,7 +243,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="WT">WT:</label></td>
+                            <td><label for="WT">Elective-1:</label></td>
                             <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
                                     required>
                             </td>
@@ -248,7 +251,7 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="CAM">CAM:</label></td>
+                            <td><label for="CAM">Training-2:</label></td>
                             <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
                                     required>
                             </td>
@@ -256,38 +259,23 @@
                     </div>
                     <div>
                         <tr>
-                            <td><label for="DBMS-LAB">DBMS-LAB</label></td>
+                            <td><label for="DBMS-LAB">Java-Lab</label></td>
                             <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
                                     name="DBMS-LAB" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="PY-LAB">PY-LAB:</label></td>
+                            <td><label for="PY-LAB">Iot-Lab:</label></td>
                             <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
                                     name="PY-LAB" required></td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><label for="OS-LAB">OS & CAM -LAB:</label></td>
+                            <td><label for="OS-LAB">Elective-1-Lab:</label></td>
                             <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
                                     name="OS-LAB" required></td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="WT-LAB">WT-LAB:</label></td>
-                            <td><input type="number" id="WT-LAB" placeholder="Enter Sum of internel & external"
-                                    name="WT-LAB" required></td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="MPD">MPD:</label></td>
-                            <td><input type="number" id="MPD" placeholder="Enter Sum of internel & external" name="MPD"
-                                    required>
-                            </td>
                         </tr>
                     </div>
                 </table>
@@ -420,9 +408,7 @@
             let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
             let PY_LAB = (document.getElementById("PY-LAB").value);
             let OS_LAB = (document.getElementById("OS-LAB").value);
-            let WT_LAB = (document.getElementById("WT-LAB").value);
-            let MPD_lab = (document.getElementById("MPD").value);
-
+           
             // Validate if any input field is empty
             let test = document.querySelectorAll("input");
             for (let p of test) {
@@ -444,8 +430,7 @@
             DBMS_LAB = DBMS_LAB / 50 * 100;
             PY_LAB = PY_LAB / 50 * 100;
             OS_LAB = OS_LAB / 50 * 100;
-            WT_LAB = WT_LAB / 50 * 100;
-            MPD_lab = MPD_lab / 100 * 100;
+           
             // now calculating grade point form persentage
             let pasgrade = Math.floor(PAS / 10) + 1;
             if (pasgrade >= 10) {
@@ -486,30 +471,21 @@
             if (oslabgrade >= 10) {
                 oslabgrade = 10;
             }
-            let wtlabgrade = Math.floor(WT_LAB / 10) + 1;
-            if (wtlabgrade >= 10) {
-                wtlabgrade = 10;
-            }
-            let MPDgrade = Math.floor(MPD_lab / 10) + 1;
-            if (MPDgrade >= 10) {
-                MPDgrade = 10;
-            }
+           
             // multiplying grade and credit point
-            let pasresult = pasgrade * 3;
-            let dbmsresult = dbmsgrade * 3;
+            let pasresult = pasgrade * 4;
+            let dbmsresult = dbmsgrade * 4;
             let pyresult = pygrade * 3;
-            let osresult = osgrade * 3;
+            let osresult = osgrade * 4;
             let wtresult = wtgrade * 3;
-            let camresult = camgrade * 3;
+            let camresult = camgrade * 1;
 
-            let dbmslabresult = dbmslabgrade * 1;
+            let dbmslabresult = dbmslabgrade * 2;
             let pylabresult = pylabgrade * 1;
             let oslabresult = oslabgrade * 1;
-            let wtlabresult = wtlabgrade * 1;
-            let MPDresult = MPDgrade * 1;
-
+          
             //   adding all results
-            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
             sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
@@ -536,17 +512,6 @@
             } else {
                 console.error("User is not authenticated.");
             }
-        });
-    </script>
-    <!-- button sound effect -->
-    <script>
-        // Get the button and audio elements
-        const sgpabtn2 = document.getElementById("sgpabtn");
-        const clicksoun2 = document.getElementById("clicksound");
-
-        // Add event listener to the button
-        sgpabtn2.addEventListener("click", () => {
-            clicksoun2.play();
         });
     </script>
     <!-- footer file included -->

@@ -275,7 +275,7 @@ nav ul li i {
 
 /* for sgpa it  */
 .dropdown-content_for_it_sgpa {
-  height: 100px;
+  height: 120px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -371,7 +371,7 @@ nav ul li i {
 
 /* for sgpa ce  */
 .dropdown-content_for_ce_sgpa {
-  height: 100px;
+  height: 120px;
   width: 130px;
   background-color:#581c84;
   display: flex;
