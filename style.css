@@ -30,6 +30,7 @@ body {
   --primary-color: #000;
   --secondary-color: #fff;
 }
+
 nav {
   /* background-color: #0082e6; #48a546 */
   background-color: #581c84;
@@ -135,6 +136,7 @@ nav ul li i {
   background-color: #000;
   color: white;
   cursor: pointer;
+  
   font-size: 1rem;
 }
 
