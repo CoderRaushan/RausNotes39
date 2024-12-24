@@ -53,6 +53,10 @@
             width: 100%;
             overflow-x: hidden;
         }
+
+        #downloadBtn {
+            margin-top: -1rem;
+        }
     </style>
 </head>
 
@@ -219,7 +223,7 @@
     <!-- main content section here -->
     <div class="sgpa_conatiner_main">
         <div class="row  bg-warning ">
-            <h3 class="text-center mt-3">SGPA Calculator for IT Branch, Semester 5</h3>
+            <h3 class="text-center mt-3">SGPA for IT Branch, Semester 5</h3>
             <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
                 <form method="post" id="sgpaForm" novalidate>
                     <div class="mb-1">
@@ -277,10 +281,12 @@
                         <div class="invalid-feedback">Please enter a valid score for Elective-1-Lab.</div>
                     </div>
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
-                    <button id="downloadBtn" class="btn btn-primary" style="display: none;">Download Result as
-                        PDF</button>
+
                     <p id="congrass">Please fill in all the input fields correctly.</p>
                 </form>
+                <button id="downloadBtn" class="btn btn-primary mb-3 " style="display: none;">Download Result as
+                    PDF
+                </button>
             </div>
         </div>
     </div>
@@ -477,40 +483,154 @@
 
             // Show the Download PDF button after SGPA calculation
             document.getElementById('downloadBtn').style.display = 'inline-block';
-
-            // Handle PDF Download
             buttonPrint.addEventListener("click", function () {
+                event.preventDefault();
                 const doc = new jsPDF();
 
-                // Get the SGPA and other details
-                const sgpa = document.getElementById('sgpabtn').innerText;
-                const pas = document.getElementById('PAS').value;
-                const dbms = document.getElementById('DBMS').value;
-                const py = document.getElementById('PY').value;
-                const os = document.getElementById('OS').value;
-                const wt = document.getElementById('WT').value;
-                const cam = document.getElementById('CAM').value;
-                const dbmsLab = document.getElementById('DBMS-LAB').value;
-                const pyLab = document.getElementById('PY-LAB').value;
-                const osLab = document.getElementById('OS-LAB').value;
+                const authStatus = localStorage.getItem("user");
+                let congrassMessage = "Congratulations!";
+                if (authStatus) {
+                    const userName = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+                    congrassMessage = `Congratulations, ${userName}!`;
+                }
 
-                // Add text content to PDF
-                doc.text("SGPA Calculation", 20, 20);
-                doc.text(`SGPA: ${sgpa}`, 20, 30);
-                doc.text(`Java: ${pas}`, 20, 40);
-                doc.text(`Discrete Math: ${dbms}`, 20, 50);
-                doc.text(`IoT: ${py}`, 20, 60);
-                doc.text(`TOC: ${os}`, 20, 70);
-                doc.text(`WT: ${wt}`, 20, 80);
-                doc.text(`CAM: ${cam}`, 20, 90);
-                doc.text(`Discrete Lab: ${dbmsLab}`, 20, 100);
-                doc.text(`IoT Lab: ${pyLab}`, 20, 110);
-                doc.text(`TOC Lab: ${osLab}`, 20, 120);
+                // Add the congratulatory message to the PDF
+                doc.setFontSize(16);
+                doc.text(congrassMessage, 20, 20);  // Position the message at the top
 
-                // Download the PDF
-                doc.save("SGPA_Result.pdf");
+                // Get the data
+                let PAS = document.getElementById("PAS").value;
+                let DBMS = document.getElementById("DBMS").value;
+                let PY = document.getElementById("PY").value;
+                let OS = document.getElementById("OS").value;
+                let WT = document.getElementById("WT").value;
+                let CAM = document.getElementById("CAM").value;
+                let DBMS_LAB = document.getElementById("DBMS-LAB").value;
+                let PY_LAB = document.getElementById("PY-LAB").value;
+                let OS_LAB = document.getElementById("OS-LAB").value;
+
+                // Convert marks to percentage
+                let PAS_precengage = PAS / 100 * 100;
+                let DBMS_precengage = DBMS / 100 * 100;
+                let PY_precengage = PY / 100 * 100;
+                let OS_precengage = OS / 100 * 100;
+                let WT_precengage = WT / 100 * 100;
+                let CAM_precengage = CAM / 100 * 100;
+                let DBMS_LAB_precengage = DBMS_LAB / 50 * 100;
+                let PY_LAB_precengage = PY_LAB / 50 * 100;
+                let OS_LAB_precengage = OS_LAB / 50 * 100;
+
+                // Calculating grade point from percentage
+                let pasgrade = Math.floor(PAS_precengage / 10) + 1;
+                if (pasgrade >= 10) pasgrade = 10;
+                let dbmsgrade = Math.floor(DBMS_precengage / 10) + 1;
+                if (dbmsgrade >= 10) dbmsgrade = 10;
+                let pygrade = Math.floor(PY_precengage / 10) + 1;
+                if (pygrade >= 10) pygrade = 10;
+                let osgrade = Math.floor(OS_precengage / 10) + 1;
+                if (osgrade >= 10) osgrade = 10;
+                let wtgrade = Math.floor(WT_precengage / 10) + 1;
+                if (wtgrade >= 10) wtgrade = 10;
+                let camgrade = Math.floor(CAM_precengage / 10) + 1;
+                if (camgrade >= 10) camgrade = 10;
+                // Lab grades
+                let dbmslabgrade = Math.floor(DBMS_LAB_precengage / 10) + 1;
+                if (dbmslabgrade >= 10) dbmslabgrade = 10;
+                let pylabgrade = Math.floor(PY_LAB_precengage / 10) + 1;
+                if (pylabgrade >= 10) pylabgrade = 10;
+                let oslabgrade = Math.floor(OS_LAB_precengage / 10) + 1;
+                if (oslabgrade >= 10) oslabgrade = 10;
+
+                // Credit points calculation
+                let pasresult = pasgrade * 4;
+                let dbmsresult = dbmsgrade * 4;
+                let pyresult = pygrade * 3;
+                let osresult = osgrade * 4;
+                let wtresult = wtgrade * 3;
+                let camresult = camgrade * 1;
+                let dbmslabresult = dbmslabgrade * 2;
+                let pylabresult = pylabgrade * 1;
+                let oslabresult = oslabgrade * 1;
+
+                // Calculate total credits and SGPA
+                let totalCredits = 4 + 4 + 3 + 4 + 3 + 1 + 2 + 1 + 1;
+                let totalGradePoints = pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult;
+                let sgpa = totalGradePoints / totalCredits;
+
+                // Define the table headers
+                const headers = ["Subject", "Marks", "Percentage %", "Grade Point", "Credit Point"];
+
+                // Define the table rows with subject names, marks, grade points, and credit points
+                const rows = [
+                    ["Java", PAS, PAS_precengage.toFixed(2), pasgrade, 4],
+                    ["Discrete Math", DBMS, DBMS_precengage.toFixed(2), dbmsgrade, 4],
+                    ["IoT", PY, PY_precengage.toFixed(2), pygrade, 3],
+                    ["TOC", OS, OS_precengage.toFixed(2), osgrade, 4],
+                    ["Elective-1", WT, WT_precengage.toFixed(2), wtgrade, 3],
+                    ["Training-2", CAM, CAM_precengage.toFixed(2), camgrade, 1],
+                    ["Java-Lab", DBMS_LAB, DBMS_LAB_precengage.toFixed(2), dbmslabgrade, 2],
+                    ["Iot-Lab", PY_LAB, PY_LAB_precengage.toFixed(2), pylabgrade, 1],
+                    ["Elective-1-Lab", OS_LAB, OS_LAB_precengage.toFixed(2), oslabgrade, 1],
+                ];
+
+                // Set up the position for the table
+                const cellWidth = 40;  // Adjust width for new columns
+                const startX = (doc.internal.pageSize.width - 5 * cellWidth) / 2;  // Center the table horizontally
+                let startY = 50; // Adjusted Y-position for the table to avoid overlap with the logo
+                const rowHeight = 12;
+                const headerHeight = 14;
+
+                // Header Styling: Dark background and white text
+                doc.setFontSize(10); // Reduce font size to fit the table
+                doc.setFont('helvetica', 'bold');
+                doc.setFillColor(50, 50, 50);
+                doc.rect(startX, startY - headerHeight, 5 * cellWidth, headerHeight, 'F');
+                doc.setTextColor(255, 255, 255);
+                headers.forEach((header, index) => {
+                    doc.text(header, startX + index * cellWidth + 5, startY - 3);
+                });
+                startY += headerHeight; // Adjust starting position to avoid extra row
+
+                // Row Styling: Alternate row colors and padding
+                doc.setFont('helvetica', 'normal');
+                const rowColors = [[255, 255, 255], [255, 255, 102]]; // White and Yellow
+                rows.forEach((row, index) => {
+                    const rowColor = rowColors[index % 2];
+                    doc.setFillColor(...rowColor);
+                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
+
+                    doc.setTextColor(0);
+                    row.forEach((cell, cellIndex) => {
+                        if (cellIndex === 1 || cellIndex === 2) {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8); // Marks and Percentage
+                        } else {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, cellIndex === 2 ? 'center' : 'left');
+                        }
+                    });
+                    startY += rowHeight;
+                });
+
+                // Last row: SGPA and Total Credit
+                const lastRow = [
+                    ["", "", "Total Credit", totalCredits, ""],
+                    ["", "", "SGPA", sgpa.toFixed(2), ""],
+                ];
+
+                lastRow.forEach((row, index) => {
+                    doc.setFillColor(245, 245, 245);
+                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
+                    doc.setTextColor(0);
+                    row.forEach((cell, cellIndex) => {
+                        if (cellIndex !== 4) {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, 'center');
+                        }
+                    });
+                    startY += rowHeight;
+                });
+
+                // Download the PDF  
+                doc.save("SGPA_Result_sem_5th.pdf");
             });
-
             // Trigger the fire animation after calculating SGPA
             fire(0.25, {
                 spread: 26,
