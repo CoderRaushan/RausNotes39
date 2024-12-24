@@ -38,7 +38,7 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                // setTimeout(redirectToLogin(), 1000);
+                setTimeout(redirectToLogin(), 10000);
             }
         });
         function redirectToLogin() {
@@ -48,17 +48,10 @@
         }
     </script>
     <style>
-        .Main_page_container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
+        .sgpa_conatiner_main {
             height: 100%;
-            /* width: 80%; */
-            justify-content: center;
-            align-items: center;
-            margin-right: 6rem;
-            margin-left: 5rem;
-
+            width: 100%;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -85,13 +78,7 @@
         </ul>
     </nav>
     <!-- dropdown_section  -->
-    <!-- FOR Portfolio -->
     <div class="main_nav_nested_item_ele">
-        <!-- <a href="portfolio/portfolio.html">
-            <div class="dropdown">
-                <button class="dropbtn">Portfolio</button>
-            </div>
-        </a> -->
         <a href="/ppt_section/ppt_page.html">
             <div class="dropdown">
                 <button class="dropbtn">PPT</button>
@@ -230,80 +217,73 @@
         </a> -->
     </div>
     <!-- main content section here -->
-    <div class="row  bg-warning">
-        <h3 class="text-center mt-3">SGPA Calculator for IT Branch, Semester 5</h3>
-        <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
-            <form method="post" id="sgpaForm">
-                <div class="mb-1">
-                    <label for="PAS" class="form-label">Java:</label>
-                    <input type="number" required class="form-control" id="PAS"
-                        placeholder="Enter Sum of internel & external" name="PAS">
-                </div>
-                <div class="mb-1">
-                    <label for="DBMS">Discrete Math:</label>
-                    <input type="number" class="form-control" id="DBMS" placeholder="Enter Sum of internel & external"
-                        required name="DBMS" required>
-                </div>
-                <div class="mb-1">
-                    <label for="PY">Iot:</label>
-                    <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="PY" required>
-                </div>
-                <div class="mb-1">
-                    <label for="OS">Toc:</label>
-                    <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="OS" required>
-                </div>
-                <div class="mb-1">
-                    <label for="WT">Elective-1:</label>
-                    <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="WT" required>
-                </div>
-                <div class="mb-1">
-                    <label for="CAM">Training-2:</label>
-                    <input type="number" id="CAM" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="CAM" required>
-                </div>
-                <div class="mb-1">
-
-                    <label for="DBMS-LAB">Java-Lab</label>
-                    <input type="number" id="DBMS-LAB" class="form-control"
-                        placeholder="Enter Sum of internel & external" name="DBMS-LAB" required>
-                </div>
-                <div class="mb-1">
-                    <label for="PY-LAB">Iot-Lab:</label>
-                    <input type="number" id="PY-LAB" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="PY-LAB" required>
-                </div>
-                <div class="mb-1">
-                    <label for="OS-LAB">Elective-1-Lab:</label>
-                    <input type="number" id="OS-LAB" class="form-control" placeholder="Enter Sum of internel & external"
-                        name="OS-LAB" required>
-                </div>
-                <button id="sgpabtn" class="btn btn-primary">Calculate Sgpa</button>
-                <button id="downloadBtn" class="btn btn-primary" style="display: none;">Download Result as PDF</button>
-                <p id="congrass">Click on Calculate Sgpa</p>
-            </form>
-        </div>
-    </div>
-
-    <!-- Bootstrap Modal for Pop-up Message -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="successModalLabel">SGPA Calculation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modalMessage">
-                    <!-- Success message will appear here -->
-                </div>
-               
+    <div class="sgpa_conatiner_main">
+        <div class="row  bg-warning ">
+            <h3 class="text-center mt-3">SGPA Calculator for IT Branch, Semester 5</h3>
+            <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
+                <form method="post" id="sgpaForm" novalidate>
+                    <div class="mb-1">
+                        <label for="PAS" class="form-label">Java:</label>
+                        <input type="number" required class="form-control" id="PAS"
+                            placeholder="Enter Sum of internal & external" name="PAS">
+                        <div class="invalid-feedback">Please enter a valid score for Java.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="DBMS">Discrete Math:</label>
+                        <input type="number" class="form-control" id="DBMS"
+                            placeholder="Enter Sum of internal & external" required name="DBMS">
+                        <div class="invalid-feedback">Please enter a valid score for Discrete Math.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="PY">Iot:</label>
+                        <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="PY" required>
+                        <div class="invalid-feedback">Please enter a valid score for Iot.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="OS">Toc:</label>
+                        <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="OS" required>
+                        <div class="invalid-feedback">Please enter a valid score for Toc.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="WT">Elective-1:</label>
+                        <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="WT" required>
+                        <div class="invalid-feedback">Please enter a valid score for Elective-1.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="CAM">Training-2:</label>
+                        <input type="number" id="CAM" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="CAM" required>
+                        <div class="invalid-feedback">Please enter a valid score for Training-2.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="DBMS-LAB">Java-Lab:</label>
+                        <input type="number" id="DBMS-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
+                        <div class="invalid-feedback">Please enter a valid score for Java-Lab.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="PY-LAB">Iot-Lab:</label>
+                        <input type="number" id="PY-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="PY-LAB" required>
+                        <div class="invalid-feedback">Please enter a valid score for Iot-Lab.</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="OS-LAB">Elective-1-Lab:</label>
+                        <input type="number" id="OS-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="OS-LAB" required>
+                        <div class="invalid-feedback">Please enter a valid score for Elective-1-Lab.</div>
+                    </div>
+                    <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
+                    <button id="downloadBtn" class="btn btn-primary" style="display: none;">Download Result as
+                        PDF</button>
+                    <p id="congrass">Please fill in all the input fields correctly.</p>
+                </form>
             </div>
         </div>
     </div>
-
-
     <!-- footer -->
     <footer class="footer">
         <!-- bottom menu -->
@@ -391,14 +371,40 @@
             <p class="right">&copy; 2024 RausNotes39. All Rights Reserved by RausNotes39 | Designed by Raushan kumar</p>
         </div>
     </footer>
-
     <script type="module">
         // Initialize jsPDF
+        const form = document.getElementById('sgpaForm');
+        const button = document.getElementById('sgpabtn');//downloadBtn
+        const buttonPrint = document.getElementById('downloadBtn');
+        // Function to check if all required inputs are filled
+        function validateForm() {
+            const inputs = form.querySelectorAll('input[required]');
+            let allFilled = true;
+            // Check each required input
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false; // If any input is empty, set flag to false
+                }
+            });
+
+            // Enable or disable the button based on validation
+            buttonPrint.disabled = !allFilled;
+            button.disabled = !allFilled; // Enable if all fields are filled, disable otherwise
+        }
+
+        // Attach input event listeners to all required inputs
+        form.querySelectorAll('input[required]').forEach(input => {
+            input.addEventListener('input', validateForm);
+        });
+
+        // Validate on page load (in case of autofill)
+        validateForm();
+
         const { jsPDF } = window.jspdf;
-    
-        document.getElementById('sgpabtn').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default form submission
-    
+        const authStatus = localStorage.getItem("user");
+        const congrassbtn = document.getElementById("congrass");
+        document.getElementById("sgpabtn").addEventListener("click", (event) => {
+            event.preventDefault();
             // Accessing all input fields
             let PAS = document.getElementById("PAS").value;
             let DBMS = document.getElementById("DBMS").value;
@@ -409,32 +415,7 @@
             let DBMS_LAB = document.getElementById("DBMS-LAB").value;
             let PY_LAB = document.getElementById("PY-LAB").value;
             let OS_LAB = document.getElementById("OS-LAB").value;
-    
-            // Validate if any input field is empty
-            let test = document.querySelectorAll("input");
-            let isValid = true;
-            for (let p of test) {
-                if (p.value === "") {
-                    isValid = false;
-                    break;
-                }
-            }
-    
-            // Show a warning if any field is empty
-            if (!isValid) {
-                // Use Bootstrap modal or pop-up alert for validation message
-                const popMessage = document.createElement('div');
-                popMessage.classList.add('alert', 'alert-warning');
-                popMessage.textContent = "Please Enter Marks in All input fields!";
-                document.body.appendChild(popMessage);
-    
-                // Automatically remove the warning message after 3 seconds
-                setTimeout(() => {
-                    popMessage.remove();
-                }, 3000);
-                return;
-            }
-    
+
             // Now calculating SGPA if validation passes
             PAS = PAS / 100 * 100;
             DBMS = DBMS / 100 * 100;
@@ -442,11 +423,11 @@
             OS = OS / 100 * 100;
             WT = WT / 100 * 100;
             CAM = CAM / 100 * 100;
-    
+
             DBMS_LAB = DBMS_LAB / 50 * 100;
             PY_LAB = PY_LAB / 50 * 100;
             OS_LAB = OS_LAB / 50 * 100;
-    
+
             // Calculating grade point from percentage
             let pasgrade = Math.floor(PAS / 10) + 1;
             if (pasgrade >= 10) pasgrade = 10;
@@ -460,7 +441,7 @@
             if (wtgrade >= 10) wtgrade = 10;
             let camgrade = Math.floor(CAM / 10) + 1;
             if (camgrade >= 10) camgrade = 10;
-    
+
             // Lab grades
             let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
             if (dbmslabgrade >= 10) dbmslabgrade = 10;
@@ -468,7 +449,7 @@
             if (pylabgrade >= 10) pylabgrade = 10;
             let oslabgrade = Math.floor(OS_LAB / 10) + 1;
             if (oslabgrade >= 10) oslabgrade = 10;
-    
+
             // Multiplying grade and credit point
             let pasresult = pasgrade * 4;
             let dbmsresult = dbmsgrade * 4;
@@ -476,67 +457,86 @@
             let osresult = osgrade * 4;
             let wtresult = wtgrade * 3;
             let camresult = camgrade * 1;
-    
+
             let dbmslabresult = dbmslabgrade * 2;
             let pylabresult = pylabgrade * 1;
             let oslabresult = oslabgrade * 1;
-    
+
             // Adding all results
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
             document.getElementById('sgpabtn').innerText = "SGPA : " + sgpares.toFixed(2);
-    
+
+
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
+            }
+            else {
+                congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
+            }
+
             // Show the Download PDF button after SGPA calculation
             document.getElementById('downloadBtn').style.display = 'inline-block';
-    
+
+            // Handle PDF Download
+            buttonPrint.addEventListener("click", function () {
+                const doc = new jsPDF();
+
+                // Get the SGPA and other details
+                const sgpa = document.getElementById('sgpabtn').innerText;
+                const pas = document.getElementById('PAS').value;
+                const dbms = document.getElementById('DBMS').value;
+                const py = document.getElementById('PY').value;
+                const os = document.getElementById('OS').value;
+                const wt = document.getElementById('WT').value;
+                const cam = document.getElementById('CAM').value;
+                const dbmsLab = document.getElementById('DBMS-LAB').value;
+                const pyLab = document.getElementById('PY-LAB').value;
+                const osLab = document.getElementById('OS-LAB').value;
+
+                // Add text content to PDF
+                doc.text("SGPA Calculation", 20, 20);
+                doc.text(`SGPA: ${sgpa}`, 20, 30);
+                doc.text(`Java: ${pas}`, 20, 40);
+                doc.text(`Discrete Math: ${dbms}`, 20, 50);
+                doc.text(`IoT: ${py}`, 20, 60);
+                doc.text(`TOC: ${os}`, 20, 70);
+                doc.text(`WT: ${wt}`, 20, 80);
+                doc.text(`CAM: ${cam}`, 20, 90);
+                doc.text(`Discrete Lab: ${dbmsLab}`, 20, 100);
+                doc.text(`IoT Lab: ${pyLab}`, 20, 110);
+                doc.text(`TOC Lab: ${osLab}`, 20, 120);
+
+                // Download the PDF
+                doc.save("SGPA_Result.pdf");
+            });
+
             // Trigger the fire animation after calculating SGPA
             fire(0.25, {
                 spread: 26,
                 startVelocity: 55
             });
-    
+
             fire(0.2, {
                 spread: 60
             });
-    
+
             fire(0.35, {
                 spread: 100,
                 decay: 0.91,
                 scalar: 0.8
             });
-    
+
             fire(0.1, {
                 spread: 120,
                 startVelocity: 25,
                 decay: 0.92,
                 scalar: 1.2
             });
-    
+
             fire(0.1, {
                 spread: 120,
                 startVelocity: 45
-            });
-    
-            // Function to generate and download the PDF
-            document.getElementById('downloadBtn').addEventListener('click', function () {
-                const doc = new jsPDF();
-                
-                doc.setFont("times", "normal");
-                doc.setFontSize(12);
-                
-                doc.text("SGPA Calculation Result", 20, 20);
-                doc.text(`PAS: ${PAS}% | Grade: ${pasgrade} | Result: ${pasresult}`, 20, 30);
-                doc.text(`DBMS: ${DBMS}% | Grade: ${dbmsgrade} | Result: ${dbmsresult}`, 20, 40);
-                doc.text(`PY: ${PY}% | Grade: ${pygrade} | Result: ${pyresult}`, 20, 50);
-                doc.text(`OS: ${OS}% | Grade: ${osgrade} | Result: ${osresult}`, 20, 60);
-                doc.text(`WT: ${WT}% | Grade: ${wtgrade} | Result: ${wtresult}`, 20, 70);
-                doc.text(`CAM: ${CAM}% | Grade: ${camgrade} | Result: ${camresult}`, 20, 80);
-                doc.text(`DBMS Lab: ${DBMS_LAB}% | Grade: ${dbmslabgrade} | Result: ${dbmslabresult}`, 20, 90);
-                doc.text(`PY Lab: ${PY_LAB}% | Grade: ${pylabgrade} | Result: ${pylabresult}`, 20, 100);
-                doc.text(`OS Lab: ${OS_LAB}% | Grade: ${oslabgrade} | Result: ${oslabresult}`, 20, 110);
-                
-                doc.text(`SGPA: ${sgpares.toFixed(2)}`, 20, 120);
-    
-                doc.save('SGPA_Result.pdf');
             });
         });
     </script>
@@ -628,17 +628,10 @@
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
     </script>
-    <!-- for user_displaying name -->
-    <script>
-        let user_name_display = document.getElementById("user_name_display");
-        addEventListener("DOMContentLoaded", () => {
-            user_name_display.innerHTML = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
-        });
-    </script>
     <!-- bootstrap js link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 

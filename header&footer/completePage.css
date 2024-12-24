@@ -4,6 +4,10 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+body
+{
+  overflow-x: hidden;
+}
 
 :root {
   --primary-color: #fff;
@@ -94,6 +98,19 @@ nav ul li i {
   border-bottom-style: solid;
   color: #ffff00;
 }
+
+#user_img
+{
+  height: 34px;
+  border-radius: 50%;
+}
+#it_user_iamge
+{
+  margin-bottom: -5px;
+  height: 35px;
+  border-radius: 50%;
+}
+
 
 /* dropdown contents are started here  */
 .main_nav_nested_item_ele {
@@ -865,7 +882,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   background-color: #440671;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 .frow1 {
   display: flex;
@@ -948,7 +965,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     margin-top: 2rem;
   }
   .footer {
-    height: 62rem;
+    height: 71rem;
     width: 100%;
   }
   .frow3 {
@@ -1001,7 +1018,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   }
 
   .bottom_menu {
-    height: 43px;
+    height: 53px;
     width: 70%;
     margin-right: 8px;
   }
