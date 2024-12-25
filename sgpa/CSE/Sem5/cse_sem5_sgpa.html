@@ -476,6 +476,23 @@
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 21);
             document.getElementById('sgpabtn').innerText = "SGPA : " + sgpares.toFixed(2);
 
+            const SgpaPostMethod=async()=>
+            {
+            const SgpaData = {
+            name: JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0],
+            email: JSON.parse(localStorage.getItem("user")).email,
+            sgpa: sgpares,
+            };
+            const res = await fetch(
+                "https://sgpacsesem5backend.onrender.com/CSEsem5/Addsgpa",
+                {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(SgpaData),
+                }
+            );
+            };
+            SgpaPostMethod();
 
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
