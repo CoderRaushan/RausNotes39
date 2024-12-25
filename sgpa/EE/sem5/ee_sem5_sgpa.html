@@ -610,7 +610,7 @@
                 // Last row: SGPA and Total Credit
                 const lastRow = [
                     ["", "", "Total Credit", totalCredits, ""],
-                    ["", "", "SGPA", sgpa.toFixed(2), ""],
+                    ["", "", "SGPA", Math.floor(sgpa * 100) / 100, ""],
                 ];
 
                 lastRow.forEach((row, index) => {

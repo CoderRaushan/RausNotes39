@@ -440,7 +440,7 @@
 
                 //   adding all results
                 let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
-                sgpabtn.innerText = "SGPA : " + sgpares.toFixed(2);
+                sgpabtn.innerText = "SGPA : " +  Math.floor(sgpares * 100) / 100;
                 const authStatus = localStorage.getItem("user");
                 if (authStatus) {
                     congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
