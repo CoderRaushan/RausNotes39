@@ -470,9 +470,24 @@
 
             // Adding all results
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
-            document.getElementById('sgpabtn').innerText = "SGPA : " + sgpares.toFixed(2);
-
-
+            document.getElementById('sgpabtn').innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
+            const SgpaPostMethod=async()=>
+            {
+            const SgpaData = {
+            name: JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0],
+            email: JSON.parse(localStorage.getItem("user")).email,
+            sgpa: sgpares,
+            };
+            const res = await fetch(
+                "https://sgpaitsem4backend.onrender.com/ITsem5/Addsgpa",
+                {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(SgpaData),
+                }
+            );
+            };
+            SgpaPostMethod();
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
