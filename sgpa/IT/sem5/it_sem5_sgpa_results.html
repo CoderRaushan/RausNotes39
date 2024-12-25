@@ -117,7 +117,7 @@
                     // Check if sgpaRecords exist and map over them
                     const sgpaList = user.sgpaRecords && Array.isArray(user.sgpaRecords)
                         ? user.sgpaRecords.map(
-                            (record) => `<li>SGPA: ${record.sgpa.toFixed(2)} ${formatDate(record.timestamp)}</li>`
+                            (record) => `<li>SGPA: ${record.sgpa.toFixed(2)} &nbsp; &nbsp; ${formatDate(record.timestamp)}</li>`
                         ).join('')
                         : '<li class="no-records">No SGPA records available</li>';
 
@@ -126,7 +126,7 @@
             <h3>Email: ${user.email || 'N/A'}</h3>
             <h4>SGPA Records:</h4>
             <ul>
-              ${sgpaList}
+              ${sgpaList} 
             </ul>
           `;
                     container.appendChild(userDiv);
