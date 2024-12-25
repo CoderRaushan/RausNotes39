@@ -145,26 +145,25 @@ nav ul li i {
   position: relative;
 }
 
-/* for  notes  */
-.dropdown-content 
-{
+/* drodown for  notes  */
+.dropdown-content {
   height: 120px;
   width: 160px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   margin-left: -2.4rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-.dropbtn:hover+.dropdown-content,
+.dropbtn:hover + .dropdown-content,
 .dropdown-content:hover {
   visibility: visible;
 }
@@ -173,31 +172,31 @@ nav ul li i {
 .dropdown-content_for_applied {
   height: 100px;
   width: 130px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 4.3rem;
+  margin-top: 3rem;
   margin-left: 10rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#applied_arrow:hover+.dropdown-content_for_applied,
+#applied_arrow:hover + .dropdown-content_for_applied,
 .dropdown-content_for_applied:hover {
   visibility: visible;
 }
 
 /* for it branch */
 .dropdown-content_for_it {
-  height: 100px;
+  height: 130px;
   width: 130px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,14 +204,14 @@ nav ul li i {
   position: absolute;
   margin-top: 7.6rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#it_arrow:hover+.dropdown-content_for_it,
+#it_arrow:hover + .dropdown-content_for_it,
 .dropdown-content_for_it:hover {
   visibility: visible;
 }
@@ -221,7 +220,7 @@ nav ul li i {
 .dropdown-content_for_cse {
   height: 100px;
   width: 130px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -229,22 +228,22 @@ nav ul li i {
   position: absolute;
   margin-top: 11rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#cse_arrow:hover+.dropdown-content_for_cse,
+#cse_arrow:hover + .dropdown-content_for_cse,
 .dropdown-content_for_cse:hover {
   visibility: visible;
 }
 
 /* for sgpa all branch */
 .dropdown-content_for_sgpa {
-  height: 200px;
-  width: 130px;
+  height: 250px;
+  width: 145px;
   background-color: #581c84;
   display: flex;
   flex-direction: column;
@@ -252,14 +251,14 @@ nav ul li i {
   align-items: center;
   position: absolute;
   margin-left: -2rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-.dropbtn:hover+.dropdown-content_for_sgpa,
+.dropbtn:hover + .dropdown-content_for_sgpa,
 .dropdown-content_for_sgpa:hover {
   visibility: visible;
 }
@@ -272,12 +271,12 @@ nav ul li i {
 }
 
 .dropdown-content_for_sgpa a:hover {
-  background-color: rgb(232, 116, 7)
+  background-color: rgb(232, 116, 7);
 }
 
 /* for sgpa it  */
 .dropdown-content_for_it_sgpa {
-  height: 120px;
+  height: 130px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -285,16 +284,16 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: -1.2rem;
+  margin-top: 2rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#it-arrow_sgpa:hover+.dropdown-content_for_it_sgpa,
+#it-arrow_sgpa:hover + .dropdown-content_for_it_sgpa,
 .dropdown-content_for_it_sgpa:hover {
   visibility: visible;
 }
@@ -309,16 +308,16 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 6rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#cse-arrow_sgpa:hover+.dropdown-content_for_cse_sgpa,
+#cse-arrow_sgpa:hover + .dropdown-content_for_cse_sgpa,
 .dropdown-content_for_cse_sgpa:hover {
   visibility: visible;
 }
@@ -327,22 +326,22 @@ nav ul li i {
 .dropdown-content_for_ece_sgpa {
   height: 130px;
   width: 130px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 6rem;
+  margin-top: 10rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#ece-arrow_sgpa:hover+.dropdown-content_for_ece_sgpa,
+#ece-arrow_sgpa:hover + .dropdown-content_for_ece_sgpa,
 .dropdown-content_for_ece_sgpa:hover {
   visibility: visible;
 }
@@ -351,53 +350,29 @@ nav ul li i {
 .dropdown-content_for_ee_sgpa {
   height: 130px;
   width: 130px;
-  background-color:#581c84;
+  background-color: #581c84;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 9rem;
+  margin-top: 14rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#ee-arrow_sgpa:hover+.dropdown-content_for_ee_sgpa,
+#ee-arrow_sgpa:hover + .dropdown-content_for_ee_sgpa,
 .dropdown-content_for_ee_sgpa:hover {
   visibility: visible;
 }
 
 /* for sgpa ce  */
 .dropdown-content_for_ce_sgpa {
-  height: 120px;
-  width: 130px;
-  background-color:#581c84;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin-top: 13rem;
-  margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 2;
-  visibility: hidden;
-}
-
-#ce-arrow_sgpa:hover+.dropdown-content_for_ce_sgpa,
-.dropdown-content_for_ce_sgpa:hover {
-  visibility: visible;
-}
-
-/* for sgpa me  */
-.dropdown-content_for_me_sgpa {
-  height: 100px;
+  height: 130px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -405,23 +380,47 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 16.6rem;
+  margin-top: 18rem;
   margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#me-arrow_sgpa:hover+.dropdown-content_for_me_sgpa,
+#ce-arrow_sgpa:hover + .dropdown-content_for_ce_sgpa,
+.dropdown-content_for_ce_sgpa:hover {
+  visibility: visible;
+}
+
+/* for sgpa me  */
+.dropdown-content_for_me_sgpa {
+  height: 130px;
+  width: 130px;
+  background-color: #581c84;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 21rem;
+  margin-left: 8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  visibility: hidden;
+}
+
+#me-arrow_sgpa:hover + .dropdown-content_for_me_sgpa,
 .dropdown-content_for_me_sgpa:hover {
   visibility: visible;
 }
 
 /* for game branch */
 .dropdown-content_for_game {
-  height: 200px;
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -430,14 +429,14 @@ nav ul li i {
   align-items: center;
   position: absolute;
   margin-left: -2rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-.dropbtn:hover+.dropdown-content_for_game,
+.dropbtn:hover + .dropdown-content_for_game,
 .dropdown-content_for_game:hover {
   visibility: visible;
 }
@@ -450,12 +449,12 @@ nav ul li i {
 }
 
 .dropdown-content_for_game a:hover {
-  background-color: rgb(232, 116, 7)
+  background-color: rgb(232, 116, 7);
 }
 
 /* for sgpa for leet it */
 .dropdown-content_for_it_leet {
-  height: 90px;
+  height: 100px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -463,16 +462,16 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#it-arrow_sgpa_leet:hover+.dropdown-content_for_it_leet,
+#it-arrow_sgpa_leet:hover + .dropdown-content_for_it_leet,
 .dropdown-content_for_it_leet:hover {
   visibility: visible;
 }
@@ -489,14 +488,14 @@ nav ul li i {
   position: absolute;
   margin-top: 3rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#cse-arrow_sgpa_leet:hover+.dropdown-content_for_cse_leet,
+#cse-arrow_sgpa_leet:hover + .dropdown-content_for_cse_leet,
 .dropdown-content_for_cse_leet:hover {
   visibility: visible;
 }
@@ -511,22 +510,22 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#ece-arrow_sgpa_leet:hover+.dropdown-content_for_ece_leet,
+#ece-arrow_sgpa_leet:hover + .dropdown-content_for_ece_leet,
 .dropdown-content_for_ece_leet:hover {
   visibility: visible;
 }
 
 /* for sgpa for leet ee */
-.dropdown-content_for_ee_leet { 
+.dropdown-content_for_ee_leet {
   height: 90px;
   width: 130px;
   background-color: #581c84;
@@ -535,15 +534,15 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
-#ee-arrow_sgpa_leet:hover+.dropdown-content_for_ee_leet,
+#ee-arrow_sgpa_leet:hover + .dropdown-content_for_ee_leet,
 .dropdown-content_for_ee_leet:hover {
   visibility: visible;
 }
@@ -558,16 +557,16 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#ce-arrow_sgpa_leet:hover+.dropdown-content_for_ce_leet,
+#ce-arrow_sgpa_leet:hover + .dropdown-content_for_ce_leet,
 .dropdown-content_for_ce_leet:hover {
   visibility: visible;
 }
@@ -581,19 +580,20 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 6rem;
+  margin-top: 2rem;
   margin-left: 9rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
   visibility: hidden;
 }
 
-#me-arrow_sgpa_leet:hover+.dropdown-content_for_me_leet,
+#me-arrow_sgpa_leet:hover + .dropdown-content_for_me_leet,
 .dropdown-content_for_me_leet:hover {
   visibility: visible;
 }
+
 
 /* all icon code is here */
 .dropdown-arrow {
@@ -2097,3 +2097,8 @@ font-size: 10px;
       margin-top:1rem;
     }
   }
+
+
+
+
+  
