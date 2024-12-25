@@ -817,20 +817,30 @@ nav ul li i {
   font-size: 1rem;
   color: #fff;
 }
-.home .content button {
+/* for explore more button */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+}
+#exploreMorebtn {
   margin-top: 2rem;
   height: 3rem;
   width: 15rem;
   border-radius: 5rem;
   cursor: pointer;
-  /* background: var(--pink); */
-  background-color:yellow;
+  background-color: yellow;
   color: #000; 
   font-size: 1.5rem;
-
+  animation: floatAnimation 3s ease-in-out infinite; 
+  transition: transform 0.3s ease; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .box-container {
-  /* height: 88; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
