@@ -11,7 +11,6 @@
             margin: 0;
             box-sizing: border-box;
             font-family: sans-serif;
-
         }
 
         body {
@@ -79,13 +78,13 @@
 </head>
 
 <body>
-    <h1 id="text">CSE Semester 5 Results</h1>
+    <h1 id="text">ECE Semester 5 Results</h1>
     <div id="user-data">
     </div>
     <script>
         async function fetchUserData() {
             try {
-                const response = await fetch("https://sgpacsesem5backend.onrender.com/CSEsem5/Getsgpa"); // Replace with your API endpoint
+                const response = await fetch("https://sgpaecesem5backend.onrender.com/ECEsem5/Getsgpa"); // Replace with your API endpoint
                 const data = await response.json();
                 // console.log(data); // Log the full response to see its structure
                 const users = data.SgpaData || []; // Access the SgpaData array
