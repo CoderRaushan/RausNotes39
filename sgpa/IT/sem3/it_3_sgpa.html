@@ -3,182 +3,800 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/photos/weg_logo.png">
-    <link rel="stylesheet" href="it_3_sgpa.css">
-    <title>IT Sem 3 Branch Sgpa Calculate</title>
-</head>
-<body>
-    <html>
-<head>
-    <title class="hi">SGPA Calculator</title>
-    <script id="yy"> 
-        function calculateSGPA() 
-        {
-            var arr = [];
-            var sub = ["DSA","OOPs","DCLD","DCCN","PPLE","DSA-Lab","OOPs-Lab","DCCN-Lab","DCLD-Lab","Training-1","Seminar"];
-            for (var n = 0; n <=10; n++) 
-            {
-                var inputId = "marks" + n;
-                var marks = parseFloat(document.getElementById(inputId).value);
-                if (isNaN(marks) || marks === "CRN" ) 
-                {
-                alert("Please fill in all sections before calculating SGPA.");
-                return; 
-                }
-                if ( marks===100 ) 
-                {
-                alert("Instead of entering 100 marks, please enter 99 marks, don't worry It will work fine.");
-                return; 
-                }
-           
-                arr.push(marks);
+    <title>SGPA Calculator</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="/../photos/rausnotes39_logo.png">
+    <link rel="stylesheet" href="/header&footer/completePage.css">
+    <!-- for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("user_icon").style.display = "none";
+                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
             }
-            var crn = document.getElementById("CRN").value;
-            if (crn.length !==7 || crn.substring(0, 4) !== "2221" || parseInt(crn.substring(4)) > 163 ) 
-            {
-            alert("Please enter the valid CRN before calculating SGPA.");
-            return;
+            else {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("it_user_iamge").style.display = "none";
+                document.getElementById("kaho").style.display = "none";
+                document.getElementById("kaho").style.display = "user_img";
+
+                document.getElementById("bottom_menu_profile").style.display = "none";
+                setTimeout(redirectToLogin, 10000);
             }
-            var o = (arr[0] / 100) * 100;
-            var o1 = (arr[1] / 100) * 100;
-            var o2 = (arr[2] / 100) * 100;
-            var o3 = (arr[3] / 100) * 100;
-            var o4 = (arr[4] / 100) * 100;
-            var o5 = (arr[5] / 50) * 100;
-            var o6 = (arr[6] / 50) * 100;
-            var o7 = (arr[7] / 50) * 100;
-            var o8 = (arr[8] / 50 )* 100;
-            var o9 = (arr[9] / 100) * 100;
-            var o10 = (arr[10] / 50)* 100;
-
-            var p = Math.floor(o / 10) + 1;
-            var p1 = Math.floor(o1 / 10) + 1;
-            var p2 = Math.floor(o2 / 10) + 1;
-            var p3 = Math.floor(o3 / 10) + 1;
-            var p4 = Math.floor(o4 / 10) + 1;
-            var p5 = Math.floor(o5 / 10) + 1;
-            var p6 = Math.floor(o6 / 10) + 1;
-            var p7 = Math.floor(o7 / 10) + 1;
-            var p8 = Math.floor(o8 / 10) + 1;
-            var p9 = Math.floor(o9 / 10) + 1;
-            var p10 = Math.floor(o10 / 10) + 1;
-
-            var res = p * 3;
-            var res1 = p1 * 3;
-            var res2 = p2 * 3;
-            var res3 = p3 * 3;
-            var res4 = p4 * 3;
-            var res5 = p5 * 1;
-            var res6 = p6 * 1;
-            var res7 = p7 * 1;
-            var res8 = p8 * 1;
-            var res9 = p9 * 1;
-            var res10 = p10 *1;
-
-            var c1 = 21;
-            var dum = res + res1 + res2 + res3 + res4 + res5 + res6 + res7+res8+res9+res10;
-            var sgpa = dum / c1;
-
-            document.getElementById("sgpaResult").innerHTML = "SGPA: " + sgpa.toFixed(2);
-            document.getElementById("sgpaInput").value = sgpa.toFixed(2);
+        });
+        function redirectToLogin() {
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+            window.location.href = '/database/login.html';
         }
     </script>
+    <style>
+        .sgpa_conatiner_main {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #downloadBtn {
+            margin-top: -1rem;
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+    </style>
 </head>
+
 <body>
-   <div>  
-
-    <h1 id="yy"> <a href="https://it.gndec.ac.in/" target="_blank"><img   class="logo"src="/photos/logo.png" alt=""></a><diB  class="name" >IT 3rd Semester SGPA Calculator</helo></h1>
-        <a  class="home" href="/index.html" target="_blank">Home page</a>
-        <a  class="home1" href="sgpa_page.html" target="_blank">Previous page </a>
+    <nav class="nav-class-for-phone">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/rausnotes39_logo.png"
+                alt="logo">RausNotes39</label>
+        <ul class="nav-item">
+            <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+            <li><a class="active" id="about_dev_btn">About</a>
+            </li>
+            <li><a class="active" id="feedback_btn">Feedback</a></li>
+            <li><a class="active" href="/database/Notes/notes.html"><i id="note" class="fa-solid fa-pencil"></i></a>
+            </li>
+            <li><a id="signinBtn" href="/database/login.html">Login</a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img id="user_img" class="user_img_css"></a></li>
+            <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
+            <li><a id="signout" class="logoutbtn">LogOut</a></li>
+            <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
+            <li id="themeicon" onclick="toggleTheme()"></i></li>
+        </ul>
+    </nav>
+    <!-- dropdown_section  -->
+    <div class="main_nav_nested_item_ele">
+        <a href="/ppt_section/ppt_page.html">
+            <div class="dropdown">
+                <button class="dropbtn">PPT</button>
+            </div>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content">
+                <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
+                    <div class="dropdown-content_for_applied">
+                        <a href="/notes/physics_Group.html">Physics</a>
+                        <a href="/notes/chemistry_Group.html">Chemistry</a>
+                    </div>
+                </a>
+                <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
+                    <div class="dropdown-content_for_it">
+                        <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
+                        <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                        <a href="/notes/it_5th_sem_pdfs.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
+                    <div class="dropdown-content_for_cse">
+                        <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
+                        <a href="">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_sgpa">
+                <a id="it-arrow_sgpa">Physics Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -8rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">Chemistry Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -6rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa">
+                        <a id="it-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_it_leet">
+                                <a href="/sgpa/IT/sem3/it_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/IT/sem3/it_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/IT/sem5/it_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_cse_sgpa">
+                        <a id="cse-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_cse_leet">
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CSE/sem4/cse_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CSE/sem5/cse_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ece_sgpa">
+                        <a id="ece-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ece_leet">
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ECE/sem4/ece_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ECE/sem5/ece_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ee_sgpa">
+                        <a id="ee-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ee_leet">
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/EE/sem4/ee_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/EE/sem5/ee_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ce_sgpa">
+                        <a id="ce-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ce_leet">
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CE/sem5/ce_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_me_sgpa">
+                        <a id="me-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_me_leet">
+                                <a href="/sgpa/ME/sem3/me_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ME/sem3/me_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ME/sem4/me_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ME/sem5/me_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_game">
+                <a href="/game/color_genetator.html">Color Gen</a>
+                <a href="/game/gues_a_number.html">Guess no</a>
+                <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
+                <a href="#">Game4</a>
+                <a href="#">Game5</a>
+                <a href="#">Game6</a>
+            </div>
+        </div>
+        <!-- <a href="/weather/weather.html">
+            <div class="dropdown">
+                <button class="dropbtn">Weather</i></button>
+            </div>
+        </a> -->
     </div>
-    <form method="post" name="submit-to-google-sheet">
-        <fieldset id="fs">
-        <table>
-            <br> 
-               
-            <tr>
-                <td><label for="marks0">DSA:</label></td>
-                <td><input type="number" id="marks0" placeholder="Enter internel + external" name="DSA"></td>
-            </tr>
-            <tr>
-                <td><label for="marks1">OOPS:</label></td>
-                <td><input type="number" id="marks1" placeholder="Enter internel + external" name="OOPs"></td>
-            </tr>
-            <tr>
-                <td><label for="marks2">DCLD:</label></td>
-                <td><input type="number" id="marks2" placeholder="Enter internel + external"  name="DCLD" ></td>
-            </tr>
-            <tr>
-                <td><label for="marks3">DCCN:</label></td>
-                <td><input type="number" id="marks3" placeholder="Enter internel + external" name="DCCN"></td>
-            </tr>
-            <tr>
-                <td><label for="marks4">PPLE:</label></td>
-                <td><input type="number" id="marks4" placeholder="Enter internel + external" name="PPLE" ></td>
-            </tr>
-            <tr>
-                <td><label for="marks5">DSA-Lab:</label></td>
-                <td><input type="number" id="marks5" placeholder="Enter internel + external" name="DSA-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="marks6">OOPS-Lab:</label></td>
-                <td><input type="number" id="marks6" placeholder="Enter internel + external" name="OOPs-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="marks7">DCCN-Lab:</label></td>
-                <td><input type="number" id="marks7" placeholder="Enter internel + external" name="DCCN-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="marks8">DCLD-Lab:</label></td>
-                <td><input type="number" id="marks8" placeholder="Enter internel + external" name="DCLD-Lab"></td>
-            </tr>
-            <tr>
-                <td><label for="marks9">Tranning-1:</label></td>
-                <td><input type="number" id="marks9" placeholder="Enter internel + external" name="Tranning-1"></td>
-            </tr>
-            <tr>
-                <td><label for="marks10">Seminar:</label></td>
-                <td><input type="number" id="marks10" placeholder="Enter internel" name="Seminar"></td>
-            </tr>
-            <tr>
-                <td><label for="CRN">CRN:</label></td>
-                <td><input type="number" id="CRN"  placeholder="Enter CRN" name="CRN"></td>
-            </tr>
-            <tr>
-                <input type="hidden" id="sgpaInput" name="SGPA" value="">
-                <button id="noshow" type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
-            </tr>
-        </table>
-        
-        <button type="submit" name="submit" onclick="calculateSGPA()">Calculate SGPA</button>
-    </fieldset>
-    </form>
-    <p id="sgpaResult"></p> 
- 
+    <!-- main content section here -->
+    <div class="sgpa_conatiner_main">
+        <div class="row sgpa_sem5_it_container">
+            <h3 class="text-center mt-3">SGPA for IT Branch, Semester 3</h3>
+            <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
+                <form method="post" id="sgpaForm" novalidate>
+                    <div class="mb-1">
+                        <label for="PAS" class="form-label">DSA:</label>
+                        <input type="number" required class="form-control" id="PAS"
+                            placeholder="Enter Sum of internal & external" name="PAS">
+                    </div>
+                    <div class="mb-1">
+                        <label for="DBMS">OOPS:</label>
+                        <input type="number" class="form-control" id="DBMS"
+                            placeholder="Enter Sum of internal & external" required name="DBMS">
+                    </div>
+                    <div class="mb-1">
+                        <label for="PY">DCLD:</label>
+                        <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="PY" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="OS">DCCN:</label>
+                        <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="OS" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="WT">PPLE:</label>
+                        <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
+                            name="WT" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="CAM">Training-1:</label>
+                        <input type="number" id="CAM" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="CAM" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="DBMS-LAB">DSA-Lab:</label>
+                        <input type="number" id="DBMS-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="PY-LAB">OOPS-Lab:</label>
+                        <input type="number" id="PY-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="PY-LAB" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="OS-LAB">DCCN-Lab:</label>
+                        <input type="number" id="OS-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="OS-LAB" required>
+
+                    </div>
+                    <div class="mb-1">
+                        <label for="DCLD-LAB">DCLD-Lab:</label>
+                        <input type="number" id="DCLD-LAB" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="DCLD-LAB" required>
+                    </div>
+                    <div class="mb-1">
+                        <label for="Seminar">Seminar:</label>
+                        <input type="number" id="Seminar" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="Seminar" required>
+                    </div>
+
+                    <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
+
+                    <p id="congrass">Please fill in all the input fields correctly.</p>
+                </form>
+                <button id="downloadBtn" class="btn btn-primary mb-3 " style="display: none;">Download Result as
+                    PDF
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- bottom menu -->
+        <div class="bottom_menu">
+            <a class="bottom_menu_anchor" href="/index.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/notes/notes_section.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h4>Notes</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/sgpa/sgpa.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h4>SgpaC</h4>
+                </div>
+            </a>
+            <a href="/userProfile/userProfile.html" class="bottom_menu_anchor">
+                <div class="bottom_menubox1" id="user_profile_btn">
+                    <i class="fa-solid fa-user" id="user_icon"></i>
+                    <img id="it_user_iamge">
+                    <h4 id="bottom_menu_profile">Profile</h4>
+                </div>
+            </a>
+        </div>
+        <div class="myfooter">
+            <div class="frow1">
+                <img src="/photos/rausnotes39_logo.png" class="img" alt="logo">
+                <img src="/photos/qrcode.png" alt="qrcode" height="100px" width="100px">
+            </div>
+            <div class="frow2">
+                <h3>Social Meadia Links</h3>
+                <ul>
+                    <li> <a href="https://wa.link/by8byy" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i>whatsapp</a></li>
+                    <li> <a href="https://instagram.com/raushan__39?igshid=NGExMmI2YTkyZg==" target="_blank"><i
+                                class="fa-brands fa-instagram" target="_blank"></i>instagram</a></li>
+                    <li> <a href="https://www.linkedin.com/in/raushan-kumar-964a75255" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i>linkedin</a></li>
+                    <li> <a href="mailto:raushankumar23082004@gmail.com" target="_blank"><i
+                                class="fa-regular fa-envelope"></i>Email</a></li>
+                    <li> <a href="https://t.me/+917631867534" target="_blank"><i
+                                class="fa-brands fa-telegram"></i>telegram</a></li>
+                    <li> <a href="tel:+91 763 1867 534" target="_blank"><i class="fa-solid fa-phone"></i>phone</a></li>
+                </ul>
+            </div>
+            <div class="frow3">
+                <ul>
+                    <li><a href="https://discord.com/invite/ykh35QgtU5" target="_blank"><i
+                                class="fa-brands fa-discord"></i>discord</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61554941665692&mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook"></i>facebook</a></li>
+                    <li><a href="https://x.com/RaushanKum11066?t=EW6TRRFWQX4lzqeSePZW4w&s=09" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i>twitter</a></li>
+                    <li><a href="https://www.youtube.com/@RaushanKumar-dt3pv" target="_blank"><i
+                                class="fa-brands fa-youtube"></i>youtube</a></li>
+                    <li><a href="https://github.com/CoderRaushan" target="_blank"><i
+                                class="fa-brands fa-github"></i>github</a></li>
+                    <li><a href="robots.txt"><i class="fa-brands fa-snapchat" target="_blank"></i>robots</a></li>
+                </ul>
+            </div>
+            <div class="frow4">
+                <h3>Useful Links</h3>
+                <ul>
+                    <!-- <li><a href="sitemap.xml" target="_blank"><i class="fa-solid fa-briefcase"></i>sitemap</a></li> -->
+                    <li><a href="/temp/index.html" target="_blank"><i class="fa-solid fa-briefcase"></i>TEMP</a></li>
+
+                    <li><a href="notes/notes_section.html" target="_blank"><i class="fa-solid fa-book"></i></i>notes</a>
+                    </li>
+                    <li><a href="sgpa/sgpa_page.html" target="_blank"><i
+                                class="fa-solid fa-calculator"></i>calculator</a></li>
+                    <li><a href="toss/toss.html" target="_blank"><i class="fa-solid fa-coins"></i>toss</a></li>
+                    <li><a href="/weather/weather.html"><i class="fa-solid fa-cloud"></i></i>weather</a></li>
+                    <li><a href="/game/color_genetator.html" target="_blank"><i class="fa-solid fa-gamepad"></i>Game</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="right">&copy; 2025 RausNotes39. All Rights Reserved by RausNotes39 | Designed by Raushan kumar</p>
+        </div>
+    </footer>
+    <script type="module">
+        // Initialize jsPDF
+        const form = document.getElementById('sgpaForm');
+        const button = document.getElementById('sgpabtn');//downloadBtn
+        const buttonPrint = document.getElementById('downloadBtn');
+        // Function to check if all required inputs are filled
+        function validateForm() {
+            const inputs = form.querySelectorAll('input[required]');
+            let allFilled = true;
+            // Check each required input
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false; // If any input is empty, set flag to false
+                }
+            });
+
+            // Enable or disable the button based on validation
+            buttonPrint.disabled = !allFilled;
+            button.disabled = !allFilled; // Enable if all fields are filled, disable otherwise
+        }
+
+        // Attach input event listeners to all required inputs
+        form.querySelectorAll('input[required]').forEach(input => {
+            input.addEventListener('input', validateForm);
+        });
+
+        // Validate on page load (in case of autofill)
+        validateForm();
+
+        const { jsPDF } = window.jspdf;
+        const authStatus = localStorage.getItem("user");
+        const congrassbtn = document.getElementById("congrass");
+        document.getElementById("sgpabtn").addEventListener("click", (event) => {
+            event.preventDefault();
+            // Accessing all input fields
+            let PAS = document.getElementById("PAS").value;
+            let DBMS = document.getElementById("DBMS").value;
+            let PY = document.getElementById("PY").value;
+            let OS = document.getElementById("OS").value;
+            let WT = document.getElementById("WT").value;
+            let CAM = document.getElementById("CAM").value;
+            let DBMS_LAB = document.getElementById("DBMS-LAB").value;
+            let PY_LAB = document.getElementById("PY-LAB").value;
+            let OS_LAB = document.getElementById("OS-LAB").value;
+
+            let DCLD_LAB = document.getElementById("DCLD-LAB").value;
+            let SEMINAR = document.getElementById("Seminar").value;
+
+            // Now calculating SGPA if validation passes
+            PAS = PAS / 100 * 100;
+            DBMS = DBMS / 100 * 100;
+            PY = PY / 100 * 100;
+            OS = OS / 100 * 100;
+            WT = WT / 100 * 100;
+            CAM = CAM / 100 * 100;
+
+            DBMS_LAB = DBMS_LAB / 50 * 100;
+            PY_LAB = PY_LAB / 50 * 100;
+            OS_LAB = OS_LAB / 50 * 100;
+            DCLD_LAB = DCLD_LAB / 50 * 100;
+            SEMINAR = SEMINAR / 50 * 100;
+
+            // Calculating grade point from percentage
+            let pasgrade = Math.floor(PAS / 10) + 1;
+            if (pasgrade >= 10) pasgrade = 10;
+            let dbmsgrade = Math.floor(DBMS / 10) + 1;
+            if (dbmsgrade >= 10) dbmsgrade = 10;
+            let pygrade = Math.floor(PY / 10) + 1;
+            if (pygrade >= 10) pygrade = 10;
+            let osgrade = Math.floor(OS / 10) + 1;
+            if (osgrade >= 10) osgrade = 10;
+            let wtgrade = Math.floor(WT / 10) + 1;
+            if (wtgrade >= 10) wtgrade = 10;
+            let camgrade = Math.floor(CAM / 10) + 1;
+            if (camgrade >= 10) camgrade = 10;
+
+            // Lab grades
+            let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
+            if (dbmslabgrade >= 10) dbmslabgrade = 10;
+            let pylabgrade = Math.floor(PY_LAB / 10) + 1;
+            if (pylabgrade >= 10) pylabgrade = 10;
+            let oslabgrade = Math.floor(OS_LAB / 10) + 1;
+            if (oslabgrade >= 10) oslabgrade = 10;
+            let dcldlabgrade = Math.floor(DCLD_LAB / 10) + 1;
+            if (dcldlabgrade >= 10) dcldlabgrade = 10;
+            let seminargrade = Math.floor(SEMINAR / 10) + 1;
+            if (seminargrade >= 10) seminargrade = 10;
+
+            // Multiplying grade and credit point
+            let pasresult = pasgrade * 3;
+            let dbmsresult = dbmsgrade * 3;
+            let pyresult = pygrade * 3;
+            let osresult = osgrade * 3;
+            let wtresult = wtgrade * 3;
+            let camresult = camgrade * 1;
+
+            let dbmslabresult = dbmslabgrade * 1;
+            let pylabresult = pylabgrade * 1;
+            let oslabresult = oslabgrade * 1;
+            let dcldlabresult = dcldlabgrade * 1;
+            let seminarresult = seminargrade * 1;
+
+            // Adding all results
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + dcldlabresult + seminarresult) / 21);
+            document.getElementById('sgpabtn').innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
+            }
+            else {
+                congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
+            }
+
+            // Show the Download PDF button after SGPA calculation
+            document.getElementById('downloadBtn').style.display = 'inline-block';
+            buttonPrint.addEventListener("click", function () {
+                event.preventDefault();
+                const doc = new jsPDF();
+
+                const authStatus = localStorage.getItem("user");
+                let congrassMessage = "Congratulations!";
+                if (authStatus) {
+                    const userName = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+                    congrassMessage = `Congratulations, ${userName}!`;
+                }
+
+                // Add the congratulatory message to the PDF
+                doc.setFontSize(16);
+                doc.text(congrassMessage, 20, 20);  // Position the message at the top
+
+                // Get the data
+                let PAS = document.getElementById("PAS").value;
+                let DBMS = document.getElementById("DBMS").value;
+                let PY = document.getElementById("PY").value;
+                let OS = document.getElementById("OS").value;
+                let WT = document.getElementById("WT").value;
+                let CAM = document.getElementById("CAM").value;
+                let DBMS_LAB = document.getElementById("DBMS-LAB").value;
+                let PY_LAB = document.getElementById("PY-LAB").value;
+                let OS_LAB = document.getElementById("OS-LAB").value;
+                let DCLD_LAB = document.getElementById("DCLD-LAB").value;
+                let SEMINAR = document.getElementById("Seminar").value;
+
+                // Convert marks to percentage
+                let PAS_perecengage = PAS / 100 * 100;
+                let DBMS_perecengage = DBMS / 100 * 100;
+                let PY_perecengage = PY / 100 * 100;
+                let OS_perecengage = OS / 100 * 100;
+                let WT_perecengage = WT / 100 * 100;
+                let CAM_perecengage = CAM / 100 * 100;
+                let DBMS_LAB_perecengage = DBMS_LAB / 50 * 100;
+                let PY_LAB_perecengage = PY_LAB / 50 * 100;
+                let OS_LAB_perecengage = OS_LAB / 50 * 100;
+                let DCLD_LAB_perecengage = DCLD_LAB / 50 * 100;
+                let Seminar_percentage = SEMINAR / 50 * 100;
+
+                // Calculating grade point from percentage
+                let pasgrade = Math.floor(PAS_perecengage / 10) + 1;
+                if (pasgrade >= 10) pasgrade = 10;
+                let dbmsgrade = Math.floor(DBMS_perecengage / 10) + 1;
+                if (dbmsgrade >= 10) dbmsgrade = 10;
+                let pygrade = Math.floor(PY_perecengage / 10) + 1;
+                if (pygrade >= 10) pygrade = 10;
+                let osgrade = Math.floor(OS_perecengage / 10) + 1;
+                if (osgrade >= 10) osgrade = 10;
+                let wtgrade = Math.floor(WT_perecengage / 10) + 1;
+                if (wtgrade >= 10) wtgrade = 10;
+                let camgrade = Math.floor(CAM_perecengage / 10) + 1;
+                if (camgrade >= 10) camgrade = 10;
+                // Lab grades
+                let dbmslabgrade = Math.floor(DBMS_LAB_perecengage / 10) + 1;
+                if (dbmslabgrade >= 10) dbmslabgrade = 10;
+                let pylabgrade = Math.floor(PY_LAB_perecengage / 10) + 1;
+                if (pylabgrade >= 10) pylabgrade = 10;
+                let oslabgrade = Math.floor(OS_LAB_perecengage / 10) + 1;
+                if (oslabgrade >= 10) oslabgrade = 10;
+                let dcldlabgrade = Math.floor(DCLD_LAB_perecengage / 10) + 1;
+                if (dcldlabgrade >= 10) dcldlabgrade = 10;
+                let seminargrade = Math.floor(Seminar_percentage / 10) + 1;
+                if (seminargrade >= 10) seminargrade = 10;
+
+                // Credit points calculation
+                let pasresult = pasgrade * 3;
+                let dbmsresult = dbmsgrade * 3;
+                let pyresult = pygrade * 3;
+                let osresult = osgrade * 3;
+                let wtresult = wtgrade * 3;
+                let camresult = camgrade * 1;
+                let dbmslabresult = dbmslabgrade * 1;
+                let pylabresult = pylabgrade * 1;
+                let oslabresult = oslabgrade * 1;
+                let dcldlabresult = dcldlabgrade * 1;
+                let seminarresult = seminargrade * 1;
+
+                // Calculate total credits and SGPA
+                let totalCredits = 3 + 3 + 3 + 3 + 3 + 1 + 1 + 1 + 1 + 1 + 1;
+                let totalGradePoints = pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + dcldlabresult + seminarresult;
+                let sgpa = totalGradePoints / totalCredits;
+
+                // Define the table headers
+                const headers = ["Subject", "Marks", "Percentage %", "Grade Point", "Credit Point"];
+
+                // Define the table rows with subject names, marks, grade points, and credit points
+                const rows = [
+                    ["DSA", PAS, PAS_perecengage.toFixed(2), pasgrade, 3],
+                    ["OOPS", DBMS, DBMS_perecengage.toFixed(2), dbmsgrade, 3],
+                    ["DCLD", PY, PY_perecengage.toFixed(2), pygrade, 3],
+                    ["DCCN", OS, OS_perecengage.toFixed(2), osgrade, 3],
+                    ["PPLE", WT, WT_perecengage.toFixed(2), wtgrade, 3],
+                    ["Training-1", CAM, CAM_perecengage.toFixed(2), camgrade, 1],
+                    ["DSA-Lab", DBMS_LAB, DBMS_LAB_perecengage.toFixed(2), dbmslabgrade, 1],
+                    ["OOPS-Lab", PY_LAB, PY_LAB_perecengage.toFixed(2), pylabgrade, 1],
+                    ["DCCN-Lab", OS_LAB, OS_LAB_perecengage.toFixed(2), oslabgrade, 1],
+                    ["DCLD-Lab", DCLD_LAB,DBMS_LAB_perecengage.toFixed(2), dcldlabgrade, 1],
+                    ["Seminar", SEMINAR, Seminar_percentage, seminargrade, 1],
+                ];
+
+                // Set up the position for the table
+                const cellWidth = 40;  // Adjust width for new columns
+                const startX = (doc.internal.pageSize.width - 5 * cellWidth) / 2;  // Center the table horizontally
+                let startY = 50; // Adjusted Y-position for the table to avoid overlap with the logo
+                const rowHeight = 12;
+                const headerHeight = 14;
+
+                // Header Styling: Dark background and white text
+                doc.setFontSize(10); // Reduce font size to fit the table
+                doc.setFont('helvetica', 'bold');
+                doc.setFillColor(50, 50, 50);
+                doc.rect(startX, startY - headerHeight, 5 * cellWidth, headerHeight, 'F');
+                doc.setTextColor(255, 255, 255);
+                headers.forEach((header, index) => {
+                    doc.text(header, startX + index * cellWidth + 5, startY - 3);
+                });
+                startY += headerHeight; // Adjust starting position to avoid extra row
+
+                // Row Styling: Alternate row colors and padding
+                doc.setFont('helvetica', 'normal');
+                const rowColors = [[255, 255, 255], [255, 255, 102]]; // White and Yellow
+                rows.forEach((row, index) => {
+                    const rowColor = rowColors[index % 2];
+                    doc.setFillColor(...rowColor);
+                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
+
+                    doc.setTextColor(0);
+                    row.forEach((cell, cellIndex) => {
+                        if (cellIndex === 1 || cellIndex === 2) {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8); // Marks and Percentage
+                        } else {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, cellIndex === 2 ? 'center' : 'left');
+                        }
+                    });
+                    startY += rowHeight;
+                });
+
+                // Last row: SGPA and Total Credit
+                const lastRow = [
+                    ["", "", "Total Credit", totalCredits, ""],
+                    ["", "", "SGPA", Math.floor(sgpa * 100) / 100, ""],
+                ];
+
+                lastRow.forEach((row, index) => {
+                    doc.setFillColor(245, 245, 245);
+                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
+                    doc.setTextColor(0);
+                    row.forEach((cell, cellIndex) => {
+                        if (cellIndex !== 4) {
+                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, 'center');
+                        }
+                    });
+                    startY += rowHeight;
+                });
+
+                // Download the PDF  
+                doc.save("SGPA_Result_sem_3rd.pdf");
+            });
+            // Trigger the fire animation after calculating SGPA
+            fire(0.25, {
+                spread: 26,
+                startVelocity: 55
+            });
+
+            fire(0.2, {
+                spread: 60
+            });
+
+            fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8
+            });
+
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2
+            });
+
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 45
+            });
+        });
+    </script>
+    <!-- Include the confetti.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw_2vFR62YDs-ndPMviEaaJFv-K01y_uAU_PXctXlocRNo9batkpRRbA04x2kXRqFXf/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          const sgpaValue = document.getElementById("sgpaInput").value;
-          const formData = new FormData(form);
-        formData.append('SGPA', sgpaValue);
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        });
-      </script>
-</body>
-<footer class="foter">
-    <div class="auto"> 
-       
-        <script type="text/javascript" src="https://www.counters-free.net/count/di0e"></script><br>
-        <a href='http://www.freevisitorcounters.com'>.</a> <script type='text/javascript' src='https://whomania.com/ctr?id=87b29ffbb633494216a9b14c5748549873533df5'></script>
- 
-    </div>
-</footer>
-</html>
+        var count = 200;
 
+        var defaults = {
+            origin: { y: 0.8 }
+        };
+        function fire(particleRatio, opts) {
+            confetti(Object.assign({}, defaults, opts, {
+                particleCount: Math.floor(count * particleRatio)
+            }));
+        }
+    </script>
+    </script>
+
+    <script>
+        // Function to enable dark theme
+        function enableDarkTheme() {
+            document.documentElement.classList.add('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        }
+
+        // Function to enable light theme
+        function enableLightTheme() {
+            document.documentElement.classList.remove('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Function to toggle between themes
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark_theme')) {
+                enableLightTheme();
+            } else {
+                enableDarkTheme();
+            }
+        }
+
+        // Check the user's saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                enableDarkTheme();
+            } else {
+                enableLightTheme();
+            }
+        });
+    </script>
+    <!-- for share the weblink -->
+    <script>
+        async function sharepage() {
+            await navigator.share({
+                title: document.title,
+                url: window.location.href
+            })
+        }
+    </script>
+
+    <!-- logout section of js code  -->
+    <script>
+        const signoutBtn = document.querySelector("#signout");
+        let userInfo = JSON.parse(localStorage.getItem("user"));
+        let Signout = () => {
+            localStorage.removeItem("user");
+            window.location.href = '/index.html';
+        }
+        signoutBtn.addEventListener('click', Signout);
+    </script>
+    <!-- JAVA script code for clicking outside of the nav bar it gores back -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nav = document.querySelector('.nav-class-for-phone');
+            var checkbox = document.getElementById('check');
+            document.addEventListener('click', function (event) {
+                if (!nav.contains(event.target) && checkbox.checked) {
+                    checkbox.checked = false;
+                }
+            });
+        });
+
+    </script>
+    <!-- store the current website url to sessionStoreage -->
+    <script>
+        const currentUrl = window.location.href;
+        sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
+
 </html>
