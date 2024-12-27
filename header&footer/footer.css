@@ -1,0 +1,234 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* bottom menu */
+.bottom_menu_anchor {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .bottom_menu {
+    position: fixed;
+    bottom: 5px;
+    height: 60px;
+    width: 30%;
+    background-color: #581c84;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    z-index: 5;
+    border-radius: 2rem;
+  }
+  .bottom_menubox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 4rem;
+  }
+  .hover_on_pro:hover {
+    background-color: white;
+    color: #000;
+    /* padding:8px 8px; */
+  }
+  
+  .bottom_menubox1 h4 {
+    font-size: 13px;
+    margin-bottom: -4px;
+  }
+.foter {
+    /* #333 */
+    background-color: #333;
+    color: var(--primary-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .auto {
+    position: fixed;
+    bottom: 35px;
+    width: 120px;
+    margin: 0px -45px;
+  }
+  #right {
+    font-size: 15px;
+    font-weight: 900;
+  }
+  #somelink {
+    margin-bottom: 5px;
+    font-family: initial;
+    font-weight: 400;
+    font-size: 11px;
+  }
+  
+  .footer {
+    height: 400px;
+    width: 100%;
+    /*  old fotter */
+    background-color: #440671;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  
+  .myfooter {
+    height: 293px;
+    width: 95%;
+    display: flex;
+    list-style: none;
+  }
+  .myfooter a {
+    text-decoration: none;
+    color: lavenderblush;
+    opacity: 0.8;
+    /* font-family: 'Kanit', sans-serif; */
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  .myfooter a:hover {
+    opacity: 1;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .myfooter i {
+    margin-right: 5px;
+  }
+  .footer-copyright {
+    height: 12rem;
+    width: 100%;
+    background-color: #440671;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .frow1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 10%;
+    cursor: pointer;
+  }
+  
+  .img {
+    height: 80px;
+  }
+  .frow2 {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .frow2 a {
+    display: flex;
+    margin-top: 15px;
+  }
+  .frow3 a {
+    display: flex;
+    margin-top: 15px;
+  }
+  .frow4 a {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .frow3 {
+    margin-top: 40px;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+  }
+  .frow4 {
+    margin-top: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+  }
+  .right {
+    color: #fff;
+    text-align: center;
+  }
+  
+  @media (max-width: 658px) 
+  {
+    .myfooter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .frow1 {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      width: 10%;
+      gap: 1rem;
+    }
+    .frow1,
+    .frow2,
+    .frow3,
+    .frow4 {
+      width: 100%;
+    }
+    .frow4 {
+      margin-top: 2rem;
+    }
+    .footer {
+      height: 71rem;
+      width: 100%;
+    }
+    .frow3 {
+      margin-top: 0px;
+    }
+    .footer-copyright {
+      height: 8.5rem;
+      padding: 1rem;
+      padding-right: 1rem;
+    }
+    .footer a {
+      opacity: 1;
+    }
+  
+   
+  .bottom_menu {
+    height: 53px;
+    width: 70%;
+    margin-right: 8px;
+  }
+  .bottom_menubox1 {
+    gap: 3px;
+  }
+  .bottom_menubox1 i {
+    font-size: 15px;
+  }
+  .bottom_menubox1 h4 {
+    font-size: 10px;
+  }
+}
