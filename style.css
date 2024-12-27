@@ -1246,6 +1246,15 @@ textarea {
   color: #fff;
   margin: 10px 10px 10px 10px;
 }
+/* animation for cv button  */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+}
 .cv_btn
 {
   margin-top:10px;
@@ -1257,6 +1266,9 @@ textarea {
   color: #000;
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  animation: floatAnimation 3s ease-in-out infinite; 
+  transition: transform 0.3s ease; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .personal_info 
 {
