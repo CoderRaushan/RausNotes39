@@ -1,93 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="google-site-verification" content="jjSz4zVZv2EWGo-UQD6WRXeu3v_sWTvp48t1COaECjY" />
     <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9833609693095446"
-     crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/photos/weg_logo.png">
-    <link rel="stylesheet" href="it_3rd_sem_pdfs.css">
-    <title>IT_Branch_3rd_semester-rausnotes39</title>
+    <title>IT Sem 3 Notes</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="/../photos/rausnotes39_logo.png">
+    <link rel="stylesheet" href="/header&footer/completePage.css">
+    <!-- for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        // Add this script to handle user authentication status
+        document.addEventListener("DOMContentLoaded", function () {
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                // User is signed in
+                document.getElementById("signupBtn").style.display = "none";
+                document.getElementById("signinBtn").style.display = "none";
+                document.getElementById("signout").style.display = "inline-block";
+                document.getElementById("user_icon").style.display = "none";
+                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+            }
+            else {
+                // User is not signed in
+                document.getElementById("signupBtn").style.display = "inline-block";
+                document.getElementById("signinBtn").style.display = "inline-block";
+                document.getElementById("signout").style.display = "none";
+                document.getElementById("it_user_iamge").style.display = "none";
+                document.getElementById("kaho").style.display = "none";
+                document.getElementById("kaho").style.display = "user_img";
+
+                document.getElementById("bottom_menu_profile").style.display = "none";
+                setTimeout(redirectToLogin, 10000);
+            }
+        });
+        function redirectToLogin() {
+            const currentUrl = window.location.href;
+            sessionStorage.setItem('originalUrl', currentUrl);
+            window.location.href = '/database/login.html';
+        }
+    </script>
+    <style>
+        .sgpa_conatiner_main {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #downloadBtn {
+            margin-top: -1rem;
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+
+        :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+
+        .sgpa_sem5_it_container {
+            background-color: var(--primary-color);
+        }
+
+        .home_button {
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            border-radius: 5rem;
+            padding: .3rem .8rem .4rem .8rem;
+            font-weight: 600;
+        }
+
+        .home_button:hover {
+            background-color: #fff;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .home_button:active {
+            background-color: yellow;
+            color: black;
+            border: 2px solid black;
+        }
+
+        /* faq section */
+        .accordion {
+            padding: 10px 3rem 10px 3rem;
+            height: auto;
+            width: auto;
+            background-color: #75b3d9;
+            margin-bottom: 1rem;
+            box-shadow: 2px 2px 5px black;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .question h3 {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        .accordion_container {
+            padding: 1rem 12rem 1rem 12rem;
+        }
+
+        .icon {
+            margin-left: .7rem;
+            transition: transform .3s;
+        }
+
+        .icon.active {
+            transform: rotate(-180deg);
+        }
+
+        .answer {
+            height: auto;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .answer a {
+            margin-right: 8rem;
+            color: black;
+            text-decoration: none;
+            background-color: pink;
+            border: 2px solid black;
+            padding: 5px;
+            margin-top: 2px;
+        }
+
+        .answer a:hover {
+            background-color: yellow;
+        }
+
+        @media(max-width:658px) {
+            .accordion_container {
+                padding: 1rem 2rem 1rem 2rem;
+            }
+
+            .question h3 {
+                font-size: 1rem;
+            }
+
+            .accordion {
+                padding: 10px 1rem 10px 1rem;
+            }
+
+            .answer p {
+                margin-right: 0rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="arrowdiv"> 
-        <div> 
-            <a id="arrowanc" href="it_All_sem_notes.html"><img id="arrowimg" src="/photos/back_arrow.png" alt=""></a>
-         </div>
-     </div>
-     <h1 style="text-align: center;">Engineering Notes for It 3rd semester students  
-     </h1>
-    <div>
-        <span id="t" >DSA Pdf Download (53.8 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/DSA.pdf" target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-         <span id="t">DCCN Pdf Download (31.6 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/DCCN.pdf" target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCLD Pdf Download (46.8 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/DCLD.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a> 
-         <span id="t">OOPs Pdf Download (47.8 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/OOPs.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a> 
-        <span id="t">PPLE Pdf Download (20.7 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/PPLE.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <hr>
-        <span id="t">DSA Practical File Download (1.1 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/DSA_PRACTICLE_FILE.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCCN Practical File Download (34 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dccn - practical file .pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">OOPs Practical File Download (15 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/oops-practical-file.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCLD Practical File Download (18 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dcld-practical-file .pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <hr>
-        <span id="t">DSA PYQ Download (6.7 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dsa-pyq.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">OOPs PYQ Download (8.7 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/oops-pyq.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCCN PYQ Download (4.9 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dccn-pyq .pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCLD PYQ Download (8.1 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dcld-pyq.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">PPLE PYQ Download (4.9 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/pple-pyq.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">DCCN PYQ Download (4.9 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/dccn-pyq .pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <span id="t">EVS PYQ Download (0.97 MB) &nbsp;</span>
-        <a class="pdf" href="/pdf/EVS-PYQ.pdf"target="_blank"><button type="button" data-dl>
-            <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
-        </button></a>
-        <hr>
-        <span id="t">For accessing all study materials that are provided us during whole semester join teligram group to access it <span><a href="https://t.me/it_3rd_sem_notes" id="teli">click here</a></span> </span>
-    <br>
+    <nav class="nav-class-for-phone">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo"><img style="cursor: pointer;" class="lp" id="myImage" src="/photos/rausnotes39_logo.png"
+                alt="logo">RausNotes39</label>
+        <ul class="nav-item">
+            <li><a class="active" href="/index.html" target="_blank">Home</a></li>
+            <li><a class="active" id="about_dev_btn">About</a>
+            </li>
+            <li><a class="active" id="feedback_btn">Feedback</a></li>
+            <li><a class="active" href="/database/Notes/notes.html"><i id="note" class="fa-solid fa-pencil"></i></a>
+            </li>
+            <li><a id="signinBtn" href="/database/login.html">Login</a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img id="user_img" class="user_img_css"></a></li>
+            <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
+            <li><a id="signout" class="logoutbtn">LogOut</a></li>
+            <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
+            <li id="themeicon" onclick="toggleTheme()"></i></li>
+        </ul>
+    </nav>
+    <!-- dropdown_section  -->
+    <div class="main_nav_nested_item_ele">
+        <a href="/ppt_section/ppt_page.html">
+            <div class="dropdown">
+                <button class="dropbtn">PPT</button>
+            </div>
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content">
+                <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
+                    <div class="dropdown-content_for_applied">
+                        <a href="/notes/physics_Group.html">Physics</a>
+                        <a href="/notes/chemistry_Group.html">Chemistry</a>
+                    </div>
+                </a>
+                <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
+                    <div class="dropdown-content_for_it">
+                        <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
+                        <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                        <a href="/notes/it_5th_sem_pdfs.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
+                    <div class="dropdown-content_for_cse">
+                        <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
+                        <a href="">Semester 4</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_sgpa">
+                <a id="it-arrow_sgpa">Physics Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -8rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">Chemistry Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -6rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa">
+                        <a id="it-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_it_leet">
+                                <a href="/sgpa/IT/sem3/it_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/IT/sem3/it_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/IT/sem5/it_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_cse_sgpa">
+                        <a id="cse-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_cse_leet">
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CSE/sem4/cse_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CSE/sem5/cse_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ece_sgpa">
+                        <a id="ece-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ece_leet">
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ECE/sem4/ece_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ECE/sem5/ece_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ee_sgpa">
+                        <a id="ee-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ee_leet">
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/EE/sem4/ee_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/EE/sem5/ee_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ce_sgpa">
+                        <a id="ce-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ce_leet">
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CE/sem5/ce_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_me_sgpa">
+                        <a id="me-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_me_leet">
+                                <a href="/sgpa/ME/sem3/me_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ME/sem3/me_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ME/sem4/me_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ME/sem5/me_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_game">
+                <a href="/game/color_genetator.html">Color Gen</a>
+                <a href="/game/gues_a_number.html">Guess no</a>
+                <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
+                <a href="#">Game4</a>
+                <a href="#">Game5</a>
+                <a href="#">Game6</a>
+            </div>
+        </div>
     </div>
+    <!-- main content will be start form here! -->
+    <!-- notes secton start -->
+    <div class="container">
+        <div class="text-center">
+            <p class="h2 fw-bold mt-3">IT Semester 3 Pyqs And Notes</p>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center" role="alert"
+            style="font-size: 12px; width: fit-content; margin: 0 auto; position: relative; border-left: 4px solid #581c84;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                aria-label="Warning:">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <div>
+                <strong>Disclaimer:</strong>
+                While we strive to provide accurate and high-quality handwritten notes, occasional errors like typos,
+                spelling mistakes, or
+                incorrect information may occur. We apologize for any such mistakes.
+            </div>
+            <!-- Dismiss button -->
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <div class="accordion_container">
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <h3 class="text-center">Full Notes</h3>
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <div class="accordion">
+            <div class="question">
+                <h3>
+                    DSA
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/DSA.pdf">DSA</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>DCCN
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/DCCN.pdf">DCCN</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3> DCLD
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/DCLD.pdf">DCLD</a>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="question">
+                <h3>OOPs
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/OOPs.pdf">OOPs</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>PPLE
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/PPLE.pdf">PPLE</a>
+            </div>
+        </div>
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <h3 class="text-center">Practical Files</h3>
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <div class="accordion">
+            <div class="question">
+                <h3>DCCN
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dccn - practical file .pdf">DCCN Practical File</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>OOPs
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/oops-practical-file.pdf">OOPs Practical File</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>DCLD
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dcld-practical-file .pdf">DCLD Practical File</a>
+            </div>
+        </div>
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <h3 class="text-center">Pyqs</h3>
+        <hr style="color: rgb(0, 0, 0); height: 20px;">
+        <div class="accordion">
+            <div class="question">
+                <h3>DSA
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dsa-pyq.pdf">DSA PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>OOPs
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/oops-pyq.pdf">OOPs PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>DCCN
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dccn-pyq .pdf">DCCN PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>DCLD
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dcld-pyq.pdf">DCLD PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>PPLE
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/pple-pyq.pdf">PPLE PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>DCCN
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/dccn-pyq .pdf">DCCN PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>EVS
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="/pdf/EVS-PYQ.pdf">EVS PYQ</a>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="question">
+                <h3>For accessing all study materials provided during the whole semester, join our Telegram group
+                </h3>
+                <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+            </div>
+            <div class="answer">
+                <a href="https://t.me/it_3rd_sem_notes">Link</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- bottom menu -->
+        <div class="bottom_menu">
+            <a class="bottom_menu_anchor" href="/index.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-house"></i>
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/notes/notes_section.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h4>Notes</h4>
+                </div>
+            </a>
+            <a class="bottom_menu_anchor" href="/sgpa/sgpa.html">
+                <div class="bottom_menubox1 hover_on_pro">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h4>SgpaC</h4>
+                </div>
+            </a>
+            <a href="/userProfile/userProfile.html" class="bottom_menu_anchor">
+                <div class="bottom_menubox1" id="user_profile_btn">
+                    <i class="fa-solid fa-user" id="user_icon"></i>
+                    <img id="it_user_iamge">
+                    <h4 id="bottom_menu_profile">Profile</h4>
+                </div>
+            </a>
+        </div>
+        <div class="myfooter">
+            <div class="frow1">
+                <img src="/photos/rausnotes39_logo.png" class="img" alt="logo">
+                <img src="/photos/qrcode.png" alt="qrcode" height="100px" width="100px">
+            </div>
+            <div class="frow2">
+                <h3>Social Meadia Links</h3>
+                <ul>
+                    <li> <a href="https://wa.link/by8byy" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i>whatsapp</a></li>
+                    <li> <a href="https://instagram.com/raushan__39?igshid=NGExMmI2YTkyZg==" target="_blank"><i
+                                class="fa-brands fa-instagram" target="_blank"></i>instagram</a></li>
+                    <li> <a href="https://www.linkedin.com/in/raushan-kumar-964a75255" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i>linkedin</a></li>
+                    <li> <a href="mailto:raushankumar23082004@gmail.com" target="_blank"><i
+                                class="fa-regular fa-envelope"></i>Email</a></li>
+                    <li> <a href="https://t.me/+917631867534" target="_blank"><i
+                                class="fa-brands fa-telegram"></i>telegram</a></li>
+                    <li> <a href="tel:+91 763 1867 534" target="_blank"><i class="fa-solid fa-phone"></i>phone</a></li>
+                </ul>
+            </div>
+            <div class="frow3">
+                <ul>
+                    <li><a href="https://discord.com/invite/ykh35QgtU5" target="_blank"><i
+                                class="fa-brands fa-discord"></i>discord</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61554941665692&mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook"></i>facebook</a></li>
+                    <li><a href="https://x.com/RaushanKum11066?t=EW6TRRFWQX4lzqeSePZW4w&s=09" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i>twitter</a></li>
+                    <li><a href="https://www.youtube.com/@RaushanKumar-dt3pv" target="_blank"><i
+                                class="fa-brands fa-youtube"></i>youtube</a></li>
+                    <li><a href="https://github.com/CoderRaushan" target="_blank"><i
+                                class="fa-brands fa-github"></i>github</a></li>
+                    <li><a href="robots.txt"><i class="fa-brands fa-snapchat" target="_blank"></i>robots</a></li>
+                </ul>
+            </div>
+            <div class="frow4">
+                <h3>Useful Links</h3>
+                <ul>
+                    <!-- <li><a href="sitemap.xml" target="_blank"><i class="fa-solid fa-briefcase"></i>sitemap</a></li> -->
+                    <li><a href="/temp/index.html" target="_blank"><i class="fa-solid fa-briefcase"></i>TEMP</a></li>
+
+                    <li><a href="notes/notes_section.html" target="_blank"><i class="fa-solid fa-book"></i></i>notes</a>
+                    </li>
+                    <li><a href="sgpa/sgpa_page.html" target="_blank"><i
+                                class="fa-solid fa-calculator"></i>calculator</a></li>
+                    <li><a href="toss/toss.html" target="_blank"><i class="fa-solid fa-coins"></i>toss</a></li>
+                    <li><a href="/weather/weather.html"><i class="fa-solid fa-cloud"></i></i>weather</a></li>
+                    <li><a href="/game/color_genetator.html" target="_blank"><i class="fa-solid fa-gamepad"></i>Game</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="right">&copy; 2025 RausNotes39. All Rights Reserved by RausNotes39 | Designed by Raushan kumar</p>
+        </div>
+    </footer>
+    <!-- for faq checkbox -->
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            const icon = accordion.querySelector(".icon");
+            const answer = accordion.querySelector(".answer");
+            accordion.addEventListener("click", () => {
+                //    icon.classList.toggle("active");// isme koi problem nahi hai but
+                //    answer.classList.toggle("active");//isme animation problem hai 
+                if (icon.classList.contains("active")) {
+                    icon.classList.remove("active");
+                    answer.style.maxHeight = null;
+                }
+                else {
+                    icon.classList.add("active");
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+    <script>
+        // Function to enable dark theme
+        function enableDarkTheme() {
+            document.documentElement.classList.add('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        }
+
+        // Function to enable light theme
+        function enableLightTheme() {
+            document.documentElement.classList.remove('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Function to toggle between themes
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark_theme')) {
+                enableLightTheme();
+            } else {
+                enableDarkTheme();
+            }
+        }
+
+        // Check the user's saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                enableDarkTheme();
+            } else {
+                enableLightTheme();
+            }
+        });
+    </script>
+    <!-- for share the weblink -->
+    <script>
+        async function sharepage() {
+            await navigator.share({
+                title: document.title,
+                url: window.location.href
+            })
+        }
+    </script>
+
+    <!-- logout section of js code  -->
+    <script>
+        const signoutBtn = document.querySelector("#signout");
+        let userInfo = JSON.parse(localStorage.getItem("user"));
+        let Signout = () => {
+            localStorage.removeItem("user");
+            window.location.href = '/index.html';
+        }
+        signoutBtn.addEventListener('click', Signout);
+    </script>
+    <!-- JAVA script code for clicking outside of the nav bar it gores back -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nav = document.querySelector('.nav-class-for-phone');
+            var checkbox = document.getElementById('check');
+            document.addEventListener('click', function (event) {
+                if (!nav.contains(event.target) && checkbox.checked) {
+                    checkbox.checked = false;
+                }
+            });
+        });
+
+    </script>
+    <!-- store the current website url to sessionStoreage -->
+    <script>
+        const currentUrl = window.location.href;
+        sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
+
 </html>

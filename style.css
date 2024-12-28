@@ -901,6 +901,7 @@ nav ul li i {
   border-radius: 50%;
   z-index: -1;
 }
+
 .hero-heading {
   font-size: 4rem;
   color: var(--secondary-color);
@@ -1398,6 +1399,7 @@ color:#000;
   cursor: pointer;
   display: none;
 }
+/* for ppt section*/
 .ppt_container {
   display: flex;
   justify-content: center;
