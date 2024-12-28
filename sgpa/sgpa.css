@@ -1,8 +1,15 @@
-
 *{
   padding: 0%;
   margin: 0;
   box-sizing: border-box;
+}
+:root {
+  --primary-color: #ffc108;
+  --secondary-color: #000;
+}
+.dark_theme {
+  --primary-color: #000;
+  --secondary-color: #fff;
 }
 .title_container
 {
@@ -15,7 +22,7 @@
 #title_sgpa
 {
   text-align: center;
-  text-shadow: 2px 2px #2acc35; ;
+  text-shadow: 2px 2px #2acc35;
 }
 /* faq section */
 .accordion {
@@ -24,7 +31,7 @@
   margin-left: 16rem;
   height: auto;
   width: auto;
-  background-color: #07eb44;
+  background-color: #75b3d9;
   margin-bottom: 1rem;
   box-shadow: 2px 2px 5px black;
   cursor: pointer;
