@@ -51,14 +51,16 @@
         }
     </script>
     <style>
-         :root {
+        :root {
             --primary-color: #ffc108;
             --secondary-color: #000;
         }
+
         .dark_theme {
             --primary-color: #000;
             --secondary-color: #fff;
         }
+
         /* for ppt section*/
         .ppt_container {
             display: flex;
@@ -158,6 +160,16 @@
             font-weight: 400;
             color: var(--secondary-color);
             opacity: .8;
+        }
+
+        @media(max-width:658px) {
+            .hero-heading {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
