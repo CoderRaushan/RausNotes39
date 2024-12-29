@@ -18,10 +18,10 @@
 
 :root 
 {
-  --primary-color: #fff;
+  --primary-color: #e3edf7;
+  /* --primary-color: #fff; */
   --secondary-color: #000;
 }
-
 body {
   background-color: var(--primary-color);
   overflow: auto;
@@ -1146,7 +1146,7 @@ textarea {
   padding: 10px 3rem 10px 3rem;
   height: auto;
   width: auto;
-  /* background-color: #e3edf7; */
+  background-color:#75b3d9;  
   margin-bottom: 1rem;
   box-shadow: 2px 2px 5px var(--secondary-color);
   cursor: pointer;
