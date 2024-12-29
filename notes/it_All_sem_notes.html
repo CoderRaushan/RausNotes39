@@ -66,6 +66,7 @@
       padding: 0;
       font-family: 'Roboto', sans-serif;
     }
+
     .main {
       width: 100%;
       display: flex;
@@ -74,21 +75,24 @@
       gap: 4rem;
       background-color: var(--primary-color);
     }
+
     .card {
       height: 330px;
       width: 248px;
       border: 2px solid black;
-      margin-top:2rem;
+      margin-top: 2rem;
       box-shadow: 2px 2px 8px black;
       cursor: pointer;
       border-radius: 10px;
       background-color: rgb(245, 245, 232);
       margin-bottom: 1.5rem;
     }
+
     .inner {
       text-align: center;
       font-style: inherit;
     }
+
     p {
       font-weight: bold;
       margin-bottom: 5px;
@@ -99,7 +103,6 @@
       width: 245px;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      
     }
 
     #a {
@@ -124,6 +127,12 @@
     .card:hover {
       transform: scale(1.03);
       box-shadow: 4px 4px 8px black;
+    }
+
+    @media(max-width:658px) {
+      .main {
+        gap: 0rem;
+      }
     }
   </style>
 </head>
