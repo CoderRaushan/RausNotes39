@@ -33,7 +33,6 @@ width: 859px;
   cursor: pointer;
 }
 
-
 .reviews {
   margin-top: 20px;
 }
@@ -80,5 +79,106 @@ width: 859px;
 
 .show-more:hover {
   background-color: #06478d;
-  transition: .8s ease;
+  transition: 0.8s ease;
+}
+.review_staststic_analysis {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+#review_staststic_analysis_h1 {
+  font-size: 2rem;
+}
+.review_theory {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+}
+.digit_contailer_and_bars_container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.review_avg_data {
+  width: 30%;
+}
+.review_big_digit_data {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  font-size: 4rem;
+  padding: 1rem;
+}
+.review_starts_and_total_users {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.review_one_two_three_four_bars_progress_bars {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.review_one_bar,
+.review_two_bar,
+.review_three_bar,
+.review_four_bar {
+  height: 10px;
+  width: 100%;
+  background-color: blue;
+  border-radius: 4rem;
+}
+._outerlayer {
+  height: 10px;
+  width: 100%;
+  background-color: rgb(200, 212, 197);
+  border-radius: 4rem;
+}
+.bar_of_the_one_ratting {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.review_two_bar {
+  width: 0%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.one_rating_and_prograss_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 658px) {
+  .digit_contailer_and_bars_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review_avg_data {
+    width: 100%;
+  }
+  .review_big_digit_data {
+    justify-content: center;
+    align-items: center;
+  }
+  .review_starts_and_total_users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
