@@ -181,4 +181,7 @@ width: 859px;
     align-items: center;
     flex-direction: column;
   }
+  .review_one_two_three_four_bars_progress_bars {
+    width: 90%;
+  }
 }
