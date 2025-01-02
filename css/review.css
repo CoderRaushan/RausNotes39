@@ -28,7 +28,7 @@ width: 859px;
 } */
 
 .review-form button {
-  background-color: #01127e;
+  background-color: #581c84;
   color: white;
   cursor: pointer;
 }
@@ -71,7 +71,7 @@ width: 859px;
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #581c84;
   color: white;
   border: none;
   border-radius: 5px;
@@ -79,5 +79,6 @@ width: 859px;
 }
 
 .show-more:hover {
-  background-color: #0056b3;
+  background-color: #06478d;
+  transition: .8s ease;
 }
