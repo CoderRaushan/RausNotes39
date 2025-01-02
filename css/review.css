@@ -53,7 +53,7 @@ width: 859px;
   align-items: center;
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 2px solid var(--secondary-color);
   border-radius: 5px;
   background-color:var(--primary-color);
   color: var(--secondary-color);
