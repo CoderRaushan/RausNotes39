@@ -63,7 +63,7 @@ width: 859px;
 }
 
 .stars {
-  color: gold;
+  color: #581c84;
 }
 
 .show-more {
@@ -137,7 +137,7 @@ width: 859px;
 .review_four_bar {
   height: 10px;
   width: 100%;
-  background-color: blue;
+  background-color: #581c84;
   border-radius: 4rem;
 }
 ._outerlayer {
@@ -162,7 +162,11 @@ width: 859px;
   justify-content: center;
   align-items: center;
 }
-
+#stars
+  {
+    margin-top: -2.9rem;
+    color: #581c84;
+  }
 @media (max-width: 658px) {
   .digit_contailer_and_bars_container {
     flex-direction: column;
@@ -183,5 +187,14 @@ width: 859px;
   }
   .review_one_two_three_four_bars_progress_bars {
     width: 90%;
+  }
+  .review_starts_and_total_users 
+  {
+    font-size: 2rem;
+  }
+  #stars
+  {
+    margin-top: -2.9rem;
+    color: #581c84;
   }
 }
