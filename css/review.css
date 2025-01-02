@@ -1,3 +1,14 @@
+
+/* .dark_theme
+{
+  --primary-color: #f9f9f9;
+  --secondary-color: #000;
+}
+.dark_theme
+{
+  --primary-color: #f9f9f9;
+  --secondary-color: #000;
+} */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -44,9 +55,9 @@ width: 859px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color:var(--primary-color);
+  color: var(--secondary-color);
 }
-
 .review img {
   width: 50px;
   height: 50px;
@@ -81,6 +92,10 @@ width: 859px;
   background-color: #06478d;
   transition: 0.8s ease;
 }
+.review_staststic_analysis_heading{
+  background-color: var(--primary-color);
+  color:var(--secondary-color);
+}
 .review_staststic_analysis {
   height: 100%;
   width: 100%;
@@ -88,7 +103,9 @@ width: 859px;
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #f9f9f9;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   margin-bottom: 1rem;
   padding: 1rem;
   gap: 1rem;
