@@ -258,37 +258,37 @@
                         <label for="PAS" class="form-label">EG:</label>
                         <input type="number" required class="form-control" id="PAS"
                             placeholder="Enter Sum of internal & external" name="PAS">
-                        <div class="invalid-feedback">Please enter a valid score for Java.</div>
+                        <div class="invalid-feedback">Please enter a valid score for EG.</div>
                     </div>      
                     <div class="mb-1">
                         <label for="DBMS">EEE&C:</label>
                         <input type="number" class="form-control" id="DBMS"
                             placeholder="Enter Sum of internal & external" required name="DBMS">
-                        <div class="invalid-feedback">Please enter a valid score for Discrete Math.</div>
+                        <div class="invalid-feedback">Please enter a valid score for EEE&C.</div>
                     </div>
                     <div class="mb-1">
                         <label for="PY">CE&M:</label>
                         <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
                             name="PY" required>
-                        <div class="invalid-feedback">Please enter a valid score for Iot.</div>
+                        <div class="invalid-feedback">Please enter a valid score for CE&M.</div>
                     </div>
                     <div class="mb-1">
                         <label for="OS">EE:</label>
                         <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
                             name="OS" required>
-                        <div class="invalid-feedback">Please enter a valid score for Toc.</div>
+                        <div class="invalid-feedback">Please enter a valid score for EE.</div>
                     </div>
                     <div class="mb-1">
                         <label for="WT">SE:</label>
                         <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
                             name="WT" required>
-                        <div class="invalid-feedback">Please enter a valid score for Elective-1.</div>
+                        <div class="invalid-feedback">Please enter a valid score for SE.</div>
                     </div>
                     <div class="mb-1">
                         <label for="GE">GE:</label>
                         <input type="number" id="GE" class="form-control" placeholder="Enter Sum of internal & external"
                             name="GE" required>
-                        <div class="invalid-feedback">Please enter a valid score for Elective-1.</div>
+                        <div class="invalid-feedback">Please enter a valid score for GE.</div>
                     </div>
                     <div class="mb-1">
                         <label for="CAM">Training-2:</label>
@@ -300,24 +300,24 @@
                         <label for="DBMS-LAB">G-Lab:</label>
                         <input type="number" id="DBMS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Java-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score for G-Lab.</div>
                     </div>
                     <div class="mb-1">
                         <label for="PY-LAB">EE-Lab:</label>
                         <input type="number" id="PY-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="PY-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Iot-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score for EE-Lab.</div>
                     </div>
                     <div class="mb-1">
                         <label for="OS-LAB">S-Lab:</label>
                         <input type="number" id="OS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="OS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Elective-1-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score for S-Lab.</div>
                     </div>
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
-
+                
                     <p id="congrass">Please fill in all the input fields correctly.</p>
-                </form>
+                </form>                
                 <button id="downloadBtn" class="btn btn-primary mb-3 " style="display: none;">Download Result as
                     PDF
                 </button>
@@ -798,6 +798,45 @@
     <script>
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- validating form  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('sgpaForm');
+            const inputs = form.querySelectorAll('input[type=number]');
+            const calculateBtn = document.getElementById('sgpabtn');
+            const maxMarks = {
+            'PAS': 100,
+            'DBMS': 100,
+            'PY': 100,
+            'OS': 100,
+            'WT': 100,
+            'CAM': 100,
+            'DBMS-LAB': 50,
+            'PY-LAB': 50,
+            'OS-LAB': 50
+        };
+            function validateInputs() 
+            {
+                let isValid = true;
+                inputs.forEach(input => {
+                    const value = parseFloat(input.value);
+                    const max = maxMarks[input.id] || 100;
+                    if (isNaN(value) || value < 0 || value > max) {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                });
+                calculateBtn.disabled = !isValid;
+            }
+            inputs.forEach(input => {
+                input.addEventListener('input', validateInputs);
+            });
+        });
     </script>
     <!-- bootstrap js link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

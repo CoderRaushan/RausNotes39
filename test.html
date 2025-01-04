@@ -52,11 +52,6 @@
                 };
             }
         });
-        function redirectToLogin() {
-            const currentUrl = window.location.href;
-            sessionStorage.setItem('originalUrl', currentUrl);
-            window.location.href = '/database/login.html';
-        }
     </script>
     <style>
         .sgpa_conatiner_main {
@@ -79,7 +74,7 @@
             --secondary-color: #fff;
         }
 
-        .sgpa_sem5_me_container {
+        .sgpa_sem5_it_container {
             background-color: var(--primary-color);
         }
     </style>
@@ -251,75 +246,69 @@
     </div>
     <!-- main content section here -->
     <div class="sgpa_conatiner_main">
-        <div class="row  sgpa_sem5_me_container">
-            <h3 class="text-center mt-3">SGPA for ME Branch, Semester 5 </h3>
+        <div class="row sgpa_sem5_it_container">
+            <h3 class="text-center mt-3">SGPA for IT Branch, Semester 5</h3>
             <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
                 <form method="post" id="sgpaForm" novalidate>
                     <div class="mb-1">
-                        <label for="PAS" class="form-label">FEM:</label>
+                        <label for="PAS" class="form-label">Java:</label>
                         <input type="number" required class="form-control" id="PAS"
-                            placeholder="Enter Sum of internal & external" name="PAS">
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" name="PAS" min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS">DME:</label>
+                        <label for="DBMS">Discrete Math:</label>
                         <input type="number" class="form-control" id="DBMS"
-                            placeholder="Enter Sum of internal & external" required name="DBMS">
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" required name="DBMS" min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="PY">HT:</label>
+                        <label for="PY">Iot:</label>
                         <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
-                            name="PY" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            name="PY" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="OS">OR:</label>
+                        <label for="OS">Toc:</label>
                         <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
-                            name="OS" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            name="OS" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="WT">MM&C:</label>
+                        <label for="WT">Elective-1:</label>
                         <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
-                            name="WT" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
-                    </div>
-                    <div class="mb-1">
-                        <label for="GE">IA&R:</label>
-                        <input type="number" id="GE" class="form-control" placeholder="Enter Sum of internal & external"
-                            name="GE" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            name="WT" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="CAM">Training-2:</label>
                         <input type="number" id="CAM" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="CAM" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" name="CAM" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS-LAB">IA&R-Lab:</label>
+                        <label for="DBMS-LAB">Java-Lab:</label>
                         <input type="number" id="DBMS-LAB" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" name="DBMS-LAB" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="PY-LAB">MM&C-Lab:</label>
+                        <label for="PY-LAB">Iot-Lab:</label>
                         <input type="number" id="PY-LAB" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="PY-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" name="PY-LAB" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
-                        <label for="OS-LAB">HT-Lab:</label>
+                        <label for="OS-LAB">Elective-1-Lab:</label>
                         <input type="number" id="OS-LAB" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="OS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score</div>
+                            placeholder="Enter Sum of internal & external" name="OS-LAB" required min="0" max="100">
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
 
                     <p id="congrass">Please fill in all the input fields correctly.</p>
                 </form>
-                <button id="downloadBtn" class="btn btn-primary mb-3 " style="display: none;">Download Result as
+                <button id="downloadBtn" class="btn btn-primary mb-3" style="display: none;">Download Result as
                     PDF
                 </button>
             </div>
@@ -452,12 +441,10 @@
             let PY = document.getElementById("PY").value;
             let OS = document.getElementById("OS").value;
             let WT = document.getElementById("WT").value;
-            let GE = document.getElementById("GE").value;
             let CAM = document.getElementById("CAM").value;
             let DBMS_LAB = document.getElementById("DBMS-LAB").value;
             let PY_LAB = document.getElementById("PY-LAB").value;
             let OS_LAB = document.getElementById("OS-LAB").value;
-
 
             // Now calculating SGPA if validation passes
             PAS = PAS / 100 * 100;
@@ -465,13 +452,11 @@
             PY = PY / 100 * 100;
             OS = OS / 100 * 100;
             WT = WT / 100 * 100;
-            GE = GE / 100 * 100;
             CAM = CAM / 100 * 100;
 
             DBMS_LAB = DBMS_LAB / 50 * 100;
             PY_LAB = PY_LAB / 50 * 100;
             OS_LAB = OS_LAB / 50 * 100;
-
 
             // Calculating grade point from percentage
             let pasgrade = Math.floor(PAS / 10) + 1;
@@ -484,8 +469,6 @@
             if (osgrade >= 10) osgrade = 10;
             let wtgrade = Math.floor(WT / 10) + 1;
             if (wtgrade >= 10) wtgrade = 10;
-            let gegrade = Math.floor(WT / 10) + 1;
-            if (gegrade >= 10) gegrade = 10;
             let camgrade = Math.floor(CAM / 10) + 1;
             if (camgrade >= 10) camgrade = 10;
 
@@ -497,24 +480,37 @@
             let oslabgrade = Math.floor(OS_LAB / 10) + 1;
             if (oslabgrade >= 10) oslabgrade = 10;
 
-
             // Multiplying grade and credit point
-            let pasresult = pasgrade * 2;
+            let pasresult = pasgrade * 4;
             let dbmsresult = dbmsgrade * 4;
-            let pyresult = pygrade * 4;
-            let osresult = osgrade * 3;
+            let pyresult = pygrade * 3;
+            let osresult = osgrade * 4;
             let wtresult = wtgrade * 3;
-            let geresult = gegrade * 3;
             let camresult = camgrade * 1;
 
-            let dbmslabresult = dbmslabgrade * 1;
+            let dbmslabresult = dbmslabgrade * 2;
             let pylabresult = pylabgrade * 1;
             let oslabresult = oslabgrade * 1;
 
             // Adding all results
-            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + geresult) / 23);
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
             document.getElementById('sgpabtn').innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
-
+            const SgpaPostMethod = async () => {
+                const SgpaData = {
+                    name: JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0],
+                    email: JSON.parse(localStorage.getItem("user")).email,
+                    sgpa: sgpares,
+                };
+                const res = await fetch(
+                    // "https://sgpaitsem4backend.onrender.com/ITsem5/Addsgpa",
+                    {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(SgpaData),
+                    }
+                );
+            };
+            SgpaPostMethod();
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
@@ -546,12 +542,10 @@
                 let PY = document.getElementById("PY").value;
                 let OS = document.getElementById("OS").value;
                 let WT = document.getElementById("WT").value;
-                let GE = document.getElementById("GE").value;
                 let CAM = document.getElementById("CAM").value;
                 let DBMS_LAB = document.getElementById("DBMS-LAB").value;
                 let PY_LAB = document.getElementById("PY-LAB").value;
                 let OS_LAB = document.getElementById("OS-LAB").value;
-
 
                 // Convert marks to percentage
                 let PAS_precengage = PAS / 100 * 100;
@@ -559,12 +553,10 @@
                 let PY_precengage = PY / 100 * 100;
                 let OS_precengage = OS / 100 * 100;
                 let WT_precengage = WT / 100 * 100;
-                let GE_precengage = GE / 100 * 100;
                 let CAM_precengage = CAM / 100 * 100;
                 let DBMS_LAB_precengage = DBMS_LAB / 50 * 100;
                 let PY_LAB_precengage = PY_LAB / 50 * 100;
                 let OS_LAB_precengage = OS_LAB / 50 * 100;
-
 
                 // Calculating grade point from percentage
                 let pasgrade = Math.floor(PAS_precengage / 10) + 1;
@@ -577,8 +569,6 @@
                 if (osgrade >= 10) osgrade = 10;
                 let wtgrade = Math.floor(WT_precengage / 10) + 1;
                 if (wtgrade >= 10) wtgrade = 10;
-                let gegrade = Math.floor(WT / 10) + 1;
-                if (gegrade >= 10) gegrade = 10;
                 let camgrade = Math.floor(CAM_precengage / 10) + 1;
                 if (camgrade >= 10) camgrade = 10;
                 // Lab grades
@@ -589,23 +579,20 @@
                 let oslabgrade = Math.floor(OS_LAB_precengage / 10) + 1;
                 if (oslabgrade >= 10) oslabgrade = 10;
 
-
                 // Credit points calculation
-                let pasresult = pasgrade * 2;
+                let pasresult = pasgrade * 4;
                 let dbmsresult = dbmsgrade * 4;
-                let pyresult = pygrade * 4;
-                let osresult = osgrade * 3;
+                let pyresult = pygrade * 3;
+                let osresult = osgrade * 4;
                 let wtresult = wtgrade * 3;
-                let geresult = gegrade * 3;
                 let camresult = camgrade * 1;
-                let dbmslabresult = dbmslabgrade * 1;
+                let dbmslabresult = dbmslabgrade * 2;
                 let pylabresult = pylabgrade * 1;
                 let oslabresult = oslabgrade * 1;
 
-
                 // Calculate total credits and SGPA
-                let totalCredits = 2 + 4 + 4 + 3 + 3 + 3 + 1 + 1 + 1 + 1;
-                let totalGradePoints = pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + geresult;
+                let totalCredits = 4 + 4 + 3 + 4 + 3 + 1 + 2 + 1 + 1;
+                let totalGradePoints = pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult;
                 let sgpa = totalGradePoints / totalCredits;
 
                 // Define the table headers
@@ -613,16 +600,15 @@
 
                 // Define the table rows with subject names, marks, grade points, and credit points
                 const rows = [
-                    ["FEM", PAS, PAS_precengage.toFixed(2), pasgrade, 2],
-                    ["DME", DBMS, DBMS_precengage.toFixed(2), dbmsgrade, 4],
-                    ["HT", PY, PY_precengage.toFixed(2), pygrade, 4],
-                    ["OR", OS, OS_precengage.toFixed(2), osgrade, 3],
-                    ["MM&C", WT, WT_precengage.toFixed(2), wtgrade, 3],
-                    ["IA&R", GE, GE_precengage.toFixed(2), gegrade, 3],
+                    ["Java", PAS, PAS_precengage.toFixed(2), pasgrade, 4],
+                    ["Discrete Math", DBMS, DBMS_precengage.toFixed(2), dbmsgrade, 4],
+                    ["IoT", PY, PY_precengage.toFixed(2), pygrade, 3],
+                    ["TOC", OS, OS_precengage.toFixed(2), osgrade, 4],
+                    ["Elective-1", WT, WT_precengage.toFixed(2), wtgrade, 3],
                     ["Training-2", CAM, CAM_precengage.toFixed(2), camgrade, 1],
-                    ["IA&R-Lab", DBMS_LAB, DBMS_LAB_precengage.toFixed(2), dbmslabgrade, 1],
-                    ["MM&C-Lab", PY_LAB, PY_LAB_precengage.toFixed(2), pylabgrade, 1],
-                    ["HT-Lab", OS_LAB, OS_LAB_precengage.toFixed(2), oslabgrade, 1],
+                    ["Java-Lab", DBMS_LAB, DBMS_LAB_precengage.toFixed(2), dbmslabgrade, 2],
+                    ["Iot-Lab", PY_LAB, PY_LAB_precengage.toFixed(2), pylabgrade, 1],
+                    ["Elective-1-Lab", OS_LAB, OS_LAB_precengage.toFixed(2), oslabgrade, 1],
                 ];
 
                 // Set up the position for the table
@@ -771,7 +757,6 @@
             })
         }
     </script>
-
     <!-- logout section of js code  -->
     <script>
         const signoutBtn = document.querySelector("#signout");
@@ -800,6 +785,11 @@
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
     </script>
+    <!-- bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <!-- validating form  -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -807,18 +797,18 @@
             const inputs = form.querySelectorAll('input[type=number]');
             const calculateBtn = document.getElementById('sgpabtn');
             const maxMarks = {
-                'PAS': 100,         // FEM
-                'DBMS': 100,        // DME
-                'PY': 100,          // HT
-                'OS': 100,          // OR
-                'WT': 100,          // MM&C
-                'GE': 100,          // IA&R
-                'CAM': 100,         // Training-2
-                'DBMS-LAB': 50,     // IA&R-Lab
-                'PY-LAB': 50,       // MM&C-Lab
-                'OS-LAB': 50        // HT-Lab
+                'PAS': 100,
+                'DBMS': 100,
+                'PY': 100,
+                'OS': 100,
+                'WT': 100,
+                'CAM': 100,
+                'DBMS-LAB': 50,
+                'PY-LAB': 50,
+                'OS-LAB': 50
             };
-            function validateInputs() {
+            function validateInputs() 
+            {
                 let isValid = true;
                 inputs.forEach(input => {
                     const value = parseFloat(input.value);
@@ -838,12 +828,7 @@
                 input.addEventListener('input', validateInputs);
             });
         });
-    </script>
-    <!-- bootstrap js link-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    </script> 
 </body>
 
 </html>

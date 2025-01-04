@@ -248,7 +248,7 @@
     <div class="sgpa_conatiner_main">
         <div class="row sgpa_sem5_it_container">
             <h3 class="text-center mt-3">SGPA for IT Branch, Semester 5</h3>
-            <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
+            <div class="col col-10 offset-1 col-lg-4 offset-lg-4">
                 <form method="post" id="sgpaForm" novalidate>
                     <div class="mb-1">
                         <label for="PAS" class="form-label">Java:</label>
@@ -416,18 +416,12 @@
                     allFilled = false; // If any input is empty, set flag to false
                 }
             });
-
-            // Enable or disable the button based on validation
             buttonPrint.disabled = !allFilled;
             button.disabled = !allFilled; // Enable if all fields are filled, disable otherwise
         }
-
-        // Attach input event listeners to all required inputs
         form.querySelectorAll('input[required]').forEach(input => {
             input.addEventListener('input', validateForm);
         });
-
-        // Validate on page load (in case of autofill)
         validateForm();
 
         const { jsPDF } = window.jspdf;
@@ -779,12 +773,50 @@
                 }
             });
         });
-
     </script>
     <!-- store the current website url to sessionStoreage -->
     <script>
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- validating form  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('sgpaForm');
+            const inputs = form.querySelectorAll('input[type=number]');
+            const calculateBtn = document.getElementById('sgpabtn');
+            const maxMarks = {
+                'PAS': 100,
+                'DBMS': 100,
+                'PY': 100,
+                'OS': 100,
+                'WT': 100,
+                'CAM': 100,
+                'DBMS-LAB': 50,
+                'PY-LAB': 50,
+                'OS-LAB': 50
+            };
+            function validateInputs() 
+            {
+                let isValid = true;
+                inputs.forEach(input => {
+                    const value = parseFloat(input.value);
+                    const max = maxMarks[input.id] || 100;
+                    if (isNaN(value) || value < 0 || value > max) {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                });
+                calculateBtn.disabled = !isValid;
+            }
+            inputs.forEach(input => {
+                input.addEventListener('input', validateInputs);
+            });
+        });
     </script>
     <!-- bootstrap js link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

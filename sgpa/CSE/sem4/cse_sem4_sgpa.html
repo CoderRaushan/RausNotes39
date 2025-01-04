@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGPA Calculator</title>
-    <link rel="icon" href="/photos/rausnotes39_logo.png">
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
+     rel="stylesheet">
+    <!-- bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="/../photos/rausnotes39_logo.png">
+    <link rel="stylesheet" href="/header&footer/completePage.css">
     <link rel="stylesheet" href="/sgpa/sharedStyle.css">
-    <!-- code for nav items to move towards left side -->
-    <script src="/header&footer/nav.js"></script>
-    <!-- <link rel="stylesheet" href="sem_4_common_style.css"> -->
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
@@ -40,7 +45,6 @@
                     sessionStorage.setItem('originalUrl', window.location.href);
                     window.location.href = '/database/login.html';
                 }, 5000);
-                // Disable back navigation
                 window.history.pushState(null, "", window.location.href);
                 window.onpopstate = function () {
                     window.history.pushState(null, "", window.location.href);
@@ -53,11 +57,20 @@
             window.location.href = '/database/login.html';
         }
     </script>
+    <style>
+         :root {
+            --primary-color: #ffc108;
+            --secondary-color: #000;
+        }
+
+        .dark_theme {
+            --primary-color: #000;
+            --secondary-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- nav file included -->
-    <!-- <div id="includnav"></div> -->
     <nav class="nav-class-for-phone">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
@@ -71,8 +84,7 @@
             <li><a class="active" href="/database/Notes/notes.html"><i id="note" class="fa-solid fa-pencil"></i></a>
             </li>
             <li><a id="signinBtn" href="/database/login.html">Login</a></li>
-            <li><a id="kaho" href="/userProfile/userProfile.html"><img src="" alt="user_img" id="user_img"
-                        class="user_img_css"></a></li>
+            <li><a id="kaho" href="/userProfile/userProfile.html"><img id="user_img" class="user_img_css"></a></li>
             <li><a class=" signuphidekarnahai" id="signupBtn" href="/database/login.html">SignUp</a></li>
             <li><a id="signout" class="logoutbtn">LogOut</a></li>
             <li><i onclick="sharepage()" class="fa-solid fa-share-from-square"></i></li>
@@ -216,93 +228,210 @@
                 <a href="#">Game6</a>
             </div>
         </div>
-        <!-- <a href="/weather/weather.html">
-            <div class="dropdown">
-                <button class="dropbtn">Weather</i></button>
-            </div>
-        </a> -->
     </div>
-    <h3 id="it_sem4">SGPA Calculator for CSE Branch, Semester 4</h3>
-    <div class="main">
-        <form method="post">
-            <div class="box" style="height:740x;">
-                <table border="none">
-                    <div>
-                        <tr>
-                            <td><label for="PAS">Discrete Mathematics:</label></td>
-                            <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
-                                    required>
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="DBMS">CAM:</label></td>
-                            <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
-                                    name="DBMS" required></td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="PY">OS:</label></td>
-                            <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
-                                    required>
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="OS">DS:</label></td>
-                            <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
-                                    required>
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="WT">SE:</label></td>
-                            <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
-                                    required>
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="CAM">CAM-LAB:</label></td>
-                            <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
-                                    required>
-                            </td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="DBMS-LAB">OS-LAB</label></td>
-                            <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
-                                    name="DBMS-LAB" required></td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="PY-LAB">DS-LAB:</label></td>
-                            <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
-                                    name="PY-LAB" required></td>
-                        </tr>
-                    </div>
-                    <div>
-                        <tr>
-                            <td><label for="OS-LAB">MPD:</label></td>
-                            <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
-                                    name="OS-LAB" required></td>
-                        </tr>
-                    </div>
-                </table>
-                <button id="sgpabtn">Calculate Sgpa</button>
-                <audio src="/sgpa/congrts_music.unknown" preload="auto" id="clicksound" controls></audio>
-                <p id="congrass">Click on Calculate Sgpa</p>
-            </div>
+   <!-- main content will be start form here! -->
 
-        </form>
+   <h3 id="it_sem4">SGPA Calculator for CSE Branch, Semester 4</h3>
+<div class="main">
+    <form method="post">
+        <div class="box" style="height:840x;">
+            <table border="none">
+                <div>
+                    <tr>
+                        <td><label for="PAS">Discrete Mathematics:</label></td>
+                        <td><input type="number" id="PAS" placeholder="Enter Sum of internel & external" name="PAS"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="DBMS">CAM:</label></td>
+                        <td><input type="number" id="DBMS" placeholder="Enter Sum of internel & external" required
+                                name="DBMS" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="PY">OS:</label></td>
+                        <td><input type="number" id="PY" placeholder="Enter Sum of internel & external" name="PY"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="OS">DS:</label></td>
+                        <td><input type="number" id="OS" placeholder="Enter Sum of internel & external" name="OS"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="WT">SE:</label></td>
+                        <td><input type="number" id="WT" placeholder="Enter Sum of internel & external" name="WT"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="CAM">CAM-LAB:</label></td>
+                        <td><input type="number" id="CAM" placeholder="Enter Sum of internel & external" name="CAM"
+                                required>
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="DBMS-LAB">OS-LAB</label></td>
+                        <td><input type="number" id="DBMS-LAB" placeholder="Enter Sum of internel & external"
+                                name="DBMS-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="PY-LAB">DS-LAB:</label></td>
+                        <td><input type="number" id="PY-LAB" placeholder="Enter Sum of internel & external"
+                                name="PY-LAB" required></td>
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td><label for="OS-LAB">MPD:</label></td>
+                        <td><input type="number" id="OS-LAB" placeholder="Enter Sum of internel & external"
+                                name="OS-LAB" required></td>
+                    </tr>
+                </div>
+            </table>
+            <button id="sgpabtn">Calculate Sgpa</button>
+            <p id="congrass">Click on Calculate Sgpa</p>
+        </div>
+    </form>
+</div>
+<script type="module">
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
 
+    let sgpabtn = document.getElementById("sgpabtn");
+    let congrassbtn = document.getElementById("congrass");
+    sgpabtn.addEventListener("click", (event) => {
+        {
+            event.preventDefault();
+            // accessing all input fields 
+            let PAS = (document.getElementById("PAS").value);
+            let DBMS = (document.getElementById("DBMS").value);
+            let PY = (document.getElementById("PY").value);
+            let OS = (document.getElementById("OS").value);
+            let WT = (document.getElementById("WT").value);
+            let CAM = (document.getElementById("CAM").value);
+            let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
+            let PY_LAB = (document.getElementById("PY-LAB").value);
+            let OS_LAB = (document.getElementById("OS-LAB").value);
+
+            let test = document.querySelectorAll("input");
+            for (let p of test) {
+                if (p.value === "") {
+
+                    alert("Please Enter Marks in All input field!");
+                    break;
+                }
+            }
+            // now  calculating percentage of each subject including lab
+            PAS = PAS / 100 * 100;
+            DBMS = DBMS / 100 * 100;
+            PY = PY / 100 * 100;
+            OS = OS / 100 * 100;
+            WT = WT / 100 * 100;
+            CAM = CAM / 50 * 100;
+
+            DBMS_LAB = DBMS_LAB / 50 * 100;
+            PY_LAB = PY_LAB / 50 * 100;
+            OS_LAB = OS_LAB / 100 * 100;
+
+            // now calculating grade point form persentage
+            let pasgrade = Math.floor(PAS / 10) + 1;
+            if (pasgrade >= 10) {
+                pasgrade = 10;
+            }
+            let dbmsgrade = Math.floor(DBMS / 10) + 1;
+            if (dbmsgrade >= 10) {
+                dbmsgrade = 10;
+            }
+            let pygrade = Math.floor(PY / 10) + 1;
+            if (pygrade >= 10) {
+                pygrade = 10;
+            }
+            let osgrade = Math.floor(OS / 10) + 1;
+            if (osgrade >= 10) {
+                osgrade = 10;
+            }
+            let wtgrade = Math.floor(WT / 10) + 1;
+            if (wtgrade >= 10) {
+                wtgrade = 10;
+            }
+            let camgrade = Math.floor(CAM / 10) + 1;
+            if (camgrade >= 10) {
+                camgrade = 10;
+            }
+            let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
+            if (dbmslabgrade >= 10) {
+                dbmslabgrade = 10;
+            }
+            let pylabgrade = Math.floor(PY_LAB / 10) + 1;
+            if (pylabgrade >= 10) {
+                pylabgrade = 10;
+            }
+            let oslabgrade = Math.floor(OS_LAB / 10) + 1;
+            if (oslabgrade >= 10) {
+                oslabgrade = 10;
+            }
+            // multiplying grade and credit point
+            let pasresult = pasgrade * 4;
+            let dbmsresult = dbmsgrade * 3;
+            let pyresult = pygrade * 4;
+            let osresult = osgrade * 3;
+            let wtresult = wtgrade * 4;
+            let camresult = camgrade * 1;
+
+            let dbmslabresult = dbmslabgrade * 1;
+            let pylabresult = pylabgrade * 2;
+            let oslabresult = oslabgrade * 1;
+
+            //   adding all results
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
+            sgpabtn.innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
+            const authStatus = localStorage.getItem("user");
+            if (authStatus) {
+                congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
+            }
+            else {
+                congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
+            }
+            // Store SGPA in Firebase Realtime Database
+            if (authStatus) {
+                let user = JSON.parse(localStorage.getItem("user"));
+                let username = user.displayName.split(' ')[0];
+                let sgpa = sgpares.toFixed(2).replace('.', '-');
+                let username_sgpa = `${username} ${sgpa}`;
+                const userRef = ref(database, `${username_sgpa}`);
+                set(userRef, {
+                    sgpa: sgpares.toFixed(2),
+                    username: username
+                }).then(() => {
+                    console.log("SGPA stored successfully.");
+                }).catch((error) => {
+                    console.error("Error storing SGPA: ", error);
+                });
+            } else {
+                console.error("User is not authenticated.");
+            }
+        }
+    });
+</script>
+    <!-- footer -->
+    <footer class="footer">
         <!-- bottom menu -->
         <div class="bottom_menu">
             <a class="bottom_menu_anchor" href="/index.html">
@@ -323,258 +452,147 @@
                     <h4>SgpaC</h4>
                 </div>
             </a>
-            <a class="bottom_menu_anchor" href="../../userProfile/userProfile.html">
+            <a href="/userProfile/userProfile.html" class="bottom_menu_anchor">
                 <div class="bottom_menubox1" id="user_profile_btn">
                     <i class="fa-solid fa-user" id="user_icon"></i>
-                    <img src="" alt="uesr image" id="it_user_iamge">
+                    <img id="it_user_iamge">
                     <h4 id="bottom_menu_profile">Profile</h4>
                 </div>
             </a>
         </div>
-    </div>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+        <div class="myfooter">
+            <div class="frow1">
+                <img src="/photos/rausnotes39_logo.png" class="img" alt="logo">
+                <img src="/photos/qrcode.png" alt="qrcode" height="100px" width="100px">
+            </div>
+            <div class="frow2">
+                <h3>Social Meadia Links</h3>
+                <ul>
+                    <li> <a href="https://wa.link/by8byy" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i>whatsapp</a></li>
+                    <li> <a href="https://instagram.com/raushan__39?igshid=NGExMmI2YTkyZg==" target="_blank"><i
+                                class="fa-brands fa-instagram" target="_blank"></i>instagram</a></li>
+                    <li> <a href="https://www.linkedin.com/in/raushan-kumar-964a75255" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i>linkedin</a></li>
+                    <li> <a href="mailto:raushankumar23082004@gmail.com" target="_blank"><i
+                                class="fa-regular fa-envelope"></i>Email</a></li>
+                    <li> <a href="https://t.me/+917631867534" target="_blank"><i
+                                class="fa-brands fa-telegram"></i>telegram</a></li>
+                    <li> <a href="tel:+91 763 1867 534" target="_blank"><i class="fa-solid fa-phone"></i>phone</a></li>
+                </ul>
+            </div>
+            <div class="frow3">
+                <ul>
+                    <li><a href="https://discord.com/invite/ykh35QgtU5" target="_blank"><i
+                                class="fa-brands fa-discord"></i>discord</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61554941665692&mibextid=ZbWKwL"
+                            target="_blank"><i class="fa-brands fa-facebook"></i>facebook</a></li>
+                    <li><a href="https://x.com/RaushanKum11066?t=EW6TRRFWQX4lzqeSePZW4w&s=09" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i>twitter</a></li>
+                    <li><a href="https://www.youtube.com/@RaushanKumar-dt3pv" target="_blank"><i
+                                class="fa-brands fa-youtube"></i>youtube</a></li>
+                    <li><a href="https://github.com/CoderRaushan" target="_blank"><i
+                                class="fa-brands fa-github"></i>github</a></li>
+                    <li><a href="robots.txt"><i class="fa-brands fa-snapchat" target="_blank"></i>robots</a></li>
+                </ul>
+            </div>
+            <div class="frow4">
+                <h3>Useful Links</h3>
+                <ul>
+                    <!-- <li><a href="sitemap.xml" target="_blank"><i class="fa-solid fa-briefcase"></i>sitemap</a></li> -->
+                    <li><a href="/temp/index.html" target="_blank"><i class="fa-solid fa-briefcase"></i>TEMP</a></li>
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyCMqcf_7Rbhlc-iq7Khgtuf8bM2hIJXT5I",
-            authDomain: "sem4resultcse.firebaseapp.com",
-            projectId: "sem4resultcse",
-            storageBucket: "sem4resultcse.appspot.com",
-            messagingSenderId: "26108703653",
-            appId: "1:26108703653:web:2c2a9246c293bef6066e4c"
-        };
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-
-        let sgpabtn = document.getElementById("sgpabtn");
-        let congrassbtn = document.getElementById("congrass");
-        sgpabtn.addEventListener("click", (event) => {
-            {
-                event.preventDefault();
-                // accessing all input fields 
-                let PAS = (document.getElementById("PAS").value);
-                let DBMS = (document.getElementById("DBMS").value);
-                let PY = (document.getElementById("PY").value);
-                let OS = (document.getElementById("OS").value);
-                let WT = (document.getElementById("WT").value);
-                let CAM = (document.getElementById("CAM").value);
-                let DBMS_LAB = (document.getElementById("DBMS-LAB").value);
-                let PY_LAB = (document.getElementById("PY-LAB").value);
-                let OS_LAB = (document.getElementById("OS-LAB").value);
-
-
-                let test = document.querySelectorAll("input");
-                for (let p of test) {
-                    if (p.value === "") {
-
-                        alert("Please Enter Marks in All input field!");
-                        break;
-                    }
-                }
-                // now  calculating percentage of each subject including lab
-                PAS = PAS / 100 * 100;
-                DBMS = DBMS / 100 * 100;
-                PY = PY / 100 * 100;
-                OS = OS / 100 * 100;
-                WT = WT / 100 * 100;
-                CAM = CAM / 50 * 100;
-
-                DBMS_LAB = DBMS_LAB / 50 * 100;
-                PY_LAB = PY_LAB / 50 * 100;
-                OS_LAB = OS_LAB / 100 * 100;
-
-                // now calculating grade point form persentage
-                let pasgrade = Math.floor(PAS / 10) + 1;
-                if (pasgrade >= 10) {
-                    pasgrade = 10;
-                }
-                let dbmsgrade = Math.floor(DBMS / 10) + 1;
-                if (dbmsgrade >= 10) {
-                    dbmsgrade = 10;
-                }
-                let pygrade = Math.floor(PY / 10) + 1;
-                if (pygrade >= 10) {
-                    pygrade = 10;
-                }
-                let osgrade = Math.floor(OS / 10) + 1;
-                if (osgrade >= 10) {
-                    osgrade = 10;
-                }
-                let wtgrade = Math.floor(WT / 10) + 1;
-                if (wtgrade >= 10) {
-                    wtgrade = 10;
-                }
-                let camgrade = Math.floor(CAM / 10) + 1;
-                if (camgrade >= 10) {
-                    camgrade = 10;
-                }
-                let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
-                if (dbmslabgrade >= 10) {
-                    dbmslabgrade = 10;
-                }
-                let pylabgrade = Math.floor(PY_LAB / 10) + 1;
-                if (pylabgrade >= 10) {
-                    pylabgrade = 10;
-                }
-                let oslabgrade = Math.floor(OS_LAB / 10) + 1;
-                if (oslabgrade >= 10) {
-                    oslabgrade = 10;
-                }
-                // multiplying grade and credit point
-                let pasresult = pasgrade * 4;
-                let dbmsresult = dbmsgrade * 3;
-                let pyresult = pygrade * 4;
-                let osresult = osgrade * 3;
-                let wtresult = wtgrade * 4;
-                let camresult = camgrade * 1;
-
-                let dbmslabresult = dbmslabgrade * 1;
-                let pylabresult = pylabgrade * 2;
-                let oslabresult = oslabgrade * 1;
-
-                //   adding all results
-                let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult) / 23);
-                sgpabtn.innerText = "SGPA : " +  Math.floor(sgpares * 100) / 100;
-                const authStatus = localStorage.getItem("user");
-                if (authStatus) {
-                    congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
-                }
-                else {
-                    congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
-                }
-                // Store SGPA in Firebase Realtime Database
-                if (authStatus) {
-                    let user = JSON.parse(localStorage.getItem("user"));
-                    let username = user.displayName.split(' ')[0];
-                    let sgpa = sgpares.toFixed(2).replace('.', '-');
-                    let username_sgpa = `${username} ${sgpa}`;
-                    const userRef = ref(database, `${username_sgpa}`);
-                    set(userRef, {
-                        sgpa: sgpares.toFixed(2),
-                        username: username
-                    }).then(() => {
-                        console.log("SGPA stored successfully.");
-                    }).catch((error) => {
-                        console.error("Error storing SGPA: ", error);
-                    });
-                } else {
-                    console.error("User is not authenticated.");
-                }
-            }
-        });
-    </script>
-    <!-- button sound effect -->
+                    <li><a href="notes/notes_section.html" target="_blank"><i class="fa-solid fa-book"></i></i>notes</a>
+                    </li>
+                    <li><a href="sgpa/sgpa_page.html" target="_blank"><i
+                                class="fa-solid fa-calculator"></i>calculator</a></li>
+                    <li><a href="toss/toss.html" target="_blank"><i class="fa-solid fa-coins"></i>toss</a></li>
+                    <li><a href="/weather/weather.html"><i class="fa-solid fa-cloud"></i></i>weather</a></li>
+                    <li><a href="/game/color_genetator.html" target="_blank"><i class="fa-solid fa-gamepad"></i>Game</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="right">&copy; 2025 RausNotes39. All Rights Reserved by RausNotes39 | Designed by Raushan kumar</p>
+        </div>
+    </footer>
     <script>
-        // Get the button and audio elements
-        const sgpabtn2 = document.getElementById("sgpabtn");
-        const clicksoun2 = document.getElementById("clicksound");
+        // Function to enable dark theme
+        function enableDarkTheme() {
+            document.documentElement.classList.add('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        }
 
-        // Add event listener to the button
-        sgpabtn2.addEventListener("click", () => {
-            clicksoun2.play();
+        // Function to enable light theme
+        function enableLightTheme() {
+            document.documentElement.classList.remove('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Function to toggle between themes
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark_theme')) {
+                enableLightTheme();
+            } else {
+                enableDarkTheme();
+            }
+        }
+
+        // Check the user's saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                enableDarkTheme();
+            } else {
+                enableLightTheme();
+            }
         });
     </script>
-    <!-- footer file included -->
-    <div id="includefooter"></div>
-        <!-- importing js code -->
+    <!-- for share the weblink -->
+    <script>
+        async function sharepage() {
+            await navigator.share({
+                title: document.title,
+                url: window.location.href
+            })
+        }
+    </script>
 
-        <script>
-            $("#includnav").load("/header&footer/nav.html");
-            $("#includefooter").load("/header&footer/footer.html");
-        </script>
-        <!-- Dark and Light mode theme js code -->
-<script>
-    // Function to enable dark theme
-    function enableDarkTheme() {
-      document.documentElement.classList.add('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
-      localStorage.setItem('theme', 'dark');
-    }
-  
-    // Function to enable light theme
-    function enableLightTheme() {
-      document.documentElement.classList.remove('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
-      localStorage.setItem('theme', 'light');
-    }
-  
-    // Function to toggle between themes
-    function toggleTheme() {
-      if (document.documentElement.classList.contains('dark_theme')) {
-        enableLightTheme();
-      } else {
-        enableDarkTheme();
-      }
-    }
-  
-    // Check the user's saved theme preference on page load
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        enableDarkTheme();
-      } else {
-        enableLightTheme();
-      }
-    });
-  </script>
-        <!-- for share the weblink -->
-        <script>
-            async function sharepage() {
-                await navigator.share({
-                    title: document.title,
-                    url: window.location.href
-                })
-            }
-        </script>
-        <!-- Include the confetti.js library -->
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-        <script>
-            var count = 200;
-
-            var defaults = {
-                origin: { y: 0.8 }
-            };
-            function fire(particleRatio, opts) {
-                confetti(Object.assign({}, defaults, opts, {
-                    particleCount: Math.floor(count * particleRatio)
-                }));
-            }
-
-            document.getElementById('sgpabtn').addEventListener('click', function () {
-                fire(0.25, {
-                    spread: 26,
-                    startVelocity: 55
-                });
-
-                fire(0.2, {
-                    spread: 60
-                });
-
-                fire(0.35, {
-                    spread: 100,
-                    decay: 0.91,
-                    scalar: 0.8
-                });
-
-                fire(0.1, {
-                    spread: 120,
-                    startVelocity: 25,
-                    decay: 0.92,
-                    scalar: 1.2
-                });
-
-                fire(0.1, {
-                    spread: 120,
-                    startVelocity: 45
-                });
+    <!-- logout section of js code  -->
+    <script>
+        const signoutBtn = document.querySelector("#signout");
+        let userInfo = JSON.parse(localStorage.getItem("user"));
+        let Signout = () => {
+            localStorage.removeItem("user");
+            window.location.href = '/index.html';
+        }
+        signoutBtn.addEventListener('click', Signout);
+    </script>
+    <!-- JAVA script code for clicking outside of the nav bar it gores back -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nav = document.querySelector('.nav-class-for-phone');
+            var checkbox = document.getElementById('check');
+            document.addEventListener('click', function (event) {
+                if (!nav.contains(event.target) && checkbox.checked) {
+                    checkbox.checked = false;
+                }
             });
-        </script>
-        </script>
-        <!-- logout section of js code  -->
-        <script src="/header&footer/logout.js"> </script>
-</body>
+        });
 
+    </script>
+    <!-- store the current website url to sessionStoreage -->
+    <script>
+        const currentUrl = window.location.href;
+        sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
 </html>

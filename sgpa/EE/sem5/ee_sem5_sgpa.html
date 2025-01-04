@@ -10,9 +10,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="/../photos/rausnotes39_logo.png">
     <link rel="stylesheet" href="/header&footer/completePage.css">
-     <!-- google fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
-     rel="stylesheet">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
     <!-- for font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -41,7 +41,7 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                 setTimeout(() => {
+                setTimeout(() => {
                     sessionStorage.setItem('originalUrl', window.location.href);
                     window.location.href = '/database/login.html';
                 }, 5000);
@@ -68,6 +68,7 @@
         #downloadBtn {
             margin-top: -1rem;
         }
+
         :root {
             --primary-color: #ffc108;
             --secondary-color: #000;
@@ -77,8 +78,8 @@
             --primary-color: #000;
             --secondary-color: #fff;
         }
-        .sgpa_sem5_ee_container
-        {
+
+        .sgpa_sem5_ee_container {
             background-color: var(--primary-color);
         }
     </style>
@@ -105,149 +106,149 @@
             <li id="themeicon" onclick="toggleTheme()"></i></li>
         </ul>
     </nav>
-   <!-- dropdown_section  -->
-   <div class="main_nav_nested_item_ele">
-    <a href="/ppt_section/ppt_page.html">
+    <!-- dropdown_section  -->
+    <div class="main_nav_nested_item_ele">
+        <a href="/ppt_section/ppt_page.html">
+            <div class="dropdown">
+                <button class="dropbtn">PPT</button>
+            </div>
+        </a>
         <div class="dropdown">
-            <button class="dropbtn">PPT</button>
+            <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content">
+                <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
+                    <div class="dropdown-content_for_applied">
+                        <a href="/notes/physics_Group.html">Physics</a>
+                        <a href="/notes/chemistry_Group.html">Chemistry</a>
+                    </div>
+                </a>
+                <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
+                    <div class="dropdown-content_for_it">
+                        <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
+                        <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
+                        <a href="/notes/it_5th_sem_pdfs.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
+                    <div class="dropdown-content_for_cse">
+                        <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
+                        <a href="">Semester 4</a>
+                    </div>
+                </a>
+            </div>
         </div>
-    </a>
-    <div class="dropdown">
-        <button class="dropbtn"> Notes <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
-        <div class="dropdown-content">
-            <a id="applied_arrow">Applied Science <i class="fa-solid fa-caret-right applied-arrowi"></i>
-                <div class="dropdown-content_for_applied">
-                    <a href="/notes/physics_Group.html">Physics</a>
-                    <a href="/notes/chemistry_Group.html">Chemistry</a>
-                </div>
-            </a>
-            <a id="it_arrow">IT <i class="fa-solid fa-caret-right it-arrowi"></i>
-                <div class="dropdown-content_for_it">
-                    <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
-                    <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
-                    <a href="/notes/it_5th_sem_pdfs.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
-                <div class="dropdown-content_for_cse">
-                    <a href="/notes/cse_3rd_pdfs.html">Semester 3</a>
-                    <a href="">Semester 4</a>
-                </div>
-            </a>
+        <div class="dropdown">
+            <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_sgpa">
+                <a id="it-arrow_sgpa">Physics Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -8rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/physicGroup/pg_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">Chemistry Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa" style="margin-top: -6rem;height: 100px; width: 140px;">
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wm_sgpa.html">Mentoring</a>
+                        <a href="/sgpa/AppliedScience/chemistryGroup/che_wom_sgpa.html">No Mentoring</a>
+                    </div>
+                </a>
+                <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_it_sgpa">
+                        <a id="it-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_it_leet">
+                                <a href="/sgpa/IT/sem3/it_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/IT/sem3/it_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/IT/sem5/it_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_cse_sgpa">
+                        <a id="cse-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_cse_leet">
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CSE/sem3/cse_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CSE/sem4/cse_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CSE/sem5/cse_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ece_sgpa">
+                        <a id="ece-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ece_leet">
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ECE/sem3/ece_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ECE/sem4/ece_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ECE/sem5/ece_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ee_sgpa">
+                        <a id="ee-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ee_leet">
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/EE/sem3/ee_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/EE/sem4/ee_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/EE/sem5/ee_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_ce_sgpa">
+                        <a id="ce-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_ce_leet">
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/CE/sem3/ce_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/CE/sem5/ce_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+                <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
+                    <div class="dropdown-content_for_me_sgpa">
+                        <a id="me-arrow_sgpa_leet">Semester 3
+                            <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
+                            <div class="dropdown-content_for_me_leet">
+                                <a href="/sgpa/ME/sem3/me_3_sgpa.html">Regular</a>
+                                <a href="/sgpa/ME/sem3/me_3_sgpa_for_leet.html">Leet</a>
+                            </div>
+                        </a>
+                        <a href="/sgpa/ME/sem4/me_sem4_sgpa.html">Semester 4</a>
+                        <a href="/sgpa/ME/sem5/me_sem5_sgpa.html">Semester 5</a>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">SGPA <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
-        <div class="dropdown-content_for_sgpa">
-            <a id="it-arrow_sgpa">Physics Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_it_sgpa" style="margin-top: -8rem;height: 100px; width: 140px;">
-                    <a href="/sgpa/AppliedScience/physicGroup/pg_wm_sgpa.html">Mentoring</a>
-                    <a href="/sgpa/AppliedScience/physicGroup/pg_wom_sgpa.html">No Mentoring</a>
-                </div>
-            </a>
-            <a id="it-arrow_sgpa">Chemistry Grp <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_it_sgpa" style="margin-top: -6rem;height: 100px; width: 140px;">
-                    <a href="/sgpa/AppliedScience/chemistryGroup/che_wm_sgpa.html">Mentoring</a>
-                    <a href="/sgpa/AppliedScience/chemistryGroup/che_wom_sgpa.html">No Mentoring</a>
-                </div>
-            </a>
-            <a id="it-arrow_sgpa">IT <i class="fa-solid fa-caret-right it-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_it_sgpa">
-                    <a id="it-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right it-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_it_leet">
-                            <a href="/sgpa/IT/sem3/it_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/IT/sem3/it_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/IT/sem5/it_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_cse_sgpa">
-                    <a id="cse-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right cse-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_cse_leet">
-                            <a href="/sgpa/CSE/sem3/cse_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/CSE/sem3/cse_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/CSE/sem4/cse_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/CSE/sem5/cse_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_ece_sgpa">
-                    <a id="ece-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right ece-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_ece_leet">
-                            <a href="/sgpa/ECE/sem3/ece_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/ECE/sem3/ece_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/ECE/sem4/ece_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/ECE/sem5/ece_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_ee_sgpa">
-                    <a id="ee-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right ee-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_ee_leet">
-                            <a href="/sgpa/EE/sem3/ee_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/EE/sem3/ee_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/EE/sem4/ee_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/EE/sem5/ee_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_ce_sgpa">
-                    <a id="ce-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right ce-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_ce_leet">
-                            <a href="/sgpa/CE/sem3/ce_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/CE/sem3/ce_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/CE/sem5/ce_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
-            <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
-                <div class="dropdown-content_for_me_sgpa">
-                    <a id="me-arrow_sgpa_leet">Semester 3
-                        <i class="fa-solid fa-caret-right me-arrowi_sgpa_leet"></i>
-                        <div class="dropdown-content_for_me_leet">
-                            <a href="/sgpa/ME/sem3/me_3_sgpa.html">Regular</a>
-                            <a href="/sgpa/ME/sem3/me_3_sgpa_for_leet.html">Leet</a>
-                        </div>
-                    </a>
-                    <a href="/sgpa/ME/sem4/me_sem4_sgpa.html">Semester 4</a>
-                    <a href="/sgpa/ME/sem5/me_sem5_sgpa.html">Semester 5</a>
-                </div>
-            </a>
+        <div class="dropdown">
+            <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
+            <div class="dropdown-content_for_game">
+                <a href="/game/color_genetator.html">Color Gen</a>
+                <a href="/game/gues_a_number.html">Guess no</a>
+                <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
+                <a href="#">Game4</a>
+                <a href="#">Game5</a>
+                <a href="#">Game6</a>
+            </div>
         </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Game <i class="fa-solid fa-caret-down dropdown-arrow"></i></button>
-        <div class="dropdown-content_for_game">
-            <a href="/game/color_genetator.html">Color Gen</a>
-            <a href="/game/gues_a_number.html">Guess no</a>
-            <a href="/game/no_to_wa_link_generator.html">WaLinkGen</a>
-            <a href="#">Game4</a>
-            <a href="#">Game5</a>
-            <a href="#">Game6</a>
-        </div>
-    </div>
-    <!-- <a href="/weather/weather.html">
+        <!-- <a href="/weather/weather.html">
         <div class="dropdown">
             <button class="dropbtn">Weather</i></button>
         </div>
     </a> -->
-</div>
+    </div>
     <!-- main content section here -->
     <div class="sgpa_conatiner_main">
         <div class="row  sgpa_sem5_ee_container ">
@@ -258,55 +259,55 @@
                         <label for="PAS" class="form-label">PS-1:</label>
                         <input type="number" required class="form-control" id="PAS"
                             placeholder="Enter Sum of internal & external" name="PAS">
-                        <div class="invalid-feedback">Please enter a valid score for Java.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="DBMS">CS:</label>
                         <input type="number" class="form-control" id="DBMS"
                             placeholder="Enter Sum of internal & external" required name="DBMS">
-                        <div class="invalid-feedback">Please enter a valid score for Discrete Math.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="PY">M&M:</label>
                         <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
                             name="PY" required>
-                        <div class="invalid-feedback">Please enter a valid score for Iot.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="OS">M&I:</label>
                         <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
                             name="OS" required>
-                        <div class="invalid-feedback">Please enter a valid score for Toc.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="WT">EG&E:</label>
                         <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
                             name="WT" required>
-                        <div class="invalid-feedback">Please enter a valid score for Elective-1.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="CAM">Training-2:</label>
                         <input type="number" id="CAM" class="form-control"
                             placeholder="Enter Sum of internal & external" name="CAM" required>
-                        <div class="invalid-feedback">Please enter a valid score for Training-2.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="DBMS-LAB">PS-Lab-1:</label>
                         <input type="number" id="DBMS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Java-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="PY-LAB">CS-Lab:</label>
                         <input type="number" id="PY-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="PY-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Iot-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <div class="mb-1">
                         <label for="OS-LAB">M&M-Lab:</label>
                         <input type="number" id="OS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="OS-LAB" required>
-                        <div class="invalid-feedback">Please enter a valid score for Elective-1-Lab.</div>
+                        <div class="invalid-feedback">Please enter a valid score.</div>
                     </div>
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
 
@@ -772,6 +773,44 @@
     <script>
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- validating form  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('sgpaForm');
+            const inputs = form.querySelectorAll('input[type=number]');
+            const calculateBtn = document.getElementById('sgpabtn');
+            const maxMarks = {
+                'PAS': 100,
+                'DBMS': 100,
+                'PY': 100,
+                'OS': 100,
+                'WT': 100,
+                'CAM': 100,
+                'DBMS-LAB': 50,
+                'PY-LAB': 50,
+                'OS-LAB': 50
+            };
+            function validateInputs() {
+                let isValid = true;
+                inputs.forEach(input => {
+                    const value = parseFloat(input.value);
+                    const max = maxMarks[input.id] || 100;
+                    if (isNaN(value) || value < 0 || value > max) {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                });
+                calculateBtn.disabled = !isValid;
+            }
+            inputs.forEach(input => {
+                input.addEventListener('input', validateInputs);
+            });
+        });
     </script>
     <!-- bootstrap js link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
