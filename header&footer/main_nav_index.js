@@ -22,7 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("kaho").style.display = "user_img";
 
         document.getElementById("bottom_menu_profile").style.display = "none";
-        setTimeout(redirectToLogin(), 1000);
+         setTimeout(() => {
+                    sessionStorage.setItem('originalUrl', window.location.href);
+                    window.location.href = '/database/login.html';
+                }, 5000);
+                // Disable back navigation
+                window.history.pushState(null, "", window.location.href);
+                window.onpopstate = function () {
+                    window.history.pushState(null, "", window.location.href);
+                };
     }
 });
 function redirectToLogin() {

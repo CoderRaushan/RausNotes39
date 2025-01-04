@@ -31,7 +31,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
-        // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
@@ -54,7 +53,7 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                // setTimeout(redirectToLogin(), 1000);
+                // setTimeout(redirectToLogin, 1000);
             }
         });
 
