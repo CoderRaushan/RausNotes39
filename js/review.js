@@ -164,11 +164,18 @@ function renderReviews() {
 
 // Submit review
 document.getElementById("submit-review").addEventListener("click", async () => {
-  const comment = document.getElementById("review-comment").value;
+  const user = JSON.parse(localStorage.getItem("user"));
+  if(!user)
+  {
+    alert("Login for post review!");
+  }
+  else
+  {
+    const comment = document.getElementById("review-comment").value;
   const rating = parseInt(document.getElementById("review-rating").value);
 
   // Get user info from localStorage
-  const user = JSON.parse(localStorage.getItem("user"));
+  
   const photo = user ? user.photoURL : "default-photo-url.jpg";
   const name = user ? user.displayName : "Anonymous";
 
@@ -207,6 +214,7 @@ document.getElementById("submit-review").addEventListener("click", async () => {
     }
   } else {
     alert("Please enter a valid comment and rating between 1 and 5.");
+  }
   }
 });
 
