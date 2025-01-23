@@ -168,6 +168,7 @@ document.getElementById("submit-review").addEventListener("click", async () => {
   if(!user)
   {
     alert("Login for post review!");
+    window.location.href = '/database/login.html';
   }
   else
   {
