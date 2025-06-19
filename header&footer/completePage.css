@@ -179,7 +179,7 @@ nav ul li i {
 
 /* for it branch */
 .dropdown-content_for_it {
-  height: 130px;
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -187,7 +187,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 7.6rem;
+  margin-top: 12rem;
   margin-left: 8rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -227,7 +227,7 @@ nav ul li i {
 
 /* for sgpa all branch */
 .dropdown-content_for_sgpa {
-  height: 300px;
+  height: 280px;
   width: 145px;
   background-color: #581c84;
   display: flex;
@@ -261,31 +261,7 @@ nav ul li i {
 
 /* for sgpa it  */
 .dropdown-content_for_it_sgpa {
-  height: 130px;
-  width: 130px;
-  background-color: #581c84;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin-top: 2rem;
-  margin-left: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 2;
-  visibility: hidden;
-}
-
-#it-arrow_sgpa:hover + .dropdown-content_for_it_sgpa,
-.dropdown-content_for_it_sgpa:hover {
-  visibility: visible;
-}
-
-/* for sgpa cse */
-.dropdown-content_for_cse_sgpa {
-  height: 130px;
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -302,14 +278,14 @@ nav ul li i {
   visibility: hidden;
 }
 
-#cse-arrow_sgpa:hover + .dropdown-content_for_cse_sgpa,
-.dropdown-content_for_cse_sgpa:hover {
+#it-arrow_sgpa:hover + .dropdown-content_for_it_sgpa,
+.dropdown-content_for_it_sgpa:hover {
   visibility: visible;
 }
 
-/* for sgpa ece  */
-.dropdown-content_for_ece_sgpa {
-  height: 130px;
+/* for sgpa cse */
+.dropdown-content_for_cse_sgpa {
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -317,7 +293,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 10rem;
+  margin-top: 10.5rem;
   margin-left: 8rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -326,14 +302,14 @@ nav ul li i {
   visibility: hidden;
 }
 
-#ece-arrow_sgpa:hover + .dropdown-content_for_ece_sgpa,
-.dropdown-content_for_ece_sgpa:hover {
+#cse-arrow_sgpa:hover + .dropdown-content_for_cse_sgpa,
+.dropdown-content_for_cse_sgpa:hover {
   visibility: visible;
 }
 
-/* for sgpa ee  */
-.dropdown-content_for_ee_sgpa {
-  height: 130px;
+/* for sgpa ece  */
+.dropdown-content_for_ece_sgpa {
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -350,14 +326,14 @@ nav ul li i {
   visibility: hidden;
 }
 
-#ee-arrow_sgpa:hover + .dropdown-content_for_ee_sgpa,
-.dropdown-content_for_ee_sgpa:hover {
+#ece-arrow_sgpa:hover + .dropdown-content_for_ece_sgpa,
+.dropdown-content_for_ece_sgpa:hover {
   visibility: visible;
 }
 
-/* for sgpa ce  */
-.dropdown-content_for_ce_sgpa {
-  height: 130px;
+/* for sgpa ee  */
+.dropdown-content_for_ee_sgpa {
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -365,7 +341,31 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 18rem;
+  margin-top: 17.5rem;
+  margin-left: 8rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  visibility: hidden;
+}
+
+#ee-arrow_sgpa:hover + .dropdown-content_for_ee_sgpa,
+.dropdown-content_for_ee_sgpa:hover {
+  visibility: visible;
+}
+
+/* for sgpa ce  */
+.dropdown-content_for_ce_sgpa {
+  height: 220px;
+  width: 130px;
+  background-color: #581c84;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 21rem;
   margin-left: 8rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -381,7 +381,7 @@ nav ul li i {
 
 /* for sgpa me  */
 .dropdown-content_for_me_sgpa {
-  height: 130px;
+  height: 220px;
   width: 130px;
   background-color: #581c84;
   display: flex;
@@ -389,7 +389,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 23rem;
+  margin-top: 25rem;
   margin-left: 8rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -447,7 +447,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 4rem;
+  margin-top: -2.5rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -471,7 +471,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 3rem;
+  margin-top: -2.5rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -495,7 +495,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: -3rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -519,7 +519,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: -3rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -542,7 +542,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: -3rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -565,7 +565,7 @@ nav ul li i {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: -3rem;
   margin-left: 9rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
   border-radius: 10px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,44 +13,43 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="/../photos/rausnotes39_logo.png">
     <link rel="stylesheet" href="/header&footer/completePage.css">
-    <script src="/database/login.js" defer type="module"></script>
     <!-- for font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/photos/rausnotes39_logo.png">
+    <script src="/database/login.js" defer type="module"></script>
     <script>
-        // Add this script to handle user authentication status
         document.addEventListener("DOMContentLoaded", function () {
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
-                // User is signed in
                 document.getElementById("loginPopup").style.display = "none";
                 document.getElementById("signupBtn").style.display = "none";
                 document.getElementById("signinBtn").style.display = "none";
                 document.getElementById("signout").style.display = "inline-block";
                 document.getElementById("user_icon").style.display = "none";
-                document.getElementById("it_user_iamge").src = JSON.parse(localStorage.getItem("user")).photoURL;
-                document.getElementById("user_img").src = JSON.parse(localStorage.getItem("user")).photoURL;
-                document.getElementById("bottom_menu_profile").textContent = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
-            }
-            else {
+                document.getElementById("it_user_iamge").src = JSON.parse(authStatus).photoURL;
+                document.getElementById("user_img").src = JSON.parse(authStatus).photoURL;
+                document.getElementById("bottom_menu_profile").textContent = JSON.parse(authStatus).displayName.split(' ')[0];
+            } else {
                 // User is not signed in
                 document.getElementById("loginPopup").style.display = "flex";
                 document.getElementById("signupBtn").style.display = "inline-block";
                 document.getElementById("signinBtn").style.display = "inline-block";
                 document.getElementById("signout").style.display = "none";
                 document.getElementById("it_user_iamge").style.display = "none";
-                document.getElementById("kaho").style.display = "none";
-                document.getElementById("kaho").style.display = "user_img";
+                document.getElementById("user_img").style.display = "none";
+                document.getElementById("bottom_menu_profile").style.display = "none";
             }
         });
-        function redirectToLogin() {
-            const currentUrl = window.location.href;
-            sessionStorage.setItem('originalUrl', currentUrl);
-            window.location.href = '/database/login.html';
-        }
     </script>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
         .main_container {
             height: 100vh;
             width: 100vw;
@@ -389,66 +389,75 @@
     <!-- main content section here -->
     <div class="sgpa_conatiner_main">
         <div class="row sgpa_sem5_it_container">
-            <h3 class="text-center mt-3">SGPA for IT Branch, Semester 3</h3>
-            <div class="col col-10 offset-1 col-lg-4 offset-lg-4 ">
+            <h3 class="text-center mt-3">SGPA for CSE Branch, Semester 6</h3>
+            <div class="col col-10 offset-1 col-lg-4 offset-lg-4">
                 <form method="post" id="sgpaForm" novalidate>
                     <div class="mb-1">
-                        <label for="PAS" class="form-label">DSA:</label>
+                        <label for="PAS" class="form-label">CD:</label>
                         <input type="number" required class="form-control" id="PAS"
                             placeholder="Enter Sum of internal & external" name="PAS">
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS">OOPS:</label>
+                        <label for="DBMS">CG:</label>
                         <input type="number" class="form-control" id="DBMS"
                             placeholder="Enter Sum of internal & external" required name="DBMS">
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="PY">DCLD:</label>
+                        <label for="PY">ML:</label>
                         <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
                             name="PY" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="OS">DCCN:</label>
+                        <label for="OS">Cyber Security:</label>
                         <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
                             name="OS" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="WT">PPLE:</label>
+                        <label for="WT">Elective-II:</label>
                         <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
                             name="WT" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="CAM">Training-1:</label>
+                        <label for="CAM">Open Elective-I:</label>
                         <input type="number" id="CAM" class="form-control"
                             placeholder="Enter Sum of internal & external" name="CAM" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS-LAB">DSA-Lab:</label>
+                        <label for="DBMS-LAB">CG-Lab:</label>
                         <input type="number" id="DBMS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="PY-LAB">OOPS-Lab:</label>
+                        <label for="PY-LAB">ML-Lab:</label>
                         <input type="number" id="PY-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="PY-LAB" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="OS-LAB">DCCN-Lab:</label>
+                        <label for="OS-LAB">Elective-II Lab:</label>
                         <input type="number" id="OS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="OS-LAB" required>
-
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DCLD-LAB">DCLD-Lab:</label>
-                        <input type="number" id="DCLD-LAB" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="DCLD-LAB" required>
+                        <label for="OS-LAB">Minor Project:</label>
+                        <input type="number" id="Minor-Project" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="Minor-Project" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="Seminar">Seminar:</label>
-                        <input type="number" id="Seminar" class="form-control"
-                            placeholder="Enter Sum of internal & external" name="Seminar" required>
+                        <label for="MPD">MPD:</label>
+                        <input type="number" id="MPD" class="form-control"
+                            placeholder="Enter Sum of internal & external" name="MPD" required>
+                        <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
-
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
 
                     <p id="congrass">Please fill in all the input fields correctly.</p>
@@ -458,7 +467,7 @@
                 </button>
             </div>
         </div>
-    </div>  
+    </div>
     <!-- footer -->
     <footer class="footer">
         <!-- bottom menu -->
@@ -574,18 +583,12 @@
                     allFilled = false; // If any input is empty, set flag to false
                 }
             });
-
-            // Enable or disable the button based on validation
             buttonPrint.disabled = !allFilled;
             button.disabled = !allFilled; // Enable if all fields are filled, disable otherwise
         }
-
-        // Attach input event listeners to all required inputs
         form.querySelectorAll('input[required]').forEach(input => {
             input.addEventListener('input', validateForm);
         });
-
-        // Validate on page load (in case of autofill)
         validateForm();
 
         const { jsPDF } = window.jspdf;
@@ -599,13 +602,13 @@
             let PY = document.getElementById("PY").value;
             let OS = document.getElementById("OS").value;
             let WT = document.getElementById("WT").value;
-            let CAM = document.getElementById("CAM").value;
+
+            let CAM_LAB = document.getElementById("CAM").value;
             let DBMS_LAB = document.getElementById("DBMS-LAB").value;
             let PY_LAB = document.getElementById("PY-LAB").value;
             let OS_LAB = document.getElementById("OS-LAB").value;
-
-            let DCLD_LAB = document.getElementById("DCLD-LAB").value;
-            let SEMINAR = document.getElementById("Seminar").value;
+            let MINOR_PROJECT = document.getElementById("Minor-Project").value;
+            let MPD = document.getElementById("MPD").value;
 
             // Now calculating SGPA if validation passes
             PAS = PAS / 100 * 100;
@@ -613,13 +616,13 @@
             PY = PY / 100 * 100;
             OS = OS / 100 * 100;
             WT = WT / 100 * 100;
-            CAM = CAM / 100 * 100;
+            CAM_LAB = CAM_LAB / 100 * 100;
 
             DBMS_LAB = DBMS_LAB / 50 * 100;
             PY_LAB = PY_LAB / 50 * 100;
             OS_LAB = OS_LAB / 50 * 100;
-            DCLD_LAB = DCLD_LAB / 50 * 100;
-            SEMINAR = SEMINAR / 50 * 100;
+            MINOR_PROJECT = MINOR_PROJECT / 100 * 100;
+            MPD = MPD / 100 * 100;
 
             // Calculating grade point from percentage
             let pasgrade = Math.floor(PAS / 10) + 1;
@@ -632,38 +635,54 @@
             if (osgrade >= 10) osgrade = 10;
             let wtgrade = Math.floor(WT / 10) + 1;
             if (wtgrade >= 10) wtgrade = 10;
-            let camgrade = Math.floor(CAM / 10) + 1;
-            if (camgrade >= 10) camgrade = 10;
+
 
             // Lab grades
+            let camlabgrade = Math.floor(CAM_LAB / 10) + 1;
+            if (camlabgrade >= 10) camlabgrade = 10;
             let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
             if (dbmslabgrade >= 10) dbmslabgrade = 10;
             let pylabgrade = Math.floor(PY_LAB / 10) + 1;
             if (pylabgrade >= 10) pylabgrade = 10;
             let oslabgrade = Math.floor(OS_LAB / 10) + 1;
             if (oslabgrade >= 10) oslabgrade = 10;
-            let dcldlabgrade = Math.floor(DCLD_LAB / 10) + 1;
-            if (dcldlabgrade >= 10) dcldlabgrade = 10;
-            let seminargrade = Math.floor(SEMINAR / 10) + 1;
-            if (seminargrade >= 10) seminargrade = 10;
-
+            let Minorgrade = Math.floor(MINOR_PROJECT / 10) + 1;
+            if (Minorgrade >= 10) Minorgrade = 10;
+            let mpdgrade = Math.floor(MPD / 10) + 1;
+            if (mpdgrade >= 10) mpdgrade = 10;
             // Multiplying grade and credit point
-            let pasresult = pasgrade * 3;
-            let dbmsresult = dbmsgrade * 3;
+            let pasresult = pasgrade * 4;
+            let dbmsresult = dbmsgrade * 4;
             let pyresult = pygrade * 3;
             let osresult = osgrade * 3;
             let wtresult = wtgrade * 3;
-            let camresult = camgrade * 1;
+            let camresult = camlabgrade * 3;
 
             let dbmslabresult = dbmslabgrade * 1;
             let pylabresult = pylabgrade * 1;
             let oslabresult = oslabgrade * 1;
-            let dcldlabresult = dcldlabgrade * 1;
-            let seminarresult = seminargrade * 1;
+            let minorprojectresult = Minorgrade * 1;
+            let mpdresult = mpdgrade * 1;
 
             // Adding all results
-            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + dcldlabresult + seminarresult) / 21);
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + minorprojectresult + mpdresult) / 25);
             document.getElementById('sgpabtn').innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
+            const SgpaPostMethod = async () => {
+                const SgpaData = {
+                    name: JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0],
+                    email: JSON.parse(localStorage.getItem("user")).email,
+                    sgpa: sgpares,
+                };
+                const res = await fetch(
+                    "https://sgpaitsem4backend.onrender.com/ITsem5/Addsgpa",
+                    {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(SgpaData),
+                    }
+                );
+            };
+            // SgpaPostMethod();
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
@@ -672,168 +691,152 @@
                 congrassbtn.innerHTML = "Congratulations!, You did well. Keep it up!"
             }
 
-            // Show the Download PDF button after SGPA calculation
             document.getElementById('downloadBtn').style.display = 'inline-block';
-            buttonPrint.addEventListener("click", function () {
+
+            buttonPrint.addEventListener("click", function (event) {
                 event.preventDefault();
                 const doc = new jsPDF();
+                const pageWidth = doc.internal.pageSize.width;
 
                 const authStatus = localStorage.getItem("user");
                 let congrassMessage = "Congratulations!";
                 if (authStatus) {
-                    const userName = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
+                    const userName = JSON.parse(authStatus).displayName.split(' ')[0];
                     congrassMessage = `Congratulations, ${userName}!`;
                 }
 
-                // Add the congratulatory message to the PDF
+                // Set font for heading
                 doc.setFontSize(16);
-                doc.text(congrassMessage, 20, 20);  // Position the message at the top
+                doc.text(congrassMessage, 10, 10);
 
-                // Get the data
-                let PAS = document.getElementById("PAS").value;
-                let DBMS = document.getElementById("DBMS").value;
-                let PY = document.getElementById("PY").value;
-                let OS = document.getElementById("OS").value;
-                let WT = document.getElementById("WT").value;
-                let CAM = document.getElementById("CAM").value;
-                let DBMS_LAB = document.getElementById("DBMS-LAB").value;
-                let PY_LAB = document.getElementById("PY-LAB").value;
-                let OS_LAB = document.getElementById("OS-LAB").value;
-                let DCLD_LAB = document.getElementById("DCLD-LAB").value;
-                let SEMINAR = document.getElementById("Seminar").value;
+                // Load and draw logo
+                const logoImg = new Image();
+                logoImg.src = '/photos/rausnotes39_logo.png'; // Ensure the image is publicly accessible
 
-                // Convert marks to percentage
-                let PAS_perecengage = PAS / 100 * 100;
-                let DBMS_perecengage = DBMS / 100 * 100;
-                let PY_perecengage = PY / 100 * 100;
-                let OS_perecengage = OS / 100 * 100;
-                let WT_perecengage = WT / 100 * 100;
-                let CAM_perecengage = CAM / 100 * 100;
-                let DBMS_LAB_perecengage = DBMS_LAB / 50 * 100;
-                let PY_LAB_perecengage = PY_LAB / 50 * 100;
-                let OS_LAB_perecengage = OS_LAB / 50 * 100;
-                let DCLD_LAB_perecengage = DCLD_LAB / 50 * 100;
-                let Seminar_percentage = SEMINAR / 50 * 100;
+                logoImg.onload = function () {
+                    const imgWidth = 20;
+                    const imgHeight = 20;
+                    // const imgX = (pageWidth - imgWidth) / 2;
+                    let startY = 30;
+                    doc.setFontSize(18);
+                    doc.setFont('helvetica', 'bold');
+                    const websiteText = "RausNotes39";
 
-                // Calculating grade point from percentage
-                let pasgrade = Math.floor(PAS_perecengage / 10) + 1;
-                if (pasgrade >= 10) pasgrade = 10;
-                let dbmsgrade = Math.floor(DBMS_perecengage / 10) + 1;
-                if (dbmsgrade >= 10) dbmsgrade = 10;
-                let pygrade = Math.floor(PY_perecengage / 10) + 1;
-                if (pygrade >= 10) pygrade = 10;
-                let osgrade = Math.floor(OS_perecengage / 10) + 1;
-                if (osgrade >= 10) osgrade = 10;
-                let wtgrade = Math.floor(WT_perecengage / 10) + 1;
-                if (wtgrade >= 10) wtgrade = 10;
-                let camgrade = Math.floor(CAM_perecengage / 10) + 1;
-                if (camgrade >= 10) camgrade = 10;
-                // Lab grades
-                let dbmslabgrade = Math.floor(DBMS_LAB_perecengage / 10) + 1;
-                if (dbmslabgrade >= 10) dbmslabgrade = 10;
-                let pylabgrade = Math.floor(PY_LAB_perecengage / 10) + 1;
-                if (pylabgrade >= 10) pylabgrade = 10;
-                let oslabgrade = Math.floor(OS_LAB_perecengage / 10) + 1;
-                if (oslabgrade >= 10) oslabgrade = 10;
-                let dcldlabgrade = Math.floor(DCLD_LAB_perecengage / 10) + 1;
-                if (dcldlabgrade >= 10) dcldlabgrade = 10;
-                let seminargrade = Math.floor(Seminar_percentage / 10) + 1;
-                if (seminargrade >= 10) seminargrade = 10;
+                    // Calculate widths
+                    const textWidth = doc.getTextWidth(websiteText);
+                    const spacing = 0; // spacing between logo and text
+                    const totalWidth = imgWidth + spacing + textWidth;
 
-                // Credit points calculation
-                let pasresult = pasgrade * 3;
-                let dbmsresult = dbmsgrade * 3;
-                let pyresult = pygrade * 3;
-                let osresult = osgrade * 3;
-                let wtresult = wtgrade * 3;
-                let camresult = camgrade * 1;
-                let dbmslabresult = dbmslabgrade * 1;
-                let pylabresult = pylabgrade * 1;
-                let oslabresult = oslabgrade * 1;
-                let dcldlabresult = dcldlabgrade * 1;
-                let seminarresult = seminargrade * 1;
+                    // Set Y-position for both (same line)
+                    const topY = 25;
+                    const startX = (doc.internal.pageSize.width - totalWidth) / 2;
 
-                // Calculate total credits and SGPA
-                let totalCredits = 3 + 3 + 3 + 3 + 3 + 1 + 1 + 1 + 1 + 1 + 1;
-                let totalGradePoints = pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + dcldlabresult + seminarresult;
-                let sgpa = totalGradePoints / totalCredits;
+                    // Draw logo
+                    doc.addImage(logoImg, 'PNG', startX, topY - imgHeight / 2, imgWidth, imgHeight);
 
-                // Define the table headers
-                const headers = ["Subject", "Marks", "Percentage %", "Grade Point", "Credit Point"];
+                    // Draw text next to logo
+                    doc.text(websiteText, startX + imgWidth + spacing, topY, { baseline: 'middle' });
+                    startY += 10;
 
-                // Define the table rows with subject names, marks, grade points, and credit points
-                const rows = [
-                    ["DSA", PAS, PAS_perecengage.toFixed(2), pasgrade, 3],
-                    ["OOPS", DBMS, DBMS_perecengage.toFixed(2), dbmsgrade, 3],
-                    ["DCLD", PY, PY_perecengage.toFixed(2), pygrade, 3],
-                    ["DCCN", OS, OS_perecengage.toFixed(2), osgrade, 3],
-                    ["PPLE", WT, WT_perecengage.toFixed(2), wtgrade, 3],
-                    ["Training-1", CAM, CAM_perecengage.toFixed(2), camgrade, 1],
-                    ["DSA-Lab", DBMS_LAB, DBMS_LAB_perecengage.toFixed(2), dbmslabgrade, 1],
-                    ["OOPS-Lab", PY_LAB, PY_LAB_perecengage.toFixed(2), pylabgrade, 1],
-                    ["DCCN-Lab", OS_LAB, OS_LAB_perecengage.toFixed(2), oslabgrade, 1],
-                    ["DCLD-Lab", DCLD_LAB,DBMS_LAB_perecengage.toFixed(2), dcldlabgrade, 1],
-                    ["Seminar", SEMINAR, Seminar_percentage, seminargrade, 1],
-                ];
+                    // Get values
+                    const getVal = id => parseFloat(document.getElementById(id).value);
+                    let PAS = getVal("PAS"), DBMS = getVal("DBMS"), PY = getVal("PY"),
+                        OS = getVal("OS"), WT = getVal("WT"),
+                        CAM_LAB = getVal("CAM"), DBMS_LAB = getVal("DBMS-LAB"),
+                        PY_LAB = getVal("PY-LAB"), OS_LAB = getVal("OS-LAB"),
+                        MINOR_PROJECT = getVal("Minor-Project"), MPD = getVal("MPD");
 
-                // Set up the position for the table
-                const cellWidth = 40;  // Adjust width for new columns
-                const startX = (doc.internal.pageSize.width - 5 * cellWidth) / 2;  // Center the table horizontally
-                let startY = 50; // Adjusted Y-position for the table to avoid overlap with the logo
-                const rowHeight = 12;
-                const headerHeight = 14;
+                    // Percentage
+                    const toPercent = (score, full) => (score / full) * 100;
+                    let PAS_pct = toPercent(PAS, 100),
+                        DBMS_pct = toPercent(DBMS, 100),
+                        PY_pct = toPercent(PY, 100),
+                        OS_pct = toPercent(OS, 100),
+                        WT_pct = toPercent(WT, 100),
+                        CAM_pct = toPercent(CAM_LAB, 100),
+                        DBMSLAB_pct = toPercent(DBMS_LAB, 50),
+                        PYLAB_pct = toPercent(PY_LAB, 50),
+                        OSLAB_pct = toPercent(OS_LAB, 50),
+                        MINOR_pct = toPercent(MINOR_PROJECT, 100),
+                        MPD_pct = toPercent(MPD, 100);
 
-                // Header Styling: Dark background and white text
-                doc.setFontSize(10); // Reduce font size to fit the table
-                doc.setFont('helvetica', 'bold');
-                doc.setFillColor(50, 50, 50);
-                doc.rect(startX, startY - headerHeight, 5 * cellWidth, headerHeight, 'F');
-                doc.setTextColor(255, 255, 255);
-                headers.forEach((header, index) => {
-                    doc.text(header, startX + index * cellWidth + 5, startY - 3);
-                });
-                startY += headerHeight; // Adjust starting position to avoid extra row
 
-                // Row Styling: Alternate row colors and padding
-                doc.setFont('helvetica', 'normal');
-                const rowColors = [[255, 255, 255], [255, 255, 102]]; // White and Yellow
-                rows.forEach((row, index) => {
-                    const rowColor = rowColors[index % 2];
-                    doc.setFillColor(...rowColor);
-                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
 
-                    doc.setTextColor(0);
-                    row.forEach((cell, cellIndex) => {
-                        if (cellIndex === 1 || cellIndex === 2) {
-                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8); // Marks and Percentage
-                        } else {
-                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, cellIndex === 2 ? 'center' : 'left');
-                        }
+                    // Grade function
+                    const getGrade = pct => Math.min(10, Math.floor(pct / 10) + 1);
+
+                    let pasG = getGrade(PAS_pct), dbmsG = getGrade(DBMS_pct), pyG = getGrade(PY_pct),
+                        osG = getGrade(OS_pct), wtG = getGrade(WT_pct),
+                        camG = getGrade(CAM_pct), dbmslabG = getGrade(DBMSLAB_pct),
+                        pylabG = getGrade(PYLAB_pct), oslabG = getGrade(OSLAB_pct),
+                        minorG = getGrade(MINOR_pct), mpdG = getGrade(MPD_pct);
+
+                    // Credits
+                    let totalCredits = 25; 
+                    let totalGradePoints = pasG * 4 + dbmsG * 4 + pyG * 3 + osG * 3 + wtG * 3 +
+                        camG * 3 + dbmslabG * 1 + pylabG * 1 + oslabG * 1 + minorG * 1 + mpdG * 1;
+                    let sgpa = (totalGradePoints / totalCredits).toFixed(2);
+
+                    // Table
+                    const headers = ["Subject", "Marks", "Percentage %", "Grade Point", "Credit"];
+                    const rows = [
+                        ["CD", PAS, PAS_pct.toFixed(2), pasG, 4],
+                        ["CG", DBMS, DBMS_pct.toFixed(2), dbmsG, 4],
+                        ["ML", PY, PY_pct.toFixed(2), pyG, 3],
+                        ["Cyber Security", OS, OS_pct.toFixed(2), osG, 3],
+                        ["Elective-II", WT, WT_pct.toFixed(2), wtG, 3],
+                        ["Open Elective-I", CAM_LAB, CAM_pct.toFixed(2), camG, 3],
+                        ["CG-Lab", DBMS_LAB, DBMSLAB_pct.toFixed(2), dbmslabG, 1],
+                        ["ML-Lab", PY_LAB, PYLAB_pct.toFixed(2), pylabG, 1],
+                        ["Elective-II Lab", OS_LAB, OSLAB_pct.toFixed(2), oslabG, 1],
+                        ["Minor Project", MINOR_PROJECT, MINOR_pct.toFixed(2), minorG, 1],
+                        ["MPD", MPD, MPD_pct.toFixed(2), mpdG, 1]
+                    ];
+
+                    const cellWidth = 40;
+                    const rowHeight = 12;
+                    const headerHeight = 14;
+                    const tableX = (doc.internal.pageSize.width - headers.length * cellWidth) / 2;
+
+                    // Header
+                    doc.setFontSize(10);
+                    doc.setFont('helvetica', 'bold');
+                    doc.setFillColor(50, 50, 50);
+                    doc.setTextColor(255);
+                    doc.rect(tableX, startY, headers.length * cellWidth, headerHeight, 'F');
+                    headers.forEach((text, i) => {
+                        doc.text(text, tableX + i * cellWidth + 5, startY + 10);
                     });
-                    startY += rowHeight;
-                });
 
-                // Last row: SGPA and Total Credit
-                const lastRow = [
-                    ["", "", "Total Credit", totalCredits, ""],
-                    ["", "", "SGPA", Math.floor(sgpa * 100) / 100, ""],
-                ];
-
-                lastRow.forEach((row, index) => {
-                    doc.setFillColor(245, 245, 245);
-                    doc.rect(startX, startY, 5 * cellWidth, rowHeight, 'F');
+                    startY += headerHeight;
+                    doc.setFont('helvetica', 'normal');
                     doc.setTextColor(0);
-                    row.forEach((cell, cellIndex) => {
-                        if (cellIndex !== 4) {
-                            doc.text(cell.toString(), startX + cellIndex * cellWidth + 5, startY + 8, null, null, 'center');
-                        }
-                    });
-                    startY += rowHeight;
-                });
 
-                // Download the PDF  
-                doc.save("SGPA_Result_sem_3rd.pdf");
+                    // Rows
+                    const rowColors = [[255, 255, 255], [255, 255, 102]];
+                    rows.forEach((row, idx) => {
+                        doc.setFillColor(...rowColors[idx % 2]);
+                        doc.rect(tableX, startY, headers.length * cellWidth, rowHeight, 'F');
+                        row.forEach((cell, i) => {
+                            doc.text(cell.toString(), tableX + i * cellWidth + 5, startY + 8);
+                        });
+                        startY += rowHeight;
+                    });
+
+                    // Summary rows
+                    [["", "", "Total Credit", totalCredits, ""], ["", "", "SGPA", sgpa, ""]].forEach(summary => {
+                        doc.setFillColor(230);
+                        doc.rect(tableX, startY, headers.length * cellWidth, rowHeight, 'F');
+                        summary.forEach((cell, i) => {
+                            doc.text(cell.toString(), tableX + i * cellWidth + 5, startY + 8, { align: 'left' });
+                        });
+                        startY += rowHeight;
+                    });
+                    // Save PDF
+                    doc.save("SGPA_Result_sem_5th.pdf");
+                };
             });
+
             // Trigger the fire animation after calculating SGPA
             fire(0.25, {
                 spread: 26,
@@ -876,7 +879,6 @@
                 particleCount: Math.floor(count * particleRatio)
             }));
         }
-    </script>
     </script>
 
     <script>
@@ -944,12 +946,63 @@
                 }
             });
         });
-
     </script>
     <!-- store the current website url to sessionStoreage -->
     <script>
         const currentUrl = window.location.href;
         sessionStorage.setItem('originalUrl', currentUrl);
+    </script>
+    <!-- validating form  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('sgpaForm');
+            const inputs = form.querySelectorAll('input[type=number]');
+            const calculateBtn = document.getElementById('sgpabtn');
+            let PAS = document.getElementById("PAS").value;
+            let DBMS = document.getElementById("DBMS").value;
+            let PY = document.getElementById("PY").value;
+            let OS = document.getElementById("OS").value;
+            let WT = document.getElementById("WT").value;
+
+            let CAM_LAB = document.getElementById("CAM").value;
+            let DBMS_LAB = document.getElementById("DBMS-LAB").value;
+            let PY_LAB = document.getElementById("PY-LAB").value;
+            let OS_LAB = document.getElementById("OS-LAB").value;
+            let MINOR_PROJECT = document.getElementById("Minor-Project").value;
+
+            const maxMarks = {
+                'PAS': 100,
+                'DBMS': 100,
+                'PY': 100,
+                'OS': 100,
+                'WT': 100,
+                'CAM': 100,
+                'DBMS-LAB': 50,
+                'PY-LAB': 50,
+                'OS-LAB': 50,
+                'Minor-Project': 100,
+                'MPD': 100
+            };
+            function validateInputs() {
+                let isValid = true;
+                inputs.forEach(input => {
+                    const value = parseFloat(input.value);
+                    const max = maxMarks[input.id] || 100;
+                    if (isNaN(value) || value < 0 || value > max) {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                });
+                calculateBtn.disabled = !isValid;
+            }
+            inputs.forEach(input => {
+                input.addEventListener('input', validateInputs);
+            });
+        });
     </script>
     <!-- js for preventing user form inspect -->
     <script>
@@ -959,8 +1012,7 @@
             alert('Right-click is disabled on this page.');
         });
         // js for preventing user form inspect
-        document.onkeydown = function (e) 
-        {
+        document.onkeydown = function (e) {
             // lock F12, Ctrl + Shift + I, Cmd + Option + I (Mac)
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.altKey && e.key === 'I')) {
                 e.preventDefault();

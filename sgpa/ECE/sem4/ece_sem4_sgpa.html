@@ -35,7 +35,7 @@
                 document.getElementById("kaho").style.display = "user_img";
 
                 document.getElementById("bottom_menu_profile").style.display = "none";
-                 setTimeout(() => {
+                setTimeout(() => {
                     sessionStorage.setItem('originalUrl', window.location.href);
                     window.location.href = '/database/login.html';
                 }, 5000);
@@ -73,8 +73,8 @@
             <li id="themeicon" onclick="toggleTheme()"></i></li>
         </ul>
     </nav>
-     <!-- dropdown_section  -->
-     <div class="main_nav_nested_item_ele">
+    <!-- dropdown_section  -->
+    <div class="main_nav_nested_item_ele">
         <a href="/ppt_section/ppt_page.html">
             <div class="dropdown">
                 <button class="dropbtn">PPT</button>
@@ -94,6 +94,9 @@
                         <a href="/notes/it_3rd_sem_pdfs.html">Semester 3</a>
                         <a href="/notes/it_4rd_sem_pdfs.html">Semester 4</a>
                         <a href="/notes/it_5th_sem_pdfs.html">Semester 5</a>
+                        <a href="/notes/it_6th_sem_pdfs.html">Semester 6</a>
+                        <a href="/notes/it_7th_sem_pdfs.html">Semester 7</a>
+                        <a href="/notes/it_8th_sem_pdfs.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="cse_arrow">CSE <i class="fa-solid fa-caret-right cse-arrowi"></i>
@@ -130,6 +133,9 @@
                         </a>
                         <a href="/sgpa/IT/sem4/it_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/IT/sem5/it_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/IT/sem6/it_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/IT/sem7/it_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/IT/sem8/it_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="cse-arrow_sgpa">CSE <i class="fa-solid fa-caret-right cse-arrowi_sgpa"></i>
@@ -143,6 +149,9 @@
                         </a>
                         <a href="/sgpa/CSE/sem4/cse_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/CSE/sem5/cse_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/CSE/sem6/cse_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/CSE/sem7/cse_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/CSE/sem8/cse_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="ece-arrow_sgpa">ECE <i class="fa-solid fa-caret-right ece-arrowi_sgpa"></i>
@@ -156,6 +165,9 @@
                         </a>
                         <a href="/sgpa/ECE/sem4/ece_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/ECE/sem5/ece_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/ECE/sem6/ece_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/ECE/sem7/ece_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/ECE/sem8/ece_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="ee-arrow_sgpa">EE <i class="fa-solid fa-caret-right ee-arrowi_sgpa"></i>
@@ -169,6 +181,9 @@
                         </a>
                         <a href="/sgpa/EE/sem4/ee_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/EE/sem5/ee_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/EE/sem6/ee_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/EE/sem7/ee_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/EE/sem8/ee_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="ce-arrow_sgpa">CE <i class="fa-solid fa-caret-right ce-arrowi_sgpa"></i>
@@ -182,6 +197,9 @@
                         </a>
                         <a href="/sgpa/CE/sem4/ce_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/CE/sem5/ce_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/CE/sem6/ce_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/CE/sem7/ce_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/CE/sem8/ce_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
                 <a id="me-arrow_sgpa">ME <i class="fa-solid fa-caret-right me-arrowi_sgpa"></i>
@@ -195,6 +213,9 @@
                         </a>
                         <a href="/sgpa/ME/sem4/me_sem4_sgpa.html">Semester 4</a>
                         <a href="/sgpa/ME/sem5/me_sem5_sgpa.html">Semester 5</a>
+                        <a href="/sgpa/ME/sem6/me_sem6_sgpa.html">Semester 6</a>
+                        <a href="/sgpa/ME/sem7/me_sem7_sgpa.html">Semester 7</a>
+                        <a href="/sgpa/ME/sem8/me_sem8_sgpa.html">Semester 8</a>
                     </div>
                 </a>
             </div>
@@ -465,7 +486,7 @@
 
             //   adding all results
             let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult + pylabresult + oslabresult + wtlabresult + MPDresult) / 23);
-            sgpabtn.innerText = "SGPA : " +  Math.floor(sgpares * 100) / 100;
+            sgpabtn.innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
@@ -477,11 +498,11 @@
             if (authStatus) {
                 let user = JSON.parse(localStorage.getItem("user"));
                 let username = user.displayName.split(' ')[0];
-                let sgpa =  (Math.floor(sgpares * 100) / 100).replace('.', '-');
+                let sgpa = (Math.floor(sgpares * 100) / 100).replace('.', '-');
                 let username_sgpa = `${username} ${sgpa}`;
                 const userRef = ref(database, `${username_sgpa}`);
                 set(userRef, {
-                    sgpa:Math.floor(sgpares * 100) / 100,
+                    sgpa: Math.floor(sgpares * 100) / 100,
                     username: username
                 }).then(() => {
                     console.log("SGPA stored successfully.");
@@ -506,108 +527,108 @@
     </script>
     <!-- footer file included -->
     <div id="includefooter"></div>
-        <!-- importing js code -->
-        <script>
-            $("#includnav").load("/header&footer/nav.html");
-            $("#includefooter").load("/header&footer/footer.html");
-        </script>
-        <!-- Dark and Light mode theme js code -->
-<script>
-    // Function to enable dark theme
-    function enableDarkTheme() {
-      document.documentElement.classList.add('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
-      localStorage.setItem('theme', 'dark');
-    }
-  
-    // Function to enable light theme
-    function enableLightTheme() {
-      document.documentElement.classList.remove('dark_theme');
-      document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
-      localStorage.setItem('theme', 'light');
-    }
-  
-    // Function to toggle between themes
-    function toggleTheme() {
-      if (document.documentElement.classList.contains('dark_theme')) {
-        enableLightTheme();
-      } else {
-        enableDarkTheme();
-      }
-    }
-  
-    // Check the user's saved theme preference on page load
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        enableDarkTheme();
-      } else {
-        enableLightTheme();
-      }
-    });
-  </script>
-        <!-- for share the weblink -->
-        <script>
-            async function sharepage() {
-                await navigator.share({
-                    title: document.title,
-                    url: window.location.href
-                })
+    <!-- importing js code -->
+    <script>
+        $("#includnav").load("/header&footer/nav.html");
+        $("#includefooter").load("/header&footer/footer.html");
+    </script>
+    <!-- Dark and Light mode theme js code -->
+    <script>
+        // Function to enable dark theme
+        function enableDarkTheme() {
+            document.documentElement.classList.add('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        }
+
+        // Function to enable light theme
+        function enableLightTheme() {
+            document.documentElement.classList.remove('dark_theme');
+            document.getElementById('themeicon').innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+
+        // Function to toggle between themes
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark_theme')) {
+                enableLightTheme();
+            } else {
+                enableDarkTheme();
             }
-        </script>
-        <!-- Include the confetti.js library -->
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-        <script>
-            var count = 200;
+        }
 
-            var defaults = {
-                origin: { y: 0.8 }
-            };
-            function fire(particleRatio, opts) {
-                confetti(Object.assign({}, defaults, opts, {
-                    particleCount: Math.floor(count * particleRatio)
-                }));
+        // Check the user's saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                enableDarkTheme();
+            } else {
+                enableLightTheme();
             }
+        });
+    </script>
+    <!-- for share the weblink -->
+    <script>
+        async function sharepage() {
+            await navigator.share({
+                title: document.title,
+                url: window.location.href
+            })
+        }
+    </script>
+    <!-- Include the confetti.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        var count = 200;
 
-            document.getElementById('sgpabtn').addEventListener('click', function () {
-                fire(0.25, {
-                    spread: 26,
-                    startVelocity: 55
-                });
+        var defaults = {
+            origin: { y: 0.8 }
+        };
+        function fire(particleRatio, opts) {
+            confetti(Object.assign({}, defaults, opts, {
+                particleCount: Math.floor(count * particleRatio)
+            }));
+        }
 
-                fire(0.2, {
-                    spread: 60
-                });
-
-                fire(0.35, {
-                    spread: 100,
-                    decay: 0.91,
-                    scalar: 0.8
-                });
-
-                fire(0.1, {
-                    spread: 120,
-                    startVelocity: 25,
-                    decay: 0.92,
-                    scalar: 1.2
-                });
-
-                fire(0.1, {
-                    spread: 120,
-                    startVelocity: 45
-                });
+        document.getElementById('sgpabtn').addEventListener('click', function () {
+            fire(0.25, {
+                spread: 26,
+                startVelocity: 55
             });
-        </script>
-        </script>
-        <!-- logout section of js code  -->
-        <script src="/header&footer/logout.js"> </script>
-        <!-- store the current website url to sessionStoreage -->
-        <!-- <script>
+
+            fire(0.2, {
+                spread: 60
+            });
+
+            fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8
+            });
+
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2
+            });
+
+            fire(0.1, {
+                spread: 120,
+                startVelocity: 45
+            });
+        });
+    </script>
+    </script>
+    <!-- logout section of js code  -->
+    <script src="/header&footer/logout.js"> </script>
+    <!-- store the current website url to sessionStoreage -->
+    <!-- <script>
             const currentUrl = window.location.href;
             sessionStorage.setItem('originalUrl', currentUrl);
         </script> -->
-        <!-- for user_displaying name -->
-        <!-- <script>
+    <!-- for user_displaying name -->
+    <!-- <script>
         let user_name_display = document.getElementById("user_name_display");
         addEventListener("DOMContentLoaded", () => {
             user_name_display.innerHTML = JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0];
