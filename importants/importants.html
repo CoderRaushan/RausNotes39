@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>importants</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = JSON.parse(localStorage.getItem("user"));
+            if (user) {
+                if (user.email === "raushankumar23082004@gmail.com") {
+                    const impDoc = document.getElementById("importants_placement_prep");
+                    impDoc.style.display = "block";
+                }
+                else {
+                    const impDoc = document.getElementById("importants_placement_prep");
+                    impDoc.style.display = "none";
+                }
+            }
+            else {
+                const impDoc = document.getElementById("importants_placement_prep");
+                impDoc.style.display = "none";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <div id="importants_placement_prep">
+            <h2>Apptitude</h2>
+            <a href="/pdf/importants/Numerical +1.pdf">Numerical +1</a> <br><br>
+            <a href="/pdf/importants/Numerical +2.pdf">Numerical +2</a> <br><br>
+            <a href="/pdf/importants/Numerical +3.pdf">Numerical +3</a> <br><br>
+            <a href="/pdf/importants/Reasoning +1.pdf">Reasoning +1</a> <br><br>
+            <hr>
+            <h2>DSA</h2>
+            <a href="/pdf/importants/Array.pdf">Array</a> <br><br>
+            <a href="/pdf/importants/Recursion.pdf">Recursion</a> <br><br>
+            <a href="/pdf/importants/Graph 1.pdf">Graph 1</a> <br><br>
+            <a href="/pdf/importants/Graph 2.pdf">Graph 2</a> <br><br>
+            <a href="/pdf/importants/Graph 3.pdf">Graph 3</a> <br><br>
+            <hr>
+            <h2>English</h2>
+            <a href="/pdf/importants/English.pdf">English</a> <br><br>
+        </div>
+    </main>
+</body>
+
+</html>
