@@ -679,10 +679,10 @@
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(SgpaData),
-                    }
+                    }   
                 );
             };
-            // SgpaPostMethod();
+            SgpaPostMethod();
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
                 congrassbtn.innerHTML = "Congratulations," + JSON.parse(localStorage.getItem("user")).displayName.split(' ')[0] + "! You did well. Keep it up!"
