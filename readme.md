@@ -23,11 +23,11 @@ RausNotes39 is a comprehensive educational web platform designed to provide engi
 
 ## Features
 
-- **Branch-wise Notes:** Download and view notes for all semesters and branches (IT, CSE, ME, CE, ECE, EE, etc.).
+- **Branch-wise Notes:** Download and view notes for all semesters and branches (IT, CSE).
 - **SGPA Calculator:** Calculate SGPA for different branches and semesters.
 - **Games:** Fun and educational games like Color Generator, Guess a Number, and WhatsApp Link Generator.
-- **Project Showcase:** Explore various student projects with live demos.
-- **Music Player:** Listen to curated music tracks.
+- **Project Showcase:** Explore various projects with live demos.
+- **PPT Section:** Explore various PPTs on diffrent topics.
 - **User Authentication:** Login with Google, logout, and user profile management.
 - **Responsive Design:** Mobile-friendly and accessible UI.
 - **Downloadable Resources:** Access to PDFs, PPTs, and practical files.
@@ -107,7 +107,7 @@ RausNotes39 is a comprehensive educational web platform designed to provide engi
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/RausNotes39.git
+   git clone https://github.com/CoderRaushan/RausNotes39.git
    cd RausNotes39
    ```
 
@@ -126,8 +126,8 @@ RausNotes39 is a comprehensive educational web platform designed to provide engi
 - **Home Page:** Navigate to [index.html](index.html) for the main dashboard.
 - **Notes:** Access notes by branch and semester in the [notes/](notes/) directory.
 - **SGPA Calculator:** Use the calculators in [sgpa/](sgpa/) for your branch and semester.
+- **PPT:** Access PPTs in the [notes/](ppt/) directory.
 - **Games:** Play games in the [game/](game/) directory.
-- **Music Player:** Enjoy music in [MusicPlayer/index.html](MusicPlayer/index.html).
 - **Authentication:** Login/logout via Google using the login popup ([database/login.html](database/login.html)).
 
 ---
@@ -164,13 +164,6 @@ RausNotes39 is a comprehensive educational web platform designed to provide engi
 
 ---
 
-## Music Player
-
-- **Location:** [MusicPlayer/index.html](MusicPlayer/index.html)
-- **Features:** Play, pause, loop, next/prev track, progress bar, and album art.
-
----
-
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -183,19 +176,14 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Contact
 
 - **Author:** Raushan Kumar
 - **Website:** [https://rausnotes39.netlify.app/](https://rausnotes39.netlify.app/)
 - **Email:** raushankumar23082004@gmail.com
 - **GitHub:** [https://github.com/coderraushan](https://github.com/coderraushan)
+- **LinkedIn:** [https://www.linkedin.com/in/raushan-kumar-964a75255/)
 
 ---
 
-> _RausNotes39 is dedicated to making engineering education accessible and organized for
+> RausNotes39 is dedicated to making engineering education accessible and organized for everyone.
