@@ -175,25 +175,25 @@ Contributions are welcome! Please follow these steps:
 ---
 
 ## Screenshots
-### Home
+### Home 
 ![Home](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/home.png)
 
-### Dark Home
+### Dark Home Page
 ![Dark Home](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/darkhome.png)
 
 ### About Us
 ![About Us](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/aboutus.png)
-
-### Contact
+ 
+### Contact Us
 ![Contact](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/contact.png)
 
 ### FAQ
 ![FAQ](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/faq.png)
 
-### Notice
+### Notice Board
 ![Notice](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/notice.png)
 
-### PPT
+### PPT Section
 ![PPT](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/ppt.png)
 
 ### PPT Page
@@ -202,13 +202,13 @@ Contributions are welcome! Please follow these steps:
 ### User Profile
 ![Profile](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/profile.png)
 
-### Projects
+### Projects Section
 ![Projects](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/projects.png)
 
 ### Rating
 ![Rating](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/rating.png)
 
-### Review
+### Reviews
 ![Review](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/review.png)
 
 ### Notes
