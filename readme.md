@@ -174,6 +174,66 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
+## Screenshots
+### Home
+![Home](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/home.png)
+
+### Dark Home
+![Dark Home](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/darkhome.png)
+
+### About Us
+![About Us](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/aboutus.png)
+
+### Contact
+![Contact](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/contact.png)
+
+### FAQ
+![FAQ](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/faq.png)
+
+### Notice
+![Notice](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/notice.png)
+
+### PPT
+![PPT](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/ppt.png)
+
+### PPT Page
+![PPT Page](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/pptpage.png)
+
+### User Profile
+![Profile](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/profile.png)
+
+### Projects
+![Projects](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/projects.png)
+
+### Rating
+![Rating](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/rating.png)
+
+### Review
+![Review](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/review.png)
+
+### Notes
+![Notes](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/notes.png)
+
+### Physics Notes
+![Physics Notes](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/physicsnotes.png)
+
+### Chemistry Notes
+![Chemistry Notes](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/chemistrynotes.png)
+
+### IT Notes
+![IT Notes](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/itnotes.png)
+
+### Make Notes
+![Make Notes](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/makenotes.png)
+
+### SGPA Page
+![SGPA Page](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/sgpapage.png)
+
+### SGPA
+![SGPA](https://github.com/CoderRaushan/RausNotes39/blob/master/photos/WebScreenShorts/sgpa.png)
+
+---
+
 ## Contact
 
 - **Author:** Raushan Kumar
