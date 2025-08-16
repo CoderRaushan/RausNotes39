@@ -14,9 +14,7 @@ RausNotes39 is a comprehensive educational web platform designed to provide engi
 - [Games](#games)
 - [SGPA Calculator](#sgpa-calculator)
 - [Notes & Resources](#notes--resources)
-- [Music Player](#music-player)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ---
