@@ -389,51 +389,52 @@
     <!-- main content section here -->
     <div class="sgpa_conatiner_main">
         <div class="row sgpa_sem5_it_container">
-            <h3 class="text-center mt-3">SGPA for CSE Branch, Semester 7</h3>
+            <h3 class="text-center mt-3">SGPA for CSE Branch, Semester 6</h3>
             <div class="col col-10 offset-1 col-lg-4 offset-lg-4">
                 <form method="post" id="sgpaForm" novalidate>
                     <div class="mb-1">
-                        <label for="PAS" class="form-label">Elective-III:</label>
+                        <label for="PAS" class="form-label">CD:</label>
                         <input type="number" required class="form-control" id="PAS"
                             placeholder="Enter Sum of internal & external" name="PAS">
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS">Elective-IV:</label>
+                        <label for="DBMS">CG:</label>
                         <input type="number" class="form-control" id="DBMS"
                             placeholder="Enter Sum of internal & external" required name="DBMS">
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="PY">Elective-IV Lab:</label>
+                        <label for="PY">ML:</label>
                         <input type="number" id="PY" class="form-control" placeholder="Enter Sum of internal & external"
                             name="PY" required>
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="OS">Open Elective-II:</label>
+                        <label for="OS">Cyber Security:</label>
                         <input type="number" id="OS" class="form-control" placeholder="Enter Sum of internal & external"
                             name="OS" required>
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="WT">Major Project:</label>
+                        <label for="WT">Elective-II:</label>
                         <input type="number" id="WT" class="form-control" placeholder="Enter Sum of internal & external"
                             name="WT" required>
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="CAM">Technical Aptitude:</label>
+                        <label for="CAM">Open Elective-I:</label>
                         <input type="number" id="CAM" class="form-control"
                             placeholder="Enter Sum of internal & external" name="CAM" required>
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
                     <div class="mb-1">
-                        <label for="DBMS-LAB">Training-III:</label>
+                        <label for="DBMS-LAB">CG-Lab:</label>
                         <input type="number" id="DBMS-LAB" class="form-control"
                             placeholder="Enter Sum of internal & external" name="DBMS-LAB" required>
                         <div class="invalid-feedback">Please enter a valid score</div>
                     </div>
+                   
                     <button id="sgpabtn" class="btn btn-primary" disabled>Calculate Sgpa</button>
 
                     <p id="congrass">Please fill in all the input fields correctly.</p>
@@ -582,7 +583,6 @@
             let Technical_Aptitude = document.getElementById("CAM").value;
             let Training_III = document.getElementById("DBMS-LAB").value;
 
-
             // Now calculating SGPA if validation passes
             PAS = PAS / 100 * 100;
             DBMS = DBMS / 100 * 100;
@@ -591,8 +591,7 @@
             WT = WT / 200 * 100;
             CAM_LAB = CAM_LAB / 50 * 100;
             DBMS_LAB = DBMS_LAB / 100 * 100;
-
-
+          
             // Calculating grade point from percentage
             let pasgrade = Math.floor(PAS / 10) + 1;
             if (pasgrade >= 10) pasgrade = 10;
@@ -612,7 +611,6 @@
             let dbmslabgrade = Math.floor(DBMS_LAB / 10) + 1;
             if (dbmslabgrade >= 10) dbmslabgrade = 10;
           
-
             // Multiplying grade and credit point
             let pasresult = pasgrade * 4;
             let dbmsresult = dbmsgrade * 3;
@@ -621,10 +619,12 @@
             let wtresult = wtgrade * 3;
             let camresult = camlabgrade * 1;
             let dbmslabresult = dbmslabgrade * 1;
-        
+            
+
             // Adding all results
-            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult) / 16);
+            let sgpares = ((pasresult + dbmsresult + pyresult + osresult + wtresult + camresult + dbmslabresult ) / 16);
             document.getElementById('sgpabtn').innerText = "SGPA : " + Math.floor(sgpares * 100) / 100;
+           
             // SgpaPostMethod();
             const authStatus = localStorage.getItem("user");
             if (authStatus) {
@@ -686,15 +686,19 @@
                     let PAS = getVal("PAS"), DBMS = getVal("DBMS"), PY = getVal("PY"),
                         OS = getVal("OS"), WT = getVal("WT"),
                         CAM_LAB = getVal("CAM"), DBMS_LAB = getVal("DBMS-LAB");
+
                     // Percentage
                     const toPercent = (score, full) => (score / full) * 100;
                     let PAS_pct = toPercent(PAS, 100),
                         DBMS_pct = toPercent(DBMS, 100),
-                        PY_pct = toPercent(PY, 50),
+                        PY_pct = toPercent(PY, 100),
                         OS_pct = toPercent(OS, 100),
-                        WT_pct = toPercent(WT, 200),
-                        CAM_pct = toPercent(CAM_LAB, 50),
-                        DBMSLAB_pct = toPercent(DBMS_LAB, 100);
+                        WT_pct = toPercent(WT, 100),
+                        CAM_pct = toPercent(CAM_LAB, 100),
+                        DBMSLAB_pct = toPercent(DBMS_LAB, 50);
+                      
+
+
 
                     // Grade function
                     const getGrade = pct => Math.min(10, Math.floor(pct / 10) + 1);
@@ -702,24 +706,28 @@
                     let pasG = getGrade(PAS_pct), dbmsG = getGrade(DBMS_pct), pyG = getGrade(PY_pct),
                         osG = getGrade(OS_pct), wtG = getGrade(WT_pct),
                         camG = getGrade(CAM_pct), dbmslabG = getGrade(DBMSLAB_pct);
-                       
+                     
 
                     // Credits
-                    let totalCredits = 16;
+                    let totalCredits = 25; 
                     let totalGradePoints = pasG * 4 + dbmsG * 3 + pyG * 1 + osG * 3 + wtG * 3 +
-                        camG * 1 + dbmslabG * 1;
+                        camG * 1 + dbmslabG * 1 ;
                     let sgpa = (totalGradePoints / totalCredits).toFixed(2);
 
                     // Table
                     const headers = ["Subject", "Marks", "Percentage %", "Grade Point", "Credit"];
                     const rows = [
-                        ["Elective-III", PAS, PAS_pct.toFixed(2), pasG, 4],
-                        ["Elective-IV", DBMS, DBMS_pct.toFixed(2), dbmsG, 3],
-                        ["Elective-IV Laboratory", PY, PY_pct.toFixed(2), pyG, 1],
-                        ["Open Elective-II", OS, OS_pct.toFixed(2), osG, 3],
-                        ["Major Project", WT, WT_pct.toFixed(2), wtG, 3],
-                        ["Technical Aptitude", CAM_LAB, CAM_pct.toFixed(2), camG, 1],
-                        ["Training-III", DBMS_LAB, DBMSLAB_pct.toFixed(2), dbmslabG, 1],
+                        ["CD", PAS, PAS_pct.toFixed(2), pasG, 4],
+                        ["CG", DBMS, DBMS_pct.toFixed(2), dbmsG, 4],
+                        ["ML", PY, PY_pct.toFixed(2), pyG, 3],
+                        ["Cyber Security", OS, OS_pct.toFixed(2), osG, 3],
+                        ["Elective-II", WT, WT_pct.toFixed(2), wtG, 3],
+                        ["Open Elective-I", CAM_LAB, CAM_pct.toFixed(2), camG, 3],
+                        ["CG-Lab", DBMS_LAB, DBMSLAB_pct.toFixed(2), dbmslabG, 1],
+                        ["ML-Lab", PY_LAB, PYLAB_pct.toFixed(2), pylabG, 1],
+                        ["Elective-II Lab", OS_LAB, OSLAB_pct.toFixed(2), oslabG, 1],
+                        ["Minor Project", MINOR_PROJECT, MINOR_pct.toFixed(2), minorG, 1],
+                        ["MPD", MPD, MPD_pct.toFixed(2), mpdG, 1]
                     ];
 
                     const cellWidth = 40;
@@ -895,16 +903,22 @@
 
             let CAM_LAB = document.getElementById("CAM").value;
             let DBMS_LAB = document.getElementById("DBMS-LAB").value;
-
+            let PY_LAB = document.getElementById("PY-LAB").value;
+            let OS_LAB = document.getElementById("OS-LAB").value;
+            let MINOR_PROJECT = document.getElementById("Minor-Project").value;
 
             const maxMarks = {
                 'PAS': 100,
                 'DBMS': 100,
-                'PY': 50,
+                'PY': 100,
                 'OS': 100,
-                'WT': 200,
-                'CAM': 50,
-                'DBMS-LAB': 100,
+                'WT': 100,
+                'CAM': 100,
+                'DBMS-LAB': 50,
+                'PY-LAB': 50,
+                'OS-LAB': 50,
+                'Minor-Project': 100,
+                'MPD': 100
             };
             function validateInputs() {
                 let isValid = true;
