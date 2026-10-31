@@ -716,7 +716,7 @@
             </div> -->
             <!-- Professional Status -->
             <h3 class="developer_skill_text">Professional Journy</h3>
-            <section class="professional-status"
+            <!-- <section class="professional-status"
                 style="display: flex; justify-content: center; align-items: center; padding: 20px;">
 
                 <div class="professional-card"
@@ -789,7 +789,162 @@
                         </div>
                     </div>
                 </div>
+            </section> -->
+
+
+            <section class="professional-status"
+                style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+
+                <div class="professional-card"
+                    style="position: relative; width: 100%; max-width: 420px; border-radius: 18px; padding: 1px; background: linear-gradient(135deg, #581c84, #581c84 55%, #581c84); box-shadow: 0 20px 45px -15px #581c84; transition: transform 0.35s ease, box-shadow 0.35s ease; isolation: isolate; overflow: hidden;">
+
+                    <!-- TCS Logo -->
+                    <div class="logo-banner"
+                        style="background: #ffffff; padding: 22px 28px; display: flex; justify-content: center; align-items: center;">
+                        <img src="/photos/tcs_logo-cropped.svg" class="tcs-logo"
+                            style="width: 70%; max-width: 260px; height: auto; display: block;" alt="TCS Logo">
+                    </div>
+
+                    <!-- Header -->
+                    <div class="card-header"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 18px 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); position: relative;">
+
+                        <div class="header-text">
+                            <h2
+                                style="font-family: 'Sora', sans-serif; font-size: 19px; font-weight: 700; color: #f2eefc; letter-spacing: 0.2px; margin: 0 0 2px;">
+                                TCS Digital
+                            </h2>
+
+                            <p style="font-size: 13px; color: #a99cc4; margin: 0; font-weight: 500;">
+                                System Engineer C1
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body"
+                        style="padding: 20px 24px 26px; display: flex; flex-direction: column; gap: 14px;">
+
+                        <!-- Working At -->
+                        <div class="info"
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+
+                            <span class="title"
+                                style="font-size: 13.5px; color: #a99cc4; font-weight: 500; white-space: nowrap;">
+                                🏢 Working At:
+                            </span>
+
+                            <span class="value"
+                                style="font-size: 14px; color: #f2eefc; font-weight: 600; text-align: right;">
+                                Tata Consultancy Services
+                            </span>
+                        </div>
+
+                        <!-- Designation -->
+                        <div class="info"
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+
+                            <span class="title"
+                                style="font-size: 13.5px; color: #a99cc4; font-weight: 500; white-space: nowrap;">
+                                💻 Designation:
+                            </span>
+
+                            <span class="value"
+                                style="font-size: 14px; color: #f2eefc; font-weight: 600; text-align: right;">
+                                System Engineer C1
+                            </span>
+                        </div>
+
+                        <!-- Employment -->
+                        <div class="info"
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+
+                            <span class="title"
+                                style="font-size: 13.5px; color: #a99cc4; font-weight: 500; white-space: nowrap;">
+                                📄 Employment:
+                            </span>
+
+                            <span class="value"
+                                style="font-size: 14px; color: #f2eefc; font-weight: 600; text-align: right;">
+                                Full-Time Employee
+                            </span>
+                        </div>
+
+                        <!-- Status -->
+                        <div class="info"
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+
+                            <span class="title"
+                                style="font-size: 13.5px; color: #a99cc4; font-weight: 500; white-space: nowrap;">
+                                🚀 Status:
+                            </span>
+
+                            <span class="badge"
+                                style="position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.3px; color: #1a1204; background: linear-gradient(120deg, #ffd98a, #e8b84b); box-shadow: 0 4px 16px rgba(232, 184, 75, 0.35);">
+                                Currently Working:
+                            </span>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="info"
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: none; padding-bottom: 0;">
+
+                            <span class="title"
+                                style="font-size: 13.5px; color: #a99cc4; font-weight: 500; white-space: nowrap;">
+                                ⏳ Experience:
+                            </span>
+
+                            <span id="experience-counter"
+                                style="font-size: 15px; color: #ffd98a; font-weight: 700; text-align: right;">
+                                0.0 Years
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
             </section>
+
+            <script>
+                function updateExperience() {
+
+                    // Joining Date: 22 October 2026
+                    const joiningDate = new Date(2026, 9, 22);
+                    const today = new Date();
+
+                    const experienceElement =
+                        document.getElementById("experience-counter");
+
+                    if (!experienceElement) return;
+
+                    if (today < joiningDate) {
+                        experienceElement.textContent = "0.0 Years";
+                        return;
+                    }
+
+                    // Calculate completed months
+                    let totalMonths =
+                        (today.getFullYear() - joiningDate.getFullYear()) * 12 +
+                        (today.getMonth() - joiningDate.getMonth());
+
+                    if (today.getDate() < joiningDate.getDate()) {
+                        totalMonths--;
+                    }
+
+                    // Convert months into decimal years
+                    const experience = (totalMonths / 12).toFixed(1);
+
+                    experienceElement.textContent = experience + " Years";
+                }
+
+                // Initial calculation
+                updateExperience();
+
+                // Refresh automatically every day
+                setInterval(updateExperience, 24 * 60 * 60 * 1000);
+            </script>
+
+
+
 
             <!-- Education section -->
             <h3 class="developer_skill_text">Education</h3>
